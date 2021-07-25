@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About(작성중)
+title: Portfolio(작성중)
 permalink: /about/
 image: '/images/01-2.jpg'
 ---
