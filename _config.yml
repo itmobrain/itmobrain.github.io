@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
 title: ZZANZU
-logo: # You can add own logo. For example '/images/logo.png'.
+logo: 'images/logo.jpg' # You can add own logo. For example '/images/logo.png'.
 description: Menca personal blogging theme for Jekyll
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -94,7 +94,7 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
-paginate: 9
+paginate: 6
 paginate_path: "/page/:num"
 
 # Pages Path
