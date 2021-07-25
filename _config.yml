@@ -13,7 +13,7 @@ color_scheme: dark # You can choose three modes auto, light, and dark. By defaul
 author:
   author__name: ZZANZU
   author__bio: 하라는 취업은 안하고 창업을 해버린 나,<br>잘 살고 있는걸까?
-  author__avatar: '/images/01-1.jpg'
+  author__avatar: '/images/01-1.png'
 
 social:
 - {icon: "ion-logo-facebook", link: "https://www.facebook.com/sksckswn"}
@@ -27,8 +27,8 @@ social:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Hey, I’m Camelia Mendes
-  hero__description: Designs, talks, and writes about web, ethics, privacy, and dev. I share design tutorials, free resources and inspiration.
+  hero__title: 반가워요!
+  hero__description:
   hero__image: '/images/01.jpg'
 
 
