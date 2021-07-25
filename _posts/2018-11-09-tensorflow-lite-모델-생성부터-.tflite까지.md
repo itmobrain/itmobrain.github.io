@@ -2,7 +2,7 @@
 layout: post
 title: "TensorFlow Lite(1)"
 date: 2018-11-09 03:54:51
-image: '/assets/img/android_default.png'
+image: '/images/android_default.png'
 description: "TensorFlow Lite 모델 생성부터 .tflite까지 + Google Colab Files"
 tags:
 - TFLite
