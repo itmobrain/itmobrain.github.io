@@ -12,7 +12,7 @@ color_scheme: auto # You can choose three modes auto, light, and dark. By defaul
 # Author Settings
 author:
   author__name: ZZANZU
-  author__bio: 하라는 취업은 안하고 창업을 해버린 나, 잘 살고 있는걸까?
+  author__bio: 하라는 취업은 안하고 창업을 해버린 나,\n잘 살고 있는걸까?
   author__avatar: '/images/01-1.jpg'
 
 social:
