@@ -16,6 +16,7 @@ author:
   author__avatar: '/images/01-1.png'
 
 social:
+- {icon: "ion-logo-github", link: "https://github.com/ZZANZU"}
 - {icon: "ion-logo-facebook", link: "https://www.facebook.com/sksckswn"}
 - {icon: "ion-logo-instagram", link: "https://www.instagram.com/zzanzu/"}
 - {icon: "ion-logo-youtube", link: "https://www.youtube.com/c/ChanjoosReactionVideo/"}
