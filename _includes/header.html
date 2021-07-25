@@ -26,7 +26,7 @@
               </li>
               {% for page in site.pages %}
                 {% unless page.name == 'tags.html' or page.name == '404.html' or page.name == 'elements.md' %}
-                  {% if page.title %}
+                  {% if page.title and page.title != 'Elements' %}
                   <li class="nav__item">
                     <a href="{{ page.url | prepend: site.baseurl }}" class="nav__link">{{ page.title }}</a>
                   </li>
