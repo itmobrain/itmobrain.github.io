@@ -28,7 +28,7 @@ social:
 # Hero Settings
 hero:
   hero__title: 반가워요!
-  hero__description:
+  hero__description: 내가 잘하는 것, 좋아하는 것들을 알아가기 위해 오늘도 부딪혀봅니다.
   hero__image: '/images/01.jpg'
 
 
