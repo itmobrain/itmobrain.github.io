@@ -2,7 +2,7 @@
 layout: post
 title: "WBS, WBS-dictionary란 무엇인가?"
 date: 2018-11-16 17:40:44
-image: '/assets/img/'
+image: 'https://lh6.googleusercontent.com/6QcLpyXBCs61XZ5eKzNLQZHPh91dIzX8L-J3DjG7GseVQ6_IFXKGRYv7gobh7xHRo1Ml8B89v9uA88RB6cC7wDnSgrtBbbfs-ET7Xj3jmjSt5sH3R3hKbtu7kAxII8Ewl2dynXvD'
 description: 프로젝트 관리
 tags:
 - Project Management
