@@ -14,11 +14,13 @@ categories:
 - 기존에는 생명주기 메소드(onCreate, onResume 등)에 무식하게(?) 로그를 추가해서 확인했었는데, 너무 비효율적이었다.
 - 그러던중 adb 터미널 명령어로 확인이 가능하다는 것을 확인했다.
 - 명령어는 아래와 같다.
+
 ```bash
 $adb shell dumpsys activity activities | sed -En -e "/Stack #/p " -e "/Running activities/,/Run #0/p"
 ```
 
 - 터미널에 위의 명령어를 입력하면 아래와 같은 결과를 확인할 수 있다.
+
 ```bash
 Stack #1:
   Running activities (most recent first):
