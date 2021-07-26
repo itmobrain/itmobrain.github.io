@@ -6,7 +6,7 @@ image: 'https://user-images.githubusercontent.com/26498433/122062932-ce4c7e80-ce
 description:
 tags:
 - android
-  categories:
+categories:
 - android
 - abilfilter
 ---

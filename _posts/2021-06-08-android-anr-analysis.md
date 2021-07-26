@@ -6,7 +6,7 @@ image: 'https://user-images.githubusercontent.com/26498433/121179133-4c90aa00-c8
 description:
 tags:
 - android
-  categories:
+categories:
 - android
 - anr
 ---
