@@ -39,8 +39,6 @@ categories:
 .externalNativeBuild
 ```
 
-- 
-
 ## Ref
 - [Deep dive into .idea folder in Android Studio](!https://proandroiddev.com/deep-dive-into-idea-folder-in-android-studio-53f867cf7b70)
 - [Android project settings Git ignore file and .idea folder problem](!https://www.programmersought.com/article/46824643626/)
