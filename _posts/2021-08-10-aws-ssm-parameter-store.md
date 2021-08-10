@@ -10,7 +10,6 @@ tags:
 categories:
 - aws
 ---
-
 ## 1. 읽기 전에
 > 본 글에서는 AWS의 System Manager(구 SSM) 전체를 다루는 것이 아닌, 기능의 일부인 Parameter Store에 대해 설명합니다.
 
