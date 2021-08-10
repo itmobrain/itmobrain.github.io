@@ -29,6 +29,7 @@ categories:
     - 우리가 작성한 코드에서 secret값이나 config값을 분리시켜주고(암호화도 원한다면 사용 가능하다)
     - AWS의 여러 서비스들 내에서 이 값들을 사용할 수 있게 해준다.
 
+
 ### parameter가 뭔데?
 - Parameter Store의 parameter는 Parameter Store에 저장된 텍스트 블록이나 이름의 리스트, 비밀번호, 또는 AMI ID와 같은 데이터를 의미한다. 이를 통해 우리의 스크립트나 커맨드같은 것에서 안전하고 관리되기 용이하도록 사용될 수 있다.
 
@@ -45,7 +46,7 @@ categories:
 
 - 다시 한 번 강조하지만, 민감한 정보인 경우 String이나 StringList를 쓰면 안된다!(Don't) 민감한 정보는 반드시 암호화되어야 하기 때문에, SecureString을 사용해야한다.
 
-- Secure String 생성하기 : [참](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
+- Secure String 생성하기 : [참고](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
 
 - '그래도 그냥 String으로 사용해도 되지 않을까?' 할 수 있겠지만, 우리가 모르는 사이에 CloudTrail 로그나 일반 커맨드 메세지나 agent 로그에 포함되어있을 수도 있기 때문이다!
 
