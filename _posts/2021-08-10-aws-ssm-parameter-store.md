@@ -51,6 +51,19 @@ categories:
   
 - String과 StringList는 말 그대로 문자열과 문자열 리스트 타입입니다. 말 그대로 문자열과 문자열 리스트를 Parameter Store에 저장해놓고 코드에서 불러오는 형식으로 사용할 수 있는 것이죠.
 
+```
+// String 타입 예시
+abc123
+Example Corp
+<img src="images/bannerImage1.png"/>
+
+// StringList 타입 예시 - 쉼표(comma)로 구분된 문자열
+Monday,Wednesday,Friday
+CSV,TSV,CLF,ELF,JSON
+```
+
+> <cite>코드 내에서 뿐만 아니라, 운영중인 서비스(웹, 앱 등) 내에서 공통적으로 사용되는 값(예. 이미지 URL)들은 Parameter Store로 관리한다면 편리할 것 같네요!</cite>
+
 #### SecureString 타입
 - 조심스럽게 참조/저장되어야하는 민감한 데이터인 경우 사용되는 타입입니다. 비밀번호나 라이센스 키와같이 사용자들에 의해 바뀌거나 참조되지 않아야하는 데이터가 있는 경우, 이 타입을 사용하여 parameter를 생성하면 됩니다.
 
