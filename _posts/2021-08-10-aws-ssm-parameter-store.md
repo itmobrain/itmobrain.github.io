@@ -15,11 +15,11 @@ categories:
 
 - 코드를 작성하다보면 github 레파지토리에 올라가기에는 민감한 정보들(주로 config 값들)을 어떻게 관리해야할까, 한 번쯤은 고민해보셨을 겁니다. 
   
-- 저 또한 이러한 상황에 익숙하지 않은 시절에는 별도의 파일을 만든 뒤 .gitignore 파일에 추가하여 레포지터리에는 업로드되지 않도록 하던 시절도 있었습니다 -_-;;
+- 저 또한 이러한 상황에 익숙하지 않은 시절에는 이러한 정보들을 별도의 파일에 정의한 뒤 .gitignore 파일에 추가하여 레포지터리에는 업로드되지 않도록 하던 시절도 있었습니다 -_-;;
 
 - 하지만 이러한 경우 협업 과정에서 공유하는 과정이 번거롭기도 하고, 그렇다고 안전하게 관리되는 느낌이 있지도 않았습니다.
 
-- 그러던 중, AWS의 Parameter Store를 통해 이러한 상황을 해결해줄 수 있다는 것을 알게 되었습니다.
+- 그러던 중, AWS의 **Parameter Store**를 통해 이러한 상황을 해결해줄 수 있다는 것을 알게 되었습니다.
 
 - 이 글을 통해 AWS Parameter Store가 무엇이고, 어떤 기능을 제공하는지 이해가 되신다면 좋겠습니다 :)
 
@@ -50,6 +50,7 @@ categories:
     - SecureString
   
 - String과 StringList는 말 그대로 문자열과 문자열 리스트 타입입니다. 말 그대로 문자열과 문자열 리스트를 Parameter Store에 저장해놓고 코드에서 불러오는 형식으로 사용할 수 있는 것이죠.
+
 ```
 // String 타입 예시
 abc123
@@ -75,6 +76,7 @@ CSV,TSV,CLF,ELF,JSON
 - SecureString은 AWS의 KMS key를 이용하여 decrypt, encrypt됩니다. KMS key는 AWS가 기본으로 제공하는 값을 사용해도 되고, 우리가 만든 KMS key를 사용해도 됩니다.
 
 - 다양한 AWS 내의 서비스에서 사용될 수 있다. 심지어는 람다 코드 내에서도 사용될 수 있습니다.
+
 ```python
 from __future__ import print_function
  
@@ -83,8 +85,9 @@ import boto3
 ssm = boto3.client('ssm', 'ap-northeast-2')
 
 def get_parameters():
+    # LambdaSecureString라고 정의한 값을 불러옵니다.
     response = ssm.get_parameters(
-        Names=['LambdaSecureString'],WithDecryption=True # LambdaSecureString값을 불러옵니다.
+        Names=['LambdaSecureString'],WithDecryption=True
     )
     for parameter in response['Parameters']:
         return parameter['Value']
