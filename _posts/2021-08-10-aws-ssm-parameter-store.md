@@ -75,7 +75,7 @@ CSV,TSV,CLF,ELF,JSON
 
 - SecureString은 AWS의 KMS key를 이용하여 decrypt, encrypt됩니다. KMS key는 AWS가 기본으로 제공하는 값을 사용해도 되고, 우리가 만든 KMS key를 사용해도 됩니다.
 
-- 다양한 AWS 내의 서비스에서 사용될 수 있다. 심지어는 람다 코드 내에서도 사용될 수 있습니다.
+- 다양한 AWS 내의 서비스에서 사용될 수 있는데요, 심지어는 람다 코드 내에서도 parameter 값을 불러와서 사용할 수 있습니다.
 
 ```python
 from __future__ import print_function
@@ -101,11 +101,30 @@ def lambda_handler(event, context):
 ***
 
 ## 📌 3. 사용해보기
-> <cite>python 코드 내에서의 사용을 예시로 설명합니다.</cite>
+> <cite>python 코드 내에서 SecureString 타입으로 정의한 값을 사용하는 예시입니다.</cite>
+
+### Step 1. parameter 생성 하기
+- parameter는 AWS 의 콘솔(웹)에서도 생성이 가능하고, AWS CLI를 통해 생성하는 것도 가능합니다.
 
 - AWS의 System Manager > 좌측 메뉴에서 Parameter Store 클릭 > Create parameter 클릭 > Name에 parameter 이름 입력 > Type 선택 및 Value 입력 
 
 <img src="https://user-images.githubusercontent.com/26498433/128894733-879fc535-bf62-4849-ba21-151848a98023.png" />
+
+  - Name
+    - parameter의 이름(변수명이라고 생각하면 편할 것 같습니다)을 선언합니다.
+    - 운영중인 여러 서비스 내에서 사용될 수 있기 때문에 하이픈('-')을 이용해 의미를 설명할 수 있겠죠?(갑자기 질문)
+    - (예) server-dev-db-url : 개발 서버의 DB URL 정보를 저장합니다.
+    
+  - Tier [ref](!https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html)
+    - Standard : default Tier로써 해당 Region에 최대 10,000개의 parameter를 저장할 수 있게 됩니다. 저의 경우처럼 고작해야 서비스 내의 변수들만 관리하는 용도라면 문제가 없겠지만, 실시간으로 parameter를 생성해야하는 로직이 있다면 Advanced Tier를 고려하는 것이 좋습니다.
+    - Advanced : parameter를 100,000개까지 생성할 수 있습니다. 자세한 내용은 ref의 링크를 참고해주세요.
+  
+  - Type : 위에서 설명한 것 처럼 사용하려는 용도에 맞는 타입을 선택합니다.
+    
+  - Value : 실제로 불러올 값을 입력합니다(config, secret 값 등)
+    
+  - 예시
+  <img src="https://user-images.githubusercontent.com/26498433/129469271-f53df10f-30da-4752-9b74-a52aa0be04f9.png" />
 
 - 우선, 파이썬 코드 내에서 AWS의 서비스(S3, SQS 등)를 접근하기 위해서는 boto3라는 라이브러리를 사용해야한다.
 ```bash
@@ -116,4 +135,4 @@ $ pip install boto3
 
 - (작성중)
 
-[참고](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
+[참고](!https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
