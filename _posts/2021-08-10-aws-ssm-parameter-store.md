@@ -42,7 +42,7 @@ categories:
 
 
 ### 2.1 parameter가 뭔데?
-- Parameter Store의 parameter는 Parameter Store에 저장된 **텍스트 블록이나 이름의 리스트, 비밀번호, 또는 AMI ID와 같은 데이터**를 의미합니다. 이를 통해 우리의 스크립트나 커맨드같은 곳에서 안전하고 관리되기 용이하게 사용될 수 있습니다.
+- Parameter Store의 parameter는 Parameter Store에 저장된 **텍스트 블록이나 이름의 리스트, 비밀번호, 또는 AMI ID와 같은 데이터**를 의미합니다. 이를 통해 우리의 스크립트나 커맨드같은 곳에서 안전히 관리된 채로 사용할 수 있습니다.
 
 - parameter에는 3가지 타입이 있습니다.
     - String
@@ -50,7 +50,6 @@ categories:
     - SecureString
   
 - String과 StringList는 말 그대로 문자열과 문자열 리스트 타입입니다. 말 그대로 문자열과 문자열 리스트를 Parameter Store에 저장해놓고 코드에서 불러오는 형식으로 사용할 수 있는 것이죠.
-
 ```
 // String 타입 예시
 abc123
@@ -71,16 +70,35 @@ CSV,TSV,CLF,ELF,JSON
 
 - '그래도 그냥 String으로 사용해도 되지 않을까?' 할 수 있겠지만, 우리가 모르는 사이에 CloudTrail 로그나 일반 커맨드 메세지나 agent 로그에 포함되어있을 수도 있습니다.
 
-- Secure String 생성하기 : [참고](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
+- Secure String 생성하기 : `📌 3. 사용해보기` 참고
 
-- SecureString은 KMS key를 이용하여 decrypt, encrypt한다.
+- SecureString은 AWS의 KMS key를 이용하여 decrypt, encrypt됩니다. KMS key는 AWS가 기본으로 제공하는 값을 사용해도 되고, 우리가 만든 KMS key를 사용해도 됩니다.
 
-- 다양한 AWS 내의 서비스에서 사용될 수 있다. 심지어는 람다에서도 사용될 수 있다!
+- 다양한 AWS 내의 서비스에서 사용될 수 있다. 심지어는 람다 코드 내에서도 사용될 수 있습니다.
+```python
+from __future__ import print_function
+ 
+import json
+import boto3
+ssm = boto3.client('ssm', 'ap-northeast-2')
+
+def get_parameters():
+    response = ssm.get_parameters(
+        Names=['LambdaSecureString'],WithDecryption=True # LambdaSecureString값을 불러옵니다.
+    )
+    for parameter in response['Parameters']:
+        return parameter['Value']
+        
+def lambda_handler(event, context):
+    value = get_parameters()
+    print("value1 = " + value)
+    return value  # Echo back the first key value
+```
 
 ***
 
 ## 📌 3. 사용해보기
-> python 코드 내에서의 사용을 예시로 설명합니다.
+> <cite>python 코드 내에서의 사용을 예시로 설명합니다.</cite>
 
 - AWS의 System Manager > 좌측 메뉴에서 Parameter Store 클릭 > Create parameter 클릭 > Name에 parameter 이름 입력 > Type 선택 및 Value 입력 
 
@@ -94,3 +112,5 @@ $ pip install boto3
 - 또한 AWS 서비스에 접근하기 위해서는 코드를 작성하는 환경이 해당 권한을 가지고 있다는 것을 증명해야한다. 증명 방법에는 여러가지가 있는데, AWS CLI를 설치한 뒤 config에 Access Key와 ID를 직접 등록하는 방식도 있고, 코드 내에 직접 추가하는 방식도 있다(보안적으로 후자의 방식은 별로 추천하지 않는다).
 
 - (작성중)
+
+[참고](https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
