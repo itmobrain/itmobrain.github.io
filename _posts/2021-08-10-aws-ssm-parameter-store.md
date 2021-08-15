@@ -124,7 +124,7 @@ def lambda_handler(event, context):
   - 생성 완료 예시
   <img src="https://user-images.githubusercontent.com/26498433/129469271-f53df10f-30da-4752-9b74-a52aa0be04f9.png" />
 
-### Step 2. Policy 선언 및 코드 구현(파이썬 예시)
+### Step 2. Policy 선언 및 코드 구현(Python 예시)
 - parameter를 생성하였으니, 코드 내에서 잘 불러와지는지 확인해봅시다.
 
 - 우선, 파이썬 코드 내에서 AWS의 서비스(S3, SQS 등)를 접근하기 위해서는 boto3라는 라이브러리를 사용해야합니다.
@@ -136,10 +136,10 @@ $ pip install boto3
 
 <img src="https://user-images.githubusercontent.com/26498433/129469705-9ee55db1-7718-4f90-b3a1-c43e0a1f9c19.png" />
 
-  - "Action" : 허용할 action을 추가합니다. 여기서는 parameter를 불러오는 기능만 테스트하기 때문에 GetParameter에 대한 권한을 추가했습니다.
-  - "Resource" : policy를 통해 접근 가능한 parameter를 추가합니다. 위의 예시에서는 '*'을 입력하여 모든 parameter를 접근할 수 있도록 하였습니다. 
+  - **Action** : 허용할 action을 추가합니다. 여기서는 parameter를 불러오는 기능만 테스트하기 때문에 GetParameter에 대한 권한을 추가했습니다.
+  - **Resource** : policy를 통해 접근 가능한 parameter를 추가합니다. 위의 예시에서는 '*'을 입력하여 모든 parameter를 접근할 수 있도록 하였습니다. 
 
-- 아래의 코드를 통해 parameter를 불러옵니다. [boto3 문서 참고](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ssm.html#SSM.Client.get_parameter)
+- 마지막으로 아래의 코드를 통해 parameter를 불러옵니다. [boto3 문서 참고](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ssm.html#SSM.Client.get_parameter)
 
 ```python
 def __get_parameter(parameter_name):
@@ -159,6 +159,20 @@ def __get_parameter(parameter_name):
 
     return response['Parameter']['Value']
 ```
-  
 
-[참고](!https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
+***
+
+## 📌 4. 마치며
+
+- 당초 생각했던 것보다 많은 내용을 담지 못한 것 같습니다😢 parameter를 생성하고, 불러오는 방식만 설명하려 했지만 Use Case에 따른 옵션들이 다양해서 이것들을 모두 설명하기에는 제 역량이 아직 부족하지 않나 싶습니다.
+
+- 매번 느끼는 것이지만 AWS 내의 서비스를 사용하기 위해서는 기본 적인 권한(IAM 등)이나 서비스들에 대한 전반적인 특징들을 파악하고 있는 것이 중요한 것 같습니다. Developer Associate를 준비하며 계속 내용들을 정리해나가야 겠습니다.
+
+
+***
+
+## Reference
+
+- [AWS System Manager Parameter Store](!https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html)
+- [Create a SecureString parameter](!https://docs.aws.amazon.com/systems-manager/latest/userguide/param-create-cli.html#param-create-cli-securestring)
+- [Managing parameter tiers](!https://docs.aws.amazon.com/systems-manager/latest/userguide/parameter-store-advanced-parameters.html)
