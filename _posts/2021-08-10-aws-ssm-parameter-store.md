@@ -73,6 +73,8 @@ CSV,TSV,CLF,ELF,JSON
 
 - SecureString은 AWS의 KMS key를 이용하여 decrypt, encrypt됩니다. KMS key는 AWS가 기본으로 제공하는 값을 사용해도 되고, 우리가 만든 KMS key를 사용해도 됩니다.
 
+- 작동 방식은 [링크](https://docs.aws.amazon.com/kms/latest/developerguide/services-parameter-store.html#parameter-store-advanced-encrypt) 를 참고해주세요. getParameter()를 실행할 떄 with-decryption 옵션을 활성화한 경우 자동으로 KMS 인증 로직이 실행되어 decrypt된 value값을 얻게 됩니다.
+
 - 다양한 AWS 내의 서비스에서 사용될 수 있는데요, 심지어는 람다 코드 내에서도 parameter 값을 불러와서 사용할 수 있습니다.
 
 ```python
@@ -139,7 +141,7 @@ $ pip install boto3
   - **Action** : 허용할 action을 추가합니다. 여기서는 parameter를 불러오는 기능만 테스트하기 때문에 GetParameter에 대한 권한을 추가했습니다.
   - **Resource** : policy를 통해 접근 가능한 parameter를 추가합니다. 위의 예시에서는 '*'을 입력하여 모든 parameter를 접근할 수 있도록 하였습니다. 
 
-- 마지막으로 아래의 코드를 통해 parameter를 불러옵니다. [boto3 문서 참고](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ssm.html#SSM.Client.get_parameter)
+- 마지막으로 아래의 코드를 통해 parameter를 불러옵니다. [boto3 문서 참고](!https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/ssm.html#SSM.Client.get_parameter)
 
 ```python
 def __get_parameter(parameter_name):
