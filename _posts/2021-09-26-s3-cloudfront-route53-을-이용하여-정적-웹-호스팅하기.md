@@ -107,12 +107,14 @@ categories:
 ### 정리해볼까요?
 - 간단한 웹 코드를 S3 버킷에 업로드하여 URL을 통해 웹페이지를 생성하게 되었습니다.
 - 웹페이지 URL은 다음과 같습니다.
+
     `http://{버킷 이름}.s3-website.{버킷 region}.amazonaws.com`
 
 ***
 
 ## 📌 3. S3와 CloudFront 연동
 (1) CloudFront 콘솔에 접속하여 '배포 생성'을 클릭합니다.
+
 (2) 여기서 중요한데요, 원본 도메인의 드롭다운을 클릭하게되면 여러 S3 버킷들의 목록이 보일 겁니다.
 <img src="https://user-images.githubusercontent.com/26498433/134797915-800c90fe-a57f-48c5-8ff6-6233bfed7ee7.png"/>
 *버킷을 선택하게되면 다음과 같이 도메인 이름이 입력된 것을 볼 수 있습니다.*
@@ -134,7 +136,6 @@ categories:
 (3) 저희는 웹페이지를 HTTPS만 사용하기 위해 '뷰어 프로토콜 정책'에서 'Redirect HTTP to HTTPS'를 선택하도록 하겠습니다. 
 
 (4) 완료하였으면 '배포 생성'을 클릭합니다. 대략 3분 정도 후에 배포가 완료될 때까지 기다립니다.
-
 <img src="https://user-images.githubusercontent.com/26498433/134797961-7bb4d6bf-2243-4d03-a5b4-8abb2b7d663c.png"/>
 
 (5) '원본' 탭에서 '원본 도메인'에 (2)에서 입력한 URL 형식이 제대로 되었는지 다시 한 번 확인합니다.
@@ -142,11 +143,9 @@ categories:
 ```html
 {버킷 이름}.s3-website.{버킷 Region}.amazonaws.com
 ```
-
 <img src="https://user-images.githubusercontent.com/26498433/134797981-4c68626c-5354-4067-b81e-a511b05caf11.png"/>
 
 (6) '세부 정보'의 '배포 도메인 이름'의 URL(~~.cloudfront.net)을 복사한 뒤, 웹페이지에서 열어보도록 하겠습니다. 정상적으로 표시되는 것을 확인할 수 있습니다.
-
 <img src="https://user-images.githubusercontent.com/26498433/134798044-f60a0bb4-329f-47df-b323-c02b3cf7aabc.png"/>
 
 ### 정리해볼까요?
@@ -187,4 +186,5 @@ categories:
     <img src="https://user-images.githubusercontent.com/26498433/134798242-de993cb6-8bf5-4dee-b9ae-746a5ea80475.png"/>
 
 - 잠시 기다린 뒤 생성한 도메인 주소를 입력하면 정상적으로 웹페이지가 등록된 것을 확인할 수 있습니다. 수고하셨습니다.
+    
     <img src="https://user-images.githubusercontent.com/26498433/134798257-15d5a93e-8728-4b0f-84eb-a4113d29c78a.png"/>
