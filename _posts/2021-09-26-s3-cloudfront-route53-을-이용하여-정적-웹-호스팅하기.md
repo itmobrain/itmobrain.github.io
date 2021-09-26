@@ -151,6 +151,7 @@ categories:
 <img src="https://user-images.githubusercontent.com/26498433/134797981-4c68626c-5354-4067-b81e-a511b05caf11.png"/>
 
 (6) '세부 정보'의 '배포 도메인 이름'의 URL(~~.cloudfront.net)을 복사한 뒤, 웹페이지에서 열어보도록 하겠습니다. 정상적으로 표시되는 것을 확인할 수 있습니다.
+
 <img src="https://user-images.githubusercontent.com/26498433/134798044-f60a0bb4-329f-47df-b323-c02b3cf7aabc.png"/>
 
 ### 정리해볼까요?
