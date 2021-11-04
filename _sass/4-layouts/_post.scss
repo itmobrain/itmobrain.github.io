@@ -300,7 +300,7 @@
 /* Related posts */
 .related-posts {
   display: none;
-  margin-top: 80px;
+  margin-top: 10px;
 
   &.is-related {
     display: block;
@@ -311,7 +311,7 @@
   }
 
   @media only screen and (max-width: $mobile) {
-     margin-top: 60px;
+     margin-top: 10px;
 
     .row .col:last-child {
       margin-bottom: 0;
@@ -321,11 +321,11 @@
 
 /* Disqus */
 .show-comments {
-  margin: 48px 0 32px;
+  margin: 12px 0 10px;
   text-align: center;
 
   .disqus-button {
-    padding: 28px;
+    padding: 14px;
     border-radius: 8px;
     text-decoration: underline;
     text-decoration-color: transparent;
@@ -336,10 +336,10 @@
   }
 
   @media only screen and (max-width: $mobile) {
-    margin: 60px 0 0;
+    margin: 10px 0 0;
 
     .disqus-button {
-      padding: 24px;
+      padding: 12px;
     }
   }
 }
@@ -383,10 +383,10 @@
 
 /* Recent posts */
 .recent-posts {
-  margin-top: 80px;
+  margin-top: 40px;
 
   @media only screen and (max-width: $mobile) {
-     margin-top: 60px;
+     margin-top: 20px;
 
     .row .col:last-child {
       margin-bottom: 0;

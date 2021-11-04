@@ -1,5 +1,6 @@
 <!-- begin comments -->
 <div class="show-comments">
+
   <button class="button disqus-button" id="show-comments-button" onclick="disqus();return false;">댓글 보기</button>
 </div>
 
@@ -11,8 +12,7 @@
   var disqus_loaded = false;
   var disqus_shortname = '{{ site.disqus-identifier }}';
   var disqus_container = document.getElementById("disqus_thread");
-  function disqus() {
-    if (!disqus_loaded) {
+  if (!disqus_loaded) {
       disqus_loaded = true;
       var e = document.createElement("script");
       e.type = "text/javascript";
@@ -26,7 +26,6 @@
       // Show disqus comments
       disqus_container.classList.add("is-open");
     }
-  }
 </script>
 
 <noscript>Please enable JavaScript to view the
