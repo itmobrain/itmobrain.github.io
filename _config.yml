@@ -40,7 +40,7 @@ hero:
 #-------------------------------
 # Newsletter
 mailchimp: enable # To enable the mailchimp form, use the value 'enable'. To disable the form, leave the field blank.
-mailchimp__identifier: frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3 # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
+mailchimp__identifier: github.us20.list-manage.com/subscribe/post?u=bcadae01b7923c394ece51a14&amp;id=3083a440df # Add your MailChimp form identifier. For example - frnla.us6.list-manage.com/subscribe/post?u=6314d69a3f315af7ce3fb00a0&amp;id=3038727cc3
 mailchimp__input__text: E-mail
 mailchimp__button__text: Gửi
 
@@ -69,7 +69,8 @@ gallery:
       url: '/images/admin/khanh.jpg'
     - alt: 'Rest'
       url: '/images/admin/thien.jpg'
-
+    - alt: 'Rest'
+      url: '/images/admin/nguyen.jpg'
 
 #-------------------------------
 # Contact Settings
