@@ -1,6 +1,0 @@
-I"�<ul>
-  <li>ffmpeg 라이브러리를 사용하면서, 일부 기종에서는 특정 라이브러리를 찾지 못하는 에러(UnsatisfiedLinkError)가 리포팅되는 것을 인지하게 되었다.
-<br /><img src="https://user-images.githubusercontent.com/26498433/122062932-ce4c7e80-ce2a-11eb-83e1-249252132119.png" width="700" /></li>
-  <li>요놈의 원인은 무엇이며, 왜 발생한 것인지를 알아보고자 한다.</li>
-</ul>
-:ET

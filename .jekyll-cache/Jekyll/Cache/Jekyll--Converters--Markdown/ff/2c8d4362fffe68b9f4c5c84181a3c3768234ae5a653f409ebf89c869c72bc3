@@ -1,8 +1,0 @@
-I"�<h2 id="1-개요">1. 개요</h2>
-<ul>
-  <li>RecyclerView의 Adapter가 그려주는 각 아이템들의 데이터에 변화(추가, 삭제, 수정 등)가 생겼을때, Adapter에 그려줘야하는 데이터에 변화가 생겼음을 알려줘야함.</li>
-  <li>이 경우, 다음과 같은 메소드들을 사용할 수 있음. <a href="!https://developer.android.com/reference/androidx/recyclerview/widget/RecyclerView.Adapter">링크</a>
-<img src="https://user-images.githubusercontent.com/26498433/118092091-99ea3a80-b406-11eb-9bb6-dec35aace2aa.png" /></li>
-  <li>예를들어 아이템이 추가된 경우, 대표적으로는 notifyDataSetChanged()와 notifyItemInserted()를 고민할 수 있을 것이다.</li>
-</ul>
-:ET
