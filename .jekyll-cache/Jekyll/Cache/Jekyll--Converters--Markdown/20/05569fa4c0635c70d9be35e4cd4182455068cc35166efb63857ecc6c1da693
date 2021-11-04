@@ -1,0 +1,83 @@
+I"�<p>안드로이드 내부 데이터베이스를 생성해서 써야할 프로젝트를 진행하고있다.<br />
+<br />
+주요 로직을 실행할 때마다 내부 데이터베이스의 데이터들을 불러오고 저장할 필요가 있기 때문에,<br />
+<br />
+아무것도 모르고 구현을 하게되면 매번 DB 객체를 생성하고 종료하는 것을 반복하게 되는 것이었다.<br />
+<br />
+이는 매우 비효율적이고 프로그램이 커지게되면 어떤 문제를 일으킬지 몰라 ‘최초 한 번만 메모리를 할당하고 그 메모리에 인스턴스를 만들어 사용하는’ 싱글톤 패턴을 적용해보려 하였다.<br />
+<br /></p>
+
+<h2 id="이-글을-통해-당신이-배울-수-있는-것">이 글을 통해 당신이 배울 수 있는 것</h2>
+
+<h3 id="1-giới-thiệu">1. Giới thiệu</h3>
+<p>Xin chào mọi người, mình tên là Đỗ Bảo Hoàng hiện đang là sinh viên thạc sĩ năm 1 chuyên ngành an toàn thông tin (10.04.01) trường đại học ITMO, đã tốt nghiệp chuyên ngành an toàn thông tin (10.03.01) năm 2021. Trong suốt 5 năm ngụp lặn với việc học tập tại ITMO, mình nhận được khá nhiều câu hỏi của các bạn khóa dưới, trong đó câu hỏi thường gặp nhất là: ngành mình học gì vậy anh? :v :v :v</p>
+
+<p>Nhớ lại sau 1-2 năm học đầu mình cũng không hề có được cái nhìn khái quát về ngành học của chính mình. Lúc đó mình cảm thấy rất bối rối và mông lung không hiểu mình đang học gì và vai trò của các môn học trên trường. Kéo theo đó là bao khó khăn, áp lực và cả chán nản suốt những năm học đại học.</p>
+
+<p>Sau khi đã tốt nghiệp cử nhân và có cái nhìn đầy đủ hơn về ngành học này, mình thực sự muốn tóm tắt lại và chia sẻ những điều mình biết để giúp các bạn có được cái nhìn khái quát và hiểu hơn về an toàn thông tin, hy vọng những thông tin này sẽ giúp các bạn giảm bớt phần nào những khó khăn mà mình đã gặp phải trong quá trình học tập trước đó.</p>
+
+<h3 id="2-an-toàn-thông-tin-là-gì">2. An toàn thông tin là gì?</h3>
+<p>An toàn thông tin (hay InfoSec) là việc bảo vệ bất kì thông tin nào trước các mối nguy hại. An toàn thông tin tập trung vào 3 mục tiêu chính cần bảo vệ thường được gọi là tam giác CIA:</p>
+<ul>
+  <li>Tính bí mật (Confidentiality): thông tin chỉ được cung cấp hoặc tiết lộ cho những người được cho phép. Ví dụ: bằng cách nào đó, một người khác không có sự cho phép của bạn nhìn thấy mật khẩu tài khoản Facebook hoặc Google. Trong trường hợp đó, mật khẩu của bạn đã bị xâm phạm và tính bí mật bị vi phạm.</li>
+  <li>Tính toàn vẹn (Integrity): thông tin trong toàn bộ vòng đời của nó được duy trì và đảm bảo chính xác, đầy đủ, không bị thay đổi trái phép. Ví dụ: trong hệ thống kiểm soát không lưu, trạng thái của mỗi chuyến bay phải được cập nhật liên tục và chính xác. Nếu hacker xâm nhập và thay đổi thông tin sẽ dẫn đến những thiệt hại rất lớn.</li>
+  <li>Tính khả dụng (Availability): thông tin có thể truy cập bất cứ khi nào cần. Ví dụ: trong cuộc tấn công từ chối dịch vụ (DDoS), không thể truy cập dữ liệu của server và Tính khả dụng bị vi phạm.</li>
+</ul>
+
+<p>Mục tiêu là vậy thế còn làm sao để đạt được? Hay đúng hơn làm an toàn thông tin là làm gì? Để trả lời được câu hỏi này rất khó vì bất cứ hành động nào giúp đạt được 1 trong 3 mục tiêu nêu trên đều là làm an toàn thông tin. Ngành InfoSec rất rộng và có thể chia làm 4 lĩnh vực nhỏ:</p>
+<ul>
+  <li>Tổ chức và pháp lý (organisational and legal): nghiên cứu các phương pháp tổ chức thông tin và xây dựng bộ pháp lý phục vụ mục đích bảo mật thông tin</li>
+  <li>Phần mềm và phần cứng (software and hardware): nghiên cứu, xây dựng các phần mềm (phần mềm diệt virus, phần mềm dò tìm lỗ hổng,…) và phần cứng (camera, máy dò sóng, chặn sóng,…) hoặc bộ công cụ gồm phần mềm-phần cứng kết hợp (máy kiểm tra sinh trắc học, thẻ propusk,…)</li>
+  <li>Công nghệ và kỹ thuật (engineering and technical): nghiên cứu, xây dựng các công nghệ, kỹ thuật phục vụ mục đích bảo mật thông tin (kỹ thuật tấn công, phòng thủ, dịch ngược, điều tra số,…)</li>
+  <li>Mật mã (cryptographic): nghiên cứu sự an toàn những loại mật mã hiện tại, xây dựng các thuật toán mật mã mới (Caesar, DES, SHA,… )</li>
+</ul>
+
+<p>Tuy vậy khi đi làm thực tế công việc thường sẽ kết hợp sử dụng kiến thức, kỹ năng từ tất cả các lĩnh vực trên chứ không đơn thuần sử dụng một lĩnh vực nào cả. Nếu phân loại theo các ngành áp dụng sẽ có rất nhiều ngành. Trong đó có 4 ngành chính và lớn nhất:</p>
+<ul>
+  <li>An toàn sản phẩm (product security): làm việc với các đội phát triển sản phẩm để đảm bảo sản phẩm làm ra an toàn cho người dùng và an toàn cho hệ thống của công ty (kiểm định mã nguồn, đào tạo nâng cao nhận thức của nhân viên, phát triển các giải pháp ngăn chặn kỹ thuật tấn công,…)</li>
+  <li>An toàn vận hành (operations security): đảm bảo sự an toàn cho toàn bộ hệ thống thông tin của doanh nghiệp (đưa ra chính sách, quy định, giám sát an ninh mạng, xử lí sự cố,…)</li>
+  <li>Phát triển công cụ (applied security): phát triển và cung cấp các công cụ, dịch vụ và thư viện phần mềm có liên quan đến an toàn thông tin cho các nhóm phát triển sản phẩm sử dụng lại.</li>
+  <li>Tìm diệt mã độc và các nguy cơ khác (threat analysis): phân tích, truy tìm nguồn gốc và tiêu diệt tận gốc mã độc và các tấn công có chủ đích (targeted attack).</li>
+</ul>
+
+<p>Chi tiết hơn các bạn có thể tham khảo các đường dẫn mình cung cấp thêm ở cuối bài viết.</p>
+
+<p><br />
+<br /></p>
+<hr />
+
+<p>그렇다면, 나는 싱글톤이라고 말만 들어봤지, 정확한 개념을 머릿 속에 가지고 있지 않다.<br />
+싱글톤란 무엇일까?<br />
+<br />
+<br /></p>
+<h2 id="what-is-singletonpattern">What is Singleton(Pattern)?</h2>
+<ul>
+  <li>자바 디자인 패턴 중에 하나인듯하다.</li>
+  <li>하나의 클래스에 대해 앱이 시작될 때 한번만 메모리를 할당하고(static 이용), 그 메모리에 인스턴스를 생성한다.</li>
+  <li>생성자가 여러번 호출되어도 실제 생성되는 객체는 하나다.</li>
+  <li>최초에 만들어지는 생성자(A) 이후의 생성자(B) 호출에 대해서는 최초에 만들어지는 생성자(A)를 대신 반환해준다.
+<br />
+<br /></li>
+</ul>
+
+<h2 id="so-how-can-i-use-thatgeneral">So, How can I use that?(General)</h2>
+
+<p>####1. 이른 초기화</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// singleton code here
+public class SingletonPatternExample {
+    public SingletonPatternExample() {
+        // constructor
+        
+    }
+}
+</code></pre></div></div>
+
+<p>####2. 늦은 초기화</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<h2 id="sqlite-with-singleton">SQLite with Singleton</h2>
+
+<h2 id="singleton의-문제점">Singleton의 문제점</h2>
+<p>1</p>
+:ET
