@@ -52,7 +52,7 @@ gallery:
   gallery__columns: 4
   gallery__images:
     - alt: 'Tran Duc Manh'
-      url: '/images/admin/manh.jpg'
+      url: '/images/admin/thang.jpg'
     - alt: 'Do Bao Hoang'
       url: '/images/admin/hoang.jpg'
     - alt: 'Trieu Tam'
@@ -74,7 +74,7 @@ gallery:
     - alt: 'Rest'
       url: '/images/admin/nguyen3.jpg'
     - alt: 'Rest'
-      url: '/images/admin/nguyen.jpg'
+      url: '/images/admin/manh.jpg'
 
 #-------------------------------
 # Contact Settings
