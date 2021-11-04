@@ -49,7 +49,7 @@ mailchimp__button__text: Gửi
 # Gallery Footer Section
 gallery:
   gallery__title: Thành viên ban điều hành
-  gallery__columns: 3
+  gallery__columns: 4
   gallery__images:
     - alt: 'Tran Duc Manh'
       url: '/images/admin/manh.jpg'
@@ -68,7 +68,7 @@ gallery:
     - alt: 'Notes'
       url: '/images/admin/khanh.jpg'
     - alt: 'Rest'
-      url: '/images/admin/nguyen.jpg'
+      url: '/images/admin/thien.jpg'
 
 
 #-------------------------------
