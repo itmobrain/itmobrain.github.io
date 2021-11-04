@@ -5,8 +5,8 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 04 Nov 2021 18:45:47 +0300</pubDate>
-        <lastBuildDate>Thu, 04 Nov 2021 18:45:47 +0300</lastBuildDate>
+        <pubDate>Thu, 04 Nov 2021 19:02:15 +0300</pubDate>
+        <lastBuildDate>Thu, 04 Nov 2021 19:02:15 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
             <item>
@@ -20,6 +20,7 @@
 &lt;p&gt;Sau khi đã tốt nghiệp cử nhân và có cái nhìn đầy đủ hơn về ngành học này, mình thực sự muốn tóm tắt lại và chia sẻ những điều mình biết để giúp các bạn có được cái nhìn khái quát và hiểu hơn về an toàn thông tin, hy vọng những thông tin này sẽ giúp các bạn giảm bớt phần nào những khó khăn mà mình đã gặp phải trong quá trình học tập trước đó.&lt;/p&gt;
 
 &lt;h3 id=&quot;2-an-toàn-thông-tin-là-gì&quot;&gt;2. An toàn thông tin là gì?&lt;/h3&gt;
+&lt;div style=&quot;vertical-align: middle;align= center;margin: auto&quot;&gt;&lt;p&gt;&lt;img src=&quot;/images/bitimg.png&quot; height=&quot;50%&quot; width=&quot;50%&quot; alt=&quot;cia&quot; /&gt;&lt;br /&gt;&lt;br /&gt;The Confidentiality, Integrity, Availability (CIA) triad.&lt;/p&gt;&lt;/div&gt;
 &lt;p&gt;An toàn thông tin (hay InfoSec) là việc bảo vệ bất kì thông tin nào trước các mối nguy hại. An toàn thông tin tập trung vào 3 mục tiêu chính cần bảo vệ thường được gọi là tam giác CIA:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Tính bí mật (Confidentiality): thông tin chỉ được cung cấp hoặc tiết lộ cho những người được cho phép. Ví dụ: bằng cách nào đó, một người khác không có sự cho phép của bạn nhìn thấy mật khẩu tài khoản Facebook hoặc Google. Trong trường hợp đó, mật khẩu của bạn đã bị xâm phạm và tính bí mật bị vi phạm.&lt;/li&gt;
