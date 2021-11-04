@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact
+title: Liên hệ
 permalink: /contact/
 image: '/images/16.jpg'
 ---
@@ -14,15 +14,15 @@ image: '/images/16.jpg'
   <form class="form" action="{% if site.data.settings.contact.email %}https://formspree.io/{{site.data.settings.contact.email}}{% else %}#{% endif %}" method="POST">
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-name">이름</label>
-      <input class="form__input" id="form-name" type="text" name="name" placeholder="Name" required>
+      <input class="form__input" id="form-name" type="text" name="name" placeholder="Họ và tên" required>
     </div>
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-email">이메일 주소</label>
-      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Email" required>
+      <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Địa chỉ email" required>
     </div>
     <div class="form__group">
       <label class="form__label screen-reader-text" for="form-text">내용을 입력해주세요</label>
-      <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="Message" required></textarea>
+      <textarea class="form__input" id="form-text" name="text" rows="10" placeholder="Tin nhắn" required></textarea>
     </div>
     <div class="form__group">
       <button class="button button--primary" type="submit">문의하기</button>

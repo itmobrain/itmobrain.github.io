@@ -1,0 +1,5 @@
+I"�<h2 id="1-개요">1. 개요</h2>
+<ul>
+  <li>DialogFragment위에 기존의 목적 이상의 기능(canvas, view 전환 등)이 동작하다보니, life cycle을 제대로 알고 구현할 필요가 생겼음.</li>
+</ul>
+:ET

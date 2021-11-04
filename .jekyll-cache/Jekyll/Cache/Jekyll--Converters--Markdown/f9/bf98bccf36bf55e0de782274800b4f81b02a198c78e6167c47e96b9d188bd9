@@ -1,0 +1,147 @@
+I"�8<h2 id="-1-읽기-전에">📌 1. 읽기 전에</h2>
+
+<blockquote>
+  <p><cite>📌 해당 글은 저자가 FastAPI를 이용한 백엔드 서버를 구축하며 필요한 개념들을 밀키트(?) 형식으로 작성한 글입니다.</cite>
+<cite>📌 FastAPI로 백엔드 서버를 구축하고자 하는데 어디서부터 시작해야할지 고민중인 분들께 조금이나마 도움이 되기를 바랍니다.</cite></p>
+
+  <p><cite>📌 해당 글에서는 다음과 같은 내용들을 다룹니다.</cite><br />
+<cite>- pydantic 라이브러리를 통한 model 정의</cite><br />
+<cite>- 프로젝트 폴더 구조</cite></p>
+</blockquote>
+
+<hr />
+
+<h2 id="-2-model-정의">📌 2. Model 정의</h2>
+
+<p>어떤 서비스를 개발하든지 데이터를 정의하고 체계화하는 것이 필수라고 생각합니다. FastAPI를 통한 API 서버를 구축할 때도 마찬가지인데요, FastAPI 서버의 request와 response에 사용되는 데이터(Model)를 정의해봅시다.</p>
+
+<h3 id="21-pydantic">2.1 pydantic</h3>
+
+<ul>
+  <li>
+    <p>공식 문서 <a href="https://pydantic-docs.helpmanual.io/">링크</a></p>
+  </li>
+  <li>백엔드 서버라고 한다면 많은 정보들을 조합하고 가공하는 로직이 많을텐데, 이 과정에서 데이터의 유효성이나 형식을 관리하는 것은 매우 번거롭고 복잡할 것입니다. 따라서 pydantic과 같은 data validation 라이브러리를 사용하여 이러한 번거로움을 줄일 수 있습니다.
+    <blockquote>
+      <p><cite><em>엄밀히 말하면 validation을 해주는 라이브러리는 아닙니다. 공식 문서에도 나와있지만 input data가 아닌 output model의 형(type)과 조건(constraint)을 보장해주는 라이브러리라고 할 수 있습니다.</em></cite></p>
+    </blockquote>
+  </li>
+  <li>대표적으로 FastAPI와 궁합(?)을 맞춰 사용하고, 이미 다양한 프로젝트들에서 사용할 만큼 활용도가 높습니다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/26498433/132981991-61c6e1f8-156d-4f27-b43b-52c4f21f4145.png" />
+<em>jupyter notebook의 여러 서브 프로젝트에서도 사용한다고 jupyter notebook의 개발자가 친히(?) pydantic 프로젝트 이슈에 글을 남기기도 했군요.</em></p>
+
+<p><br /></p>
+
+<h3 id="22-model">2.2 Model</h3>
+
+<p>pydantic이 무엇인지 대충은 알고 넘어갔으니, 이제는 실제로 model을 정의하는 방식을 살펴봅시다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">'John Doe'</span>
+    <span class="n">signup_ts</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<p>pydantic의 예제 코드를 그대로 가져와봤는데요, 위의 코드를 통해 데이터 모델의 형 선언과 여러 옵션을 살펴볼 수 있습니다.</p>
+
+<h4 id="221-basemodel">2.2.1 BaseModel</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</code></pre></div></div>
+
+<p>pydantic을 통해 object를 정의하기 위해서는 위에서부터 계속 언급한 Model이라는 개념을 사용하는데요, 간단히 말하면 pydantic의 <code class="language-plaintext highlighter-rouge">BaseModel</code>을 상속한 클래스입니다.</p>
+
+<p>위의 예시에서는 User라는 Model을 정의하였고, pydantic을 통한 data validation이 가능해지는 object를 생성할 수 있게 되었군요.</p>
+
+<h4 id="222-field-정의">2.2.2 field 정의</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span> <span class="c1"># required
+</span>    <span class="n">name</span> <span class="o">=</span> <span class="s">'John Doe'</span> <span class="c1"># not required
+</span>    <span class="n">signup_ts</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span> <span class="c1"># not required
+</span>    <span class="n">friends</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># not required
+</span></code></pre></div></div>
+
+<p>여기서부터는 잠시 집중해주실 필요가 있습니다. 앞으로 많은 Model을 정의하시게 되면서 헷갈릴 수 있거든요.</p>
+
+<h5 id="1-필수-vs-필수가-아닌-필드-선언">(1) 필수 vs 필수가 아닌 필드 선언</h5>
+
+<p><strong>’ <code class="language-plaintext highlighter-rouge">=</code>을 통한 default값 선언이 있느냐 없느냐로 구분한다’</strong>  를 기억합시다. 위의 코드에서 <code class="language-plaintext highlighter-rouge">id</code>같은 경우에는 값이 선언되어있지 않기 때문에 필수(required) 필드이고, 나머지 <code class="language-plaintext highlighter-rouge">name</code>, <code class="language-plaintext highlighter-rouge">signup_ts</code>, <code class="language-plaintext highlighter-rouge">friends</code> 필드의 경우 default값이 선언되어있기 때문에 필수 필드가 아닙니다. 즉 다시 말해 <code class="language-plaintext highlighter-rouge">User</code> object를 선언할 경우, <code class="language-plaintext highlighter-rouge">id</code> 필드의 데이터를 반드시 정의해주어야합니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="s">'123'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>이렇게 user라는 이름의 User object를 선언하게 되면, id값만 선언해주었지만 다른 field의 값은 default 값으로 채워지겠죠?</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">assert</span> <span class="n">user</span><span class="p">.</span><span class="n">name</span> <span class="o">==</span> <span class="s">'Jane Doe'</span> <span class="c1"># True!
+</span></code></pre></div></div>
+
+<h5 id="2-필드-타입-선언">(2) 필드 타입 선언</h5>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">'John Doe'</span>
+    <span class="n">signup_ts</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">datetime</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">friends</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<p>위의 코드를 보며 어느정도 유추할 수 있듯이, <code class="language-plaintext highlighter-rouge">id</code>같은 경우 int 타입이라는 것을 알 수 있고, <code class="language-plaintext highlighter-rouge">signup_ts</code>는 뭔지는 모르겠지만 대충 datetime 타입이라는 것, <code class="language-plaintext highlighter-rouge">friends</code>의 경우 int형 리스트라는 것을 아실 수 있으실 겁니다.</p>
+
+<p>특이한 점이 있다면 <code class="language-plaintext highlighter-rouge">name</code> 필드같은 경우에는 따로 타입이 선언되어있지 않지만, ‘John Doe’라는 값을 default값으로 선언하여 str(문자열) 타입이라는 것을 선언하였습니다. 이런 식으로 default값을 통해 타입을 선언할 수도 있습니다.</p>
+
+<p>다음으로는 <code class="language-plaintext highlighter-rouge">signup_ts</code>, <code class="language-plaintext highlighter-rouge">friends</code> 필드에는 각각 <strong>Optional</strong>, <strong>List</strong> 타입으로 선언이 되었는데요, 이는 <strong>typing</strong> 모듈(공식 <a href="https://docs.python.org/3/library/typing.html">docs</a>)에서 지원하는 기능입니다. 타입 힌트를 언어 차원에서 지원하기 위해 파이썬 3.5 버전에서부터 스탠다드 라이브러리로 추가되었습니다.</p>
+
+<p><br /></p>
+
+<h4 id="223-정리">2.2.3 정리</h4>
+<ul>
+  <li>
+    <p>지금까지 기본적인 Model을 정의하는 방법, Model 내의 field에 대해서 필요하다고 생각하는 부분에 대해서만 설명드렸는데, 어떠셨나요? 분명 설명이 부족하겠지만 이런 부분은 앞으로 개발하시며 공식 문서를 읽어가다보면 자연스럽게 덧칠이 되는 느낌을 받으실 수 있으실 겁니다(개인적으로는 공식 문서를 읽는 재미가 있는 것 같았습니다).</p>
+  </li>
+  <li>
+    <p>마지막으로 실제 사용 예시 코드를 보며 간단히 정리해봅시다.</p>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">from</span> <span class="nn">pydantic</span> <span class="kn">import</span> <span class="n">BaseModel</span>
+
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">count</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="bp">None</span>
+
+<span class="k">class</span> <span class="nc">Bar</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">apple</span> <span class="o">=</span> <span class="s">'x'</span>
+    <span class="n">banana</span> <span class="o">=</span> <span class="s">'y'</span>
+
+<span class="k">class</span> <span class="nc">Spam</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">foo</span><span class="p">:</span> <span class="n">Foo</span>
+    <span class="n">bars</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Bar</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>3개의 Model이 정의되었군요. 어떻게 알 수 있냐구요? BaseModel을 상속한 클래스가 3개 있거든요!</p>
+
+<p><code class="language-plaintext highlighter-rouge">Foo</code>라는 Model은 int형 required 필드인 <code class="language-plaintext highlighter-rouge">count</code>와 default 값이 None으로 선언된 not required 필드인 <code class="language-plaintext highlighter-rouge">size</code>로 이루어졌군요.</p>
+
+<p>다음으로 <code class="language-plaintext highlighter-rouge">Bar</code>라는 Model은 시크합니다. not required 필드 2개로 ‘x’와 ‘y’값이 default인 필드로 이루어졌군요. 타입이 따로 선언되지 않았지만 default값이 둘 다 문자열(‘ ‘)인 것으로 보아 str(문자열) 타입인 것을 알 수 있습니다.</p>
+
+<p>마지막으로 <code class="language-plaintext highlighter-rouge">Spam</code>은 좀 신기합니다. 우리가 아는 타입(str, int 등)이 아닌 우리가 위에서 선언한 Model들을 타입으로 사용했습니다. 따라서 <code class="language-plaintext highlighter-rouge">bars</code>는 <strong>typing</strong>의 <strong>List</strong> 타입을 이용하여 <code class="language-plaintext highlighter-rouge">Bar</code> 타입의 리스트인 것을 알 수 있겠습니다(required 필드인 것도 아셨겠죠?!).</p>
+
+<p>이처럼 <strong>우리가 정의한 Model은 또 다른 Model의 타입으로 사용될 수 있습니다</strong>. 서비스를 개발하시다보면 나도 모르게 데이터들의 구조를 신경쓰며 개발하고있는(?) 본인을 발견하시게 될 겁니다.</p>
+
+:ET

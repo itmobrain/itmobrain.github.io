@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Portfolio(작성중)
+title: ITMO Brain
 permalink: /about/
 image: '/images/01-2.jpg'
 ---

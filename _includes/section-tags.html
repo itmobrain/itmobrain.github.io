@@ -4,8 +4,8 @@
     <div class="row">
       <div class="col col-12">
         <div class="section__head">
-          <h3 class="section__title">태그</h3>
-          <a href="{{ site.baseurl }}/tags/" class="section__link">전체보기</a>
+          <h3 class="section__title">Tags</h3>
+          <a href="{{ site.baseurl }}/tags/" class="section__link">Xem thêm</a>
         </div>
         {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{%
         endfor %}{% endcapture %}

@@ -5,8 +5,8 @@
     <div class="container">
       <div class="row">
 
-        <div class="col col-5 col-d-12">
-          <div class="footer__author">
+        <div class="col col-5 col-d-12 " >
+          <div class="footer__author justify-content-center" >
             <div class="footer__author-avatar">
               <img class="lazy" data-src="{{site.author.author__avatar}}" alt="{{site.author.author__name}}">
             </div>
@@ -28,22 +28,22 @@
         </div>
 
         {% if site.gallery %}
-<!--        <div class="col col-6 push-1 col-d-12 push-d-0">-->
-<!--          <div class="footer__gallery">-->
-<!--            <h3 class="footer__gallery-title">{{ site.gallery.gallery__title }}</h3>-->
-<!--            {% if site.gallery %}-->
-<!--            <div class="gallery-footer">-->
-<!--              <div class="gallery" style="grid-template-columns: repeat({{site.gallery.gallery__columns}}, auto);">-->
-<!--                {% for image in site.gallery.gallery__images %}-->
-<!--                <div class="gallery__image">-->
-<!--                  <img src="{{site.baseurl}}{{image.url}}" alt="{{image.alt}}" loading="lazy">-->
-<!--                </div>-->
-<!--                {% endfor %}-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            {% endif %}-->
-<!--          </div>-->
-<!--        </div>-->
+       <div class="col col-6 push-1 col-d-12 push-d-0">
+         <div class="footer__gallery">
+           <h3 class="footer__gallery-title">{{ site.gallery.gallery__title }}</h3>
+           {% if site.gallery %}
+           <div class="gallery-footer">
+             <div class="gallery" style="grid-template-columns: repeat({{site.gallery.gallery__columns}}, auto);">
+               {% for image in site.gallery.gallery__images %}
+               <div class="gallery__image">
+                 <img src="{{site.baseurl}}{{image.url}}" alt="{{image.alt}}" loading="lazy">
+               </div>
+               {% endfor %}
+             </div>
+           </div>
+           {% endif %}
+         </div>
+       </div>
         {% endif %}
 
       </div>

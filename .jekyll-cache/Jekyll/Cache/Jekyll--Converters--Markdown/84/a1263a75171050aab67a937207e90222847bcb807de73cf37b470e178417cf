@@ -1,0 +1,33 @@
+I"�	<h2 id="1-개요">1. 개요</h2>
+<ul>
+  <li>액티비티 전환간의 리소스 할당과 해제 타이밍이 중요한 기능을 테스트하던 도중, 어떻게 효율적으로 확인할 수 있을까? 하는 생각에서 검색을 시작하였다.</li>
+  <li>기존에는 생명주기 메소드(onCreate, onResume 등)에 무식하게(?) 로그를 추가해서 확인했었는데, 너무 비효율적이었다.</li>
+  <li>그러던중 adb 터미널 명령어로 확인이 가능하다는 것을 확인했다.</li>
+  <li>명령어는 아래와 같다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$adb</span> shell dumpsys activity activities | <span class="nb">sed</span> <span class="nt">-En</span> <span class="nt">-e</span> <span class="s2">"/Stack #/p "</span> <span class="nt">-e</span> <span class="s2">"/Running activities/,/Run #0/p"</span>
+</code></pre></div></div>
+
+<ul>
+  <li>터미널에 위의 명령어를 입력하면 아래와 같은 결과를 확인할 수 있다.</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Stack <span class="c">#1:</span>
+  Running activities <span class="o">(</span>most recent first<span class="o">)</span>:
+    TaskRecord<span class="o">{</span>4844b83d0 <span class="c">#159 A={앱 패키지명}} U=0 StackId=1 sz=2}</span>
+      Run <span class="c">#1: ActivityRecord{e348c0dd0 u0 {앱 패키지명}/{앱 패키지명}.{액티비티2} t159}</span>
+      Run <span class="c">#0: ActivityRecord{e23e359d0 u0 {앱 패키지명}/{앱 패키지명}.{액티비티1} t159}</span>
+Stack <span class="c">#0:</span>
+  Running activities <span class="o">(</span>most recent first<span class="o">)</span>:
+    TaskRecord<span class="o">{</span>2849e2dd0 <span class="c">#143 A=com.sec.android.app.launcher U=0 StackId=0 sz=1}</span>
+      Run <span class="c">#1: ActivityRecord{c99b3f1d0 u0 com.sec.android.app.launcher/.activities.LauncherActivity t143}</span>
+    TaskRecord<span class="o">{</span>406b61bd0 <span class="c">#146 A=com.android.systemui U=0 StackId=0 sz=1}</span>
+      Run <span class="c">#0: ActivityRecord{72888ffd0 u0 com.android.systemui/.recents.RecentsActivity t146}</span>
+</code></pre></div></div>
+
+<h2 id="2-참고">2. 참고</h2>
+<ul>
+  <li><a href="https://developer.android.com/studio/command-line/adb?hl=ko">ADB란?</a></li>
+</ul>
+:ET
