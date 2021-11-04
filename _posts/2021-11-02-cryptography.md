@@ -1,18 +1,16 @@
 ---
 layout: post
-title: "INTRO TO CRYPTOGRAPHY"
+title: "Intro to Cryptography"
 date: 2021-11-03 01:48:45
-image: '/images/itmo2.jpg'
-description: INTRO TO CRYPTOGRAPHY
+image: '/images/quantumexplainer3.2-01-10.jpg'
+description: ManhLab
 tags:
 - Infosec
 categories:
 - ITMOBRAIN
 twitter_text:
 ---
-      
-## Факультет Безопасности Информационных Технологий 
-
+## Intro to Cryptography
 Trong ngành Bảo mật thông tin, Mật mã học là một phần rất quan trọng và đóng vai trò nền tảng của bảo mật thông tin hiện nay. Khác với các mảng khác, cryptography được sử dụng cách ngày nay rất lâu và đóng vai trò bảo mật trong suốt lịch sử loài người. 
 
 Bài viết này đề cập tới mã hóa cổ điển(classic cryptography)  là cách mã hóa cổ điển được dùng trước thời kỳ của máy vi tính hiện nay. Thời vì này việc mã hóa và giải mã được thực hiện chủ yếu bằng tay. Mã được sắp xếp để tạo thành một đoạn ciphertext khó hiểu đối với kẻ thâm nhập, nhưng với người nhận nhờ đã nắm rõ quy tắc giải mã thông tin nên việc này dễ dàng hơn rất nhiều. 

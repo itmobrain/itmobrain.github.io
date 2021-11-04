@@ -1,0 +1,98 @@
+I"�D<h2 id="chia-sẻ-kinh-nghiệm-chuyên-ngành-khoa-an-toàn-thông-tin">Chia sẻ kinh nghiệm chuyên ngành: Khoa an toàn thông tin</h2>
+
+<h3 id="1-giới-thiệu">1. Giới thiệu</h3>
+<p>Xin chào mọi người, mình tên là Đỗ Bảo Hoàng hiện đang là sinh viên thạc sĩ năm 1 chuyên ngành an toàn thông tin (10.04.01) trường đại học ITMO, đã tốt nghiệp chuyên ngành an toàn thông tin (10.03.01) năm 2021. Trong suốt 5 năm ngụp lặn với việc học tập tại ITMO, mình nhận được khá nhiều câu hỏi của các bạn khóa dưới, trong đó câu hỏi thường gặp nhất là: ngành mình học gì vậy anh? :v :v :v</p>
+
+<p>Nhớ lại sau 1-2 năm học đầu mình cũng không hề có được cái nhìn khái quát về ngành học của chính mình. Lúc đó mình cảm thấy rất bối rối và mông lung không hiểu mình đang học gì và vai trò của các môn học trên trường. Kéo theo đó là bao khó khăn, áp lực và cả chán nản suốt những năm học đại học.</p>
+
+<p>Sau khi đã tốt nghiệp cử nhân và có cái nhìn đầy đủ hơn về ngành học này, mình thực sự muốn tóm tắt lại và chia sẻ những điều mình biết để giúp các bạn có được cái nhìn khái quát và hiểu hơn về an toàn thông tin, hy vọng những thông tin này sẽ giúp các bạn giảm bớt phần nào những khó khăn mà mình đã gặp phải trong quá trình học tập trước đó.</p>
+
+<h3 id="2-an-toàn-thông-tin-là-gì">2. An toàn thông tin là gì?</h3>
+<p>An toàn thông tin (hay InfoSec) là việc bảo vệ bất kì thông tin nào trước các mối nguy hại. An toàn thông tin tập trung vào 3 mục tiêu chính cần bảo vệ thường được gọi là tam giác CIA:</p>
+<ul>
+  <li>Tính bí mật (Confidentiality): thông tin chỉ được cung cấp hoặc tiết lộ cho những người được cho phép. Ví dụ: bằng cách nào đó, một người khác không có sự cho phép của bạn nhìn thấy mật khẩu tài khoản Facebook hoặc Google. Trong trường hợp đó, mật khẩu của bạn đã bị xâm phạm và tính bí mật bị vi phạm.</li>
+  <li>Tính toàn vẹn (Integrity): thông tin trong toàn bộ vòng đời của nó được duy trì và đảm bảo chính xác, đầy đủ, không bị thay đổi trái phép. Ví dụ: trong hệ thống kiểm soát không lưu, trạng thái của mỗi chuyến bay phải được cập nhật liên tục và chính xác. Nếu hacker xâm nhập và thay đổi thông tin sẽ dẫn đến những thiệt hại rất lớn.</li>
+  <li>Tính khả dụng (Availability): thông tin có thể truy cập bất cứ khi nào cần. Ví dụ: trong cuộc tấn công từ chối dịch vụ (DDoS), không thể truy cập dữ liệu của server và Tính khả dụng bị vi phạm.</li>
+</ul>
+
+<p>Mục tiêu là vậy thế còn làm sao để đạt được? Hay đúng hơn làm an toàn thông tin là làm gì? Để trả lời được câu hỏi này rất khó vì bất cứ hành động nào giúp đạt được 1 trong 3 mục tiêu nêu trên đều là làm an toàn thông tin. Ngành InfoSec rất rộng và có thể chia làm 4 lĩnh vực nhỏ:</p>
+<ul>
+  <li>Tổ chức và pháp lý (organisational and legal): nghiên cứu các phương pháp tổ chức thông tin và xây dựng bộ pháp lý phục vụ mục đích bảo mật thông tin</li>
+  <li>Phần mềm và phần cứng (software and hardware): nghiên cứu, xây dựng các phần mềm (phần mềm diệt virus, phần mềm dò tìm lỗ hổng,…) và phần cứng (camera, máy dò sóng, chặn sóng,…) hoặc bộ công cụ gồm phần mềm-phần cứng kết hợp (máy kiểm tra sinh trắc học, thẻ propusk,…)</li>
+  <li>Công nghệ và kỹ thuật (engineering and technical): nghiên cứu, xây dựng các công nghệ, kỹ thuật phục vụ mục đích bảo mật thông tin (kỹ thuật tấn công, phòng thủ, dịch ngược, điều tra số,…)</li>
+  <li>Mật mã (cryptographic): nghiên cứu sự an toàn những loại mật mã hiện tại, xây dựng các thuật toán mật mã mới (Caesar, DES, SHA,… )</li>
+</ul>
+
+<p>Tuy vậy khi đi làm thực tế công việc thường sẽ kết hợp sử dụng kiến thức, kỹ năng từ tất cả các lĩnh vực trên chứ không đơn thuần sử dụng một lĩnh vực nào cả. Nếu phân loại theo các ngành áp dụng sẽ có rất nhiều ngành. Trong đó có 4 ngành chính và lớn nhất:</p>
+<ul>
+  <li>An toàn sản phẩm (product security): làm việc với các đội phát triển sản phẩm để đảm bảo sản phẩm làm ra an toàn cho người dùng và an toàn cho hệ thống của công ty (kiểm định mã nguồn, đào tạo nâng cao nhận thức của nhân viên, phát triển các giải pháp ngăn chặn kỹ thuật tấn công,…)</li>
+  <li>An toàn vận hành (operations security): đảm bảo sự an toàn cho toàn bộ hệ thống thông tin của doanh nghiệp (đưa ra chính sách, quy định, giám sát an ninh mạng, xử lí sự cố,…)</li>
+  <li>Phát triển công cụ (applied security): phát triển và cung cấp các công cụ, dịch vụ và thư viện phần mềm có liên quan đến an toàn thông tin cho các nhóm phát triển sản phẩm sử dụng lại.</li>
+  <li>Tìm diệt mã độc và các nguy cơ khác (threat analysis): phân tích, truy tìm nguồn gốc và tiêu diệt tận gốc mã độc và các tấn công có chủ đích (targeted attack).</li>
+</ul>
+
+<p>Chi tiết hơn các bạn có thể tham khảo các đường dẫn mình cung cấp thêm ở cuối bài viết.</p>
+<h3 id="3-ngành-an-toàn-thông-tin-ở-itmo">3. Ngành an toàn thông tin ở ITMO</h3>
+<p>Chắc đọc đến đây bạn đã hiểu ngành an toàn thông tin rộng đến thế nào. Quay lại với chủ đề nhận được nhiều sự quan tâm nhất của các bạn sinh viên mới: học an toàn thông tin ở ITMO sẽ được học những gì?</p>
+
+<p>Những kỳ đầu ngoài các môn đại cương toán, lý sẽ có thêm những môn cơ bản về lập trình, lý thuyết thông tin, xác suất, an toàn thông tin giúp bạn có kiến thức nền tảng để học chuyên ngành. Có thể liệt kê những môn hay gặp như: Безопасность жизнедеятельности (học về cách lắp đặt an toàn các thiết bị điện trong cuộc sống) hay Программирование (kỹ thuật lập trình), методология защиты информации (các phương pháp bảo mật thông tin). Những năm đầu nên học kĩ các môn cơ bản, nền tảng này, thì lúc học lên năm cao sẽ ko bị đuối. Ngoài ra trên trường dạy khá ít lập trình nên tốt nhất là tự học, và tham gia CLB vs tụi mình.</p>
+
+<p>Từ năm 3 trở đi sẽ là những môn chuyên ngành trải dài từ khắp các nhánh của an toàn thông tin. Dưới đây là một số ví dụ các môn học mà mình đã từng học:</p>
+<ul>
+  <li>Tổ chức và pháp lý: môn Защищенный документооборот (quy trình xử lý tài liệu sao cho an toàn), Проектирование комплексных систем защиты информации (thiết kế hệ thống an toàn thông tin),…</li>
+  <li>Phần mềm và phần cứng: môn Программно-аппаратные средства защиты информации (hệ thống phần cứng-phần mềm giúp bảo mật thông tin), Инженерно-технические средства защиты информации (phương tiện kỹ thuật và biện pháp giúp bảo mật thông tin),…</li>
+  <li>Công nghệ và kỹ thuật: Технологии обнаружения уязвимостей в автоматизированных системах (các kỹ thuật phát hiện lỗ hổng trong hệ thống tự động), Технология сертификации средств защиты информации (học về các kỹ thuật tạo, quản lý chứng chỉ số),…</li>
+  <li>Mật mã: Криптографические методы обеспечения информационной безопасности (áp dụng các phương pháp mật mã để bảo mật), Методы криптографии (các phương pháp về mật mã),…</li>
+</ul>
+
+<p>Tuy nhiên trên con đường hội nhập và để leo lên xếp hạng 6 toàn nga (Forbes University Ranking), chương trình học hiện nay đã có nhiều thay đổi. Hiện nay ngành an toàn thông tin ở ITMO gồm 4 ngành nhỏ:</p>
+<ul>
+  <li>Комплексная защита объектов информатизации: ngành học chung, học mỗi thứ 1 ít.</li>
+  <li>Проектирование средств защиты информации: tập trung vào tổ chức và quản lý hệ thống bảo mật.</li>
+  <li>Эксплуатация беспилотных транспортных средств: thiết kế, thử nghiệm, xây dựng hệ thống giám sát không người lái.</li>
+  <li>Системы надежной передачи информации: bảo mật trong hệ thống truyền thông, học nhiều hơn về sóng và các thuật toán mã hóa.</li>
+</ul>
+
+<p>Dù là ngành nào thì bạn vẫn phải học đủ các môn đại cương và lý thuyết cơ bản về an toàn thông tin. Đó đều là các môn học hay và hữu ích nhưng đôi khi sẽ khá hàn lâm và thiếu hứng thú. :P Hãy cùng tìm hiểu làm sao để học tập một cách hiệu quả theo kinh nghiệm của mình nhé!</p>
+
+<h3 id="4-học-như-thế-nào">4. Học như thế nào?</h3>
+
+<p>Thông thường 1 kỳ học tại ITMO sẽ có 2 module, 1 bài kiểm tra giữa kì và 1 bài kiểm tra cuối kì. Trong đó bài kiểm tra cuối kỳ chỉ chiếm 20/100 điểm, chỉ cần đi học đầy đủ bạn đã có đến 10 điểm chuyên cần rồi. Số điểm còn lại sẽ chia cho các bài tập trong module. Để có được điểm 5 (xuất sắc) cho môn học bạn phải đạt trên 90 điểm. Tin mình đi, bạn sẽ không muốn cố gắng cả kì của mình đổ sông đổ bể chỉ vì thiếu 1-2 điểm chuyên cần đâu. Lời khuyên của mình là dù trời có tuyết hay mưa bão, chỉ cần thầy điểm danh là luôn có mặt.</p>
+
+<p>Khi tự làm bài tập hẳn có lúc bạn sẽ phải tìm bài mẫu hoặc thông tin trên mạng. Có người dễ dàng tìm được nhưng có người tìm mãi không ra. Đó là lúc cần đến kỹ năng tìm kiếm. Khi tìm kiếm các bạn nên có cái nhìn tổng quát về vấn đề, sau đó chia nhỏ thành nhiều từ khóa, sắp xếp sao cho từ khóa quan trọng lên trước. Đối với bài tập lý thuyết tiếng Nga thì nên ưu tiên Yandex.ru hơn Google.com. Ngược lại các bài tập lập trình nên chọn từ khóa tiếng Anh và tìm kiếm trên Google trước. Ngoài ra những nguồn stackoverflow, geeksforgeeks, github đều có rất nhiều câu hỏi, trả lời sẵn có. Để có thể tự nắm bắt kiến thức một cách hiệu quả nhất bạn nên đọc và tìm tài liệu bằng ngoại ngữ (ưu tiên tiếng Nga) và chỉ dịch ra tiếng Việt khi thật sự cần thiết. Tuy rất khó nhưng ngoại ngữ sẽ là điểm tạo ra khác biệt giữa người đi du học và học ở Việt Nam.</p>
+
+<p>Hỏi bài cũng là kỹ năng rất cần thiết khi bạn cảm thấy đã tốn nhiều công sức mà vẫn không thể làm được. Có 2 nguồn chính: bạn Nga cùng khóa và các anh chị khóa trên. Để có thể hỏi bài Nga thì các bạn đừng ngại mà giúp họ bất kì kiến thức nào mình vững, đi chơi, giao lưu mọi lúc có thể. Trong nhóm VK chung của khóa rất hay có tài liệu được các bạn Nga chia sẻ nên cũng cần phải đọc kỹ. Nguồn thứ 2 là các anh chị khóa trên người Việt. Các bạn đừng e dè mà hãy sang gõ cửa, bắt chuyện làm quen nhé. Kinh nghiệm của những người đi trước có thể giúp bạn tự tin hơn trong quá trình học tập đó.</p>
+
+<p>Tự làm bài không được, hỏi cũng không ai biết thì làm sao để qua môn? Phương án cuối cùng chính là giáo viên trên lớp. Vì ở Nga điểm số hoàn toàn do giáo viên quyết định nên nếu bạn tạo được ấn tượng tốt về kiến thức, đặc biệt là tinh thần học tập bạn sẽ xin được gợi ý của vô số bài tập khó. Theo kinh nghiệm 5 năm trầy da tróc vẩy để trả bài của mình thì không nên xin điểm (ví dụ xin 3 điểm để đủ 91) mà nên xin thêm bài tập hoặc xin làm bổ sung để nâng điểm. Nếu tỷ lệ thành công nếu xin điểm là 50% thì tỷ lệ thành công nếu xin làm thêm bài phải là 90%. Không có giáo viên nào là không quý một sinh viên có tinh thần học tập và ham học hỏi cả đâu.</p>
+
+<h3 id="5-tản-mạn-về-ngành-an-toàn-thông-tin">5. Tản mạn về ngành an toàn thông tin</h3>
+
+<p>Có nhiều người đã nói với mình là vỡ mộng khi sang ITMO học an toàn thông tin. Chính mình cũng từng vậy :(. Phim ảnh và báo đài thường để lại trong chúng ta hình ảnh các hacker ngầu lòi, những điệp viên ấn vài nút đã có thể điều khiển mọi đèn giao thông, camera khu phố,… Thực tế lại khác rất xa. Kiến thức ở bậc cử nhân dàn trải làm cho chương trình học có nhiều môn lý thuyết trong khi đó những môn lập trình, thực hành lại dạy rất nhanh và qua loa. Mải mê với các lab thực hành và thi cuối kì nhiều khi mình cũng quên đi mục đích chính của việc học là để chuẩn bị sau này đi làm. Chương trình hiện tại 2 năm đầu có khá nhiều kỹ năng mềm (soft-skill) rồi, mọi người nên coi đó như cơ hội phát triển bản thân một cách toàn diện. Những kỹ năng thuyết trình trước đám đông, làm việc nhóm,… rất có ích cho công việc sau này.</p>
+
+<p>Hối tiếc lớn nhất của mình trong 5 năm học đại học là đã không có định hướng rõ ràng. Trong những năm học đầu bạn có thể học đều, sâu về mọi môn học liên quan an toàn thông tin. Nhưng đến hết năm 3 hãy lựa chọn cho mình 1 chuyên ngành (có thể là bảo mật web, mật mã thậm chí là luật) để tìm hiểu sâu. Mỗi chuyên ngành đều có cái hay riêng nhưng như đã nói bên trên ngành an toàn thông tin quá rộng để biết tất cả.</p>
+
+<p>Thị trường việc làm an toàn thông tin ở Việt Nam chủ yếu là đảm bảo an vận hành (operations security) và web security, những bạn theo quân đội sẽ hay phải làm việc với mật mã nữa. Để có thể bắt kịp với sinh viên cùng ngành ở nhà mình sẽ liệt kê dưới đây những kiến thức chung và cơ bản nhất cần nắm bắt:</p>
+<ul>
+  <li>Lập trình</li>
+  <li>Hệ điều hành</li>
+  <li>Cấu trúc dữ liệu và giải thuật</li>
+  <li>Mạng máy tính</li>
+  <li>Mật mã</li>
+  <li>Computer Science nói chung</li>
+</ul>
+
+<p>Tập thói quen đọc kỹ yêu cầu, tự chủ động tìm hiểu, lên kế hoạch và thực hiện lab một cách hoàn chỉnh chắc chắn sẽ giúp bạn có thêm nhiều kiến thức và kỹ năng bổ ích không ngờ đó.
+Trên đây là một số kinh nghiệm của mình đúc kết được trong thời gian học tập tại đại học ITMO. Hy vọng sau khi đọc xong các bạn có một cái nhìn rõ ràng hơn về ngành an toàn thông tin cũng như các khó khăn gặp phải khi học tập. Chúc các bạn học tốt và có khoảng thời gian tuyệt vời tại ITMO nhé!</p>
+
+<blockquote>
+  <p><cite>Keep calm, learn and practice!</cite></p>
+</blockquote>
+
+<h4 id="nguồn">Nguồn:</h4>
+<p><a href="https://vnhacker.blogspot.com/2012/05/lam-toan-thong-tin-thi-hoc-gi.html">Làm an toàn thông tin thì học gì?</a> - by thaidn<br />
+<a href="https://l4w.io/2017/07/bat-dau-hoc-an-toan-thong-tin-nhu-the-nao/">BẮT ĐẦU HỌC AN TOÀN THÔNG TIN NHƯ THẾ NÀO?</a> - by l4w<br />
+<a href="https://www.youtube.com/watch?v=3YUB2Yiwxx4">Talkshow - Làm hacker là làm gì?</a> (thaidn, PhươngGàCon, HieuPC, l4w)<br />
+<a href="https://kienmanowar.wordpress.com/">Reverse Engineering</a>: kienmanowar<br />
+<a href="https://hackemall.live/">Những roadmap của các nhánh</a>: Hack ‘Em All<br />
+Những team kĩ thuật của các tổ chức lớn: <a href="https://blog.vincss.net/">VinCSS</a>, Viettel Cyber Security, VNPT, khonggianmang.vn …</p>
+:ET

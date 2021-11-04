@@ -5,14 +5,13 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 04 Nov 2021 18:37:51 +0300</pubDate>
-        <lastBuildDate>Thu, 04 Nov 2021 18:37:51 +0300</lastBuildDate>
+        <pubDate>Thu, 04 Nov 2021 18:45:47 +0300</pubDate>
+        <lastBuildDate>Thu, 04 Nov 2021 18:45:47 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
             <item>
-                <title>ИТМО ФАКУЛЬТЕТ 1</title>
-                <description>&lt;h2 id=&quot;факультет-безопасности-информационных-технологий&quot;&gt;Факультет Безопасности Информационных Технологий&lt;/h2&gt;
-
+                <title>Chia sẻ kinh nghiệm chuyên ngành</title>
+                <description>&lt;h2 id=&quot;khoa-an-toàn-thông-tin&quot;&gt;Khoa an toàn thông tin&lt;/h2&gt;
 &lt;h3 id=&quot;1-giới-thiệu&quot;&gt;1. Giới thiệu&lt;/h3&gt;
 &lt;p&gt;Xin chào mọi người, mình tên là Đỗ Bảo Hoàng hiện đang là sinh viên thạc sĩ năm 1 chuyên ngành an toàn thông tin (10.04.01) trường đại học ITMO, đã tốt nghiệp chuyên ngành an toàn thông tin (10.03.01) năm 2021. Trong suốt 5 năm ngụp lặn với việc học tập tại ITMO, mình nhận được khá nhiều câu hỏi của các bạn khóa dưới, trong đó câu hỏi thường gặp nhất là: ngành mình học gì vậy anh? :v :v :v&lt;/p&gt;
 
@@ -102,12 +101,12 @@ Trên đây là một số kinh nghiệm của mình đúc kết được trong 
 &lt;/blockquote&gt;
 
 &lt;h4 id=&quot;nguồn&quot;&gt;Nguồn:&lt;/h4&gt;
-&lt;p&gt;Làm an toàn thông tin thì học gì? - by thaidn&lt;br /&gt;
-BẮT ĐẦU HỌC AN TOÀN THÔNG TIN NHƯ THẾ NÀO? - by l4w&lt;br /&gt;
-Talkshow - Làm hacker là làm gì? (thaidn, PhươngGàCon, HieuPC, l4w)&lt;br /&gt;
-Reverse Engineering: kienmanowar&lt;br /&gt;
-Những roadmap của các nhánh: Hack ‘Em All&lt;br /&gt;
-Những team kĩ thuật của các tổ chức lớn: VinCSS, Viettel Cyber Security, VNPT, khonggianmang.vn …&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://vnhacker.blogspot.com/2012/05/lam-toan-thong-tin-thi-hoc-gi.html&quot;&gt;Làm an toàn thông tin thì học gì?&lt;/a&gt; - by thaidn&lt;br /&gt;
+&lt;a href=&quot;https://l4w.io/2017/07/bat-dau-hoc-an-toan-thong-tin-nhu-the-nao/&quot;&gt;BẮT ĐẦU HỌC AN TOÀN THÔNG TIN NHƯ THẾ NÀO?&lt;/a&gt; - by l4w&lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=3YUB2Yiwxx4&quot;&gt;Talkshow - Làm hacker là làm gì?&lt;/a&gt; (thaidn, PhươngGàCon, HieuPC, l4w)&lt;br /&gt;
+&lt;a href=&quot;https://kienmanowar.wordpress.com/&quot;&gt;Reverse Engineering&lt;/a&gt;: kienmanowar&lt;br /&gt;
+&lt;a href=&quot;https://hackemall.live/&quot;&gt;Những roadmap của các nhánh&lt;/a&gt;: Hack ‘Em All&lt;br /&gt;
+Những team kĩ thuật của các tổ chức lớn: &lt;a href=&quot;https://blog.vincss.net/&quot;&gt;VinCSS&lt;/a&gt;, &lt;a href=&quot;https://blog.viettelcybersecurity.com/&quot;&gt;Viettel Cyber Security&lt;/a&gt;, &lt;a href=&quot;https://sec.vnpt.vn/blog/&quot;&gt;VNPT&lt;/a&gt;, &lt;a href=&quot;https://blog.khonggianmang.vn/&quot;&gt;khonggianmang.vn&lt;/a&gt; …&lt;/p&gt;
 </description>
                 <pubDate>Wed, 03 Nov 2021 04:48:45 +0300</pubDate>
                 <link>http://localhost:4000/itmo-bit</link>
@@ -121,9 +120,8 @@ Những team kĩ thuật của các tổ chức lớn: VinCSS, Viettel Cyber Sec
             </item>
         
             <item>
-                <title>INTRO TO CRYPTOGRAPHY</title>
-                <description>&lt;h2 id=&quot;факультет-безопасности-информационных-технологий&quot;&gt;Факультет Безопасности Информационных Технологий&lt;/h2&gt;
-
+                <title>Intro to Cryptography</title>
+                <description>&lt;h2 id=&quot;intro-to-cryptography&quot;&gt;Intro to Cryptography&lt;/h2&gt;
 &lt;p&gt;Trong ngành Bảo mật thông tin, Mật mã học là một phần rất quan trọng và đóng vai trò nền tảng của bảo mật thông tin hiện nay. Khác với các mảng khác, cryptography được sử dụng cách ngày nay rất lâu và đóng vai trò bảo mật trong suốt lịch sử loài người.&lt;/p&gt;
 
 &lt;p&gt;Bài viết này đề cập tới mã hóa cổ điển(classic cryptography)  là cách mã hóa cổ điển được dùng trước thời kỳ của máy vi tính hiện nay. Thời vì này việc mã hóa và giải mã được thực hiện chủ yếu bằng tay. Mã được sắp xếp để tạo thành một đoạn ciphertext khó hiểu đối với kẻ thâm nhập, nhưng với người nhận nhờ đã nắm rõ quy tắc giải mã thông tin nên việc này dễ dàng hơn rất nhiều. 
