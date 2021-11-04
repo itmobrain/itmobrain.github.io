@@ -5,31 +5,35 @@ permalink: /about/
 image: '/images/itmo.jpg'
 ---
 
-Leverage agile frameworks to provide a robust Hugo Sousa synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Nhằm thúc đẩy và phát triển phong trào học tập và nghiên cứu công nghệ thông tin tại trường Đại học ITMO. Năm 2019 Ban chấp hành chi đoàn đã ra mắt câu lạc bộ tin học ITMO. Trải qua 2 năm triển khai, câu lạc bộ bước đầu đã đúc rút ra được nhiều kinh nghiệm, những khóa học đầu tiên đã được tổ chức và thu hút nhiều sinh viên trong trường. Tiếp nối thành công ấy, năm học 2021-2022 hứa hẹn những bước tiến lớn của câu lạc bộ, với  các quản trị viên tâm huyết mới, ITMO Brain sẽ là cầu nối giúp đỡ về học tập tại trường đại học ITMO. 
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+### CLB Tin học ITMO Brain hoạt động với mục tiêu:
+- Chia sẻ kiến thức về lập trình. 
+- Tạo ra một sân chơi năng động, dành cho những người có đam mê tin học. 
+- Học hỏi kinh nghiệm từ khóa trên, khách mời từ các công ty ở Việt Nam.
 
-Collaboratively administrate turnkey channels whereas virtual e-tailers. Objectively seize scalable metrics whereas proactive e-services. Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources.
+### Hoạt động dự kiến của câu lạc bộ:
+- Dạy các kiến thức lập trình cơ bản.
+- Giải đáp thắc mắc về chuyên môn.
+- Chia sẻ kinh nghiệm.
+- Hoạt động ngoại khóa
 
 <div class="gallery-box">
   <div class="gallery">
-    <img src="/images/102.jpg">
-    <img src="/images/105.jpg">
-    <img src="/images/107.jpg">
+    <img src="/images/admin/manh.jpg">
+    <img src="/images/admin/hoang.jpg">
+    <img src="/images/admin/duc.jpg">
   </div>
-  <em>Gallery / <a href="https://unsplash.com/" target="_blank">Unsplash</a></em>
+  <em>Admin / <a href="https://fb.com/itmobrain" target="_blank">ITMO Brain</a></em>
 </div>
+### Thành viên ban điều hành:
 
-Completely synergize resource taxing relationships via premier niche markets. Cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+> <cite>Trưởng ban: Trần Đức Mạnh(Năm 4)</cite>
 
-Objectively innovate empowered manufactured products whereas parallel platforms. Holisticly predominate extensible testing procedures for reliable supply chains. Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
-
-### Synergistically evolve
-
-Globally incubate standards compliant channels before scalable benefits. Quickly disseminate superior deliverables whereas web-enabled applications. Quickly drive clicks-and-mortar catalysts for change before vertical architectures.
-
-<p><iframe src="https://www.youtube.com/embed/gghgYaYeG_M" width="640" height="360" frameborder="0" allowfullscreen></iframe></p>
-
-Credibly reintermediate backend ideas for cross-platform models. Continually reintermediate integrated processes through technically sound intellectual capital. Holistically foster superior methodologies without market-driven best practices.
-
-Distinctively exploit optimal alignments for intuitive bandwidth. Quickly coordinate e-business applications through revolutionary catalysts for change. Seamlessly underwhelm optimal testing procedures whereas bricks-and-clicks processes.
+- Nguyễn Văn Chuyên(Thạc sỹ năm 2)
+- Đỗ Bảo Hoàng(Thạc sỹ năm 1)
+- Hoàng Minh Thắng(Sinh viên năm 3)
+- Triệu Minh Tâm(Sinh viên năm 3)
+- Đinh Ngọc Tuấn(Sinh viên năm 2)
+- Nguyễn Ngọc Đức(Sinh viên năm 2)
+- Lê Trọng Minh(Sinh viên năm 2)
