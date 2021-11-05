@@ -57,7 +57,7 @@
   }
 
   @media only screen and (max-width: $mobile) {
-    padding-bottom: 24px;
+    padding-bottom: 12px;
 
     .tag__item {
       margin-right: 8px;
@@ -104,7 +104,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 24px;
+  padding: 6px 12px;
   border-radius: 8px;
   color: var(--heading-font-color);
   background: var(--background-alt-color);
@@ -127,7 +127,7 @@
 }
 
 .tag__name {
-  padding: 30px 10px 30px 10px;
+  padding: 10px 10px 10px 10px;
   margin-bottom: 0;
   font-size: 36px;
   text-transform: capitalize;
@@ -143,7 +143,7 @@
   }
 
   @media only screen and (max-width: $mobile) {
-    padding: 32px 12px 32px 0;
+    padding: 12px 12px 12px 0;
     font-size: 26px;
   }
 }
