@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
 title: ITMO Brain
-logo: 'images/itmo.jpg' # You can add own logo. For example '/images/logo.png'.
+logo: 'images/itmo.png' # You can add own logo. For example '/images/logo.png'.
 description: CLB Tin Hoc ITMO Brain
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://itmobrain.github.io" # the base hostname & protocol for your site, e.g. http://example.com

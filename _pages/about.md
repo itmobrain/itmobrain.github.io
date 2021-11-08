@@ -2,7 +2,7 @@
 layout: page
 title: ITMO Brain
 permalink: /about/
-image: '/images/itmo.jpg'
+image: '/images/itmo.png'
 ---
 
 Nhằm thúc đẩy và phát triển phong trào học tập và nghiên cứu công nghệ thông tin tại trường Đại học ITMO. Năm 2019 Ban chấp hành chi đoàn đã ra mắt câu lạc bộ tin học ITMO. Trải qua 2 năm triển khai, câu lạc bộ bước đầu đã đúc rút ra được nhiều kinh nghiệm, những khóa học đầu tiên đã được tổ chức và thu hút nhiều sinh viên trong trường. Tiếp nối thành công ấy, năm học 2021-2022 hứa hẹn những bước tiến lớn của câu lạc bộ, với  các quản trị viên tâm huyết mới, ITMO Brain sẽ là cầu nối giúp đỡ về học tập tại trường đại học ITMO. 
