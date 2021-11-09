@@ -5,9 +5,246 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 04 Nov 2021 22:07:57 +0300</pubDate>
-        <lastBuildDate>Thu, 04 Nov 2021 22:07:57 +0300</lastBuildDate>
+        <pubDate>Tue, 09 Nov 2021 14:05:09 +0300</pubDate>
+        <lastBuildDate>Tue, 09 Nov 2021 14:05:09 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>What is Machine Learning (ML)?</title>
+                <description>&lt;h3 id=&quot;what-is-machine-learning-ml&quot;&gt;What is Machine Learning (ML)?&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;“Machine learning algorithms find and apply patterns in data. And they pretty much run the world.” - MIT Technology Review.&lt;br /&gt;
+“Các thuật toán học máy tìm kiếm và áp dụng các mẫu trong dữ liệu. Và chúng điều hành thế giới (của chúng ta) khá nhiều”&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Chúng ta đã trải qua 3 cuộc cách mạng công nghiệp trong lịch sử và trong những năm gần đây, AI - Trí Tuệ Nhân Tạo, và cụ thể hơn là Machine Learning (ML - Học Máy) nổi lên như một trong những trụ cột chính của cuộc cách mạng công nghiệp lần thứ tư.&lt;/p&gt;
+
+&lt;p&gt;Học Máy là hướng nghiên cứu tập trung vào việc tạo ra các hệ thống có khả năng học hỏi mà không cần phải lập trình một cách cụ thể. Học hỏi là một kỹ năng quan trọng nhất của một con người, vậy nếu chúng ta muốn tạo ra một hệ thống AI có trí tuệ như con người thì cần phải tạo ra các cỗ máy có khả năng học hỏi dựa trên các kinh nghiệm mà chúng thu thập được trong suốt quá trình hoạt động.
+Hiện nay Học Máy đã đạt được những thành công vang dội khiến nó trở thành một hướng nghiên cứu chính trong AI, được sử dụng trên toàn thế giới.&lt;/p&gt;
+
+&lt;h3 id=&quot;vậy-sự-phát-triển-của-máy-học-hiện-nay-như-thế-nào&quot;&gt;Vậy sự phát triển của Máy học hiện nay như thế nào?&lt;/h3&gt;
+&lt;p&gt;Những dấu ấn đầu tiên của Học máy đến từ cách đây hơn 70 năm, 1950 – Alan Turing tạo ra phép thử Turing (Turing Test) để xác định xem một máy tính có trí thông minh thực sự hay không. Để vượt qua các phép thử, máy tính phải có khả năng đánh lừa một người tin rằng nó cũng là con người. Đến năm 1957 - Frank Rosenblatt thiết kế hệ thần kinh (neural network) đầu tiên cho máy tính mô phỏng các quá trình tư duy của não người. Học máy đạt thành công vang dội khi gần 25 năm trước, năm 1997, ứng dụng của AI đã đặt những bước đầu tiên khi hệ thống Deep Blue do IBM phát triển giành chiến thắng trước kiện tướng cờ vua thế giới khi đó Garry Kasparov. Đến năm 2011 – Google Brain được phát triển, và hệ thần kinh sâu (deep neural network) của nó có thể học để phát hiện và phân loại các đối tượng bằng với khả năng của một chú mèo. Cho đến năm 2014 – Facebook phát triển DeepFace - có thể nhận diện hoặc xác minh các cá nhân trong các bức ảnh ở mức độ ngang với con người.&lt;/p&gt;
+
+&lt;p&gt;Một cột mốc đáng chú ý vào năm 2016 – Thuật toán AI của Google đã đánh bại một cầu thủ chuyên nghiệp trong trò cờ vây của Trung Quốc, vốn được coi là trò cờ phức tạp nhất thế giới và khó hơn cờ vua gấp nhiều lần. Cùng năm, AlphaGo do Google DeepMind phát triển đã giành chiến thắng bốn trên năm trận đấu Cờ vây với kỳ thủ số 1 thế giới.&lt;/p&gt;
+
+&lt;h3 id=&quot;ứng-dụng-của-máy-học&quot;&gt;Ứng dụng của Máy học&lt;/h3&gt;
+&lt;p&gt;AI đang len lỏi vào mọi lĩnh vực trong đời sống mà có thể chúng ta không nhận ra. Xe tự hành của Google và Tesla, hệ thống tự tag khuôn mặt trong ảnh của Facebook, trợ lý ảo Siri của Apple hay đơn giản chỉ là một hệ thống lọc email rác.… chỉ là một vài trong vô vàn những ứng dụng của AI/ML. 
+ML là một phương tiện được kỳ vọng sẽ giúp con người đạt được mục tiêu là có được trí thông minh như con người. Và thực tế thì Học Máy đã mang nhân loại đi rất xa trên quãng đường chinh phục AI.
+Chinh phục AI mặc dù vẫn là mục đích cuối cùng của các phương pháp ML, nhưng hiện tại ML tập trung vào những mục tiêu ngắn hạn hơn như:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Làm cho máy tính có những khả năng nhận thức cơ bản của con người như nghe, nhìn, hiểu được ngôn ngữ, giải toán, lập trình, …&lt;/li&gt;
+  &lt;li&gt;Hỗ trợ con người trong việc xử lý một khối lượng thông tin khổng lồ mà chúng ta phải đối mặt hàng ngày, hay còn gọi là Big Data.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Nói đến ML là nói đến “dự đoán”: từ việc dự đoán nhãn phân loại đến dự đoán hành động cần thực hiện trong bước tiếp theo. Vậy machine learning có thể dự đoán tương lai hay không? Có thể có hoặc không: Machine learning có thể dự đoán được tương lai, nhưng chỉ khi tương lai có mối liên hệ mật thiết với hiện tại.&lt;/p&gt;
+&lt;h3 id=&quot;sự-phát-triển-của-ai-ml-và-cơ-hội-tại-việt-nam&quot;&gt;Sự phát triển của AI/ ML và cơ hội tại Việt Nam.&lt;/h3&gt;
+&lt;p&gt;Trong bối cảnh phát triển và hội nhập quốc tế, cùng với sự phát triển mạnh mẽ của cuộc cách mạng công nghiệp lần thứ tư, Việt Nam xác định tập trung phát triển công nghệ AI - được dự báo sẽ trở thành ngành công nghệ đột phá nhất trong 10 năm tới.&lt;/p&gt;
+
+&lt;p&gt;Từ năm 2014, Chính phủ đã xác định AI là công nghệ đột phá, mũi nhọn cần được triển khai nghiên cứu, được đưa vào danh mục công nghệ cao ưu tiên đầu tư phát triển. Gần đây rất nhiều hội thảo, hội nghị khoa học đã được tổ chức dưới sự chủ trì của Chính phủ, với sự tham gia của các tổ chức, chuyên gia trong nước và quốc tế. Qua đó, Lãnh đạo Chính phủ đã đưa ra quan điểm về việc đẩy mạnh triển khai AI và cần thúc đẩy phát triển mạnh mẽ hơn nữa …&lt;/p&gt;
+
+&lt;p&gt;Bên cạnh những nỗ lực của Nhà nước, AI đã và đang được các tập đoàn, công ty như FPT, Viettel, Vin Big Data… nghiên cứu ứng dụng mạnh mẽ trong nhiều lĩnh vực (y tế, giáo dục, thương mại điện tử…). Năm 2019, Trường Đại học Bách khoa Hà Nội thành lập và tuyển sinh trình độ đại học ngành AI (với số điểm trên 27 điểm) để đảm bảo nguồn nhân lực AI được đào tạo chất lượng với mục tiêu trở thành đơn vị dẫn đầu trong việc đào tạo chuyên gia về AI tại Việt Nam.&lt;/p&gt;
+
+&lt;p&gt;Có thể thấy, Việt Nam không đứng ngoài cuộc đua của thế giới. Cơ hội cho những ML Engineer là rất rộng mở, không chỉ ở Việt Nam mà còn là bất cứ nơi đâu trên thế giới.
+Bài viết vừa đề cập tới Máy học là gì, sự phát triển của nó cùng sự ảnh hưởng của nó tới cuộc sống của con người hiện nay như thế nào.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Những bước tiếp theo của Machine Learning là gì? Khó khăn nào xuất hiện khi ML xuất hiện? Cần hay không mối quan tâm về Đạo đức AI? Tất cả sẽ được tiếp tục gửi tới các khác giả của ITMO Brain trong những câu chuyện tiếp theo.&lt;br /&gt;ltm from ITMO Brain :))&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;bạn-đọc-có-thể-xem-thêm-tại&quot;&gt;Bạn đọc có thể xem thêm tại&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.technologyreview.com/2018/11/10/139137/is-this-ai-we-drew-you-a-flowchart-to-work-it-out/&quot;&gt;What is AI? We drew you a flowchart to work it out | MIT Technology Review&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.technologyreview.com/2018/11/17/103781/what-is-machine-learning-we-drew-you-another-flowchart/&quot;&gt;What is machine learning? của MIT Technology Review&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/AlphaGo&quot;&gt;AlphaGo - Wikipedia&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.facebook.com/zuck/posts/10103351073024591&quot;&gt;Jarvis - trợ lý thông minh cho căn nhà của Mark Zuckerberg&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+                <pubDate>Tue, 09 Nov 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/intro-to-machinelearning</link>
+                <guid isPermaLink="true">http://localhost:4000/intro-to-machinelearning</guid>
+                
+                <category>MachineLearning</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
+        
+            <item>
+                <title>Công nghệ thông tin và các hệ thống liên lạc</title>
+                <description>&lt;p&gt;Lại một mùa tuyển sinh sắp đến, hẳn rất nhiều bạn học sinh, sinh viên đang băn khoăn, lo lắng về ngành học sắp tới của mình. Để giúp các bạn có những thông tin chính xác, cụ thể về mã ngành 11.03.02 Công nghệ thông tin và các hệ thống liên lạc, cũng như khoa IKT tại Trường Đại học tổng hợp ITMO thì chúng mình có chia sẻ dưới đây những thông tin bổ ích về ngành học. Hãy theo mình để nắm rõ hơn nhé, và mình là Lê Đình Vũ thạc sỹ năm 1, chuyên ngành CNTT và các hệ thống liên lạc trường Đại học ITMO.&lt;/p&gt;
+
+&lt;p&gt;À trước tiên thì dưới này là tên Mega khoa và tên khoa của chúng mình các bạn nhé, nếu có dự định theo học nhất định hãy ghi nhớ thật kỹ ạ vì biết đâu một ngày các em khóa dưới sẽ hỏi các bạn đấy.&lt;/p&gt;
+&lt;h3 id=&quot;1-giới-thiệu-chung&quot;&gt;1. GIỚI THIỆU CHUNG&lt;/h3&gt;
+&lt;p&gt;Trong một thế giới ngày càng gắn kết với nhau, sự tương tác giữa các thiết bị, hệ thống và con người tăng lên đáng kể. Công nghệ thông tin và các hệ thống liên lạc ngày càng khẳng định vai trò của mình ở nhiều phương diện khác nhau trong nhiều lĩnh vực của đời sống.&lt;/p&gt;
+
+&lt;p&gt;Học tập và nghiên cứu theo hướng ngành Công nghệ thông tin và các hệ thống liên lạc ở ITMO giúp sinh viên có được kiến​​thức lý thuyết và kỹ năng thực hành trong việc thiết kế và phát triển phần mềm cho các hệ thống thông tin liên lạc, đồng thời nắm vững các phương pháp phát triển mô hình hệ thống phức tạp để xử lý dữ liệu thử nghiệm, cũng như có được kỹ năng tạo hệ thống lưu trữ và xử lý dữ liệu.&lt;/p&gt;
+
+&lt;p&gt;Sinh viên theo học tại khoa IKT chủ yếu học các lý thuyết về nguyên tắc cấu tạo và phương pháp thiết kế của hệ thống truyền thông và mạng truyền thông, được đào tạo các kỹ năng cơ bản về lập trình cũng như xử lý dữ liệu, được tham gia vào thiết kế, phát triển, vận hành và các ứng dụng kỹ thuật của truyền thông hiện đại, hệ thống thông tin và mạng.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-chuyên-ngành-và-những-triển-vọng-khi-ra-trường&quot;&gt;2. CHUYÊN NGÀNH VÀ NHỮNG TRIỂN VỌNG KHI RA TRƯỜNG&lt;/h3&gt;
+&lt;h4 id=&quot;21-chương-trình-đào-tạo&quot;&gt;2.1. Chương trình đào tạo&lt;/h4&gt;
+&lt;p&gt;Đại học ITMO hiện tại có 2 bậc đào tạo cho chuyên ngành Công nghệ thông tin và các hệ thống liên lạc, mã ngành 11.03.02 cho đào tạo cử nhân (hệ 4 năm) và mã ngành 11.04.02 cho thạc sỹ (2 năm). Nhìn chung với mỗi bậc đào tạo trường đều có những chương trình học tập thú vị và bổ ích, tạo môi trường nghiên cứu thuận lợi cho sinh viên. Bạn sẽ được đi học với bạn Nga và các bạn đến từ các quốc gia khác, được hỗ trợ tận tình của giáo viên nên các bạn đừng quá lo lắng.&lt;/p&gt;
+
+&lt;p&gt;Hiện tại có 6 sinh viên và 4 thạc sỹ đang theo học ngành này và hi vọng sẽ tăng lên trong những năm tiếp theo.
+Sau khi kết thúc học kì 1 năm 2, sinh viên sẽ được chọn 1 trong 3 chuyên ngành sau: (việc chọn ngành nhỏ này bắt đầu từ năm 2020 nên thực tế mà nói thì mọi người trong khoa cũng không có nhiều kinh nghiệm, nhưng yên tâm mọi người sẽ giúp đỡ các bạn tận tình).&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chuyên ngành 1: Lập trình ứng dụng trong hệ thống thông tin liên lạc
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;cite&gt;Trong quá trình đào tạo về chuyên ngành, sinh viên có được các kỹ năng lý thuyết và thực hành về thiết kế, phát triển, thử nghiệm và hỗ trợ phần mềm hệ thống thông tin liên lạc, học cách viết code hiệu quả bằng các ngôn ngữ lập trình: Python, Java, C #, C ++, PHP, JavaScript , v.v … Nghiên cứu các phương pháp tiếp cận hiện đại để thiết kế và phát triển cơ sở dữ liệu bằng cách sử dụng các ví dụ về DBMS: Microsoft SQL Server, MySQL, Oracle, v.v., cũng như giới thiệu các công nghệ lập trình hiện đại.&lt;/cite&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Chuyên ngành 2: Công nghệ mạng và đám mây:
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;cite&gt;Trong chuyên ngành này, sinh viên có được kiến thức lý thuyết và thực hành trong việc phát triển, triển khai và bảo trì cả cơ sở hạ tầng đám mây nói chung và các dịch vụ đám mây nói riêng (dựa trên các ngôn ngữ lập trình phổ biến: C, C ++, C #, PHP, Java, Python, JavaScript và các công nghệ máy chủ JavaEE, .NET) và trong việc phát triển các ứng dụng web sử dụng các khuôn khổ (Node.js. React, Vue) tương tác với DBMS và các hệ thống khác.&lt;/cite&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Chuyên ngành 3: Công nghệ không dây
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;cite&gt;Trong chuyên ngành này, sinh viên có được kiến thức lý thuyết và thực tế trong lĩnh vực truyền thông tin vô tuyến và truyền dữ liệu, xây dựng và thiết kế các loại hệ thống thông tin liên lạc không dây chính: vệ tinh, chuyển tiếp vô tuyến, thông tin liên lạc vô tuyến di động chuyên nghiệp, thông tin liên lạc di động, hệ thống giao thông thông minh và Internet vạn vật (là một mạng lưới tất cả thiết bị thông minh được kết nối với nhau và được điều khiển bởi một thiết bị chính (bộ não)).&lt;/cite&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;22-những-yêu-cầu-cơ-bản-khi-ra-trường&quot;&gt;2.2. Những yêu cầu cơ bản khi ra trường&lt;/h4&gt;
+&lt;p&gt;Sinh viên tốt nghiệp cần có được những kiến thức và khả năng sau:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nắm vững những lý thuyết cơ bản trong lĩnh vực truyền thông;&lt;/li&gt;
+  &lt;li&gt;Có những hiểu biết về công nghệ truyền thông như sóng ánh sáng, không dây và đa phương tiện;&lt;/li&gt;
+  &lt;li&gt;Nắm vững các phương pháp phân tích và thiết kế hệ thống thông tin liên lạc và mạng lưới truyền thông;&lt;/li&gt;
+  &lt;li&gt;Có khả năng cơ bản về thiết kế, phát triển, vận hành và ứng dụng các hệ thống thông tin liên lạc và mạng lưới truyền thông.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;23-triển-vọng-nghề-nghiệp&quot;&gt;2.3. Triển vọng nghề nghiệp&lt;/h4&gt;
+&lt;h4 id=&quot;xu-hướng-việc-làm&quot;&gt;Xu hướng việc làm&lt;/h4&gt;
+&lt;p&gt;Sinh viên tốt nghiệp có thể tham gia nghiên cứu, thiết kế, chế tạo, vận hành và vận hành trong lĩnh vực truyền thông, cũng như phát triển và ứng dụng công nghệ truyền thông và bảo trì thiết bị trong các lĩnh vực khác nhau của nền kinh tế quốc dân và công nghiệp quốc phòng. Bạn cũng có thể chọn tiếp tục nghiên cứu về hệ thống thông tin và truyền thông, xử lý tín hiệu và thông tin, ứng dụng máy tính, khoa học và công nghệ thông tin điện tử.&lt;/p&gt;
+
+&lt;h4 id=&quot;triển-vọng-việc-làm&quot;&gt;Triển vọng việc làm&lt;/h4&gt;
+&lt;p&gt;Sinh viên tốt nghiệp chuyên ngành này có triển vọng việc làm tốt, sau khi tốt nghiệp, hầu hết sinh viên đều tham gia nghiên cứu, thiết kế, phát triển ứng dụng, phân tích, chế tạo, vận hành và quản lý các hệ thống và thiết bị liên lạc trong lĩnh vực truyền thông, điện tử, công nghệ thông tin, v.v.&lt;/p&gt;
+&lt;h3 id=&quot;3-học-tập-nghiên-cứu-tại-itmo&quot;&gt;3. HỌC TẬP, NGHIÊN CỨU TẠI ITMO&lt;/h3&gt;
+&lt;p&gt;Những điều mình chia sẻ phía trên chắc hẳn sẽ có bạn nào đó đã vô tình lướt qua và đọc được trên mạng Internet. Vậy nên từ giờ phút này chúng ta bắt đầu vào nội dung chính nhé: Học tập và nghiên cứu theo hướng ngành 11.03.02 Công nghệ thông tin và các hệ thống liên lạc như thế nào tại trường Đại học ITMO?&lt;/p&gt;
+&lt;h4 id=&quot;31----chuẩn-bị-kiến-thức&quot;&gt;3.1.   	Chuẩn bị kiến thức&lt;/h4&gt;
+&lt;p&gt;Để chuẩn bị tốt nhất cho 4 năm học tại trường các bạn nên có một hành trang thật tốt và tâm lý vững vàng. Năm dự bị sẽ là bước đà để các bạn hoàn thành tốt những năm học tiếp theo. Và nhìn chung để học tập tốt ở nước Nga, và đặc biệt là những bạn theo ngành của chúng mình thì cần có những kiến thức cơ bản sau:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tiếng Nga: Bạn phải đọc viết thành thạo sử dụng ổn trong giao tiếp và học tập, nếu có cả tiếng Anh nữa thì càng tốt nhưng đầu tiên phải là tiếng Nga các bạn nhé. Giáo viên rất yêu quý những người nói tốt tiếng Nga. Thầy cô cần hiểu những điều bạn nói trước rồi mới xem xét đến kết quả công việc của bạn phải không nào.&lt;/li&gt;
+  &lt;li&gt;Kiến thức chung về lập trình các loại ngôn ngữ (không cần giỏi nhưng nên biết) vì bước vào năm 1 là bạn sẽ có ngay môn C, C++ và Python))&lt;/li&gt;
+  &lt;li&gt;Nắm chắc các kiến thức về vật lý, đặc biệt phần điện сác bạn ạ. Bước vào năm và năm 2 chúng ta sẽ có 3 học kỳ Lý đại cương và nhiều nhiều môn liên quan đến Vậy lý:v&lt;/li&gt;
+  &lt;li&gt;Và cuối cùng là một tâm thế thoải mái, yêu thích môn học và ngành học. Nếu như bạn thật sự mong muốn có điều gì thì vũ trụ sẽ giúp bạn có được nó. 😋😋😋&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;32----chương-trình-học-tập&quot;&gt;3.2.   	Chương trình học tập&lt;/h4&gt;
+&lt;p&gt;Chúng ta sẽ trải qua 4 năm học với 8 học kỳ tại ITMO. Học kỳ 1 bắt đầu từ 01.09 và kết thúc vào khoảng cuối tháng 1. Học kỳ 2 bắt đầu ngay sau đó, sau kỳ nghỉ 1 tuần, từ ngày 05.02 đến cuối tháng 6. Về cơ bản mỗi học kỳ sẽ có 2 module, tương ứng với 2 tháng. Kết thúc mỗi module cũng là thời điểm sinh viên đến hạn trả lab, bài tập về nhà cũng như làm test trên CDO và test trên lớp.&lt;/p&gt;
+
+&lt;h5 id=&quot;hình-thức-học-tập&quot;&gt;Hình thức học tập:&lt;/h5&gt;
+&lt;p&gt;Mỗi môn học sẽ có những hình thức học tập khác nhau, trong đó chủ yếu sẽ có leksi, prak và lab. Giáo viên sẽ giảng bài vào các tiết leksi, hướng dẫn làm bài tập vào tiết prak và nhận trả bài vào các tiết lab. Tuy nhiên có một số môn như môn Toán, Vật lý hay môn Sử thì chúng ta chỉ có leksi và prak, vậy nên tiết trả bài sẽ là tiết prak các bạn nhé.&lt;/p&gt;
+
+&lt;p&gt;Ngoài ra chúng ta sẽ có thêm các bài tập lớn và các nhiệm vụ khác mà giáo viên giao cho, tùy từng môn học mà các bạn nên cân nhắc và phân bố thời gian hợp lý.
+Cuối mỗi module sẽ có các bài test trên lớp và test CDO. Phòng CDO là nơi test tập trung cho tất cả các sinh viên (ở địa chỉ Kronverskiy 49 – trụ sở chính của trường, phòng 101). Các bạn đăng ký trước lịch test trên hệ thống de.ifmo.ru và đến test theo lịch.&lt;/p&gt;
+
+&lt;h5 id=&quot;cách-thức-tính-điểm&quot;&gt;Cách thức tính điểm:&lt;/h5&gt;
+&lt;p&gt;Các bạn sẽ có 3 dạng chính là môn thi, môn zachot và môn zachot tính điểm.
+Cả 3 dạng môn học này đều có hệ số điểm 100. Các bạn sẽ cần tối thiểu 60 điểm để qua môn và đạt được điểm 3 (hoàn thành môn học). Với môn thi và môn zachot tính điểm thì các bạn được đánh giá điểm 3,4 và 5. Có thêm 2 mốc điểm mà các bạn cần chú ý:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Điểm 4: cho các bạn đạt được từ 74.1 đến 90 điểm&lt;/li&gt;
+  &lt;li&gt;Điểm 5: cho các bạn đạt từ 90.1 điểm trở lên.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Và để có học bổng của Nga cũng như phấn đấu đạt bằng đỏ thì các bạn sẽ không được phép có điểm 3 đâu nhé.
+Toàn bộ điểm thành phần được quản lý qua ISU và CDO. Đường dẫn về các trang này mình sẽ để ngay dưới đây để các bạn có thể dễ dàng học tập và theo dõi nhé:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;https://isu.ifmo.ru/&lt;/li&gt;
+  &lt;li&gt;https://de.ifmo.ru/&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;thi-cuối-kỳ-và-trả-zachot&quot;&gt;Thi cuối kỳ và trả zachot&lt;/h5&gt;
+&lt;p&gt;Chúng ta sẽ có thi cuối kỳ 1 vào tháng 1 và cuối kỳ 2 vào tháng 6. Giữa các môn thi sẽ có thời gian nghỉ từ 3-4 ngày. Điểm số các bạn nhận được phụ thuộc rất lớn vào ngày bạn trả thi vì giáo là người quyết định cuối cùng điểm số của bạn. Thường thì trả hết lab và các bài tập trước ngày thi bạn sẽ có khoảng 70 điểm (trong đó có 10 điểm chuyên cần nhé) và vào ngày thi bạn sẽ nhận được tối đa 20 điểm. Hình thức thi cũng khá phong phú: bốc thăm câu hỏi và chuẩn bị rồi trả lời, trả lời trực tiếp hoặc làm một bài test 20 câu. Đừng sợ khi lần đầu ngồi trực tiếp nói chuyện với giáo nhé vì bạn sẽ phải làm quen và thực hành nhiều lần đấy.&lt;/p&gt;
+
+&lt;p&gt;Như mình nói ở phía trên để có điểm xuất sắc (điểm 5) bạn cần đạt ít nhất 90.1 điểm. Vậy nên hãy đi học thật chuyên cần và trả bài đúng hạn nhé, giáo sẽ trừ điểm nếu bạn nộp muộn đó.&lt;/p&gt;
+
+&lt;h4 id=&quot;33----review-về-thầy-cô-và-các-môn-học&quot;&gt;3.3.   	Review về thầy cô và các môn học&lt;/h4&gt;
+&lt;p&gt;Với hai năm đầu các bạn sẽ chủ yếu học về đại cương, các bạn sẽ có những môn học bắt buộc như Toán, Vật lý, Tin học, Tiếng Nga, Lịch sử, Kinh tế, Triết, các môn nhập môn chuyên ngành, một vài môn zatrot học về Logic, Phần cứng và phần mềm, Thiết kế Autocad, Sinh thái học, Văn hóa… Chương trình mới bổ sung 2018 sẽ có thêm các môn học về Kỹ năng sống, Công nghệ sáng tạo trên nền tảng học trực tuyến OpenEdu và Eduado.
+Vào những năm tiếp theo các bạn sẽ học sâu về hệ thống thông tin, mô hình và các hệ thống thông tin cũng như phương pháp xây dựng và quản lý chúng, cơ sở dữ liệu (Access, Microsoft SQL Server, MySQL) và các môn học lập trình (C#, Java, Python), học về quản trị mạng và mô hình thông tin. Chúng ta cũng sẽ được học cách xây dựng web cơ bản sử dụng HTML và CSS3, PHP với cơ sở dữ liệu MySQL).&lt;/p&gt;
+
+&lt;p&gt;Nhìn chung các môn học ở mức tương đối, không quá khó nhưng không quá dễ, nắm vững những kiến thức về lập trình thì việc qua môn là rất đơn giản. Giáo viên cũng khá dễ tính, chỉ cần hoàn thành đúng hạn, tiếng Nga ổn (một số giáo vẫn cho trả bằng tiếng Anh). Thường thì các thầy cô sẽ tạo điều kiện tốt nhất cho sinh viên để sinh viên hoàn thành môn học. Vậy nên các bạn hãy xác định ngay từ đầu mục tiêu cho mình để có một kết quả học tập tốt nhất nhé.&lt;/p&gt;
+
+&lt;p&gt;Các bạn nên học theo nhóm 4-5 người và chủ động làm quen cũng như giúp đỡ các bạn Nga để cũng nhận được sự giúp đỡ của các bạn. Vấn đề giao tiếp luôn là khó khăn lớn nhất khi chúng ta học tập tại Nga vậy nên nếu có sự giúp đỡ của các bạn Nga thì mình tin là sẽ dễ dàng hơn rất nhiều trong việc học. Mình lấy ví dụ với các môn zatrot thường có các bài kiểm tra ngắn 10, 15 phút làm ngay tại lớp. Có thể với ngần nấy thời gian chúng ta chưa kịp đọc xong đề nhưng với các bạn Nga đó lại là những kiến thức cực kì cơ bản. Và các bạn biết là mình định nói gì tiếp rồi đấy…&lt;/p&gt;
+
+&lt;h6 id=&quot;dưới-đây-là-một-số-môn-học-mình-đã-từng-học&quot;&gt;Dưới đây là một số môn học mình đã từng học:&lt;/h6&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hệ thống thông tin liên lạc:
+    &lt;ul&gt;
+      &lt;li&gt;Основы сетевых технологий (Các nguyên lý cơ bản của công nghệ mạng).&lt;/li&gt;
+      &lt;li&gt;Основы схемотехники телекоммуникационных устройств (Các nguyên lý cơ bản về mạch của các thiết bị viễn thông).&lt;/li&gt;
+      &lt;li&gt;Основы радиотехники и мобильная связь (Các nguyên lý cơ bản về kỹ thuật vô tuyến và truyền thông di động).&lt;/li&gt;
+      &lt;li&gt;Администрирование в инфокоммуникационных системах (Quản trị hệ thống thông tin liên lạc).&lt;/li&gt;
+      &lt;li&gt;Архитектура сетевых инфокоммуникационных систем (Cấu trúc hệ thống thông tin liên lạc).&lt;/li&gt;
+      &lt;li&gt;Методы моделирования информационных процессов и систем (Phương pháp mô hình hóa hệ thống thông tin).&lt;/li&gt;
+      &lt;li&gt;Цифровая обработка сигналов (Xử lý tín hiệu kỹ thuật số).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Lập trình và ứng dụng.
+    &lt;ul&gt;
+      &lt;li&gt;Прикладное программирование (Lập trình ứng dụng).&lt;/li&gt;
+      &lt;li&gt;Разработка баз данных (Phát triển cơ sở dữ liệu).&lt;/li&gt;
+      &lt;li&gt;Создание клиент-серверных приложений (Xây dựng ứng dụng khách – chủ).&lt;/li&gt;
+      &lt;li&gt;Создание программного обеспечения инфокоммуникационных систем (Xây dựng phần mềm cho hệ thông tin liên lạc).&lt;/li&gt;
+      &lt;li&gt;Разработка переносимых приложений (Phát triển các ứng dụng di động).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Công nghệ truyền thông.
+    &lt;ul&gt;
+      &lt;li&gt;Технологии IP-телефонии (Công nghệ IP điện thoại).&lt;/li&gt;
+      &lt;li&gt;Облачные технологии и услуги (Công nghệ và dịch vụ đám mây).&lt;/li&gt;
+      &lt;li&gt;Мультимедийные технологии (Công nghệ truyền thông đa phương tiện).&lt;/li&gt;
+      &lt;li&gt;Электроника и микропроцессорная техника (Điện tử và công nghệ vi xử lý).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Đọc đến phần này chắc bạn đã hiểu được phần nào đó những gì chúng ta sẽ học phải không nào, hi vọng những điều mình chia sẻ tiếp theo đây sẽ giúp đỡ các bạn trong việc trả bài và hoàn thành môn học đúng hạn. Đừng bỏ lỡ nhé!!&lt;/p&gt;
+&lt;h3 id=&quot;4-những-chia-sẻ-bên-lề&quot;&gt;4.	NHỮNG CHIA SẺ BÊN LỀ&lt;/h3&gt;
+&lt;h4 id=&quot;tìm-kiếm-tài-liệu-học-tập&quot;&gt;Tìm kiếm tài liệu học tập&lt;/h4&gt;
+&lt;p&gt;Cũng giống như với việc viết một bài báo khoa học cần có những tài liệu tham khảo thì việc học tập của bạn cũng vậy. Tài nguyên ở đây mình nói tới trước hết là những tài liệu có sẵn trên Google và Yandex. Bạn rất cần trau dồi kỹ năng tìm kiếm đấy ạ. Hay tìm theo từ khóa, sắp xếp các từ khóa quan trọng lên phía trước. Với những câu hỏi lý thuyết cho các môn zatrot phải kể đến như Logic hay Kinh tế thì nên ưu tiên Yandex thay vì Google. Còn đối với những bài tập liên quan đến lập trình và công nghệ thì hãy ưu tiên tìm kiếm bằng tiếng Anh trên Google các bạn nhé. Tuy nhiên các bạn cũng không quá lo lắng vì tài liệu tiếng Việt cũng có khá nhiều và dễ hiểu.&lt;/p&gt;
+
+&lt;p&gt;Ngoài ra các bạn có thể tận dụng thư viện sách giấy và phòng máy tính miễn phí tại trường, tại cả 2 địa điểm là Kronverskiy 49 và Lomonosova 9 đều có sẵn.&lt;/p&gt;
+
+&lt;h4 id=&quot;học-hỏi-từ-bạn-nga-và-các-anh-chị-khóa-trên&quot;&gt;Học hỏi từ bạn Nga và các anh chị khóa trên&lt;/h4&gt;
+&lt;p&gt;Hãy hỏi để biết, nếu điều gì đó bạn không chắc chắn hoặc không biết, hãy mạnh dạn đặt câu hỏi. Mọi người sẽ cố gắng giúp đỡ bạn.&lt;/p&gt;
+
+&lt;p&gt;Vào các tiết học prak và lab thì giáo viên thường sẽ chia các bạn theo các nhóm, nhất là những lúc làm dự án nhỏ. Chính vì vậy hãy tích cực giao lưu và học hỏi từ các bạn Nga, kết bạn và đi chơi cùng nhau cũng là cách tăng khả năng giao tiếp và thiện cảm của các bạn Nga dành cho chúng ta.
+Ngoài ra các anh chị khóa trên cũng là nơi các bạn có thể đặt câu hỏi. Các anh chị luôn sẵn sàng giúp đỡ trong khả năng vậy nên đừng bao giờ ngần ngại nhé.&lt;/p&gt;
+
+&lt;h4 id=&quot;và-cứu-cánh-cuối-cùng-của-bạn-chính-là-giáo-viên&quot;&gt;Và cứu cánh cuối cùng của bạn chính là giáo viên.&lt;/h4&gt;
+&lt;p&gt;Hãy chờ thầy cô hết tiết và đến đặt câu hỏi trực tiếp cho thầy cô nhé. Nhớ tạo thiện cảm thật tốt để thầy cô thoải mái và có ấn tượng tốt về bạn nhé.
+Những lưu ý khi nộp bài và trả lab
+Với mình điều quan trọng nhất mà mình muốn nhắn nhủ với các bạn đó chính là trả bài đúng hạn. Đừng để nước đến chân mới nhảy và đợi đến lúc gần hết hạn mới đi nộp. Vì bạn chưa biết đâu các bạn Nga cũng sẽ chờ gần cuối kì mới nộp. Và khi đó sẽ có những hàng dài chờ trả lab và combo 8 9h tối cùng thời tiết âm 10 độ C. Việc trả bài sớm đúng hạn cũng thể hiện ý thức học tập của bạn, là một trong những tiêu chí quan trọng để giáo quyết định điểm số của bạn.&lt;/p&gt;
+
+&lt;p&gt;Việc test CDO cũng vậy, bạn sẽ có 3 lần test cho mỗi bài. Nếu chưa thật sự tự tin thì hãy test trước các bài tập ở nhà, tìm kiếm tài liệu test thực tế và hỏi các bạn đã từng test. Với số điểm dưới 60% bạn sẽ phải test lại và đương nhiên CDO cũng có hạn test, không ngoại lệ. Nếu test sau hạn thì rất có thể bạn sẽ bị trừ điểm nhé.
+Với lab thì bạn sẽ phải bảo vệ lab trực tiếp với giáo viên nếu được yêu cầu. Câu hỏi sẽ liên quan đến nội dung của bạn làm nên chuẩn bị thật kỹ nhé.&lt;/p&gt;
+
+&lt;h4 id=&quot;trả-thi-và-nợ-môn&quot;&gt;Trả thi và nợ môn&lt;/h4&gt;
+&lt;p&gt;Nếu trước kỳ thi bạn đã kiếm được cho mình hơn 60 điểm thì có thể yên tâm phần nào rồi đó vì với số điểm này môn zachot đã xong và môn thi thì cũng đã đủ điều kiện được 3. Với những bạn có yêu cầu cao hơn và thiếu điểm (ví dụ để được 5 bạn cần 90 điểm nhưng trước khi thi mới có 69 điểm=)) kể cả 20 điểm thi cũng không đủ) thì các bạn rất cần xin làm lại test hoặc xin thêm bài tập. Bạn có thể gửi mail cho giáo, gửi tin nhắn qua isu hoặc tốt nhất là đến tận nơi để xin bài nhé.&lt;/p&gt;
+
+&lt;p&gt;Ở nhóm chung VK của nhóm bạn lớp trưởng sẽ thường xuyên gửi các đường link cũng như file liên quan đến học tập. Vào thời điểm cuối kỳ giáo sẽ cho bộ câu hỏi ôn tập, hãy để ý là chuẩn bị câu hỏi cùng các bạn trong lớp để có một kỳ thi thật tốt nhé.&lt;/p&gt;
+
+&lt;p&gt;Với các bạn thiếu may mắn chưa đủ điểm qua môn thì hãy nhanh chóng đến gặp trực tiếp giáo để xin thi lại trong thời gian học, tránh để vào kỳ nghỉ bạn sẽ phải trả lại vào học kỳ tới gây ảnh hưởng đến các môn học khác.&lt;/p&gt;
+
+&lt;p&gt;Trên đây là những chia sẻ của mình và các anh chị đã và đang theo học khoa IKT, ngành Công nghệ thông tin và các hệ thống liên lạc. Chúng mình rất mong nhận được phản hồi của các bạn và luôn chào đón bạn đến học tập và nghiên cứu tại trường Đại học ITMO.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Chúc các bạn học tập tốt và dồi dào sức khỏe!&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</description>
+                <pubDate>Fri, 05 Nov 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/itmo-ikt</link>
+                <guid isPermaLink="true">http://localhost:4000/itmo-ikt</guid>
+                
+                <category>итмо_факультет</category>
+                
+                
+                <category>ITMO</category>
+                
+            </item>
         
             <item>
                 <title>Khoa an toàn thông tin</title>
@@ -172,6 +409,43 @@ Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí 
                 <guid isPermaLink="true">http://localhost:4000/cryptography</guid>
                 
                 <category>Infosec</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
+        
+            <item>
+                <title>A STORY OF PROGRAMMING</title>
+                <description>&lt;p&gt;Trong kỷ nguyên công nghiệp 4.0, Nhu cầu cao về lập trình viên, nhà phát triển và nhà khoa học dữ liệu đã thu hút nhiều bạn trẻ  tham gia vào lĩnh vực CNTT. Thông thường, những bạn mới bắt đầu có xu hướng bỏ qua một số vấn đề  cốt lõi, cơ bản và tìm thẳng code mẫu để cố gắng rút ngắn thời gian học tập hoặc chạy đua với thời hạn công việc. Tuy nhiên khi một lập trình viên giải quyết một vấn đề về lập trình, hoàn thiện code có lẽ là bước cuối cùng. Trong bài viết này, tôi sẽ hướng dẫn bạn 5 bước mà tôi tin rằng sẽ hướng bạn tới cách tiếp cận chính xác để học lập trình.&lt;/p&gt;
+&lt;h3 id=&quot;tập-giải-quyết-vấn-đề-trên-giấy&quot;&gt;Tập giải quyết vấn đề trên giấy.&lt;/h3&gt;
+&lt;p&gt;Đúng vậy, trước khi bắt đầu thực sự lập trình, bạn cần tóm tắt rõ đầu vào, đầu ra của vấn đề cũng như những hướng giải quyết ra giấy. Việc này không chỉ giúp lập trình viên hiểu rõ hơn vấn đề mà còn tổng hợp những ý tưởng mơ hồ, tạo điều kiện cho phương án giải quyết rõ ràng và tối ưu xuất hiện.&lt;/p&gt;
+&lt;h3 id=&quot;nghiên-cứu-các-thuật-toán-và-cấu-trúc-dữ-liệu&quot;&gt;Nghiên cứu các thuật toán và cấu trúc dữ liệu&lt;/h3&gt;
+&lt;p&gt;Thuật toán và cấu trúc dữ liệu có vẻ xa vời nhưng thực ra lại rất gần gũi. Thuật toán là một tập hợp các bước, khi được tuân theo, sẽ giải quyết một vấn đề cụ thể. Cấu trúc dữ liệu nghiên cứu cách để biểu diễn cùng một dữ liệu theo nhiều dạng khác nhau. Nghiên cứu thêm về thuật toán và cấu trúc dữ liệu giúp bạn có thêm nhiều lựa chọn, phương án giải quyết vấn đề.&lt;/p&gt;
+
+&lt;p&gt;Ví dụ: bài toán tìm phần tử có giá trị xác định của mảng có 1 triệu phần tử, bạn cần 1 triệu phép so sánh để hoàn thành. Nhưng nếu mảng đó đã được sắp xếp, bạn chỉ tốn chưa đến 20 phép so sánh, thậm chí với cấu trúc bảng băm (hash table) bạn chỉ cần 1 phép so sánh duy nhất.
+Vậy nên, thuật toán và cấu trúc dữ liệu là 2 yếu tố quan trọng nhất mà ai cũng cần học, đúng như câu nói nổi tiếng của Niklaus Wirth:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Programs (Chương trình) = Data Structures (Cấu trúc dữ liệu) + Algorithms (Giải thuật)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;đọc-về-lý-thuyết-độ-phức-tạp&quot;&gt;Đọc về lý thuyết độ phức tạp.&lt;/h3&gt;
+&lt;p&gt;Khi bạn đã có trong tay nhiều phương án giải quyết rồi, làm cách nào có thể đánh giá phương án nào tốt hơn, tối ưu hơn? Lý thuyết độ phức tạp sẽ giải quyết việc này.&lt;/p&gt;
+
+&lt;p&gt;Độ phức tạp là một thang đo để đánh giá thuật toán trong trường hợp xấu nhất. Máy tính, mặc dù có khả năng thực hiện lượng phép tính ấn tượng, nhưng có những hạn chế của chúng. Nếu bạn phát triển một thuật toán quá phức tạp mà các máy tính hiện tại không thể chạy nó, thì điều đó là vô nghĩa.&lt;/p&gt;
+&lt;h3 id=&quot;bắt-đầu-bằng-mã-giả&quot;&gt;Bắt đầu bằng mã giả&lt;/h3&gt;
+&lt;p&gt;Nhưng trước khi bạn ngồi vào máy tính và bắt đầu viết code, lời khuyên của tôi là hãy triển khai các thuật toán của bạn bằng mã giả trước. Như chúng ta vừa thảo luận, thuật toán là một tập hợp các bước được sử dụng để giải quyết một vấn đề cụ thể. Mã giả được định nghĩa là “mô tả các bước của thuật toán bằng ngôn ngữ đơn giản”. Đó là một cách giải thích quá trình suy nghĩ của bạn với người khác chứ không phải với máy tính. Tuy không trực tiếp giúp giải quyết vấn đề, nhưng khi bạn làm việc với 1 team, việc giúp tất các thành viên hiểu được thuật toán lại mang ý nghĩa rất lớn.&lt;/p&gt;
+&lt;h3 id=&quot;lựa-chọn-ngôn-ngữ-lập-trình&quot;&gt;Lựa chọn ngôn ngữ lập trình&lt;/h3&gt;
+&lt;p&gt;Khi bạn đã nắm vững lý thuyết giải quyết vấn đề, thuật toán và độ phức tạp, bạn có thể tự tin áp dụng bằng bất kỳ ngôn ngữ lập trình nào. Giống như khi đến Nga thì phải học tiếng Nga vậy, bạn cần lựa chọn ngôn ngữ lập trình phù hợp từng trường hợp, hoàn cảnh. Có ngôn ngữ chuyên dùng để lập trình thiết bị di động, có ngôn ngữ lại chỉ để lập trình web. Theo wikipedia có tới hơn 700 ngôn ngữ lập trình, tuy nhiên chúng đều có cùng các khái niệm như từ vựng, biến, vòng lặp, kiểu dữ liệu,… Vì vậy, bất kể bạn bắt đầu với ngôn ngữ lập trình nào, bạn cũng có thể học cú pháp khác ngay lập tức, miễn là nền tảng của bạn vững chắc.&lt;/p&gt;
+
+&lt;p&gt;Bài viết đã nêu lên được 5 bước định hướng tới cách tiếp cận chính xác để học lập trình. Khi nắm được kiến thức nền tảng thì những bài tập lập trình khó nhằn sẽ trở nên dễ dàng hơn rất nhiều.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Tham gia CLB tin học với chúng mình để nhận thêm nhiều lời khuyên hơn tại ITMO BRAIN !!!&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                <pubDate>Sun, 31 Oct 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/intro</link>
+                <guid isPermaLink="true">http://localhost:4000/intro</guid>
+                
+                <category>Programming language</category>
                 
                 
                 <category>ITMOBRAIN</category>
