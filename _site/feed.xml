@@ -5,9 +5,100 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 10 Nov 2021 12:21:13 +0300</pubDate>
-        <lastBuildDate>Wed, 10 Nov 2021 12:21:13 +0300</lastBuildDate>
+        <pubDate>Wed, 10 Nov 2021 14:06:09 +0300</pubDate>
+        <lastBuildDate>Wed, 10 Nov 2021 14:06:09 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Cơ điện tử và kỹ thuật Robot</title>
+                <description>&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/admin/tuan.jpg&quot; /&gt;
+  &lt;em&gt;Đinh Ngọc Tuấn / &lt;a href=&quot;https://www.facebook.com/profile.php?id=100011042762760&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Hế Lô mọi người, Mình là Tuấn (Đinh Ngọc Tuấn) hiện đang là sinh viên năm 2 chuyên ngành Cơ điện tử và kỹ thuật Robot (15.03.06) trường đại học ITMO.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Trước khi chia sẻ một số kiến thức về chuyên ngành mình xin được tâm sự đôi chút về lý do tại sao mình lại chọn chuyên ngành Cơ điện tử và robot. Hồi còn bé mình rất thích xem cuộc thi Robocon Việt Nam chiếu trên sóng truyền hình kênh VTV2. Cuộc thi đó đã tạo cho mình niềm đam mê về robot. Lúc đó mình rất muốn sau này tạo ra được những con robot giống như mấy anh đi thi vậy.&lt;/p&gt;
+
+&lt;p&gt;Nhưng mà đời không như là mơ, đã có một thời gian mình loay hoay tìm lối đi cho riêng mình. Sau nhiều lần thất bại, may mắn đến với mình khi mình được nhận học bổng du học tại nước Nga xinh đẹp này. Thấy chữ cơ điện tử và kỹ thuật robot là khoái rồi nên mình chọn luôn. Từ những nhận định trong quá trình học tập và tìm hiểu của bản thân về ngành học, mình xin được chia sẻ một số điều mình biết về ngành học của mình và những tư tưởng học tập mà mình đã đúc kết được trong suốt thời gian qua. Hy vọng sẽ giúp các bạn một cái nhìn rõ hơn về ngành học của mình và tiếp thêm  động lực học tập cho các bạn.&lt;/p&gt;
+&lt;h3 id=&quot;vậy-thế-nào-là-cơ-điện-tử-và-robot&quot;&gt;Vậy thế nào là cơ điện tử và robot?&lt;/h3&gt;
+&lt;p&gt;Cơ điện tử là một quá trình cấu hình bao gồm sự kết hợp của Kỹ thuật cơ khí, Kỹ thuật điện, Kỹ thuật điều khiển và Kỹ thuật máy tính. Cơ điện tử là một điểm nối mà lĩnh vực kỹ thuật hợp tác. Người máy (Rô bốt)  có thể được coi là một tập hợp con của Cơ điện tử vì nó liên quan đến các lĩnh vực kỹ thuật cơ khí, điện tử và máy tính này. Sự khác biệt chính là đầu vào được “cung cấp” cho các hệ thống cơ điện tử trong khi các hệ thống robot tự “thu nhận” đầu vào.&lt;/p&gt;
+
+&lt;p&gt;Bạn sẽ học cách xử lý một lượng lớn dữ liệu và tạo ra các hệ thống có ý nghĩa về dữ liệu trong thời gian thực để một cơ sở sản xuất hoàn toàn tự động có thể hoạt động một cách an toàn và hiệu quả hoặc một chiếc ô tô có thể lái hoàn toàn tự động. Các kỹ sư người máy và cơ điện tử đang có nhu cầu cao khi nhu cầu về các chuyên gia trong lĩnh vực này ngày càng tăng. Chúng cần thiết trong các ngành công nghiệp sản xuất và hàng không vũ trụ tiên tiến cũng như các nhà sản xuất robot và phân tích dữ liệu.&lt;/p&gt;
+
+&lt;p&gt;Khi các máy móc tự động hóa và tự động hóa ngày càng trở nên quan trọng trong xã hội của chúng ta, người máy - và ngành mẹ của nó, cơ điện tử - trở nên quan trọng hơn bao giờ hết.&lt;/p&gt;
+
+&lt;p&gt;Đối tượng nên quan tâm: Những ai yêu thích các loại thiết bị cơ khí, điện tử, máy tính, rô bốt, ô tô.&lt;br /&gt;Nếu bạn để ý thì trên trường tại Kronversky có máy bán cà phê tự động, đó là một sản phẩm những kỹ sư cơ điện tử và robot có thể làm ra. Sẽ tuyệt vời hơn nữa nếu bạn có thể ứng dụng AI và ML vào các sản phẩm này. Hãy tưởng tượng có một cỗ máy bán cà phê có thể nhận dạng khuôn mặt của bạn, giao tiếp với bạn bằng giọng nói và ghi nhớ những loại cafe bạn thích…vân vân và mây mây .&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sophia_%28robot%29.jpg/800px-Sophia_%28robot%29.jpg&quot; /&gt;
+  &lt;em&gt;Sophia / &lt;a href=&quot;https://en.wikipedia.org/wiki/Sophia&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;Hoặc một ví dụ khác là người máy Sophia - được thiết kế và phát triển bởi công ty công nghệ Mỹ Hanson Robotics có trụ sở đặt tại Hồng Kông. Sophia được thiết kế để suy nghĩ và cử động sao cho giống với con người nhất đồng thời được trang bị trí tuệ thông minh nhân tạo. Mục đích chế tạo Sophia; theo nhà sản xuất; là nhằm phát minh ra một robot có ý thức, có sự sáng tạo và có khả năng hoạt động như bất kỳ con người nào để giúp đỡ chính con người trong các vấn đề cuộc sống thường ngày như: phục vụ chăm sóc sức khỏe, hỗ trợ điều trị y tế, giáo dục cùng nhiều các dịch vụ khác. Người máy sofia là bằng chứng cho sự phát triển về AI trong tương lai. Trong tương lai ứng dụng của robotics kết hợp với AI sẽ giúp giải quyết các vấn đề của nhân loại như chăm sóc y tế, giao thông hay các vấn đề trong kinh doanh như tăng năng suất.&lt;/p&gt;
+&lt;h3 id=&quot;vậy-đơn-vị-chức-năng-của-robotics-là-gì-&quot;&gt;Vậy đơn vị chức năng của robotics là gì ?&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Body Structure -  Hầu hết các  robot đều có cấu trúc cơ thể dựa trên mục đích sử dụng và chức năng của nó.&lt;/li&gt;
+  &lt;li&gt;Muscle Systems - Các cơ cấu phổ biến như bánh răng, thiết bị truyền động khí nén, cơ nhân tạo và cơ đẩy.
+Sensory Systems - Hệ thống “sensory Systems” đơn giản sử dụng các thiết bị như máy dò chuyển động đơn giản, trong khi hệ thống “Sensory Systems” phức tạp sử dụng camera quang học cho phép robot không chỉ nhìn thấy môi trường xung quanh mà còn tương tác với môi trường dựa trên môi trường xung quanh.&lt;/li&gt;
+  &lt;li&gt;Power Source - Hai hình thức cung cấp năng lượng điện phổ biến nhất cho rô bốt là ổ cắm điện nối đất cho rô bốt cố định hoặc bộ pin bên trong cho rô bốt di động.&lt;/li&gt;
+  &lt;li&gt;Brain System - Hệ thống “não bộ” của robot có liên quan chặt chẽ và hoạt động cùng với hệ thống giác quan. Hệ thống não của robot cũng có thể rất đơn giản hoặc rất phức tạp, tùy thuộc vào chức năng của robot. Một hệ thống “não bộ” đơn giản sẽ gửi tín hiệu đến hệ thống cơ của rô-bốt yêu cầu nó dừng lại nếu hệ thống cảm giác được phát hiện được kích hoạt. Một hệ thống “não bộ” phức tạp sẽ cho phép một robot xác định các đối tượng trong môi trường xung quanh nó, dựa trên thông tin thu thập được bởi các hệ thống giác quan. Sau đó “hệ thống não bộ” sẽ gửi tín hiệu đến hệ thống cơ dựa trên thông tin đó, cho phép robot tương tác với các vật thể xung quanh nó.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;học-tập-tại-itmo-như-thế-nào&quot;&gt;Học tập tại ITMO như thế nào?&lt;/h3&gt;
+&lt;p&gt;Để học tập hiệu quả các bạn nên chuẩn bị cho mình một nền tảng toán học, vật lý thật vững chắc. Ví dụ như năm đầu tiên trong môn giới thiệu chuyên ngành cần hiểu rất rõ về Đại số tuyến tính, các hàm toán học ứng dụng trong lập trình nhúng cho robot như hàm Lyapunov (Lyapunov functions), Cơ học Lagrange và kiến thức về Vật lý phần cơ học. Tìm hiểu về lập trình C/C++ để rèn luyện tư duy và hiểu về lập trình.  Tìm hiểu cách làm việc với Simulink hay Xcos trong Matlab, Scilab.&lt;/p&gt;
+
+&lt;p&gt;Chúng ta sẽ được làm quen với các môn cơ bản liên quan đến chuyên ngành của mình.  Các môn liên quan đến lập trình như : Lập trình java, lập trình C. Môn VPD (Введение в профессиональную деятельность) nơi mà bạn sẽ được quen với lắp ráp và lập trình nhúng cho robot (cụ thể là Mindstorms EV3). Mình rất thích môn VPD và nó cũng là môn ngốn rất nhiều thời gian của mình khi học năm nhất đại học.  Ngoài ra bạn sẽ làm quen kiến thức cơ bản về AI (Artificial intelligence), ML(Machine Learning) qua các môn học Ứng dụng trí tuệ nhân tạo (прикладной искусственный интеллект) và môn Máy học (Машинное обучение) cùng một số môn đại cương khác.&lt;/p&gt;
+
+&lt;p&gt;Từ năm 2021, Mã ngành 15.03.06(Cơ điện tử và kỹ thuật robot) chia làm 3 chuyên ngành nhỏ sau:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Мехатроника.&lt;/li&gt;
+  &lt;li&gt;Интеллектуальная робототехника.&lt;/li&gt;
+  &lt;li&gt;Интеллектуальная робототехника (проектная).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Các bạn có thể tìm hiểu các môn học với từng chuyên ngành bằng file gắn &lt;a href=&quot;https://www.google.com/url?q=https://vk.com/doc563228141_617153236?hash%3D95940875d35792f68f%26dl%3Dbde995cd232f19dda8&amp;amp;sa=D&amp;amp;source=docs&amp;amp;ust=1636534480620000&amp;amp;usg=AOvVaw3Y2AGJpTQU7sG9WL9nboAw&quot;&gt;với đường link này&lt;/a&gt;.&lt;br /&gt;
+Và mình xin trích một nhận xét của một sinh viên năm 2 cùng ngành mình tên là Georgy Khachatryan như sau:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;“Робототехника, в отличие от других специальностей, очень прикладная. С первого курса мы начали собирать роботов, создавать из математические модели и программировать их (на парах ВПД). Этим все не ограничивается, в ИТМО нас знакомят с широким спектром разных общеобразовательных и специальных предметов. Это помогает нам преуспеть как в робототехника, так и в жизни в целом.’’ 
+&lt;br /&gt;&lt;br /&gt;Tạm dịch :  Robotics, không giống như các chuyên ngành khác, được ứng dụng rất nhiều. Từ năm đầu tiên chúng tôi bắt đầu lắp ráp robot, tạo ra các mô hình toán học từ chúng và lập trình nhúng ( trên các tiết học môn VPD - Введение в профессиональную деятельность). Đó không phải là tất cả, ở ITMO chúng tôi được giới thiệu về nhiều loại giáo dục phổ thông và các môn học đặc biệt khác nhau. Nó giúp chúng tôi thành công trong cả lĩnh vực chế tạo máy và cuộc sống nói chung.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;một-số-kỹ-năng-mềm-quan-trọng&quot;&gt;Một số kỹ năng mềm quan trọng&lt;/h3&gt;
+&lt;p&gt;Bên cạnh việc sở hữu nguồn tri thức dồi dào, hiểu biết về cuộc sống, có 4 kỹ năng mềm được đánh giá là vô cùng quan trọng để thành công trong công việc và cuộc sống  - hay còn được gọi tắt là kỹ năng 4C:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kỹ năng giao tiếp (Communication) - Giao tiếp là hoạt động cơ bản của con người, nảy sinh từ nhu cầu trao đổi truyền đạt thông tin, cảm xúc, suy nghĩ của bản thân thông qua ngôn ngữ. Khi được bồi đắp kỹ năng giao tiếp tốt, các bạn sẽ biết cách lắng nghe và thấu hiểu, đồng thời có khả năng thể hiện các cảm xúc, suy nghĩ của bản thân một cách hiệu quả và tự tin.&lt;/li&gt;
+  &lt;li&gt;Tư duy phản biện (Critical Thinking) : Tư duy phản biện hay tư duy phân tích là một quá trình gồm phân tích, đánh giá thông tin đã có nhằm làm sáng tỏ và khẳng định lại tính chính xác của vấn đề. Tư duy phản biện giúp các bạn có cái nhìn khái quát và khả năng đưa ra chính kiến về nhiều vấn đề, tạo ra những thay đổi tích cực trong suy nghĩ và hành động.&lt;/li&gt;
+  &lt;li&gt;Tính sáng tạo (Creativity):  Mỗi con người luôn tiềm ẩn khả năng sáng tạo không giới hạn. Trong bối cảnh thế giới thay đổi nhanh chóng, kỹ năng sáng tạo được đánh giá là vô cũng cần thiết nhằm đem lại hướng giải quyết vấn đề linh hoạt và tối ưu.&lt;/li&gt;
+  &lt;li&gt;Kỹ năng hợp tác (Collaboration): Để phát triển lâu dài, chúng ta cần làm việc cùng một tập thể và khi đó “Kỹ năng hợp tác” đóng vai trò thành hay bại. Đây cũng là kỹ năng quan trọng khi bạn tham gia vào thị trường lao động và là điều không thể thiếu để hòa nhập với mọi môi trường tổ chức - doanh nghiệp, giúp hoàn thành công việc hiệu quả.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ngoài ra còn có EQ - trí thông minh cảm xúc, kỹ năng tự tin thuyết trình trước đám đông,… Xây dựng cho mình một phong cách tự học phù hợp và hiệu quả với bản thân mình. Không ngừng tìm tòi khám phá cái mới có trọng tâm trọng điểm.&lt;/p&gt;
+
+&lt;p&gt;Trên đây là một số chia sẻ của mình về mã ngành 15.03.06 - Cơ điện tử và kỹ thuật robot. Hy vọng phần nào đó giúp đỡ mọi người hiểu hơn về chuyên ngành này. Để từ đó xây dựng cho mình một phương pháp học tập đúng đắn và đạt hiệu quả cao. Sau này khi đã có góc nhìn tổng quan và chi tiết, nhiều kinh nghiệm học tập hơn nữa mình sẽ tiếp tục chia sẻ cho mọi người .&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Cảm ơn mọi người đã đọc hết bài viết này ! Đừng quên góp ý dưới bình luận để bài viết của mình được đầy đủ và hoàn thiện hơn nhé &amp;lt;3 &amp;lt;3 &amp;lt;3 !&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;nguồn&quot;&gt;Nguồn:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pjVHbu76LYU&quot;&gt;Cơ điện tử Học gì và làm gì ? P1,2,3&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=shW5QnSrKdw&amp;amp;t=230s&quot;&gt;Cơ điện tử: Tự học để thành công (Self-study for your Own success) , 4C kỹ năng mềm&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.vyatsu.ru/abiturientu/univers/dni-otkryityih-dverey-1/mehatronika-i-robototehnika-2.html&quot;&gt;Абитуриенту Мехатроника и робототехника&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://medium.com/@norahpink/what-is-mechatronics-8e8d4591949c&quot;&gt;What are Mechatronics and Robotics?&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.monash.edu/engineering/future-students/undergraduate-study/specialisations/robotics&quot;&gt;What do robotics and mechatronics engineers do?&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://math24.net/method-lyapunov-functions.html&quot;&gt;Method of Lyapunov Functions&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://vi.wikipedia.org/wiki/Sophia_robot&quot;&gt;Người máy sofia&lt;/a&gt;&lt;br /&gt;
+Tham khảo tài liệu của khoa và một số ý kiến của các bạn học người Nga.&lt;/p&gt;
+</description>
+                <pubDate>Wed, 10 Nov 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/robotics</link>
+                <guid isPermaLink="true">http://localhost:4000/robotics</guid>
+                
+                <category>итмо_факультет</category>
+                
+                
+                <category>ITMO</category>
+                
+            </item>
         
             <item>
                 <title>What is Machine Learning (ML)?</title>

@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Intro to Cryptography</title>
-  <meta name='description' content='ManhLab'>
+  <title>Cơ điện tử và kỹ thuật Robot</title>
+  <meta name='description' content='Đinh Ngọc Tuấn'>
 
-  <link rel="canonical" href="http://localhost:4000/cryptography">
+  <link rel="canonical" href="http://localhost:4000/robotics">
   <link rel="alternate" type="application/rss+xml" title="ITMO Brain" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Intro to Cryptography – ITMO Brain">
-  <meta name="twitter:description" content="ManhLab">
-  <meta name="twitter:image:src" content="http://localhost:4000/images/quantumexplainer3.2-01-10.jpg">
+  <meta name="twitter:title" content="Cơ điện tử và kỹ thuật Robot – ITMO Brain">
+  <meta name="twitter:description" content="Đinh Ngọc Tuấn">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/itmo2.jpg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Intro to Cryptography – ITMO Brain">
-  <meta property="og:description" content="ManhLab">
-  <meta property="og:image" content="http://localhost:4000/images/quantumexplainer3.2-01-10.jpg">
+  <meta property="og:title" content="Cơ điện tử và kỹ thuật Robot – ITMO Brain">
+  <meta property="og:description" content="Đinh Ngọc Tuấn">
+  <meta property="og:image" content="http://localhost:4000/images/itmo2.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -194,7 +194,7 @@
       
       <div class="col col-6 col-d-12">
         <div class="post-image">
-          <img class="lazy" data-src="/images/quantumexplainer3.2-01-10.jpg" alt="Intro to Cryptography">
+          <img class="lazy" data-src="/images/itmo2.jpg" alt="Cơ điện tử và kỹ thuật Robot">
         </div>
       </div>
       
@@ -208,12 +208,12 @@
           
             <div class="post__tags">
               
-                <a href="/tags#Infosec" class="post__tag">Infosec</a>
+                <a href="/tags#итмо_факультет" class="post__tag">итмо_факультет</a>
               
             </div>
           
   
-          <h1 class="post__title">Intro to Cryptography</h1>
+          <h1 class="post__title">Cơ điện tử và kỹ thuật Robot</h1>
   
           <div class="post__meta">
             <a href="/about/" class="post__author-image">
@@ -222,7 +222,7 @@
 
             <div class="post__meta-bottom">
               <a class="post__author" href="/about/">ITMO Brain</a>
-              <time class="post__date" datetime="2021-11-03T04:48:45+03:00">03 Nov 2021</time>
+              <time class="post__date" datetime="2021-11-10T04:48:45+03:00">10 Nov 2021</time>
             </div>
           </div>
   
@@ -238,63 +238,95 @@
   <article class="post">
 
     <div class="post__content">
-      <h2 id="intro-to-cryptography">Intro to Cryptography</h2>
-<p>Trong ngành Bảo mật thông tin, Mật mã học là một phần rất quan trọng và đóng vai trò nền tảng của bảo mật thông tin hiện nay. Khác với các mảng khác, cryptography được sử dụng cách ngày nay rất lâu và đóng vai trò bảo mật trong suốt lịch sử loài người.</p>
+      <div class="gallery-box">
+    <img src="/images/admin/tuan.jpg" />
+  <em>Đinh Ngọc Tuấn / <a href="https://www.facebook.com/profile.php?id=100011042762760" target="_blank">Facebook</a></em>
+</div>
+<blockquote>
+  <p><cite>Hế Lô mọi người, Mình là Tuấn (Đinh Ngọc Tuấn) hiện đang là sinh viên năm 2 chuyên ngành Cơ điện tử và kỹ thuật Robot (15.03.06) trường đại học ITMO.</cite></p>
+</blockquote>
 
-<p>Bài viết này đề cập tới mã hóa cổ điển(classic cryptography)  là cách mã hóa cổ điển được dùng trước thời kỳ của máy vi tính hiện nay. Thời vì này việc mã hóa và giải mã được thực hiện chủ yếu bằng tay. Mã được sắp xếp để tạo thành một đoạn ciphertext khó hiểu đối với kẻ thâm nhập, nhưng với người nhận nhờ đã nắm rõ quy tắc giải mã thông tin nên việc này dễ dàng hơn rất nhiều. 
-Classic cryptography chia làm 2 nhánh chính đó là :</p>
+<p>Trước khi chia sẻ một số kiến thức về chuyên ngành mình xin được tâm sự đôi chút về lý do tại sao mình lại chọn chuyên ngành Cơ điện tử và robot. Hồi còn bé mình rất thích xem cuộc thi Robocon Việt Nam chiếu trên sóng truyền hình kênh VTV2. Cuộc thi đó đã tạo cho mình niềm đam mê về robot. Lúc đó mình rất muốn sau này tạo ra được những con robot giống như mấy anh đi thi vậy.</p>
+
+<p>Nhưng mà đời không như là mơ, đã có một thời gian mình loay hoay tìm lối đi cho riêng mình. Sau nhiều lần thất bại, may mắn đến với mình khi mình được nhận học bổng du học tại nước Nga xinh đẹp này. Thấy chữ cơ điện tử và kỹ thuật robot là khoái rồi nên mình chọn luôn. Từ những nhận định trong quá trình học tập và tìm hiểu của bản thân về ngành học, mình xin được chia sẻ một số điều mình biết về ngành học của mình và những tư tưởng học tập mà mình đã đúc kết được trong suốt thời gian qua. Hy vọng sẽ giúp các bạn một cái nhìn rõ hơn về ngành học của mình và tiếp thêm  động lực học tập cho các bạn.</p>
+<h3 id="vậy-thế-nào-là-cơ-điện-tử-và-robot">Vậy thế nào là cơ điện tử và robot?</h3>
+<p>Cơ điện tử là một quá trình cấu hình bao gồm sự kết hợp của Kỹ thuật cơ khí, Kỹ thuật điện, Kỹ thuật điều khiển và Kỹ thuật máy tính. Cơ điện tử là một điểm nối mà lĩnh vực kỹ thuật hợp tác. Người máy (Rô bốt)  có thể được coi là một tập hợp con của Cơ điện tử vì nó liên quan đến các lĩnh vực kỹ thuật cơ khí, điện tử và máy tính này. Sự khác biệt chính là đầu vào được “cung cấp” cho các hệ thống cơ điện tử trong khi các hệ thống robot tự “thu nhận” đầu vào.</p>
+
+<p>Bạn sẽ học cách xử lý một lượng lớn dữ liệu và tạo ra các hệ thống có ý nghĩa về dữ liệu trong thời gian thực để một cơ sở sản xuất hoàn toàn tự động có thể hoạt động một cách an toàn và hiệu quả hoặc một chiếc ô tô có thể lái hoàn toàn tự động. Các kỹ sư người máy và cơ điện tử đang có nhu cầu cao khi nhu cầu về các chuyên gia trong lĩnh vực này ngày càng tăng. Chúng cần thiết trong các ngành công nghiệp sản xuất và hàng không vũ trụ tiên tiến cũng như các nhà sản xuất robot và phân tích dữ liệu.</p>
+
+<p>Khi các máy móc tự động hóa và tự động hóa ngày càng trở nên quan trọng trong xã hội của chúng ta, người máy - và ngành mẹ của nó, cơ điện tử - trở nên quan trọng hơn bao giờ hết.</p>
+
+<p>Đối tượng nên quan tâm: Những ai yêu thích các loại thiết bị cơ khí, điện tử, máy tính, rô bốt, ô tô.<br />Nếu bạn để ý thì trên trường tại Kronversky có máy bán cà phê tự động, đó là một sản phẩm những kỹ sư cơ điện tử và robot có thể làm ra. Sẽ tuyệt vời hơn nữa nếu bạn có thể ứng dụng AI và ML vào các sản phẩm này. Hãy tưởng tượng có một cỗ máy bán cà phê có thể nhận dạng khuôn mặt của bạn, giao tiếp với bạn bằng giọng nói và ghi nhớ những loại cafe bạn thích…vân vân và mây mây .</p>
+<div class="gallery-box">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sophia_%28robot%29.jpg/800px-Sophia_%28robot%29.jpg" />
+  <em>Sophia / <a href="https://en.wikipedia.org/wiki/Sophia" target="_blank">Wikipedia</a></em>
+</div>
+<p>Hoặc một ví dụ khác là người máy Sophia - được thiết kế và phát triển bởi công ty công nghệ Mỹ Hanson Robotics có trụ sở đặt tại Hồng Kông. Sophia được thiết kế để suy nghĩ và cử động sao cho giống với con người nhất đồng thời được trang bị trí tuệ thông minh nhân tạo. Mục đích chế tạo Sophia; theo nhà sản xuất; là nhằm phát minh ra một robot có ý thức, có sự sáng tạo và có khả năng hoạt động như bất kỳ con người nào để giúp đỡ chính con người trong các vấn đề cuộc sống thường ngày như: phục vụ chăm sóc sức khỏe, hỗ trợ điều trị y tế, giáo dục cùng nhiều các dịch vụ khác. Người máy sofia là bằng chứng cho sự phát triển về AI trong tương lai. Trong tương lai ứng dụng của robotics kết hợp với AI sẽ giúp giải quyết các vấn đề của nhân loại như chăm sóc y tế, giao thông hay các vấn đề trong kinh doanh như tăng năng suất.</p>
+<h3 id="vậy-đơn-vị-chức-năng-của-robotics-là-gì-">Vậy đơn vị chức năng của robotics là gì ?</h3>
 <ul>
-  <li>chuyển vị</li>
-  <li>thay thế ký tự.</li>
+  <li>Body Structure -  Hầu hết các  robot đều có cấu trúc cơ thể dựa trên mục đích sử dụng và chức năng của nó.</li>
+  <li>Muscle Systems - Các cơ cấu phổ biến như bánh răng, thiết bị truyền động khí nén, cơ nhân tạo và cơ đẩy.
+Sensory Systems - Hệ thống “sensory Systems” đơn giản sử dụng các thiết bị như máy dò chuyển động đơn giản, trong khi hệ thống “Sensory Systems” phức tạp sử dụng camera quang học cho phép robot không chỉ nhìn thấy môi trường xung quanh mà còn tương tác với môi trường dựa trên môi trường xung quanh.</li>
+  <li>Power Source - Hai hình thức cung cấp năng lượng điện phổ biến nhất cho rô bốt là ổ cắm điện nối đất cho rô bốt cố định hoặc bộ pin bên trong cho rô bốt di động.</li>
+  <li>Brain System - Hệ thống “não bộ” của robot có liên quan chặt chẽ và hoạt động cùng với hệ thống giác quan. Hệ thống não của robot cũng có thể rất đơn giản hoặc rất phức tạp, tùy thuộc vào chức năng của robot. Một hệ thống “não bộ” đơn giản sẽ gửi tín hiệu đến hệ thống cơ của rô-bốt yêu cầu nó dừng lại nếu hệ thống cảm giác được phát hiện được kích hoạt. Một hệ thống “não bộ” phức tạp sẽ cho phép một robot xác định các đối tượng trong môi trường xung quanh nó, dựa trên thông tin thu thập được bởi các hệ thống giác quan. Sau đó “hệ thống não bộ” sẽ gửi tín hiệu đến hệ thống cơ dựa trên thông tin đó, cho phép robot tương tác với các vật thể xung quanh nó.</li>
 </ul>
 
-<h3 id="1-chuyển-vị-kí-tự">1. Chuyển vị kí tự</h3>
-<p>Chuyển vị kí tự điển hình mã Caesar được biết đến là người đầu tiên sử dụng mã hóa để truyền thông điệp, Thuật toán caesar để mã hóa 1 đoạn thông điệp gửi đến bên kia đại dương mà đối phương không hề hay biết. Thuật toán Caesar mở đầu bằng việc tịnh tiến ký tự trong bảng chữ cái mở đầu cho những mã hóa bằng kí tự, mật mã sau này:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cryptography → dịch 1 kí tự(ROT1) --&gt; Dszquphsbqiz
-</code></pre></div></div>
-<p>Mã hóa caesar khá đơn giản, không tốn nhiều thời gian, hơn nữa các dấu câu không hề được mã hóa đã dẫn đến việc kẻ thâm nhập có thể đoán ra quy tắc mã hóa và vấn đề tìm ra thông điệp chỉ còn là vấn đề thời gian. Mình có viết 1 đoạn code để giải mã thuật toán Caesar này khi làm lab trên lớp như sau.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">text</span> <span class="o">=</span> <span class="s">"IO&lt;NYCMYHINY;YJF?;M=HNY=IH&gt;"</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">126</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">-</span> <span class="mi">95</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">print</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
-</code></pre></div></div>
+<h3 id="học-tập-tại-itmo-như-thế-nào">Học tập tại ITMO như thế nào?</h3>
+<p>Để học tập hiệu quả các bạn nên chuẩn bị cho mình một nền tảng toán học, vật lý thật vững chắc. Ví dụ như năm đầu tiên trong môn giới thiệu chuyên ngành cần hiểu rất rõ về Đại số tuyến tính, các hàm toán học ứng dụng trong lập trình nhúng cho robot như hàm Lyapunov (Lyapunov functions), Cơ học Lagrange và kiến thức về Vật lý phần cơ học. Tìm hiểu về lập trình C/C++ để rèn luyện tư duy và hiểu về lập trình.  Tìm hiểu cách làm việc với Simulink hay Xcos trong Matlab, Scilab.</p>
 
-<p>Đoạn code đơn giản tấn công triệt để mọi khả năng của mã hóa Caesar và tất nhiên là sẽ thành công.
-Một số phương pháp khai thác khác trong việc chuyển vị bao gồm:</p>
+<p>Chúng ta sẽ được làm quen với các môn cơ bản liên quan đến chuyên ngành của mình.  Các môn liên quan đến lập trình như : Lập trình java, lập trình C. Môn VPD (Введение в профессиональную деятельность) nơi mà bạn sẽ được quen với lắp ráp và lập trình nhúng cho robot (cụ thể là Mindstorms EV3). Mình rất thích môn VPD và nó cũng là môn ngốn rất nhiều thời gian của mình khi học năm nhất đại học.  Ngoài ra bạn sẽ làm quen kiến thức cơ bản về AI (Artificial intelligence), ML(Machine Learning) qua các môn học Ứng dụng trí tuệ nhân tạo (прикладной искусственный интеллект) và môn Máy học (Машинное обучение) cùng một số môn đại cương khác.</p>
+
+<p>Từ năm 2021, Mã ngành 15.03.06(Cơ điện tử và kỹ thuật robot) chia làm 3 chuyên ngành nhỏ sau:</p>
 <ul>
-  <li>Dùng ma trận vuông, hoán đổi vị trí phần tử trên cột, hoán đổi phần tử trong hàng,</li>
-  <li>Hoán đổi vị trí hàng, hoán đổi vị trí cột,</li>
-  <li>kết hợp nhiều trường hợp trên lại với nhau.</li>
+  <li>Мехатроника.</li>
+  <li>Интеллектуальная робототехника.</li>
+  <li>Интеллектуальная робототехника (проектная).</li>
 </ul>
 
-<p>Nhìn chung vì là bằng tay nên những thuật toán này gây không ít khó khăn cho người giải mã. Và nó cũng cần vốn hiểu biết khá tốt về ngôn ngữ đang mã hóa.</p>
+<p>Các bạn có thể tìm hiểu các môn học với từng chuyên ngành bằng file gắn <a href="https://www.google.com/url?q=https://vk.com/doc563228141_617153236?hash%3D95940875d35792f68f%26dl%3Dbde995cd232f19dda8&amp;sa=D&amp;source=docs&amp;ust=1636534480620000&amp;usg=AOvVaw3Y2AGJpTQU7sG9WL9nboAw">với đường link này</a>.<br />
+Và mình xin trích một nhận xét của một sinh viên năm 2 cùng ngành mình tên là Georgy Khachatryan như sau:</p>
+<blockquote>
+  <p><cite>“Робототехника, в отличие от других специальностей, очень прикладная. С первого курса мы начали собирать роботов, создавать из математические модели и программировать их (на парах ВПД). Этим все не ограничивается, в ИТМО нас знакомят с широким спектром разных общеобразовательных и специальных предметов. Это помогает нам преуспеть как в робототехника, так и в жизни в целом.’’ 
+<br /><br />Tạm dịch :  Robotics, không giống như các chuyên ngành khác, được ứng dụng rất nhiều. Từ năm đầu tiên chúng tôi bắt đầu lắp ráp robot, tạo ra các mô hình toán học từ chúng và lập trình nhúng ( trên các tiết học môn VPD - Введение в профессиональную деятельность). Đó không phải là tất cả, ở ITMO chúng tôi được giới thiệu về nhiều loại giáo dục phổ thông và các môn học đặc biệt khác nhau. Nó giúp chúng tôi thành công trong cả lĩnh vực chế tạo máy và cuộc sống nói chung.</cite></p>
+</blockquote>
 
-<h3 id="2-phương-pháp-thay-thế-ký-tự">2. Phương pháp thay thế ký tự</h3>
-<p>Với phương pháp thay thế ký tự. Một kí tự đơn giản được thay thế bằng một ký tự khác hoặc số mà không có liên quan nhiều đến các kí tự khác.
-Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí tự được viết tương ứng với key mã hóa và chỉ cần đối chiếu với bảng để giải mã:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">VD</span><span class="p">:</span> <span class="n">bảng</span> <span class="n">mã</span><span class="p">:</span> <span class="n">A</span><span class="o">-</span><span class="mi">19</span> <span class="n">B</span><span class="o">-</span><span class="mi">30</span> <span class="n">C</span><span class="o">-</span><span class="mi">34</span> <span class="n">ABC</span> <span class="o">-</span> <span class="mi">193034</span>
-</code></pre></div></div>
-<p>Một ví dụ về sức mạnh của mật mã học đó là cỗ máy Enigma. Trong chiến tranh thế giới thứ 2, đây là cỗ máy được dùng để mã hoá tất cả những thư tín liên lạc, giữ bảo mật hoàn toàn các thông tin quân sự của Đức. Cùng với năng lực quân sự mạnh mẽ, nước Đức khi đó một mình chiến đấu với toàn bộ châu  u và trước tình thế này, quân đội Anh phải tìm cách phá bộ giải mã của Enigma để tìm kiếm cơ hội ngăn chặn sự bành trướng của người Đức. Cỗ máy đã làm đau đầu hàng nghìn nhà khoa học lúc bâý giờ, và phải nhờ đến một mật ngữ ở cuối mỗi dòng thư tín( Hít le vạn tuế) thì Alan Turing(cha đẻ của mật mã học hiện đại) mới giải mã được. Việc giải mã cỗ máy Enigma đã giúp chấm dứt chiến tranh thế giới thứ 2 sớm hơn khoảng 2 năm. Đóng vai trò quan trọng trong sự phát triển thế giới hiện đại.</p>
+<h3 id="một-số-kỹ-năng-mềm-quan-trọng">Một số kỹ năng mềm quan trọng</h3>
+<p>Bên cạnh việc sở hữu nguồn tri thức dồi dào, hiểu biết về cuộc sống, có 4 kỹ năng mềm được đánh giá là vô cùng quan trọng để thành công trong công việc và cuộc sống  - hay còn được gọi tắt là kỹ năng 4C:</p>
+<ul>
+  <li>Kỹ năng giao tiếp (Communication) - Giao tiếp là hoạt động cơ bản của con người, nảy sinh từ nhu cầu trao đổi truyền đạt thông tin, cảm xúc, suy nghĩ của bản thân thông qua ngôn ngữ. Khi được bồi đắp kỹ năng giao tiếp tốt, các bạn sẽ biết cách lắng nghe và thấu hiểu, đồng thời có khả năng thể hiện các cảm xúc, suy nghĩ của bản thân một cách hiệu quả và tự tin.</li>
+  <li>Tư duy phản biện (Critical Thinking) : Tư duy phản biện hay tư duy phân tích là một quá trình gồm phân tích, đánh giá thông tin đã có nhằm làm sáng tỏ và khẳng định lại tính chính xác của vấn đề. Tư duy phản biện giúp các bạn có cái nhìn khái quát và khả năng đưa ra chính kiến về nhiều vấn đề, tạo ra những thay đổi tích cực trong suy nghĩ và hành động.</li>
+  <li>Tính sáng tạo (Creativity):  Mỗi con người luôn tiềm ẩn khả năng sáng tạo không giới hạn. Trong bối cảnh thế giới thay đổi nhanh chóng, kỹ năng sáng tạo được đánh giá là vô cũng cần thiết nhằm đem lại hướng giải quyết vấn đề linh hoạt và tối ưu.</li>
+  <li>Kỹ năng hợp tác (Collaboration): Để phát triển lâu dài, chúng ta cần làm việc cùng một tập thể và khi đó “Kỹ năng hợp tác” đóng vai trò thành hay bại. Đây cũng là kỹ năng quan trọng khi bạn tham gia vào thị trường lao động và là điều không thể thiếu để hòa nhập với mọi môi trường tổ chức - doanh nghiệp, giúp hoàn thành công việc hiệu quả.</li>
+</ul>
 
-<p>Khi nghiên cứu sâu hơn về ngôn ngữ, người ta phát triển thêm  thuật toán rất hay về mã hóa: Khi mà ko có bảng giải mã, với 1 lượng lớn ký tự đầu vào đã mã hóa. Qua phân tích số lần xuất hiện, quy tắc và từ vựng đã giúp cho chúng ta có góc nhìn tổng quan hơn về nó. Từ đó lần tìm ra text gốc qua vệc giải mã từng ký tự đã bị thay thế.</p>
+<p>Ngoài ra còn có EQ - trí thông minh cảm xúc, kỹ năng tự tin thuyết trình trước đám đông,… Xây dựng cho mình một phong cách tự học phù hợp và hiệu quả với bản thân mình. Không ngừng tìm tòi khám phá cái mới có trọng tâm trọng điểm.</p>
 
-<p>Trong một thời đại mới, cryptography bước vào kỉ nguyên của thách thức khi mà dữ liệu truyền đi với tốc độ ánh sáng. Thông điệp truyền đi có thể bị bắt bới kẻ xâm nhập ngay tức thời. Những thuật toán mạnh mẽ hơn, đồng thời những cỗ máy giải mã đang cạnh tranh với nhau mỗi ngày. Nếu bạn quan tâm nhiều hơn tới mật mã học, hãy comment dưới bài viết này để CLB có động lực ra thêm nhiều bài viết về vấn đề này nữa nhé!🥳</p>
+<p>Trên đây là một số chia sẻ của mình về mã ngành 15.03.06 - Cơ điện tử và kỹ thuật robot. Hy vọng phần nào đó giúp đỡ mọi người hiểu hơn về chuyên ngành này. Để từ đó xây dựng cho mình một phương pháp học tập đúng đắn và đạt hiệu quả cao. Sau này khi đã có góc nhìn tổng quan và chi tiết, nhiều kinh nghiệm học tập hơn nữa mình sẽ tiếp tục chia sẻ cho mọi người .</p>
+<blockquote>
+  <p><cite>Cảm ơn mọi người đã đọc hết bài viết này ! Đừng quên góp ý dưới bình luận để bài viết của mình được đầy đủ và hoàn thiện hơn nhé &lt;3 &lt;3 &lt;3 !</cite></p>
+</blockquote>
+
+<h4 id="nguồn">Nguồn:</h4>
+<p><a href="https://www.youtube.com/watch?v=pjVHbu76LYU">Cơ điện tử Học gì và làm gì ? P1,2,3</a><br />
+<a href="https://www.youtube.com/watch?v=shW5QnSrKdw&amp;t=230s">Cơ điện tử: Tự học để thành công (Self-study for your Own success) , 4C kỹ năng mềm</a><br />
+<a href="https://www.vyatsu.ru/abiturientu/univers/dni-otkryityih-dverey-1/mehatronika-i-robototehnika-2.html">Абитуриенту Мехатроника и робототехника</a><br />
+<a href="https://medium.com/@norahpink/what-is-mechatronics-8e8d4591949c">What are Mechatronics and Robotics?</a><br />
+<a href="https://www.monash.edu/engineering/future-students/undergraduate-study/specialisations/robotics">What do robotics and mechatronics engineers do?</a><br />
+<a href="https://math24.net/method-lyapunov-functions.html">Method of Lyapunov Functions</a><br />
+<a href="https://vi.wikipedia.org/wiki/Sophia_robot">Người máy sofia</a><br />
+Tham khảo tài liệu của khoa và một số ý kiến của các bạn học người Nga.</p>
 
     </div>
 
     <div class="post__share">
       <ul class="share__list list-reset">
         <li class="share__item">
-          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/cryptography"
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/robotics"
             onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
             title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
         </li>
         <li class="share__item">
-          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cryptography&title=Intro%20to%20Cryptography&summary=ManhLab&source=ITMO%20Brain"
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/robotics&title=C%C6%A1%20%C4%91i%E1%BB%87n%20t%E1%BB%AD%20v%C3%A0%20k%E1%BB%B9%20thu%E1%BA%ADt%20Robot&summary=%C4%90inh%20Ng%E1%BB%8Dc%20Tu%E1%BA%A5n&source=ITMO%20Brain"
           onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
         </li>
       </ul>
@@ -313,7 +345,7 @@ Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí 
 
 <!-- begin related posts -->
 <div class="container">
-  <section class="related-posts  animate">
+  <section class="related-posts is-related animate">
     <div class="row">
       <div class="col col-12">
         <div class="container__inner">
@@ -324,7 +356,7 @@ Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí 
                 
                 
                   
-                    <a href="/tags#Infosec" class="section__link related-tag">Xem tất cả<span> Infosec</span></a>
+                    <a href="/tags#итмо_факультет" class="section__link related-tag">Xem tất cả<span> итмо_факультет</span></a>
                   
                 
               
@@ -354,6 +386,40 @@ Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí 
             
       
             
+
+              <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2021-11-05T04:48:45+03:00">05 Nov 2021</time>
+
+      
+
+      
+      <a class="article__image" href="/itmo-ikt">
+        <img class="lazy" data-src="/images/itmo2.jpg" alt="Công nghệ thông tin và các hệ thống liên lạc">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="/itmo-ikt">Công nghệ thông tin và các hệ thống liên lạc</a>
+      </h2>
+
+      
+      <p class="article__excerpt">Lê Đình Vũ</p>
+      
+
+    </div>
+  </div>
+</div>
+
+            
+                
+              
             
             
             
@@ -361,6 +427,40 @@ Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí 
             
       
             
+
+              <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2021-11-03T04:48:45+03:00">03 Nov 2021</time>
+
+      
+
+      
+      <a class="article__image" href="/itmo-bit">
+        <img class="lazy" data-src="/images/itmo2.jpg" alt="Khoa an toàn thông tin">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="/itmo-bit">Khoa an toàn thông tin</a>
+      </h2>
+
+      
+      <p class="article__excerpt">Đỗ Bảo Hoàng</p>
+      
+
+    </div>
+  </div>
+</div>
+
+            
+                
+              
             
             
             
