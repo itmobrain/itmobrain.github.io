@@ -5,8 +5,8 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 14 Nov 2021 20:02:55 +0300</pubDate>
-        <lastBuildDate>Sun, 14 Nov 2021 20:02:55 +0300</lastBuildDate>
+        <pubDate>Sun, 14 Nov 2021 20:29:11 +0300</pubDate>
+        <lastBuildDate>Sun, 14 Nov 2021 20:29:11 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
             <item>
@@ -26,11 +26,11 @@
   &lt;li&gt;Ghi nhớ cách khai báo biến, cấu trúc lệnh if else và swicth.&lt;/li&gt;
   &lt;li&gt;Một số thư viện cần nhớ:
     &lt;ul&gt;
-      &lt;li&gt;#include &amp;lt;bits/stdc++.h&amp;gt; - thư viện gọi tất cả các thư viện. Lưu ý thư viện này chỉ có trên Codeblocks.&lt;/li&gt;
-      &lt;li&gt;#include &lt;iostream&gt; - thư viện chứ hàm cin, cout,...&lt;/iostream&gt;&lt;/li&gt;
-      &lt;li&gt;#include &lt;math.h&gt; - thư viện chứa hàm sqrt(tính căn bậc 2), abs(trị tuyệt đối), sin(tính sin),...&lt;/math.h&gt;&lt;/li&gt;
-      &lt;li&gt;#include &lt;stdio.h&gt; - thư viện chứa printf, scanf,...&lt;/stdio.h&gt;&lt;/li&gt;
-      &lt;li&gt;#include &lt;iomanip&gt; - thư viện chứa setprecision,...&lt;/iomanip&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;#include &amp;lt;bits/stdc++.h&amp;gt; &lt;/code&gt;- thư viện gọi tất cả các thư viện.&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;iostream&lt;/code&gt;- thư viện chứ hàm cin, cout,…&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;math.h&lt;/code&gt; - thư viện chứa hàm sqrt(tính căn bậc 2), abs(trị tuyệt đối), sin(tính sin),…&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;stdio.h&lt;/code&gt; - thư viện chứa printf, scanf,…&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;iomanip&lt;/code&gt; - thư viện chứa setprecision,…&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Cách in số thực y làm tròn sau dấy phẩy x chữ số: &lt;code&gt;cout&amp;lt;&amp;lt;fixed&amp;lt;&amp;lt;setprecision(x)&amp;lt;&amp;lt;y&lt;/code&gt;;&lt;/li&gt;
