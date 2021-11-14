@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Khoa an toàn thông tin</title>
-  <meta name='description' content='Đỗ Bảo Hoàng'>
+  <title>Tổng kết buổi 1</title>
+  <meta name='description' content='ManhLab'>
 
-  <link rel="canonical" href="http://localhost:4000/itmo-bit">
+  <link rel="canonical" href="http://localhost:4000/cpp-buoi1">
   <link rel="alternate" type="application/rss+xml" title="ITMO Brain" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Khoa an toàn thông tin – ITMO Brain">
-  <meta name="twitter:description" content="Đỗ Bảo Hoàng">
-  <meta name="twitter:image:src" content="http://localhost:4000/images/itmo2.jpg">
+  <meta name="twitter:title" content="Tổng kết buổi 1 – ITMO Brain">
+  <meta name="twitter:description" content="ManhLab">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/cpp_banner.jpeg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Khoa an toàn thông tin – ITMO Brain">
-  <meta property="og:description" content="Đỗ Bảo Hoàng">
-  <meta property="og:image" content="http://localhost:4000/images/itmo2.jpg">
+  <meta property="og:title" content="Tổng kết buổi 1 – ITMO Brain">
+  <meta property="og:description" content="ManhLab">
+  <meta property="og:image" content="http://localhost:4000/images/cpp_banner.jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -206,7 +206,7 @@
       
       <div class="col col-6 col-d-12">
         <div class="post-image">
-          <img class="lazy" data-src="/images/itmo2.jpg" alt="Khoa an toàn thông tin">
+          <img class="lazy" data-src="/images/cpp_banner.jpeg" alt="Tổng kết buổi 1">
         </div>
       </div>
       
@@ -220,12 +220,14 @@
           
             <div class="post__tags">
               
-                <a href="/tags#итмо_факультет" class="post__tag">итмо_факультет</a>
+                <a href="/tags#Programming language" class="post__tag">Programming language</a>
+              
+                <a href="/tags#Learning" class="post__tag">Learning</a>
               
             </div>
           
   
-          <h1 class="post__title">Khoa an toàn thông tin</h1>
+          <h1 class="post__title">Tổng kết buổi 1</h1>
   
           <div class="post__meta">
             <a href="/about/" class="post__author-image">
@@ -234,7 +236,7 @@
 
             <div class="post__meta-bottom">
               <a class="post__author" href="/about/">ITMO Brain</a>
-              <time class="post__date" datetime="2021-11-03T04:48:45+03:00">03 Nov 2021</time>
+              <time class="post__date" datetime="2021-11-14T04:48:45+03:00">14 Nov 2021</time>
             </div>
           </div>
   
@@ -250,114 +252,171 @@
   <article class="post">
 
     <div class="post__content">
-      <h3 id="1-giới-thiệu">1. Giới thiệu</h3>
-<p>Xin chào mọi người, mình tên là Đỗ Bảo Hoàng hiện đang là sinh viên thạc sĩ năm 1 chuyên ngành an toàn thông tin (10.04.01) trường đại học ITMO, đã tốt nghiệp chuyên ngành an toàn thông tin (10.03.01) năm 2021. Trong suốt 5 năm ngụp lặn với việc học tập tại ITMO, mình nhận được khá nhiều câu hỏi của các bạn khóa dưới, trong đó câu hỏi thường gặp nhất là: ngành mình học gì vậy anh? :v :v :v</p>
-
-<p>Nhớ lại sau 1-2 năm học đầu mình cũng không hề có được cái nhìn khái quát về ngành học của chính mình. Lúc đó mình cảm thấy rất bối rối và mông lung không hiểu mình đang học gì và vai trò của các môn học trên trường. Kéo theo đó là bao khó khăn, áp lực và cả chán nản suốt những năm học đại học.</p>
-
-<p>Sau khi đã tốt nghiệp cử nhân và có cái nhìn đầy đủ hơn về ngành học này, mình thực sự muốn tóm tắt lại và chia sẻ những điều mình biết để giúp các bạn có được cái nhìn khái quát và hiểu hơn về an toàn thông tin, hy vọng những thông tin này sẽ giúp các bạn giảm bớt phần nào những khó khăn mà mình đã gặp phải trong quá trình học tập trước đó.</p>
-
-<h3 id="2-an-toàn-thông-tin-là-gì">2. An toàn thông tin là gì?</h3>
-<div style="vertical-align: middle;align= center;margin: auto"><p><img src="/images/bitimg.png" height="50%" width="50%" alt="cia" /><br /><br />The Confidentiality, Integrity, Availability (CIA) triad.</p></div>
-<p>An toàn thông tin (hay InfoSec) là việc bảo vệ bất kì thông tin nào trước các mối nguy hại. An toàn thông tin tập trung vào 3 mục tiêu chính cần bảo vệ thường được gọi là tam giác CIA:</p>
-<ul>
-  <li>Tính bí mật (Confidentiality): thông tin chỉ được cung cấp hoặc tiết lộ cho những người được cho phép. Ví dụ: bằng cách nào đó, một người khác không có sự cho phép của bạn nhìn thấy mật khẩu tài khoản Facebook hoặc Google. Trong trường hợp đó, mật khẩu của bạn đã bị xâm phạm và tính bí mật bị vi phạm.</li>
-  <li>Tính toàn vẹn (Integrity): thông tin trong toàn bộ vòng đời của nó được duy trì và đảm bảo chính xác, đầy đủ, không bị thay đổi trái phép. Ví dụ: trong hệ thống kiểm soát không lưu, trạng thái của mỗi chuyến bay phải được cập nhật liên tục và chính xác. Nếu hacker xâm nhập và thay đổi thông tin sẽ dẫn đến những thiệt hại rất lớn.</li>
-  <li>Tính khả dụng (Availability): thông tin có thể truy cập bất cứ khi nào cần. Ví dụ: trong cuộc tấn công từ chối dịch vụ (DDoS), không thể truy cập dữ liệu của server và Tính khả dụng bị vi phạm.</li>
-</ul>
-
-<p>Mục tiêu là vậy thế còn làm sao để đạt được? Hay đúng hơn làm an toàn thông tin là làm gì? Để trả lời được câu hỏi này rất khó vì bất cứ hành động nào giúp đạt được 1 trong 3 mục tiêu nêu trên đều là làm an toàn thông tin. Ngành InfoSec rất rộng và có thể chia làm 4 lĩnh vực nhỏ:</p>
-<ul>
-  <li>Tổ chức và pháp lý (organisational and legal): nghiên cứu các phương pháp tổ chức thông tin và xây dựng bộ pháp lý phục vụ mục đích bảo mật thông tin</li>
-  <li>Phần mềm và phần cứng (software and hardware): nghiên cứu, xây dựng các phần mềm (phần mềm diệt virus, phần mềm dò tìm lỗ hổng,…) và phần cứng (camera, máy dò sóng, chặn sóng,…) hoặc bộ công cụ gồm phần mềm-phần cứng kết hợp (máy kiểm tra sinh trắc học, thẻ propusk,…)</li>
-  <li>Công nghệ và kỹ thuật (engineering and technical): nghiên cứu, xây dựng các công nghệ, kỹ thuật phục vụ mục đích bảo mật thông tin (kỹ thuật tấn công, phòng thủ, dịch ngược, điều tra số,…)</li>
-  <li>Mật mã (cryptographic): nghiên cứu sự an toàn những loại mật mã hiện tại, xây dựng các thuật toán mật mã mới (Caesar, DES, SHA,… )</li>
-</ul>
-
-<p>Tuy vậy khi đi làm thực tế công việc thường sẽ kết hợp sử dụng kiến thức, kỹ năng từ tất cả các lĩnh vực trên chứ không đơn thuần sử dụng một lĩnh vực nào cả. Nếu phân loại theo các ngành áp dụng sẽ có rất nhiều ngành. Trong đó có 4 ngành chính và lớn nhất:</p>
-<ul>
-  <li>An toàn sản phẩm (product security): làm việc với các đội phát triển sản phẩm để đảm bảo sản phẩm làm ra an toàn cho người dùng và an toàn cho hệ thống của công ty (kiểm định mã nguồn, đào tạo nâng cao nhận thức của nhân viên, phát triển các giải pháp ngăn chặn kỹ thuật tấn công,…)</li>
-  <li>An toàn vận hành (operations security): đảm bảo sự an toàn cho toàn bộ hệ thống thông tin của doanh nghiệp (đưa ra chính sách, quy định, giám sát an ninh mạng, xử lí sự cố,…)</li>
-  <li>Phát triển công cụ (applied security): phát triển và cung cấp các công cụ, dịch vụ và thư viện phần mềm có liên quan đến an toàn thông tin cho các nhóm phát triển sản phẩm sử dụng lại.</li>
-  <li>Tìm diệt mã độc và các nguy cơ khác (threat analysis): phân tích, truy tìm nguồn gốc và tiêu diệt tận gốc mã độc và các tấn công có chủ đích (targeted attack).</li>
-</ul>
-
-<p>Chi tiết hơn các bạn có thể tham khảo các đường dẫn mình cung cấp thêm ở cuối bài viết.</p>
-<h3 id="3-ngành-an-toàn-thông-tin-ở-itmo">3. Ngành an toàn thông tin ở ITMO</h3>
-<p>Chắc đọc đến đây bạn đã hiểu ngành an toàn thông tin rộng đến thế nào. Quay lại với chủ đề nhận được nhiều sự quan tâm nhất của các bạn sinh viên mới: học an toàn thông tin ở ITMO sẽ được học những gì?</p>
-
-<p>Những kỳ đầu ngoài các môn đại cương toán, lý sẽ có thêm những môn cơ bản về lập trình, lý thuyết thông tin, xác suất, an toàn thông tin giúp bạn có kiến thức nền tảng để học chuyên ngành. Có thể liệt kê những môn hay gặp như: Безопасность жизнедеятельности (học về cách lắp đặt an toàn các thiết bị điện trong cuộc sống) hay Программирование (kỹ thuật lập trình), методология защиты информации (các phương pháp bảo mật thông tin). Những năm đầu nên học kĩ các môn cơ bản, nền tảng này, thì lúc học lên năm cao sẽ ko bị đuối. Ngoài ra trên trường dạy khá ít lập trình nên tốt nhất là tự học, và tham gia CLB vs tụi mình.</p>
-
-<p>Từ năm 3 trở đi sẽ là những môn chuyên ngành trải dài từ khắp các nhánh của an toàn thông tin. Dưới đây là một số ví dụ các môn học mà mình đã từng học:</p>
-<ul>
-  <li>Tổ chức và pháp lý: môn Защищенный документооборот (quy trình xử lý tài liệu sao cho an toàn), Проектирование комплексных систем защиты информации (thiết kế hệ thống an toàn thông tin),…</li>
-  <li>Phần mềm và phần cứng: môn Программно-аппаратные средства защиты информации (hệ thống phần cứng-phần mềm giúp bảo mật thông tin), Инженерно-технические средства защиты информации (phương tiện kỹ thuật và biện pháp giúp bảo mật thông tin),…</li>
-  <li>Công nghệ và kỹ thuật: Технологии обнаружения уязвимостей в автоматизированных системах (các kỹ thuật phát hiện lỗ hổng trong hệ thống tự động), Технология сертификации средств защиты информации (học về các kỹ thuật tạo, quản lý chứng chỉ số),…</li>
-  <li>Mật mã: Криптографические методы обеспечения информационной безопасности (áp dụng các phương pháp mật mã để bảo mật), Методы криптографии (các phương pháp về mật mã),…</li>
-</ul>
-
-<p>Tuy nhiên trên con đường hội nhập và để leo lên xếp hạng 6 toàn nga (Forbes University Ranking), chương trình học hiện nay đã có nhiều thay đổi. Hiện nay ngành an toàn thông tin ở ITMO gồm 4 ngành nhỏ:</p>
-<ul>
-  <li>Комплексная защита объектов информатизации: ngành học chung, học mỗi thứ 1 ít.</li>
-  <li>Проектирование средств защиты информации: tập trung vào tổ chức và quản lý hệ thống bảo mật.</li>
-  <li>Эксплуатация беспилотных транспортных средств: thiết kế, thử nghiệm, xây dựng hệ thống giám sát không người lái.</li>
-  <li>Системы надежной передачи информации: bảo mật trong hệ thống truyền thông, học nhiều hơn về sóng và các thuật toán mã hóa.</li>
-</ul>
-
-<p>Dù là ngành nào thì bạn vẫn phải học đủ các môn đại cương và lý thuyết cơ bản về an toàn thông tin. Đó đều là các môn học hay và hữu ích nhưng đôi khi sẽ khá hàn lâm và thiếu hứng thú. :P Hãy cùng tìm hiểu làm sao để học tập một cách hiệu quả theo kinh nghiệm của mình nhé!</p>
-
-<h3 id="4-học-như-thế-nào">4. Học như thế nào?</h3>
-
-<p>Thông thường 1 kỳ học tại ITMO sẽ có 2 module, 1 bài kiểm tra giữa kì và 1 bài kiểm tra cuối kì. Trong đó bài kiểm tra cuối kỳ chỉ chiếm 20/100 điểm, chỉ cần đi học đầy đủ bạn đã có đến 10 điểm chuyên cần rồi. Số điểm còn lại sẽ chia cho các bài tập trong module. Để có được điểm 5 (xuất sắc) cho môn học bạn phải đạt trên 90 điểm. Tin mình đi, bạn sẽ không muốn cố gắng cả kì của mình đổ sông đổ bể chỉ vì thiếu 1-2 điểm chuyên cần đâu. Lời khuyên của mình là dù trời có tuyết hay mưa bão, chỉ cần thầy điểm danh là luôn có mặt.</p>
-
-<p>Khi tự làm bài tập hẳn có lúc bạn sẽ phải tìm bài mẫu hoặc thông tin trên mạng. Có người dễ dàng tìm được nhưng có người tìm mãi không ra. Đó là lúc cần đến kỹ năng tìm kiếm. Khi tìm kiếm các bạn nên có cái nhìn tổng quát về vấn đề, sau đó chia nhỏ thành nhiều từ khóa, sắp xếp sao cho từ khóa quan trọng lên trước. Đối với bài tập lý thuyết tiếng Nga thì nên ưu tiên Yandex.ru hơn Google.com. Ngược lại các bài tập lập trình nên chọn từ khóa tiếng Anh và tìm kiếm trên Google trước. Ngoài ra những nguồn stackoverflow, geeksforgeeks, github đều có rất nhiều câu hỏi, trả lời sẵn có. Để có thể tự nắm bắt kiến thức một cách hiệu quả nhất bạn nên đọc và tìm tài liệu bằng ngoại ngữ (ưu tiên tiếng Nga) và chỉ dịch ra tiếng Việt khi thật sự cần thiết. Tuy rất khó nhưng ngoại ngữ sẽ là điểm tạo ra khác biệt giữa người đi du học và học ở Việt Nam.</p>
-
-<p>Hỏi bài cũng là kỹ năng rất cần thiết khi bạn cảm thấy đã tốn nhiều công sức mà vẫn không thể làm được. Có 2 nguồn chính: bạn Nga cùng khóa và các anh chị khóa trên. Để có thể hỏi bài Nga thì các bạn đừng ngại mà giúp họ bất kì kiến thức nào mình vững, đi chơi, giao lưu mọi lúc có thể. Trong nhóm VK chung của khóa rất hay có tài liệu được các bạn Nga chia sẻ nên cũng cần phải đọc kỹ. Nguồn thứ 2 là các anh chị khóa trên người Việt. Các bạn đừng e dè mà hãy sang gõ cửa, bắt chuyện làm quen nhé. Kinh nghiệm của những người đi trước có thể giúp bạn tự tin hơn trong quá trình học tập đó.</p>
-
-<p>Tự làm bài không được, hỏi cũng không ai biết thì làm sao để qua môn? Phương án cuối cùng chính là giáo viên trên lớp. Vì ở Nga điểm số hoàn toàn do giáo viên quyết định nên nếu bạn tạo được ấn tượng tốt về kiến thức, đặc biệt là tinh thần học tập bạn sẽ xin được gợi ý của vô số bài tập khó. Theo kinh nghiệm 5 năm trầy da tróc vẩy để trả bài của mình thì không nên xin điểm (ví dụ xin 3 điểm để đủ 91) mà nên xin thêm bài tập hoặc xin làm bổ sung để nâng điểm. Nếu tỷ lệ thành công nếu xin điểm là 50% thì tỷ lệ thành công nếu xin làm thêm bài phải là 90%. Không có giáo viên nào là không quý một sinh viên có tinh thần học tập và ham học hỏi cả đâu.</p>
-
-<h3 id="5-tản-mạn-về-ngành-an-toàn-thông-tin">5. Tản mạn về ngành an toàn thông tin</h3>
-
-<p>Có nhiều người đã nói với mình là vỡ mộng khi sang ITMO học an toàn thông tin. Chính mình cũng từng vậy :(. Phim ảnh và báo đài thường để lại trong chúng ta hình ảnh các hacker ngầu lòi, những điệp viên ấn vài nút đã có thể điều khiển mọi đèn giao thông, camera khu phố,… Thực tế lại khác rất xa. Kiến thức ở bậc cử nhân dàn trải làm cho chương trình học có nhiều môn lý thuyết trong khi đó những môn lập trình, thực hành lại dạy rất nhanh và qua loa. Mải mê với các lab thực hành và thi cuối kì nhiều khi mình cũng quên đi mục đích chính của việc học là để chuẩn bị sau này đi làm. Chương trình hiện tại 2 năm đầu có khá nhiều kỹ năng mềm (soft-skill) rồi, mọi người nên coi đó như cơ hội phát triển bản thân một cách toàn diện. Những kỹ năng thuyết trình trước đám đông, làm việc nhóm,… rất có ích cho công việc sau này.</p>
-
-<p>Hối tiếc lớn nhất của mình trong 5 năm học đại học là đã không có định hướng rõ ràng. Trong những năm học đầu bạn có thể học đều, sâu về mọi môn học liên quan an toàn thông tin. Nhưng đến hết năm 3 hãy lựa chọn cho mình 1 chuyên ngành (có thể là bảo mật web, mật mã thậm chí là luật) để tìm hiểu sâu. Mỗi chuyên ngành đều có cái hay riêng nhưng như đã nói bên trên ngành an toàn thông tin quá rộng để biết tất cả.</p>
-
-<p>Thị trường việc làm an toàn thông tin ở Việt Nam chủ yếu là đảm bảo an vận hành (operations security) và web security, những bạn theo quân đội sẽ hay phải làm việc với mật mã nữa. Để có thể bắt kịp với sinh viên cùng ngành ở nhà mình sẽ liệt kê dưới đây những kiến thức chung và cơ bản nhất cần nắm bắt:</p>
-<ul>
-  <li>Lập trình</li>
-  <li>Hệ điều hành</li>
-  <li>Cấu trúc dữ liệu và giải thuật</li>
-  <li>Mạng máy tính</li>
-  <li>Mật mã</li>
-  <li>Computer Science nói chung</li>
-</ul>
-
-<p>Tập thói quen đọc kỹ yêu cầu, tự chủ động tìm hiểu, lên kế hoạch và thực hiện lab một cách hoàn chỉnh chắc chắn sẽ giúp bạn có thêm nhiều kiến thức và kỹ năng bổ ích không ngờ đó.
-Trên đây là một số kinh nghiệm của mình đúc kết được trong thời gian học tập tại đại học ITMO. Hy vọng sau khi đọc xong các bạn có một cái nhìn rõ ràng hơn về ngành an toàn thông tin cũng như các khó khăn gặp phải khi học tập. Chúc các bạn học tốt và có khoảng thời gian tuyệt vời tại ITMO nhé!</p>
-
-<blockquote>
-  <p><cite>Keep calm, learn and practice!</cite></p>
+      <blockquote>
+  <p><cite>Số lượng thành viên tham gia: 27<br />
+<a href="https://docs.google.com/presentation/d/1XAk2ltO7TeXt-63QFWOk2vJ8bgIRHULfDuUlI4Wx1cc/edit?usp=sharing">Link slide buổi học</a><br />
+<a href="https://niuitmo.sharepoint.com/sites/ITMOBRAIN/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20211114_132810-Meeting%20Recording.mp4?web=1">Link record</a><br />
+<a href="https://www.hackerrank.com/contests/itmo-brain-cpp-1/">Link bài tập lớp buổi 1 CPP</a><br />
+<a href="https://www.hackerrank.com/itmo-brain-cpp-btvn-1/">Link btvn buổi 1 CPP</a><br /></cite></p>
 </blockquote>
 
-<h4 id="nguồn">Nguồn:</h4>
-<p><a href="https://vnhacker.blogspot.com/2012/05/lam-toan-thong-tin-thi-hoc-gi.html">Làm an toàn thông tin thì học gì?</a> - by thaidn<br />
-<a href="https://l4w.io/2017/07/bat-dau-hoc-an-toan-thong-tin-nhu-the-nao/">BẮT ĐẦU HỌC AN TOÀN THÔNG TIN NHƯ THẾ NÀO?</a> - by l4w<br />
-<a href="https://www.youtube.com/watch?v=3YUB2Yiwxx4">Talkshow - Làm hacker là làm gì?</a> (thaidn, PhươngGàCon, HieuPC, l4w)<br />
-<a href="https://kienmanowar.wordpress.com/">Reverse Engineering</a>: kienmanowar<br />
-<a href="https://hackemall.live/">Những roadmap của các nhánh</a>: Hack ‘Em All<br />
-Những team kĩ thuật của các tổ chức lớn: <a href="https://blog.vincss.net/">VinCSS</a>, <a href="https://blog.viettelcybersecurity.com/">Viettel Cyber Security</a>, <a href="https://sec.vnpt.vn/blog/">VNPT</a>, <a href="https://blog.khonggianmang.vn/">khonggianmang.vn</a> …</p>
+<h3 id="nội-dung-chia-sẻ">Nội dung chia sẻ:</h3>
+<ul>
+  <li>Tổng quan về C++ và ứng dụng.</li>
+  <li>Cấu trúc 1 chương trình C++ cơ bản.</li>
+  <li>Ghi nhớ cách khai báo biến, cấu trúc lệnh if else và swicth.</li>
+  <li>Một số thư viện cần nhớ:
+    <ul>
+      <li>#include &lt;bits/stdc++.h&gt; - thư viện gọi tất cả các thư viện. Lưu ý thư viện này chỉ có trên Codeblocks.</li>
+      <li>#include <iostream> - thư viện chứ hàm cin, cout,...</iostream></li>
+      <li>#include <math.h> - thư viện chứa hàm sqrt(tính căn bậc 2), abs(trị tuyệt đối), sin(tính sin),...</math.h></li>
+      <li>#include <stdio.h> - thư viện chứa printf, scanf,...</stdio.h></li>
+      <li>#include <iomanip> - thư viện chứa setprecision,...</iomanip></li>
+    </ul>
+  </li>
+  <li>Cách in số thực y làm tròn sau dấy phẩy x chữ số: <code>cout&lt;&lt;fixed&lt;&lt;setprecision(x)&lt;&lt;y</code>;</li>
+</ul>
+
+<h3 id="bảng-xếp-hạng-hackerrank">Bảng xếp hạng Hackerrank:</h3>
+<p><img src="/images/lb1.jpg" /></p>
+<h3 id="code-bài-tập-trên-lớp">Code bài tập trên lớp:</h3>
+<h4 id="tặng-hoa">Tặng hoa</h4>
+<p>Trong CLB ITMO Brain thì anh Trần Đức Mạnh ( a.k.a Mi sa Chan) nổi tiếng là nhiều tiền và đẹp trai, đặc biệt là rất biết quan tâm đến các bạn nữ. Hôm nay là ngày 14 tháng 11 - “Ngày bệnh dư đường thế giới” hay còn gọi là “ngày quốc tế đáo thái đường” (World Diabetes Day), anh Mạnh quyết tâm thể hiện sự ngọt ngào của mình và quyết định sẽ mua hoa tặng tất cả các người yêu của anh.</p>
+
+<p>Anh Mạnh có N người yêu và dự định mua X bông hoa, mỗi bông hoa có giá là P. Ở Saint Petersburg hoa rất đắt, sinh hoạt phí kỳ này thì đang chậm nên anh Mạnh phải lên kế hoạch đầu tư hợp lý. Các bạn hãy giúp anh tính số tiền trung bình mà anh đầu tư cho mỗi cô người yêu nhé !</p>
+
+<p><strong>Input Format:</strong><br />
+3 số nguyên n, x, p nằm trên cùng 1 dòng<br />
+<strong>Constraints</strong><br />
+1 ≤ n ≤ 10ˆ3<br />
+1 ≤ x ≤ 10ˆ6<br />
+1 ≤ p ≤ 10ˆ6<br />
+<strong>Output Format</strong><br />
+Số thực duy nhất là số tiền trung bình mà anh Mạnh đầu tư cho mỗi cô người yêu.</p>
+
+<p><strong>Sample Input 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4 6 200
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>300
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// from danghoangducbinh
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    double n, x, p;
+    cin &gt;&gt; n &gt;&gt; x &gt;&gt; p;
+    double a = x*(p/n) ;
+    cout &lt;&lt; fixed &lt;&lt; (a);
+    return 0;
+}
+</code></pre></div></div>
+<h4 id="đếm-nghiệm">Đếm nghiệm</h4>
+<p>Sau màn tặng hoa thể hiện đầy đủ sự giàu có và khả năng thấu hiểu chị em, anh Mạnh đã ghi điểm rất lớn trong lòng các bạn nữ trong CLB ITMO BRAIN. Tuy nhiên các bạn nữ trong CLB chúng ta đều là những người xinh đẹp và thông minh, ai cũng có tiêu chuẩn chọn người yêu rất cao. Ngoài đẹp trai, cao 1m90, nhiều tiền, … anh Mạnh cần phải chứng minh trí tuệ của mình. TN (Thị Nở) - một ứng cử viên tiềm năng cho vị trí người yêu đưa ra cho anh một câu đố:<br />
+Với mỗi số nguyên n bạn TN nói ra, anh phải trả lời chính xác số nghiệm thực của phương trình sau:
+<img src="/images/demnghiem.png" /><br />
+Anh Mạnh rất bận, còn rất nhiều mục tiêu theo đuổi nữa, không chỉ mình TN. Nên bạn hãy giúp anh Mạnh viết 1 chương trình tự động trả lời câu hỏi của TN nhé!</p>
+
+<p><strong>Input Format:</strong><br />
+Gồm 1 số nguyên n trên 1 dòng duy nhất<br />
+<strong>Constraints</strong><br />
+1 ≤ n ≤ 10ˆ9<br />
+<strong>Output Format</strong><br />
+Số nguyên duy nhất là số nghiệm thực của phương trình đã cho<br /></p>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// from tle15112002
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+
+int main() {
+    cout &lt;&lt; 0;
+    return 0;
+}
+
+</code></pre></div></div>
+<h4 id="mai-làm-gì">Mai làm gì</h4>
+<p>Khánh Huyền là người đam mê đỏ đen và luôn quyết định ngày mai của mình bằng việc tung xúc xắc. Đầu tiên Huyền tung xúc xắc để quyết định xem có đi học hay không. Nếu xúc xắc ra chẵn thì nghỉ học hoặc ngược lại thì đi học. Nếu đi học, Huyền lại tung xúc xắc tiếp, chẵn thì làm bài, lẻ thì không làm bài. Nếu nghỉ học, Huyền tung xúc xắc ra chẵn thì xem phim, lẻ thì gội đầu.</p>
+
+<p><strong>Input Format:</strong><br />
+2 số nguyên x và y - là 2 số Huyền nhận được sau 2 lần tung xúc xắc.<br />
+<strong>Constraints</strong><br />
+0 &lt; x &lt; 7; 0 &lt; y &lt; 7<br />
+<strong>Output Format</strong><br />
+In ra màn hình kết quả ứng với từng số: “nghi hoc”, “di hoc”, “lam bai”, “khong lam bai”, “xem phim”, “goi dau” và các kết quả được ngăn cách bởi chữ ‘va’.</p>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6 1
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nghi hoc va goi dau
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// from kh280174
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int x, y;
+    cin &gt;&gt; x &gt;&gt; y;
+    if(x%2==1){
+        if(y%2==1){cout&lt;&lt;"di hoc va khong lam bai";}
+        else cout&lt;&lt;"di hoc va lam bai";
+    };
+    if(x%2==0){
+        if(y%2==1){cout&lt;&lt;"nghi hoc va goi dau";}
+        else cout&lt;&lt;"nghi hoc va xem phim ";
+    };
+    
+    return 0;
+}
+
+</code></pre></div></div>
+
+<h4 id="đường-link-hữu-ích">Đường Link hữu ích:</h4>
+<p><a href="https://en.cppreference.com/w/cpp/language/main_function">Main function</a><br />
+<a href="https://en.cppreference.com/w/cpp/language/type">Cpp type</a><br />
+<a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-096-introduction-to-c-january-iap-2011/lecture-notes/MIT6_096IAP11_lec01.pdf">6.096 Introduction to C++: Introduction</a><br /></p>
 
     </div>
 
     <div class="post__share">
       <ul class="share__list list-reset">
         <li class="share__item">
-          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/itmo-bit"
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/cpp-buoi1"
             onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
             title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
         </li>
         <li class="share__item">
-          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/itmo-bit&title=Khoa%20an%20to%C3%A0n%20th%C3%B4ng%20tin&summary=%C4%90%E1%BB%97%20B%E1%BA%A3o%20Ho%C3%A0ng&source=ITMO%20Brain"
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cpp-buoi1&title=T%E1%BB%95ng%20k%E1%BA%BFt%20bu%E1%BB%95i%201&summary=ManhLab&source=ITMO%20Brain"
           onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
         </li>
       </ul>
@@ -387,7 +446,9 @@ Những team kĩ thuật của các tổ chức lớn: <a href="https://blog.vin
                 
                 
                   
-                    <a href="/tags#итмо_факультет" class="section__link related-tag">Xem tất cả<span> итмо_факультет</span></a>
+                    <a href="/tags#Programming language" class="section__link related-tag">Xem tất cả<span> Programming language</span></a>
+                  
+                
                   
                 
               
@@ -410,18 +471,53 @@ Những team kĩ thuật của các tổ chức lớn: <a href="https://blog.vin
             
       
             
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
 
               <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
 
     <div class="article__head">
-      <time class="article__date" datetime="2021-11-10T04:48:45+03:00">10 Nov 2021</time>
+      <time class="article__date" datetime="2021-10-31T04:48:45+03:00">31 Oct 2021</time>
 
       
 
       
-      <a class="article__image" href="/robotics">
-        <img class="lazy" data-src="/images/itmo2.jpg" alt="Cơ điện tử và kỹ thuật Robot">
+      <a class="article__image" href="/intro">
+        <img class="lazy" data-src="/images/intro.jpeg" alt="A STORY OF PROGRAMMING">
       </a>
       
 
@@ -430,11 +526,11 @@ Những team kĩ thuật của các tổ chức lớn: <a href="https://blog.vin
     <div class="article__content">
 
       <h2 class="article__title">
-        <a href="/robotics">Cơ điện tử và kỹ thuật Robot</a>
+        <a href="/intro">A STORY OF PROGRAMMING</a>
       </h2>
 
       
-      <p class="article__excerpt">Đinh Ngọc Tuấn</p>
+      <p class="article__excerpt">ManhLab</p>
       
 
     </div>
@@ -444,75 +540,6 @@ Những team kĩ thuật của các tổ chức lớn: <a href="https://blog.vin
             
                 
               
-            
-            
-            
-      
-            
-      
-            
-            
-            
-            
-      
-            
-      
-            
-
-              <div class="article col col-4 col-d-6 col-t-12">
-  <div class="article__inner">
-
-    <div class="article__head">
-      <time class="article__date" datetime="2021-11-05T04:48:45+03:00">05 Nov 2021</time>
-
-      
-
-      
-      <a class="article__image" href="/itmo-ikt">
-        <img class="lazy" data-src="/images/itmo2.jpg" alt="Công nghệ thông tin và các hệ thống liên lạc">
-      </a>
-      
-
-    </div>
-
-    <div class="article__content">
-
-      <h2 class="article__title">
-        <a href="/itmo-ikt">Công nghệ thông tin và các hệ thống liên lạc</a>
-      </h2>
-
-      
-      <p class="article__excerpt">Lê Đình Vũ</p>
-      
-
-    </div>
-  </div>
-</div>
-
-            
-                
-              
-            
-            
-            
-      
-            
-      
-            
-            
-            
-            
-      
-            
-      
-            
-            
-            
-            
-      
-            
-      
-            
             
           </div>
         </div>

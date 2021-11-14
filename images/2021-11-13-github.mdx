@@ -1,0 +1,93 @@
+---
+layout: post
+title: "Giới thiệu về Github"
+date: 2021-11-11 01:48:45
+image: '/images/github.png'
+description: Triệu Tâm
+tags:
+- Programming language
+- Tools
+categories:
+- ITMOBRAIN
+twitter_text:
+---
+
+### GitHub là gì?
+GitHub là một hệ thống quản lý dự án và phiên bản code, hoạt động giống như một mạng xã hội cho lập trình viên. Các lập trình viên có thể clone lại mã nguồn từ một repository và Github chính là một dịch vụ máy chủ repository công cộng, mỗi người có thể tạo tài khoản trên đó để tạo ra các kho chứa của riêng mình để có thể làm việc.
+
+GitHub là một dịch vụ nổi tiếng cung cấp kho lưu trữ mã nguồn Git cho các dự án phần mềm. GitHub có đầy đủ những tính năng của Git, ngoài ra nó còn bổ sung những tính năng về social để các developer tương tác với nhau.
+
+><cite>Vài thông tin về Git:
+> <br>Là công cụ giúp quản lý source code tổ chức theo dạng dữ liệu phân tán.
+> <br>Giúp đồng bộ source code của team lên 1 server.
+> <br>Hỗ trợ các thao tác kiểm tra source code trong quá trình làm việc (diff, check modifications, show history, merge source, …)</cite>
+
+### Một vài khái niệm và lệnh cơ bản của Git bạn cần nắm vững.
+Ở trong bài này, chúng ta sẽ không đi sâu vào tất cả các khái niệm và lệnh của git, mà chỉ giới thiệu các khái niệm, lệnh cơ bản hay được lập trình viên sử dụng khi phát triển các dự án phần mềm theo team. Trong quá trình hướng dẫn các lớp học cơ bản, chúng mình sẽ xen kẽ demo thực tế cách sử dụng git để tạo repository trên github và hướng dẫn mọi người làm việc với nó.
+
+Một vài khái niệm cơ bản của git:
+- Repository: Kho quản lý dữ liệu, là nơi lưu trữ các dữ liệu, mã nguồn của project.
+- Branch: được hiểu như là nhánh, thể hiện sự phân chia các version khi 2 version đó có sự sai khác nhất định và 2 version đều có sự khác nhau.
+- Commit: là một điểm trên cây công việc (Work Tree ) hay gọi là cây phát triển công việc
+- Clone: được gọi là nhân bản, hay thực hiện nhân bản. Sử dụng để clone các project, repository trên các hệ thống chạy trên cơ sở là git, ví dụ như: bitbucket, github, gitlab, cor(1 sản phẩm mã nguồn mở cho phép người dùng tự tạo git server cho riêng mình trên vps, server),… 
+- Remote: sử dụng để điều khiển các nhánh từ một repository trên git server, đối xử với các nhánh trên remote tương tự như đối xử với các nhánh trên local
+- .gitignore: file mặc định của git sử dụng để loại bỏ (ignore) các thư mục, file mà mình không muốn push lên git server
+
+Một vài lệnh cơ bản của git:
+
+| Lệnh | Mô tả |
+| ------- | ----------- |
+| `git init` | Khởi tạo kho lưu trữ git local |
+| `git clone ssh://git@github.com/[username]/[repository-name].git` | Tạo bản sao tại git local từ repository trên github |
+| `git add [file-name.txt]` | Thêm tệp vào git hiện tại |
+| `git commit –m “[commit mesage]”` | Thêm bình luận về mục đã được thay đổi ở nhánh git hiện tại |
+| `git branch -b [branch name]` | Tạo một nhánh mới có tên xác định và chuyển sang nhánh đó |
+| `git remote add origin ssh://git@github.com/[username]/[repository-name].git` | Thêm repository trên github |
+| `git pull` | Cập nhật repository local hiện tại đến sự thay đổi mới nhất (đến commit mới nhất) |
+| `git push origin [branch name]` | Đẩy 1 nhánh có tên xác định lên repository trên github |
+| `git checkout [branch name]` | Chuyển sang nhánh khác |
+
+#### Thực hành tạo và push dự án lên github khi làm việc với hệ điều hành window:
+##### Điều đầu tiên các bạn cần làm đó là tạo tài khoản trên GitHub:
+<div class="gallery-box">
+    <img src="/images/github-signup.png">
+  <em>Signup/<a href="https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home" target="_blank">Github</a></em>
+</div>
+Các bạn vào trang web [Sign up github](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home). Nhập đầy đủ thông tin tài khoản của bạn.
+
+##### Sau đó các bạn cần cài đặt git trên window:
+Các bạn có thể làm theo [bài viết này](https://openplanning.net/11707/cai-dat-git-tren-windows)
+
+##### Bước chuẩn bị đã xong, chúng ta cùng tạo 1 project nhỏ và push lên github nhé.
+B1: Bạn tạo repo (repository) trên github bằng nút new
+
+B2: Bạn đặt tên cho repo của mình và bấm nút create repository
+B3: Sau khi tạo repo xong sẽ hiện ra như thế này. Đây cũng chính là hướng dẫn giúp bạn tạo 1 repo local và push lên gihub. Chúng ta sẽ đi cụ thể hơn ở bước sau nhé. 
+B4: Bạn tạo 1 thư mục mới ở trên máy tính > Vào thư mục > Bấm chuột phải vào khoảng không thì sẽ ra như này (nếu bạn đã cài git thành công).
+B5: Bạn chọn Git Bash Here và sẽ mở ra cửa sổ sau.
+B6: Chúng ta sẽ thêm vài file đơn giản vào thư mục để thử push lên github nhé. 
+B7: Bây giờ thì các bạn gõ và gõ theo mình..=))
+B8: Đã xong! Bây giờ thì bạn vào github, refresh lại trang có repo Hello mình vừa tạo và kiểm tra nhé. Kết quả sẽ được như sau.
+(*)README.md: Về cơ bản, là một tệp văn bản hoạt động như một tài liệu cho một dự án hoặc thư mục. Có thể cho rằng phần quan trọng nhất của bất kì dự án nguồn mở nào là README. Một README tốt không chỉ thông báo cho mọi người dự án làm gì và dự án đó dành cho ai và còn cả cách họ sử dụng và đóng góp cho nó. 
+
+
+Lợi ích của Github đối với lập trình viên.
+- Quản lý source code dễ dàng:
+Khi bạn tạo một repo (repository), toàn bộ source code của repo đó được lưu trên GitHub. Tại đây, bạn có thể coi lại quá trình mình đã làm việc thông qua các comment sau mỗi lần commit. Và cái hay ở đây, là nhiều người có thể cùng làm một repo.
+Lợi ích đầu tiên, chính là bạn biết được ai đã commit và commit cái gì. Tiếp theo, source của bạn có thể phát triển theo nhiều nhánh. Nguyên tắc làm việc với các nhánh như sau: Bạn có thể rẽ nhiều nhánh để phát triển project. Nhưng cuối cùng, bạn phải merge (hợp nhất) lại vào nhánh MASTER để ra được project hoàn chỉnh.
+- Github giúp cải thiện kỹ năng code:
+Có hàng ngàn hàng vạn cách để học, học trên Github sẽ là một ý kiến không tồi trong thời đại này. Với hàng vạn open source projects, hàng trăm ngàn contributors, hàng tỉ commit mỗi ngày thì chỉ bằng việc xem. So sánh, học tập từ những thay đổi đó đã đem lại cho bạn hàng tá điều hay để cải thiện kỹ năng code của bản thân mình.
+-Github là một kho tài nguyên tuyệt vời:
+Với chức năng Explore, bạn có thể theo dõi, tìm kiếm những open source projects theo đúng technology pattern mà bạn ưa thích. Github hỗ trợ code search không kể nó ở dưới dạng một project riêng biệt hay là website. Ngoài ra, nền tảng này cũng có SEO khá tốt nên người dùng có thể tìm kiếm bất kỳ code string nào được chia sẻ public.
+- Github chứng tỏ bạn là ai:
+Chẳng thể phủ nhận những lời hay ý đẹp bạn viết trong CV là cần thiết. Nhưng Source code luôn là minh chứng tốt nhất để thể hiện bạn là developer thực thụ. Khi viết CV bạn nên đầu tư cho mình một tài khoản Git thật ấn tượng và đưa đường dẫn vào CV. Có thể nói, 1 phần GitHub “nho nhỏ” trong CV có thể đánh bóng vị trí của bạn, nổi bật hơn những ứng cử viên khác
+
+### Tóm lại, Github là gì?	
+GitHub là sự kết hợp giữa 2 từ, Git – hệ thống quản lý dự án và phiên bản code và Hub – một mạng xã hội cho lập trình viên. GitHub được sử dụng chủ yếu cho dự án có nhiều người cùng hợp tác và cần giám sát toàn bộ thay đổi của dự án, cũng như để  khôi phục code khi cần thiết.
+
+
+#### NGUỒN:
+[GitHub là gì? Những lợi ích GitHub mang lại cho lập trình viên](https://topdev.vn/blog/github-la-gi/)<br>
+[GitHub là gì? Sử dụng GitHub để làm gì? Và các thuật ngữ cần biết](https://www.hostinger.vn/huong-dan/github-la-gi/)
+
+
