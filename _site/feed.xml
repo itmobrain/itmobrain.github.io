@@ -5,9 +5,173 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 14 Nov 2021 21:42:14 +0300</pubDate>
-        <lastBuildDate>Sun, 14 Nov 2021 21:42:14 +0300</lastBuildDate>
+        <pubDate>Mon, 15 Nov 2021 21:59:59 +0300</pubDate>
+        <lastBuildDate>Mon, 15 Nov 2021 21:59:59 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Giới thiệu về Github</title>
+                <description>&lt;h3 id=&quot;github-là-gì&quot;&gt;GitHub là gì?&lt;/h3&gt;
+&lt;p&gt;GitHub là một hệ thống quản lý dự án và phiên bản code, hoạt động giống như một mạng xã hội cho lập trình viên. Các lập trình viên có thể clone lại mã nguồn từ một repository và Github chính là một dịch vụ máy chủ repository công cộng, mỗi người có thể tạo tài khoản trên đó để tạo ra các kho chứa của riêng mình để có thể làm việc.&lt;/p&gt;
+
+&lt;p&gt;GitHub là một dịch vụ nổi tiếng cung cấp kho lưu trữ mã nguồn Git cho các dự án phần mềm. GitHub có đầy đủ những tính năng của Git, ngoài ra nó còn bổ sung những tính năng về social để các developer tương tác với nhau.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Vài thông tin về Git:
+&lt;br /&gt;Là công cụ giúp quản lý source code tổ chức theo dạng dữ liệu phân tán.
+&lt;br /&gt;Giúp đồng bộ source code của team lên 1 server.
+&lt;br /&gt;Hỗ trợ các thao tác kiểm tra source code trong quá trình làm việc (diff, check modifications, show history, merge source, …)&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;một-vài-khái-niệm-và-lệnh-cơ-bản-của-git-bạn-cần-nắm-vững&quot;&gt;Một vài khái niệm và lệnh cơ bản của Git bạn cần nắm vững.&lt;/h3&gt;
+&lt;p&gt;Ở trong bài này, chúng ta sẽ không đi sâu vào tất cả các khái niệm và lệnh của git, mà chỉ giới thiệu các khái niệm, lệnh cơ bản hay được lập trình viên sử dụng khi phát triển các dự án phần mềm theo team. Trong quá trình hướng dẫn các lớp học cơ bản, chúng mình sẽ xen kẽ demo thực tế cách sử dụng git để tạo repository trên github và hướng dẫn mọi người làm việc với nó.&lt;/p&gt;
+
+&lt;p&gt;Một vài khái niệm cơ bản của git:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Repository: Kho quản lý dữ liệu, là nơi lưu trữ các dữ liệu, mã nguồn của project.&lt;/li&gt;
+  &lt;li&gt;Branch: được hiểu như là nhánh, thể hiện sự phân chia các version khi 2 version đó có sự sai khác nhất định và 2 version đều có sự khác nhau.&lt;/li&gt;
+  &lt;li&gt;Commit: là một điểm trên cây công việc (Work Tree ) hay gọi là cây phát triển công việc&lt;/li&gt;
+  &lt;li&gt;Clone: được gọi là nhân bản, hay thực hiện nhân bản. Sử dụng để clone các project, repository trên các hệ thống chạy trên cơ sở là git, ví dụ như: bitbucket, github, gitlab, cor(1 sản phẩm mã nguồn mở cho phép người dùng tự tạo git server cho riêng mình trên vps, server),…&lt;/li&gt;
+  &lt;li&gt;Remote: sử dụng để điều khiển các nhánh từ một repository trên git server, đối xử với các nhánh trên remote tương tự như đối xử với các nhánh trên local&lt;/li&gt;
+  &lt;li&gt;.gitignore: file mặc định của git sử dụng để loại bỏ (ignore) các thư mục, file mà mình không muốn push lên git server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Một vài lệnh cơ bản của git:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Lệnh&lt;/th&gt;
+      &lt;th&gt;Mô tả&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git init&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Khởi tạo kho lưu trữ git local&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git clone ssh://git@github.com/[username]/[repository-name].git&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Tạo bản sao tại git local từ repository trên github&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git add [file-name.txt]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Thêm tệp vào git hiện tại&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git commit –m “[commit mesage]”&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Thêm bình luận về mục đã được thay đổi ở nhánh git hiện tại&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git branch -b [branch name]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Tạo một nhánh mới có tên xác định và chuyển sang nhánh đó&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git remote add origin ssh://git@github.com/[username]/[repository-name].git&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Thêm repository trên github&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git pull&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Cập nhật repository local hiện tại đến sự thay đổi mới nhất (đến commit mới nhất)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git push origin [branch name]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Đẩy 1 nhánh có tên xác định lên repository trên github&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git checkout [branch name]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;Chuyển sang nhánh khác&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;thực-hành-tạo-và-push-dự-án-lên-github-khi-làm-việc-với-hệ-điều-hành-window&quot;&gt;Thực hành tạo và push dự án lên github khi làm việc với hệ điều hành window:&lt;/h4&gt;
+&lt;h5 id=&quot;điều-đầu-tiên-các-bạn-cần-làm-đó-là-tạo-tài-khoản-trên-github&quot;&gt;Điều đầu tiên các bạn cần làm đó là tạo tài khoản trên GitHub:&lt;/h5&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/github-signup.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;Các bạn vào trang web &lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot;&gt;Sign up github&lt;/a&gt;. Nhập đầy đủ thông tin tài khoản của bạn.&lt;/p&gt;
+
+&lt;h5 id=&quot;sau-đó-các-bạn-cần-cài-đặt-git-trên-window&quot;&gt;Sau đó các bạn cần cài đặt git trên window:&lt;/h5&gt;
+&lt;p&gt;Các bạn có thể làm theo &lt;a href=&quot;https://openplanning.net/11707/cai-dat-git-tren-windows&quot;&gt;bài viết này&lt;/a&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;bước-chuẩn-bị-đã-xong-chúng-ta-cùng-tạo-1-project-nhỏ-và-push-lên-github-nhé&quot;&gt;Bước chuẩn bị đã xong, chúng ta cùng tạo 1 project nhỏ và push lên github nhé.&lt;/h5&gt;
+&lt;p&gt;B1: Bạn tạo repo (repository) trên github bằng nút new&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;B2: Bạn đặt tên cho repo của mình và bấm nút create repository&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled1.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;B3: Sau khi tạo repo xong sẽ hiện ra như thế này. Đây cũng chính là hướng dẫn giúp bạn tạo 1 repo local và push lên gihub. Chúng ta sẽ đi cụ thể hơn ở bước sau nhé.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled2.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;B4: Bạn tạo 1 thư mục mới ở trên máy tính &amp;gt; Vào thư mục &amp;gt; Bấm chuột phải vào khoảng không thì sẽ ra như này (nếu bạn đã cài git thành công).&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled3.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;B5: Bạn chọn Git Bash Here và sẽ mở ra cửa sổ sau.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled4.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;B6: Chúng ta sẽ thêm vài file đơn giản vào thư mục để thử push lên github nhé.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled5.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;B7: Bây giờ thì các bạn gõ và gõ theo mình..=))&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled6.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;B8: Đã xong! Bây giờ thì bạn vào github, refresh lại trang có repo Hello mình vừa tạo và kiểm tra nhé. Kết quả sẽ được như sau.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/images_github/Untitled7.png&quot; /&gt;
+  &lt;em&gt;Signup/&lt;a href=&quot;https://github.com/signup?ref_cta=Sign+up&amp;amp;ref_loc=header+logged+out&amp;amp;ref_page=%2F&amp;amp;source=header-home&quot; target=&quot;_blank&quot;&gt;Github&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;(*)README.md: Về cơ bản, là một tệp văn bản hoạt động như một tài liệu cho một dự án hoặc thư mục. Có thể cho rằng phần quan trọng nhất của bất kì dự án nguồn mở nào là README. Một README tốt không chỉ thông báo cho mọi người dự án làm gì và dự án đó dành cho ai và còn cả cách họ sử dụng và đóng góp cho nó.&lt;/p&gt;
+
+&lt;p&gt;Lợi ích của Github đối với lập trình viên.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Quản lý source code dễ dàng:
+Khi bạn tạo một repo (repository), toàn bộ source code của repo đó được lưu trên GitHub. Tại đây, bạn có thể coi lại quá trình mình đã làm việc thông qua các comment sau mỗi lần commit. Và cái hay ở đây, là nhiều người có thể cùng làm một repo.
+Lợi ích đầu tiên, chính là bạn biết được ai đã commit và commit cái gì. Tiếp theo, source của bạn có thể phát triển theo nhiều nhánh. Nguyên tắc làm việc với các nhánh như sau: Bạn có thể rẽ nhiều nhánh để phát triển project. Nhưng cuối cùng, bạn phải merge (hợp nhất) lại vào nhánh MASTER để ra được project hoàn chỉnh.&lt;/li&gt;
+  &lt;li&gt;Github giúp cải thiện kỹ năng code:
+Có hàng ngàn hàng vạn cách để học, học trên Github sẽ là một ý kiến không tồi trong thời đại này. Với hàng vạn open source projects, hàng trăm ngàn contributors, hàng tỉ commit mỗi ngày thì chỉ bằng việc xem. So sánh, học tập từ những thay đổi đó đã đem lại cho bạn hàng tá điều hay để cải thiện kỹ năng code của bản thân mình.&lt;/li&gt;
+  &lt;li&gt;Github là một kho tài nguyên tuyệt vời:
+Với chức năng Explore, bạn có thể theo dõi, tìm kiếm những open source projects theo đúng technology pattern mà bạn ưa thích. Github hỗ trợ code search không kể nó ở dưới dạng một project riêng biệt hay là website. Ngoài ra, nền tảng này cũng có SEO khá tốt nên người dùng có thể tìm kiếm bất kỳ code string nào được chia sẻ public.&lt;/li&gt;
+  &lt;li&gt;Github chứng tỏ bạn là ai:
+Chẳng thể phủ nhận những lời hay ý đẹp bạn viết trong CV là cần thiết. Nhưng Source code luôn là minh chứng tốt nhất để thể hiện bạn là developer thực thụ. Khi viết CV bạn nên đầu tư cho mình một tài khoản Git thật ấn tượng và đưa đường dẫn vào CV. Có thể nói, 1 phần GitHub “nho nhỏ” trong CV có thể đánh bóng vị trí của bạn, nổi bật hơn những ứng cử viên khác&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;tóm-lại-github-là-gì&quot;&gt;Tóm lại, Github là gì?&lt;/h3&gt;
+&lt;p&gt;GitHub là sự kết hợp giữa 2 từ, Git – hệ thống quản lý dự án và phiên bản code và Hub – một mạng xã hội cho lập trình viên. GitHub được sử dụng chủ yếu cho dự án có nhiều người cùng hợp tác và cần giám sát toàn bộ thay đổi của dự án, cũng như để  khôi phục code khi cần thiết.&lt;/p&gt;
+
+&lt;h4 id=&quot;nguồn&quot;&gt;NGUỒN:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://topdev.vn/blog/github-la-gi/&quot;&gt;GitHub là gì? Những lợi ích GitHub mang lại cho lập trình viên&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.hostinger.vn/huong-dan/github-la-gi/&quot;&gt;GitHub là gì? Sử dụng GitHub để làm gì? Và các thuật ngữ cần biết&lt;/a&gt;&lt;/p&gt;
+
+</description>
+                <pubDate>Mon, 15 Nov 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/github</link>
+                <guid isPermaLink="true">http://localhost:4000/github</guid>
+                
+                <category>Programming language</category>
+                
+                <category>Tools</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
         
             <item>
                 <title>Tổng kết buổi 1</title>
