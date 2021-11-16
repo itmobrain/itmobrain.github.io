@@ -289,6 +289,89 @@
   <li>Cách in số thực y làm tròn sau dấy phẩy x chữ số: <code>cout&lt;&lt;fixed&lt;&lt;setprecision(x)&lt;&lt;y</code>;</li>
 </ul>
 
+<h3 id="ưu-điểm-của-c">Ưu điểm của C++</h3>
+<ul>
+  <li>C++ là một ngôn ngữ <strong>hiệu năng cao</strong>.</li>
+  <li><strong>Nhiều ứng dụng</strong> - từ Học máy đến xây dựng trò chơi trong Unity và Unreal đến mô phỏng toán học thời gian thực, đến lập trình các hợp đồng thông minh Blockchain. Nếu bạn chưa biết Tensorflow, một trong những thư viện Máy học được sử dụng rộng rãi nhất trên thế giới sử dụng C++ làm ngôn ngữ lập trình phụ trợ để tăng tốc độ thực thi.</li>
+  <li><strong>Quản lý bộ nhớ</strong> - C++ cung cấp cho người dùng quyền kiểm soát hoàn toàn, đó là một lợi thế và một bất lợi vì điều này làm tăng trách nhiệm của người dùng trong việc quản lý bộ nhớ thay vì được quản lý bởi bộ thu gom rác.</li>
+  <li><strong>Hỗ trợ Thư viện</strong> - thư viện tiêu chuẩn cho các vùng chứa khác nhau như sets, map, hash, v.v.</li>
+  <li>Ngôn ngữ lập trình <strong>hướng đối tượng</strong> - bốn nguyên tắc của lập trình hướng đối tượng là đóng gói, trừu tượng hóa, kế thừa và đa hình. Nhìn chung, điều này giúp tránh trùng lặp mã và tăng khả năng tái sử dụng mã.
+    <ul>
+      <li>Tính năng đóng gói làm cho dữ liệu trừu tượng hóa (bảo mật hoặc quyền riêng tư đối với dữ liệu) có thể thực hiện được với sự trợ giúp của một lớp.</li>
+      <li>Kế thừa được sử dụng để cung cấp khái niệm về khả năng tái sử dụng mã.</li>
+      <li>Tính đa hình làm cho một ngôn ngữ có thể thực hiện các tác vụ khác nhau ở các trường hợp khác nhau.</li>
+      <li>Tính trừu tượng thể hiện thông tin cần thiết trong một chương trình mà không cần trình bày chi tiết.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="người-sáng-tạo">Người sáng tạo</h3>
+<p>Năm 1983, Bjarne Stroustrup phát hành C++, ông là nhân viên của <strong>Bell AT&amp;T</strong> và bắt đầu làm việc trên ngôn ngữ “C với các lớp”. Giờ đây, C++ phát triển thêm nhiều tính năng mở rộng và được ứng dụng rộng rãi trong nhiều lĩnh vực.
+Nói về <strong>Bell AT&amp;T</strong> Labs là một trong những nơi ươm mầm những phát kiến lớn nhất của lĩnh vực Công nghệ thông tin và truyền thông thế kỉ 20.</p>
+<h3 id="c">C++</h3>
+<p>Nó là một <strong>ngôn ngữ cấp cao</strong> được thiết kế để phát triển ứng dụng nhanh chóng. Bạn không cần phải học C để sử dụng C ++.</p>
+<h3 id="một-dự-án-c">Một dự án C++</h3>
+<p>Nó sẽ luôn có hai giai đoạn: biên dịch mã thành một hoặc nhiều tệp object và sau đó liên kết các tệp object thành tệp thực thi. Điều này có nghĩa là trình biên dịch C++ của bạn sẽ cung cấp một công cụ khác, được gọi là trình liên kết.</p>
+<h3 id="ngữ-nghĩa-của-cpp">Ngữ nghĩa của cpp</h3>
+<p>Ở cấp độ rất cơ bản, một project C ++ sẽ chỉ chứa một file: mã nguồn C++, thường có phần mở rộng là <strong>cpp</strong>, viết tắt của c plus plus.</p>
+<h3 id="bắt-đầu-với-hàm-main">Bắt đầu với hàm main</h3>
+<p>Một trong những phần này là hàm main() là hàm chạy đầu tiên. Hiện tại, tất cả những gì bạn cần biết là mọi ứng dụng C ++ đều có một hàm main().</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+// The entry point of the program 
+int main() 
+{ 
+    std::cout &lt;&lt; “Hello, world!”;
+    return 0; 
+}
+</code></pre></div></div>
+<h3 id="chia-nhỏ-cú-pháp">Chia nhỏ cú pháp</h3>
+<p>Dòng đầu tiên bắt đầu bằng #include. #include cho phép tái sử dụng mã được viết sẵn tại thư viện trong chương trình của bạn.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+int main() 
+{ 
+    std::cout &lt;&lt; “Hello, world!”; 
+    return 0;
+}
+</code></pre></div></div>
+<ul>
+  <li><strong>dấu ngoặc nhọn (&lt;&gt;)</strong> chỉ ra rằng trình biên dịch nên tìm thư viện cung cấp sẵn.</li>
+  <li><strong>Comment - dòng bắt đầu bằng //</strong>. Một cách khác có thể được bắt đầu bằng <strong>/* và kết thúc bằng */</strong> và mọi thứ giữa hai ký hiệu này là một comment, bao gồm cả ngắt dòng. Tất cả kí tự ở giữa comment sẽ không được chạy.</li>
+  <li>Dấu ngoặc nhọn - ** chia tách khối mã {}**, trong trường hợp này được sử dụng cho hàm main để chia tách với các phần khác của chương trình. Tưởng tượng chương trình như sự lắp ghép của các khối, thì {} sẽ chia tách các khối đó với nhau, giúp chương trình biết được mã nào là của khối nào.</li>
+  <li><strong>Dấu ngoặc trống ()</strong>, hiện tại hàm này không có tham số. Nhưng thông thường, điều này được sử dụng để khai báo các tham số được truyền cho hàm.</li>
+  <li>Hàm int main(), là điểm bắt đầu của ứng dụng c++ của bạn phải trả về int(tức là một số nguyên).
+chức năng chính là một câu lệnh đơn bắt đầu bằng std và kết thúc bằng dấu chấm phẩy (;)
+câu lệnh đơn in ra chuỗi <strong>Hello, world!</strong>.</li>
+  <li>chuỗi được đặt trong dấu ngoặc kép <code>(″ ″)</code>.</li>
+  <li>chuỗi được đưa vào std::cout bằng cách sử dụng toán tử <strong>«</strong> cho phép dữ liệu được in ra.</li>
+</ul>
+
+<h3 id="sử-dụng-std-namespace-thay-thế">Sử dụng std namespace thay thế</h3>
+<p>Trong trường hợp này, std là viết tắt của <strong>standard namespace</strong>. Điều đó bao gồm cout, cin, string, vector, map, v.v. Vì vậy, phổ biến là thêm “using namespace std” ở đầu mã nguồn để bạn không phải nhập lại tiền tố <strong>std::</strong>. namespace là tên được đặt cho các phần của mã giúp giảm nguy cơ xung đột đặt tên.</p>
+
+<p>Before using Namespace</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include &lt;iostream&gt;
+int main() 
+{ 
+    std::cout &lt;&lt; “Hello, world!”; 
+}
+</code></pre></div></div>
+
+<p>After using Namespace including Breakdown of the Syntax</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//Preprocessor directive
+#include &lt;iostream&gt;
+// Entry point of the program 
+int main() 
+{ 
+    /*Tell the compiler what namespace to search with namespace std;*/
+   using namespace std;
+/* Write to the screen using std::cout*/
+   cout &lt;&lt; “Hello, world!”&lt;&lt; endl;
+//Returns a value
+    return 0; 
+}
+</code></pre></div></div>
+<p>Chúc mừng bạn đã thực hiện chương trình đầu tiên. <strong>Stay hungry! Stay foolish</strong></p>
+
 <h3 id="bảng-xếp-hạng-hackerrank">Bảng xếp hạng Hackerrank:</h3>
 <p><img src="/images/lb1.jpg" /></p>
 <h3 id="code-bài-tập-trên-lớp">Code bài tập trên lớp:</h3>
