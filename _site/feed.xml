@@ -5,8 +5,8 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Tue, 16 Nov 2021 13:37:22 +0300</pubDate>
-        <lastBuildDate>Tue, 16 Nov 2021 13:37:22 +0300</lastBuildDate>
+        <pubDate>Fri, 19 Nov 2021 21:07:21 +0300</pubDate>
+        <lastBuildDate>Fri, 19 Nov 2021 21:07:21 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
             <item>
@@ -916,6 +916,99 @@ Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí 
                 <guid isPermaLink="true">http://localhost:4000/cryptography</guid>
                 
                 <category>Infosec</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
+        
+            <item>
+                <title>Master Google Search</title>
+                <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Hello xin chào tất cả các bạn. Mình là Mạnh, cũng như các sinh viên khác mình sử dụng google rất nhiều. Sau quá trình googlelist nhiều năm, mình đã luyện được khá nhiều bí kíp võ công, giúp bản thân thành công xử lý các tiên sinh khó tính ở trường. Bí kíp này mình sẽ giữ cho riêng mình và không chia sẻ cho ai hết nhé. Tạm biệt các bạn! Kết bài đi anh Tuấn ơi! &lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Hê lô mọi người! Mình là Tuấn, mình mới trộm được quyển bí kíp của Mạnh. Nay mạnh dạn chia sẻ cho mọi người, mọi người thấy hay vui lòng gửi ít tiền vào tk: 210397290703&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ông lớn công nghệ Google hiện nay sở hữu công cụ tìm kiếm lớn nhất trên thế giới. Bất cứ thông tin, hình ảnh, video, địa điểm bạn hoàn toàn có thể sử dụng bộ tìm kiếm trên Google, kết quả sẽ có chỉ sau vài giây nhanh nhất. Và thao tác nhập nội dung tìm kiếm trên thanh Search của Google thì chắc chắn ai cũng biết. Tuy nhiên, nếu chúng ta muốn tìm những kết quả phức tạp hơn, chính xác hơn thì cần đến một vài những thủ thuật cần thiết trên Google&lt;/p&gt;
+&lt;h3 id=&quot;searching-using-site&quot;&gt;Searching using Site:&lt;/h3&gt;
+&lt;p&gt;Với sử dụng &lt;code&gt;site&lt;/code&gt; trong tìm kiếm cho phép bạn thực hiện tìm kiếm trên google cho một trang web cụ thể. bạn cũng có thể sử dụng điều này để kiểm tra xem trang web của bạn có trên google tìm kiếm hay không. Thông thường ta thường sử dụng để tìm kiếm trên các trang uy tín như: medium, stackoverflow, geeksforgeeks.org,….&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.31.19.png&quot; /&gt;
+  &lt;em&gt;Search &lt;code&gt;site&lt;/code&gt; / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;h3 id=&quot;search-using-quotation&quot;&gt;Search using quotation:&lt;/h3&gt;
+&lt;p&gt;Bạn cũng có thể sử dụng dấu ngoặc kép để lấy nội dung chính xác hơn. Thông thường, khi bạn gõ tìm một nội dung bất kỳ, Google sẽ gợi ý đến những chủ đề có từ khóa liên quan. Khi dùng phương pháp này kết quả  yêu cầu chính xác cụm từ cần search.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.58.34.png&quot; /&gt;
+  &lt;em&gt;Search using quotation / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;Không biết sao chứ mình tìm thì nó lại ra lensovieta mọi người ạ!&lt;/p&gt;
+&lt;h3 id=&quot;missing-words-or-phrases&quot;&gt;Missing words or Phrases:&lt;/h3&gt;
+&lt;p&gt;Bạn có thể sử dụng dấu * (dấu hoa thị) để điền các từ và cụm từ còn thiếu. Nó rất hữu ích bất cứ khi nào bạn đang cố gắng tìm kiếm một bài hát và bạn không nhớ lời bài hát.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-18 at 20.44.20.png&quot; /&gt;
+  &lt;em&gt;Search * / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;excluding-a-word&quot;&gt;Excluding a word:&lt;/h3&gt;
+&lt;p&gt;Sử dụng ‘-’ để loại trừ các từ và cụm từ khỏi tìm kiếm. Kết quả sẽ hiển thị tất cả các trang web và liên kết không có chữ.&lt;/p&gt;
+
+&lt;p&gt;Nếu các bạn không thêm &lt;code&gt;-nguyên&lt;/code&gt; vào phía sau thì kết quả sẽ thu được như sau:&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 21.05.55.png&quot; /&gt;
+  &lt;em&gt;Excluding a word / &lt;a href=&quot;https://www.facebook.com/manhlab&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 21.06.39.png&quot; /&gt;
+  &lt;em&gt;Excluding a word / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;filetype-operator-tìm-theo-loại-tệp&quot;&gt;FileType Operator: Tìm theo loại tệp&lt;/h3&gt;
+&lt;p&gt;Nếu bạn muốn tìm 1 quyển sách mà nó vẫn đang chơi trò trốn tìm với bạn bạn thì mẹo nhỏ sau đây sẽ hữu ích với bạn. Toán tử này cung cấp cho bạn sức mạnh để tìm kiếm tệp cho một loại tệp cụ thể. Nó rất hữu ích khi bạn đang tìm kiếm pdf hoặc các tệp tin được định dạng ở các loại khác như PPT, XSL.&lt;/p&gt;
+
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.53.47.png&quot; /&gt;
+  &lt;em&gt;Search filetype / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;thực-hành-tìm-một-quyển-sách&quot;&gt;Thực hành tìm một quyển sách&lt;/h3&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.50.59.png&quot; /&gt;
+  &lt;em&gt;Search book / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;thực-hành-tìm-mã-nguồn&quot;&gt;Thực hành tìm mã nguồn&lt;/h3&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.49.49.png&quot; /&gt;
+  &lt;em&gt;Search code / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;thực-hành-giải-quyết-lỗi-trong-chương-trình&quot;&gt;Thực hành giải quyết lỗi trong chương trình&lt;/h3&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.34.14.png&quot; /&gt;
+  &lt;em&gt;Search error / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;thực-hành-tìm-một-bài-hát-dựa-theo-lời&quot;&gt;Thực hành tìm một bài hát dựa theo lời&lt;/h3&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.36.27.png&quot; /&gt;
+  &lt;em&gt;Search song / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;p&gt;Đây là một số thủ thuật tìm kiếm mà mình biết. Nếu bạn còn các cách tìm thông tin hiệu quả khác nữa thì đừng ngần ngại chia sẻ vào comment dưới bài viết nhé.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Cảm ơn các bạn đã đọc hết bài viết này!&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                <pubDate>Sun, 31 Oct 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/google-search</link>
+                <guid isPermaLink="true">http://localhost:4000/google-search</guid>
+                
+                <category>Programming language</category>
+                
+                <category>Tools</category>
                 
                 
                 <category>ITMOBRAIN</category>

@@ -89,7 +89,8 @@ disqus-identifier: itmobrain-github-io # Add your shortname for Disqus Comment. 
 #-------------------------------
 # Google Analytics
 google-analytics: G-2LESMFZQYN # Add your GA Tracking Id
-
+adsense:
+  client_id: 'ca-pub-xxxxxxxxxxxxxxxx'
 
 #-------------------------------
 # Build Settings
