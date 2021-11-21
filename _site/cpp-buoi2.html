@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Machine Learning</title>
-  <meta name='description' content='CLB Tin Hoc ITMO Brain'>
+  <title>Tổng kết buổi 2</title>
+  <meta name='description' content='ManhLab'>
 
-  <link rel="canonical" href="http://localhost:4000/machine_learning/">
+  <link rel="canonical" href="http://localhost:4000/cpp-buoi2">
   <link rel="alternate" type="application/rss+xml" title="ITMO Brain" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Machine Learning – ITMO Brain">
-  <meta name="twitter:description" content="">
+  <meta name="twitter:title" content="Tổng kết buổi 2 – ITMO Brain">
+  <meta name="twitter:description" content="ManhLab">
   <meta name="twitter:image:src" content="http://localhost:4000/images/cpp_banner.jpeg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content="Machine Learning – ITMO Brain">
-  <meta property="og:description" content="">
+  <meta property="og:title" content="Tổng kết buổi 2 – ITMO Brain">
+  <meta property="og:description" content="ManhLab">
   <meta property="og:image" content="http://localhost:4000/images/cpp_banner.jpeg">
 
   <!-- Fonts -->
@@ -132,7 +132,7 @@
                 
                   
                   <li class="nav__item">
-                    <a href="/machine_learning/" class="nav__link">Machine Learning</a>
+                    <a href="/member/" class="nav__link">Member</a>
                   </li>
                   
                 
@@ -140,7 +140,7 @@
                 
                   
                   <li class="nav__item">
-                    <a href="/member/" class="nav__link">Member</a>
+                    <a href="/nlp/" class="nav__link">NLP</a>
                   </li>
                   
                 
@@ -209,63 +209,592 @@
 
   <!-- begin content -->
   <main class="content" aria-label="Content">
-    <div class="page-head">
+    <div class="post-head">
   <div class="container">
     <div class="row">
-
+      
       
 
       
-      <div class="col col-12">
-        <div class="page-image">
-          <img class="lazy" data-src="/images/cpp_banner.jpeg" alt="Machine Learning">
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img class="lazy" data-src="/images/cpp_banner.jpeg" alt="Tổng kết buổi 2">
         </div>
       </div>
       
 
       
+      
+      
+      <div class="col col-6 col-d-12">
+        <div class="post__info ">
+  
+          
+            <div class="post__tags">
+              
+                <a href="/tags#Programming language" class="post__tag">Programming language</a>
+              
+                <a href="/tags#Learning" class="post__tag">Learning</a>
+              
+            </div>
+          
+  
+          <h1 class="post__title">Tổng kết buổi 2</h1>
+  
+          <div class="post__meta">
+            <a href="/about/" class="post__author-image">
+              <img class="lazy" data-src="/images/logo.png" alt="ITMO Brain">
+            </a>
 
-      <div class="col col-12">
-        <div class="page__info">
-          <h1 class="page__title">Machine Learning</h1>
+            <div class="post__meta-bottom">
+              <a class="post__author" href="/about/">ITMO Brain</a>
+              <time class="post__date" datetime="2021-11-21T04:48:45+03:00">21 Nov 2021</time>
+            </div>
+          </div>
+  
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- begin page -->
+<!-- begin post -->
 <div class="container animate">
 
-  <article class="page">
-    <div class="page__content">
+  <article class="post">
+
+    <div class="post__content">
       <blockquote>
-  <p><cite>🔥Machine Learning Course🔥
-<br />Working in processing</cite></p>
+  <p><cite>Số lượng thành viên tham gia: 26<br />
+<a href="https://docs.google.com/presentation/d/11Xwe1lzVH1Vg5_bbok9VV90F1DiVSqN2/edit?usp=sharing&amp;ouid=105791949291394407664&amp;rtpof=true&amp;sd=true">Link slide buổi học</a><br />
+<a href="https://youtu.be/Z7dfHnPiPy0">Link record</a><br />
+<a href="www.hackerrank.com/itmo-brain-cpp-2">Link bài tập lớp buổi 2 CPP</a><br />
+<a href="www.hackerrank.com/itmo-brain-btvn-2">Link btvn buổi 2 CPP</a><br /></cite></p>
 </blockquote>
 
-<p>From ITMO Brain with Love</p>
-
-<h3 id="các-giảng-viên-của-khoá-học">Các giảng viên của khoá học:</h3>
+<h3 id="nội-dung-chia-sẻ">Nội dung chia sẻ:</h3>
 <ul>
-  <li>💡Trần Đức Mạnh</li>
-  <li>💡Lê Trọng Minh</li>
+  <li>Giới thiệu về mảng</li>
+  <li>Giới thiệu về các vòng lặp:
+    <ul>
+      <li>Vòng lặp for.</li>
+      <li>Vòng lặp while do.</li>
+      <li>Vòng lặp do while.</li>
+    </ul>
+  </li>
+  <li>Một số lệnh thường dùng trong vòng lặp:
+    <ul>
+      <li>break</li>
+      <li>continue</li>
+    </ul>
+  </li>
 </ul>
 
-<div class="gallery-box">
-  <div class="gallery">
-    <img src="/images/admin/minh.jpg" />
-    <img src="/images/admin/manh.jpg" />
-  </div>
-  <em>Admin Machine Learning/ <a href="https://fb.com/itmobrain" target="_blank">ITMO Brain</a></em>
-</div>
+<h3 id="mảng">Mảng</h3>
+<ul>
+  <li>Định nghĩa: Mảng là tập hợp các phần tử cùng kiểu được lưu trữ tuần tự trong bộ nhớ.</li>
+  <li>Cách khai báo: Type arrayName[dimension];
+    - Ví dụ: int a[5]; char a[26];</li>
+  <li>Truy cập vào phần tử thứ i của mảng: arrayName[i]</li>
+  <li>Lưu ý:
+    <ul>
+      <li>Chỉ số mảng bắt đầu từ 0, 1, 2, 3, 4, … , n-1</li>
+      <li>Nếu gọi phần tử không nằm trong mảng thì sẽ nhận về giá trị bất kì(Buffer overflow).</li>
+    </ul>
+  </li>
+  <li>Mảng hai chiều: type arrayName[dimesion][dimesion];</li>
+</ul>
+
+<h3 id="vòng-lặp-for">Vòng lặp For</h3>
+<h4 id="cấu-trúc">Cấu trúc:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for(initialization; condition; incrementation)
+{
+        	Statement 1;
+        	Statement 2;
+}
+</code></pre></div></div>
+<h4 id="ví-dụ">Ví dụ:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for(int i=1;i&lt;=n;i++)
+{
+        	res+=1;
+        	cout&lt;&lt;res&lt;&lt;” “;
+}
+</code></pre></div></div>
+<h4 id="giải-thích-ví-dụ">Giải thích ví dụ:</h4>
+<p>Đầu tiên t khai báo biến điểm và gán giá trị: int i = 1;<br />
+Điều kiện để vòng for chạy là i&lt;=5; tức là i còn nhỏ hơn hoặc bằng 5 thì còn chạy.<br />
+Tăng i sau mỗi lần thực hiện các câu lệnh ở trong {}.</p>
+
+<h3 id="vòng-lặp-while-do">Vòng lặp while do</h3>
+<h4 id="cấu-trúc-1">Cấu trúc:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>while (condition)
+{
+        	Statement(s);
+        	Updation;
+}
+</code></pre></div></div>
+<h4 id="ví-dụ-1">Ví dụ:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cin&gt;&gt;x; sl=0;
+while (x&gt;0)
+{
+        	x/=10;
+        	sl++;
+}
+</code></pre></div></div>
+
+<h4 id="giải-thích-ví-dụ-1">Giải thích ví dụ:</h4>
+<p>Đầu tiên nhập x và gán sl=0;<br />
+Vòng while sẽ xét điều kiện trước rồi mới thực hiện các câu lệnh trong {},<br /> tức là x &gt; 0 tức là x còn lớn hơn 0 thì còn thực hiện các câu lệnh trong ngoặc.</p>
+
+<h3 id="vòng-lặp-do-while">Vòng lặp do while</h3>
+<h4 id="cấu-trúc-2">Cấu trúc:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>do
+{
+ 
+} while (condition)
+</code></pre></div></div>
+<h4 id="ví-dụ-2">Ví dụ:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>n=-5;
+do
+{
+	n++;
+}while(n&gt;0)
+</code></pre></div></div>
+<h4 id="giải-thích-ví-dụ-2">Giải thích ví dụ:</h4>
+<p>Đầu tiên gán n=-5<br />
+Vòng do while sẽ thực hiện các câu lệnh trong {} trước rồi mới xét điều kiện</p>
+
+<h3 id="lệnh-thường-dùng">Lệnh thường dùng:</h3>
+<ul>
+  <li>Break; - thoái khỏi vòng lặp.</li>
+  <li>Continue; bỏ qua các câu lệnh phía dưới trong vòng lặp và nhảy tới lần lặp tiếp theo.</li>
+</ul>
+
+<h3 id="bảng-xếp-hạng-hackerrank">Bảng xếp hạng Hackerrank:</h3>
+<p><img src="/images/Screenshot 2021-11-21 at 19.38.58.png" /></p>
+<h3 id="code-bài-tập-trên-lớp">Code bài tập trên lớp:</h3>
+<h4 id="số-nguyên-tố">Số nguyên tố</h4>
+<p>Định nghĩa: số nguyên tố là số lớn hơn 1 và chỉ chia hết cho 1 và chính nó. Hãy viết một chương trình kiểm tra xem một số nhập từ bàn phím có phải số nguyên tố không.</p>
+
+<p><strong>Input Format:</strong><br />
+một số tự nhiên N<br />
+<strong>Constraints</strong><br />
+Subtask 1 (80% testcases): N &lt; 100000000<br />
+Subtask 2 (20% testcases): N &lt; 10000000000000000<br />
+<strong>Output Format</strong><br />
+In ra YES nếu đầu vào là số nguyên tố, NO nếu đầu vào không phải là số nguyên tố.</p>
+
+<p><strong>Sample Input 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>11
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>YES
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// from kh280174
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    long N, b=0;
+    cin &gt;&gt; N;
+    if(N==2){cout&lt;&lt;"YES"; return 0;};
+    if(N&lt;2){cout&lt;&lt;"NO"; return 0;};
+    if(N&gt;2){
+        for( int i=2; i&lt;=sqrt(N); i++){
+        if(N%i==0){b=1;};
+    }};
+    if(b==1){cout&lt;&lt;"NO";}
+    else cout&lt;&lt;"YES";
+    return 0; 
+    return 0;
+}
+</code></pre></div></div>
+<h4 id="vẽ-hình-chữ-nhật">Vẽ hình chữ nhật</h4>
+<p>Vẽ một hình chữ nhật nằm thẳng đứng (độ cao sẽ là chiều dài của hình chữ nhật), từ hai số N, M đại diện cho kích thước của hình đấy.</p>
+
+<p><strong>Input Format:</strong><br />
+N, M<br />
+<strong>Constraints</strong><br />
+1 &lt; N, M &lt; 1000<br />
+<strong>Output Format</strong><br />
+hình chữ nhật vẽ bằng ký tự “*“<br /></p>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>5 7
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*****
+*****
+*****
+*****
+*****
+*****
+*****
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// from tranduybthv
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+
+int main() {
+    int a,b;
+    cin &gt;&gt;a&gt;&gt;b;
+    if(a&gt;b){
+        int temp = a;
+        a=b;
+        b=temp;
+    }
+    for(int i =0; i&lt;b;i++ ){
+        for(int j =0; j&lt;a;j++ ){
+            cout &lt;&lt;"*";
+        }
+        cout &lt;&lt;endl;
+    }   
+    return 0;
+}
+
+</code></pre></div></div>
+<h4 id="christmas-tree">Christmas tree</h4>
+<p>Vẽ một cây thông noel, có độ cao của phần lá là N, và phần gốc có độ cao cùng với độ rộng là số lẻ gần với N/4 nhất (nếu tồn tại hai số lẻ cùng khoảng cách đến N/4 thì chọn số lớn hơn);</p>
+
+<p><strong>Input Format:</strong><br />
+Một số nguyên N là độ cao của phần lá.<br />
+<strong>Constraints</strong><br />
+1 &lt; N &lt; 1000<br />
+<strong>Output Format</strong><br />
+Một cây thông được vẽ bằng những dấu *</p>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>12
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>           *
+          ***
+         *****
+        *******
+       *********
+      ***********
+     *************
+    ***************
+   *****************
+  *******************
+ *********************
+***********************
+          ***
+          ***
+          ***
+</code></pre></div></div>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>17
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                *
+               ***
+              *****
+             *******
+            *********
+           ***********
+          *************
+         ***************
+        *****************
+       *******************
+      *********************
+     ***********************
+    *************************
+   ***************************
+  *****************************
+ *******************************
+*********************************
+              *****
+              *****
+              *****
+              *****
+              *****
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// from nguyenkhanhly111
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+
+int main() {
+    int n;
+    cin&gt;&gt;n;
+    for(int i=0; i&lt;n; i++)
+    {
+        for(int j=1; j&lt;n-i; j++) {cout&lt;&lt;" ";}
+        for(int j=0; j&lt;i*2+1; j++) {cout&lt;&lt;"*";}
+        for(int j=1; j&lt;n-i; j++) {cout&lt;&lt;" ";}  
+        cout&lt;&lt;"\n";
+    }
+    int than_cay = int(n/4) + int(int(n/4)%2 == 0);
+    for(int i=0; i&lt;than_cay; i++)
+    {
+        for(int j=0; j&lt;n-int(than_cay/2)-1; j++) {cout&lt;&lt;" ";}
+        for(int j=0; j&lt;than_cay; j++) {cout&lt;&lt;"*";}
+        cout&lt;&lt;"\n";
+    }
+    
+    return 0;
+}
+
+</code></pre></div></div>
+
+<h4 id="đường-link-hữu-ích">Đường Link hữu ích:</h4>
+<p><a href="https://habr.com/ru/post/495444/">Массивы в C++</a><br />
+<a href="https://medium.com/quick-code/a-simple-guide-to-for-while-and-do-while-loops-in-c-c1b3b236d8cb">A Simple Guide to For, While, and Do While Loops in C++</a><br />
+<a href="https://betterprogramming.pub/stop-using-i-in-your-loops-1f906520d548">Stop Using i++ in Your Loops</a><br /></p>
 
     </div>
+
+    <div class="post__share">
+      <ul class="share__list list-reset">
+        <li class="share__item">
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/cpp-buoi2"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cpp-buoi2&title=T%E1%BB%95ng%20k%E1%BA%BFt%20bu%E1%BB%95i%202&summary=ManhLab&source=ITMO%20Brain"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+        </li>
+      </ul>
+    </div>
+
+
   </article>
-
 </div>
-<!-- end page -->
+<!-- end post -->
 
+
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts is-related animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#Programming language" class="section__link related-tag">Xem tất cả<span> Programming language</span></a>
+                  
+                
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2021-11-19T04:48:45+03:00">19 Nov 2021</time>
+
+      
+
+      
+      <a class="article__image" href="/google-search">
+        <img class="lazy" data-src="/images/maxresdefault.jpeg" alt="Master Google Search">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="/google-search">Master Google Search</a>
+      </h2>
+
+      
+      <p class="article__excerpt">ManhLab+Đinh Ngọc Tuấn</p>
+      
+
+    </div>
+  </div>
+</div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2021-11-15T04:48:45+03:00">15 Nov 2021</time>
+
+      
+
+      
+      <a class="article__image" href="/github">
+        <img class="lazy" data-src="/images/github.png" alt="Giới thiệu về Github">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="/github">Giới thiệu về Github</a>
+      </h2>
+
+      
+      <p class="article__excerpt">Triệu Tâm</p>
+      
+
+    </div>
+  </div>
+</div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2021-11-14T04:48:45+03:00">14 Nov 2021</time>
+
+      
+
+      
+      <a class="article__image" href="/cpp-buoi1">
+        <img class="lazy" data-src="/images/cpp_banner.jpeg" alt="Tổng kết buổi 1">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="/cpp-buoi1">Tổng kết buổi 1</a>
+      </h2>
+
+      
+      <p class="article__excerpt">ManhLab</p>
+      
+
+    </div>
+  </div>
+</div>
+
+            
+                
+                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <!-- begin comments -->
+<div class="show-comments">
+
+  <button class="button disqus-button" id="show-comments-button" onclick="disqus();return false;">댓글 보기</button>
+</div>
+
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  var disqus_loaded = false;
+  var disqus_shortname = 'itmobrain-github-io';
+  var disqus_container = document.getElementById("disqus_thread");
+  if (!disqus_loaded) {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+      // Show disqus comments
+      disqus_container.classList.add("is-open");
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments --> 
+      </div>
+    </div>
+  </div>
 
   </main>
   <!-- end content -->

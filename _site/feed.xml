@@ -5,9 +5,325 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 19 Nov 2021 21:11:44 +0300</pubDate>
-        <lastBuildDate>Fri, 19 Nov 2021 21:11:44 +0300</lastBuildDate>
+        <pubDate>Sun, 21 Nov 2021 19:56:25 +0300</pubDate>
+        <lastBuildDate>Sun, 21 Nov 2021 19:56:25 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Tổng kết buổi 2</title>
+                <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Số lượng thành viên tham gia: 26&lt;br /&gt;
+&lt;a href=&quot;https://docs.google.com/presentation/d/11Xwe1lzVH1Vg5_bbok9VV90F1DiVSqN2/edit?usp=sharing&amp;amp;ouid=105791949291394407664&amp;amp;rtpof=true&amp;amp;sd=true&quot;&gt;Link slide buổi học&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://youtu.be/Z7dfHnPiPy0&quot;&gt;Link record&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;www.hackerrank.com/itmo-brain-cpp-2&quot;&gt;Link bài tập lớp buổi 2 CPP&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;www.hackerrank.com/itmo-brain-btvn-2&quot;&gt;Link btvn buổi 2 CPP&lt;/a&gt;&lt;br /&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;nội-dung-chia-sẻ&quot;&gt;Nội dung chia sẻ:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Giới thiệu về mảng&lt;/li&gt;
+  &lt;li&gt;Giới thiệu về các vòng lặp:
+    &lt;ul&gt;
+      &lt;li&gt;Vòng lặp for.&lt;/li&gt;
+      &lt;li&gt;Vòng lặp while do.&lt;/li&gt;
+      &lt;li&gt;Vòng lặp do while.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Một số lệnh thường dùng trong vòng lặp:
+    &lt;ul&gt;
+      &lt;li&gt;break&lt;/li&gt;
+      &lt;li&gt;continue&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mảng&quot;&gt;Mảng&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Định nghĩa: Mảng là tập hợp các phần tử cùng kiểu được lưu trữ tuần tự trong bộ nhớ.&lt;/li&gt;
+  &lt;li&gt;Cách khai báo: Type arrayName[dimension];
+    - Ví dụ: int a[5]; char a[26];&lt;/li&gt;
+  &lt;li&gt;Truy cập vào phần tử thứ i của mảng: arrayName[i]&lt;/li&gt;
+  &lt;li&gt;Lưu ý:
+    &lt;ul&gt;
+      &lt;li&gt;Chỉ số mảng bắt đầu từ 0, 1, 2, 3, 4, … , n-1&lt;/li&gt;
+      &lt;li&gt;Nếu gọi phần tử không nằm trong mảng thì sẽ nhận về giá trị bất kì(Buffer overflow).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Mảng hai chiều: type arrayName[dimesion][dimesion];&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vòng-lặp-for&quot;&gt;Vòng lặp For&lt;/h3&gt;
+&lt;h4 id=&quot;cấu-trúc&quot;&gt;Cấu trúc:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for(initialization; condition; incrementation)
+{
+        	Statement 1;
+        	Statement 2;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;ví-dụ&quot;&gt;Ví dụ:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for(int i=1;i&amp;lt;=n;i++)
+{
+        	res+=1;
+        	cout&amp;lt;&amp;lt;res&amp;lt;&amp;lt;” “;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;giải-thích-ví-dụ&quot;&gt;Giải thích ví dụ:&lt;/h4&gt;
+&lt;p&gt;Đầu tiên t khai báo biến điểm và gán giá trị: int i = 1;&lt;br /&gt;
+Điều kiện để vòng for chạy là i&amp;lt;=5; tức là i còn nhỏ hơn hoặc bằng 5 thì còn chạy.&lt;br /&gt;
+Tăng i sau mỗi lần thực hiện các câu lệnh ở trong {}.&lt;/p&gt;
+
+&lt;h3 id=&quot;vòng-lặp-while-do&quot;&gt;Vòng lặp while do&lt;/h3&gt;
+&lt;h4 id=&quot;cấu-trúc-1&quot;&gt;Cấu trúc:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;while (condition)
+{
+        	Statement(s);
+        	Updation;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;ví-dụ-1&quot;&gt;Ví dụ:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cin&amp;gt;&amp;gt;x; sl=0;
+while (x&amp;gt;0)
+{
+        	x/=10;
+        	sl++;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;giải-thích-ví-dụ-1&quot;&gt;Giải thích ví dụ:&lt;/h4&gt;
+&lt;p&gt;Đầu tiên nhập x và gán sl=0;&lt;br /&gt;
+Vòng while sẽ xét điều kiện trước rồi mới thực hiện các câu lệnh trong {},&lt;br /&gt; tức là x &amp;gt; 0 tức là x còn lớn hơn 0 thì còn thực hiện các câu lệnh trong ngoặc.&lt;/p&gt;
+
+&lt;h3 id=&quot;vòng-lặp-do-while&quot;&gt;Vòng lặp do while&lt;/h3&gt;
+&lt;h4 id=&quot;cấu-trúc-2&quot;&gt;Cấu trúc:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;do
+{
+ 
+} while (condition)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;ví-dụ-2&quot;&gt;Ví dụ:&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;n=-5;
+do
+{
+	n++;
+}while(n&amp;gt;0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;giải-thích-ví-dụ-2&quot;&gt;Giải thích ví dụ:&lt;/h4&gt;
+&lt;p&gt;Đầu tiên gán n=-5&lt;br /&gt;
+Vòng do while sẽ thực hiện các câu lệnh trong {} trước rồi mới xét điều kiện&lt;/p&gt;
+
+&lt;h3 id=&quot;lệnh-thường-dùng&quot;&gt;Lệnh thường dùng:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Break; - thoái khỏi vòng lặp.&lt;/li&gt;
+  &lt;li&gt;Continue; bỏ qua các câu lệnh phía dưới trong vòng lặp và nhảy tới lần lặp tiếp theo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;bảng-xếp-hạng-hackerrank&quot;&gt;Bảng xếp hạng Hackerrank:&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/Screenshot 2021-11-21 at 19.38.58.png&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;code-bài-tập-trên-lớp&quot;&gt;Code bài tập trên lớp:&lt;/h3&gt;
+&lt;h4 id=&quot;số-nguyên-tố&quot;&gt;Số nguyên tố&lt;/h4&gt;
+&lt;p&gt;Định nghĩa: số nguyên tố là số lớn hơn 1 và chỉ chia hết cho 1 và chính nó. Hãy viết một chương trình kiểm tra xem một số nhập từ bàn phím có phải số nguyên tố không.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input Format:&lt;/strong&gt;&lt;br /&gt;
+một số tự nhiên N&lt;br /&gt;
+&lt;strong&gt;Constraints&lt;/strong&gt;&lt;br /&gt;
+Subtask 1 (80% testcases): N &amp;lt; 100000000&lt;br /&gt;
+Subtask 2 (20% testcases): N &amp;lt; 10000000000000000&lt;br /&gt;
+&lt;strong&gt;Output Format&lt;/strong&gt;&lt;br /&gt;
+In ra YES nếu đầu vào là số nguyên tố, NO nếu đầu vào không phải là số nguyên tố.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;YES
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// from kh280174
+#include &amp;lt;cmath&amp;gt;
+#include &amp;lt;cstdio&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    long N, b=0;
+    cin &amp;gt;&amp;gt; N;
+    if(N==2){cout&amp;lt;&amp;lt;&quot;YES&quot;; return 0;};
+    if(N&amp;lt;2){cout&amp;lt;&amp;lt;&quot;NO&quot;; return 0;};
+    if(N&amp;gt;2){
+        for( int i=2; i&amp;lt;=sqrt(N); i++){
+        if(N%i==0){b=1;};
+    }};
+    if(b==1){cout&amp;lt;&amp;lt;&quot;NO&quot;;}
+    else cout&amp;lt;&amp;lt;&quot;YES&quot;;
+    return 0; 
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;vẽ-hình-chữ-nhật&quot;&gt;Vẽ hình chữ nhật&lt;/h4&gt;
+&lt;p&gt;Vẽ một hình chữ nhật nằm thẳng đứng (độ cao sẽ là chiều dài của hình chữ nhật), từ hai số N, M đại diện cho kích thước của hình đấy.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input Format:&lt;/strong&gt;&lt;br /&gt;
+N, M&lt;br /&gt;
+&lt;strong&gt;Constraints&lt;/strong&gt;&lt;br /&gt;
+1 &amp;lt; N, M &amp;lt; 1000&lt;br /&gt;
+&lt;strong&gt;Output Format&lt;/strong&gt;&lt;br /&gt;
+hình chữ nhật vẽ bằng ký tự “*“&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5 7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*****
+*****
+*****
+*****
+*****
+*****
+*****
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// from tranduybthv
+#include &amp;lt;cmath&amp;gt;
+#include &amp;lt;cstdio&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+using namespace std;
+
+
+int main() {
+    int a,b;
+    cin &amp;gt;&amp;gt;a&amp;gt;&amp;gt;b;
+    if(a&amp;gt;b){
+        int temp = a;
+        a=b;
+        b=temp;
+    }
+    for(int i =0; i&amp;lt;b;i++ ){
+        for(int j =0; j&amp;lt;a;j++ ){
+            cout &amp;lt;&amp;lt;&quot;*&quot;;
+        }
+        cout &amp;lt;&amp;lt;endl;
+    }   
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;christmas-tree&quot;&gt;Christmas tree&lt;/h4&gt;
+&lt;p&gt;Vẽ một cây thông noel, có độ cao của phần lá là N, và phần gốc có độ cao cùng với độ rộng là số lẻ gần với N/4 nhất (nếu tồn tại hai số lẻ cùng khoảng cách đến N/4 thì chọn số lớn hơn);&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input Format:&lt;/strong&gt;&lt;br /&gt;
+Một số nguyên N là độ cao của phần lá.&lt;br /&gt;
+&lt;strong&gt;Constraints&lt;/strong&gt;&lt;br /&gt;
+1 &amp;lt; N &amp;lt; 1000&lt;br /&gt;
+&lt;strong&gt;Output Format&lt;/strong&gt;&lt;br /&gt;
+Một cây thông được vẽ bằng những dấu *&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;           *
+          ***
+         *****
+        *******
+       *********
+      ***********
+     *************
+    ***************
+   *****************
+  *******************
+ *********************
+***********************
+          ***
+          ***
+          ***
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;17
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;                *
+               ***
+              *****
+             *******
+            *********
+           ***********
+          *************
+         ***************
+        *****************
+       *******************
+      *********************
+     ***********************
+    *************************
+   ***************************
+  *****************************
+ *******************************
+*********************************
+              *****
+              *****
+              *****
+              *****
+              *****
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// from nguyenkhanhly111
+#include &amp;lt;cmath&amp;gt;
+#include &amp;lt;cstdio&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+using namespace std;
+
+
+int main() {
+    int n;
+    cin&amp;gt;&amp;gt;n;
+    for(int i=0; i&amp;lt;n; i++)
+    {
+        for(int j=1; j&amp;lt;n-i; j++) {cout&amp;lt;&amp;lt;&quot; &quot;;}
+        for(int j=0; j&amp;lt;i*2+1; j++) {cout&amp;lt;&amp;lt;&quot;*&quot;;}
+        for(int j=1; j&amp;lt;n-i; j++) {cout&amp;lt;&amp;lt;&quot; &quot;;}  
+        cout&amp;lt;&amp;lt;&quot;\n&quot;;
+    }
+    int than_cay = int(n/4) + int(int(n/4)%2 == 0);
+    for(int i=0; i&amp;lt;than_cay; i++)
+    {
+        for(int j=0; j&amp;lt;n-int(than_cay/2)-1; j++) {cout&amp;lt;&amp;lt;&quot; &quot;;}
+        for(int j=0; j&amp;lt;than_cay; j++) {cout&amp;lt;&amp;lt;&quot;*&quot;;}
+        cout&amp;lt;&amp;lt;&quot;\n&quot;;
+    }
+    
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;đường-link-hữu-ích&quot;&gt;Đường Link hữu ích:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://habr.com/ru/post/495444/&quot;&gt;Массивы в C++&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://medium.com/quick-code/a-simple-guide-to-for-while-and-do-while-loops-in-c-c1b3b236d8cb&quot;&gt;A Simple Guide to For, While, and Do While Loops in C++&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://betterprogramming.pub/stop-using-i-in-your-loops-1f906520d548&quot;&gt;Stop Using i++ in Your Loops&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+                <pubDate>Sun, 21 Nov 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/cpp-buoi2</link>
+                <guid isPermaLink="true">http://localhost:4000/cpp-buoi2</guid>
+                
+                <category>Programming language</category>
+                
+                <category>Learning</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
         
             <item>
                 <title>Master Google Search</title>
