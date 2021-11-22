@@ -10,7 +10,7 @@ image: '/images/nlp.png'
 
 NLP là một chủ đề rất hot trong thời gian vừa qua, theo các chuyên gia thì 2020 là năm của  NLP khi mà hàng loạt các công trình quan trọng đồng loạt được công bố, cải thiện đáng kể hiệu quả của việc đọc hiểu ngôn ngữ tự nhiên.  Bài viết này tập trung vào việc trang bị cho bạn hiểu biết tổng quan về xử lí ngôn ngữ tự nhiên, bạn hoàn toàn có thể FROM ZERO TO HERO với những kiến thức ở trong bài viết này. <br><br>
 As I joined the competitions and since I was a complete beginner with Deep Learning Techniques for NLP, all my enthusiasm took a beating when I saw everyone Using all  kinds of BERT , everything just went over my head,I thought to quit but there is a special thing about Kaggle ,it just hooks you. I thought I have to learn someday , why not now , so I braced myself and sat on the learning curve. I wrote a kernel on the Tweet Sentiment Extraction competition that has now got a gold medal , it can be viewed here : https://www.kaggle.com/tanulsingh077/twitter-sentiment-extaction-analysis-eda-and-model <br><br>
-After 10 days of extensive learning(finishing all the latest NLP approaches) , I am back here to share my leaning , by writing a kernel that starts from the very Basic RNN's to built over , all the way to BERT . I invite you all to come and learn alongside with me and take a step closer towards becoming an NLP expert
+
 
 # Contents
 
@@ -32,7 +32,6 @@ Tôi chia mỗi chủ đề theo cấu trúc như sau:
 * Giải thích Code
 
 Đây là một bài viết tâm huyết và tôi hứa với bạn sẽ học được tất cả các công nghệ hoàn toàn với nó. 
-
 
 **<span style="color:Red">Bài viết này cần rất nhiều nỗ lực, vui lòng like và share nếu bạn cảm thấy nó hữu ích**
 
@@ -364,7 +363,7 @@ We can see our model achieves an accuracy of 1 which is just insane , we are cle
 
 # Word Embeddings
 
-While building our simple RNN models we talked about using word-embeddings , So what is word-embeddings and how do we get word-embeddings?
+Khi chúng ta xây dựng mô hình RNN, chúng ta phải sử dụng word-embeddings, Vậy word-embeding là già, và cách xây dựng nó là gì?
 Here is the answer :
 * https://www.coursera.org/learn/nlp-sequence-models/lecture/6Oq70/word-representation
 * https://machinelearningmastery.com/what-are-word-embeddings/
@@ -525,7 +524,7 @@ We see that in this case we used dropout and prevented overfitting the data
 
 ## Basic  Overview
 
-Introduced by Cho, et al. in 2014, GRU (Gated Recurrent Unit) aims to solve the vanishing gradient problem which comes with a standard recurrent neural network. GRU's are a variation on the LSTM because both are designed similarly and, in some cases, produce equally excellent results . GRU's were designed to be simpler and faster than LSTM's and in most cases produce equally good results and thus there is no clear winner.
+Introduced by Cho, et al. in 2014, GRU (Gated Recurrent Unit) sử dụng để giải quyết vấn đề mất mát gradient. GRU's are a variation on the LSTM because both are designed similarly and, in some cases, produce equally excellent results . GRU's were designed to be simpler and faster than LSTM's and in most cases produce equally good results and thus there is no clear winner.
 
 ## In Depth Explanation
 
@@ -816,7 +815,7 @@ fig.show()
 
 # Attention Models
 
-This is the toughest and most tricky part. If you are able to understand the intiuition and working of attention block , understanding transformers and transformer based architectures like BERT will be a piece of cake. This is the part where I spent the most time on and I suggest you do the same . Please read and view the following resources in the order I am providing to ignore getting confused, also at the end of this try to write and draw an attention block in your own way :-
+Đây là phần giá trị và hấp dẫn nhất của bài viết. Nếu bạn hiểu cách vận hành của attention block, understanding transformers and transformer based architectures như BERT thì sẽ thật dễ hiểu, nhưng nếu không thì cũng không sao, tôi sẽ chia sẻ cho bạn nhiều nguồn để bù đắp vấn đề này. :-
 
 * https://www.coursera.org/learn/nlp-sequence-models/lecture/RDXpX/attention-model-intuition --> Only watch this video and not the next one
 * https://towardsdatascience.com/sequence-2-sequence-model-with-attention-mechanism-9e9ca2a613a
