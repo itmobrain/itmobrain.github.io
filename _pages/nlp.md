@@ -9,7 +9,6 @@ image: '/images/nlp.png'
 <br>Neutral Network Processing</cite>
 
 NLP là một chủ đề rất hot trong thời gian vừa qua, theo các chuyên gia thì 2020 là năm của  NLP khi mà hàng loạt các công trình quan trọng đồng loạt được công bố, cải thiện đáng kể hiệu quả của việc đọc hiểu ngôn ngữ tự nhiên.  Bài viết này tập trung vào việc trang bị cho bạn hiểu biết tổng quan về xử lí ngôn ngữ tự nhiên, bạn hoàn toàn có thể FROM ZERO TO HERO với những kiến thức ở trong bài viết này. <br><br>
-As I joined the competitions and since I was a complete beginner with Deep Learning Techniques for NLP, all my enthusiasm took a beating when I saw everyone Using all  kinds of BERT , everything just went over my head,I thought to quit but there is a special thing about Kaggle ,it just hooks you. I thought I have to learn someday , why not now , so I braced myself and sat on the learning curve. I wrote a kernel on the Tweet Sentiment Extraction competition that has now got a gold medal , it can be viewed here : https://www.kaggle.com/tanulsingh077/twitter-sentiment-extaction-analysis-eda-and-model <br><br>
 
 
 # Contents
