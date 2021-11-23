@@ -2,7 +2,7 @@
 layout: post
 title: "Giới thiệu về Hàm CPP"
 date: 2021-11-23 01:48:45
-image: '/images/func_Cpp/Cat-Wants-Nothing-Meme.jpeg'
+image: '/images/func_Cpp/func.jpeg'
 description: Triệu Tâm
 tags:
 - Programming language
