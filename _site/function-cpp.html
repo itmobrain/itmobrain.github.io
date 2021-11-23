@@ -354,23 +354,27 @@ Dòng lệnh return thể hiện rằng chức năng đã kết thúc. Bất kì
 
 <p>Tròn chương trình trên, hàm add() dùng để tính tổng hai số.
 Chúng ta truyền vào trong hàm 2 đối số kiểu int với giá trị 100 và 78 trong khi gọi hàm.
-Chúng ta lưu giữ giá trị trả về của hàm trong biến sum, và sau đó in ra nó.</p>
+Chúng ta lưu giữ giá trị trả về của hàm trong biến sum, và sau đó in ra nó. 
+<img src="/images/func_Cpp/Untitled14.png" /></p>
 
 <h3 id="nguyên-mẫu-hàm-function-prototype">Nguyên mẫu hàm (function prototype)</h3>
 <p>Trong C++, mã khai báo hàm phải ở trước lệnh gọi hàm. Tuy nhiên, nếu chúng ta muốn định nghĩa một hàm sau lời gọi hàm, chúng ta cần sử dụng nguyên mẫu hàm.
 Ví dụ.
-<img src="/images/func_Cpp/Untitled14.png" /></p>
+<img src="/images/func_Cpp/Untitled15.png" /></p>
 
 <p>Trong đoạn mã trên, nguyên mẫu hàm là: 
-<img src="/images/func_Cpp/Untitled15.png" /></p>
+<img src="/images/func_Cpp/Untitled16.png" /></p>
 
 <p>Điều này cung cấp cho trình biên dịch về tên hàm và các thông số của nó. Đó là lý do vì sao chúng ta có thể sử dụng mã để gọi một hàm trước khi hàm đã được xác định. 
 Cú pháp của một nguyên mẫu hàm là:
 <img src="/images/func_Cpp/Untitled17.png" /></p>
 
 <p>Ví dụ 4: Nguyên mẫu hàm C++
-<img src="/images/func_Cpp/Untitled16.png" />
 <img src="/images/func_Cpp/Untitled18.png" /></p>
+
+<p>output:</p>
+
+<p><img src="/images/func_Cpp/Untitled19.png" /></p>
 
 <p>Chương trình trên gần như giống với ví dụ 3. Điều khác biệt duy nhất ở đây là hàm được định nghĩa sau khi gọi hàm. 
 Đó là lý do vì sau chúng ta sử dụng nguyên mẫu hàm trong ví dụ này.</p>
@@ -392,11 +396,11 @@ Cú pháp của một nguyên mẫu hàm là:
 </ul>
 
 <p>Ví dụ 5: Chương trình C++ tìm căn bậc 2 của một số
-<img src="/images/func_Cpp/Untitled18.png" /></p>
+<img src="/images/func_Cpp/Untitled20.png" /></p>
 
 <p>Đầu ra</p>
 
-<p><img src="/images/func_Cpp/Untitled19.png" /></p>
+<p><img src="/images/func_Cpp/Untitled21.png" /></p>
 
 <p>Trong chương trình này, hàm thư viện sqrt() được sử dụng để tính căn bậc hai của một số.
 Khai báo hàm của sqrt() được định nghĩa trong cmath tệp tiêu đề. Đó là lý do tại sao chúng ta cần sử dụng mã #include <cmath> để sử dụng hàm sqrt().</cmath></p>

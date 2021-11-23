@@ -97,22 +97,27 @@ Ví dụ 3: Cộng hai số
 Tròn chương trình trên, hàm add() dùng để tính tổng hai số.
 Chúng ta truyền vào trong hàm 2 đối số kiểu int với giá trị 100 và 78 trong khi gọi hàm.
 Chúng ta lưu giữ giá trị trả về của hàm trong biến sum, và sau đó in ra nó. 
+<img src="/images/func_Cpp/Untitled14.png">
 
 ### Nguyên mẫu hàm (function prototype)
 Trong C++, mã khai báo hàm phải ở trước lệnh gọi hàm. Tuy nhiên, nếu chúng ta muốn định nghĩa một hàm sau lời gọi hàm, chúng ta cần sử dụng nguyên mẫu hàm.
 Ví dụ.
-<img src="/images/func_Cpp/Untitled14.png">
+<img src="/images/func_Cpp/Untitled15.png">
+
 
 Trong đoạn mã trên, nguyên mẫu hàm là: 
-<img src="/images/func_Cpp/Untitled15.png">
+<img src="/images/func_Cpp/Untitled16.png">
 
 Điều này cung cấp cho trình biên dịch về tên hàm và các thông số của nó. Đó là lý do vì sao chúng ta có thể sử dụng mã để gọi một hàm trước khi hàm đã được xác định. 
 Cú pháp của một nguyên mẫu hàm là:
 <img src="/images/func_Cpp/Untitled17.png">
 
 Ví dụ 4: Nguyên mẫu hàm C++
-<img src="/images/func_Cpp/Untitled16.png">
 <img src="/images/func_Cpp/Untitled18.png">
+
+output:
+
+<img src="/images/func_Cpp/Untitled19.png">
 
 Chương trình trên gần như giống với ví dụ 3. Điều khác biệt duy nhất ở đây là hàm được định nghĩa sau khi gọi hàm. 
 Đó là lý do vì sau chúng ta sử dụng nguyên mẫu hàm trong ví dụ này.
@@ -130,11 +135,11 @@ Chương trình trên gần như giống với ví dụ 3. Điều khác biệt 
 - Ví dụ, để sử dụng các hàm toán học như sqrt() và abs(), chúng ta cần bao gồm tệp tiêu đề cmath.
 
 Ví dụ 5: Chương trình C++ tìm căn bậc 2 của một số
-<img src="/images/func_Cpp/Untitled18.png">
+<img src="/images/func_Cpp/Untitled20.png">
 
 Đầu ra
 
-<img src="/images/func_Cpp/Untitled19.png">
+<img src="/images/func_Cpp/Untitled21.png">
 
 Trong chương trình này, hàm thư viện sqrt() được sử dụng để tính căn bậc hai của một số.
 Khai báo hàm của sqrt() được định nghĩa trong cmath tệp tiêu đề. Đó là lý do tại sao chúng ta cần sử dụng mã #include <cmath> để sử dụng hàm sqrt().
