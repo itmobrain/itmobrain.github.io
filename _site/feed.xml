@@ -5,16 +5,173 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 21 Nov 2021 19:56:25 +0300</pubDate>
-        <lastBuildDate>Sun, 21 Nov 2021 19:56:25 +0300</lastBuildDate>
+        <pubDate>Tue, 23 Nov 2021 23:40:33 +0300</pubDate>
+        <lastBuildDate>Tue, 23 Nov 2021 23:40:33 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Giới thiệu về Hàm CPP</title>
+                <description>&lt;h3 id=&quot;giới-thiệu-về-hàm-function-trong-c&quot;&gt;Giới thiệu về hàm (function) trong C++&lt;/h3&gt;
+&lt;p&gt;Trong bài viết này chúng ta cùng tìm hiểu về hàm và biểu thức hàm thông qua các ví dụ.
+Trước tiên, hàm là một khối mã thực hiện một nhiệm vụ cụ thể.
+Giả sử chúng ta cần tạo một chương trình để vẽ một hình tròn và tô màu cho nó. Chúng ta có thể tạo hai hàm để giải quyết vấn đề này:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Hàm để vẽ hình tròn.&lt;/li&gt;
+  &lt;li&gt;Hàm để tô màu cho hình tròn.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Việc chia một vấn đề thành nhiều vấn đề nhỏ hơn giúp chương trình dễ hiểu hơn và có thể tái sử dụng.
+Hàm có 2 loại:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Hàm chuẩn, đã được định nghĩa trước ở trong C++.&lt;/li&gt;
+  &lt;li&gt;Hàm do người dùng tự định nghĩa.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Trong bài này chúng ta sẽ đi sâu vào các hàm do người tự định nghĩa.&lt;/p&gt;
+&lt;h3 id=&quot;hàm-do-người-dùng-tự-định-nghĩa&quot;&gt;Hàm do người dùng tự định nghĩa&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;C++ cho phép lập trình viên tự định nghĩa hàm của riêng họ.&lt;/li&gt;
+  &lt;li&gt;Trong hàm sẽ chứa những đoạn mã thực hiện một nhiệm vụ cụ thể nào đó và được đặt tên bởi lập trình viên.&lt;/li&gt;
+  &lt;li&gt;Khi hàm được gọi từ bất kì phần nào của chương trình, tất cả các đoạn mã nằm trong nó sẽ được thực thi.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;khai-báo-hàm-c&quot;&gt;Khai báo hàm C++&lt;/h3&gt;
+&lt;p&gt;Cú pháp tổng quát để khai báo một hàm là:
+&lt;img src=&quot;/images/func_Cpp/Untitled.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Và đây là ví dụ về khai báo hàm
+&lt;img src=&quot;/images/func_Cpp/Untitled1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ở đây, chúng ta có:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Tên của hàm là greet()&lt;/li&gt;
+  &lt;li&gt;Kiểu trả về của hàm là void&lt;/li&gt;
+  &lt;li&gt;Dấu ngoặc đơn trống () có nghĩa là không có bất kì một tham số nào được truyền vào&lt;/li&gt;
+  &lt;li&gt;Phần thân hàm (đoạn mã) sẽ được viết bên trong {}&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;gọi-một-hàm&quot;&gt;Gọi một hàm&lt;/h3&gt;
+&lt;p&gt;Trong chương trình trên chúng ta đã khai báo một hàm có tên greet(). Để sử dụng hàm greet(), chúng ta cần gọi nó.
+Và đây là cách chúng ta có thể gọi hàm greet() trên.
+&lt;img src=&quot;/images/func_Cpp/Untitled2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cách hoạt động của hàm trong C++
+&lt;img src=&quot;/images/func_Cpp/Untitled3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ví dụ 1: Hiển thị văn bản
+&lt;img src=&quot;/images/func_Cpp/Untitled4.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Đầu ra
+&lt;img src=&quot;/images/func_Cpp/Untitled5.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Khai báo hàm với tham số
+Như đã đề cập ở trên, một hàm có thể khai báo với các tham số (đối số). Tham số là một giá trị được truyền vào khi khai báo một hàm. 
+Ví du, chúng ta cùng xem xét hàm sau:
+&lt;img src=&quot;/images/func_Cpp/Untitled6.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Biến num là tham số hàm với kiểu dữ liệu được truyền vào là int.	
+Cách truyền một giá trị cho hàm khi gọi hàm:
+&lt;img src=&quot;/images/func_Cpp/Untitled7.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;VÍ dụ 2: Khai báo hàm với nhiều tham số
+&lt;img src=&quot;/images/func_Cpp/Untitled8.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;đầu-ra&quot;&gt;Đầu ra&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/func_Cpp/Untitled9.png&quot; /&gt;
+Trong chương trình trên, chúng ta đã sử dụng một hàm với một tham số có kiểu int và một tham số có kiểu float.
+Sau đó chúng ta truyền vào hàm biến num1 và num2 dưới dạng đối số. Các giá trị này được lưu trữ bởi các tham số hàm n1 và n2 tương ứng. 
+&lt;img src=&quot;/images/func_Cpp/Untitled10.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Lưu ý: Kiểu của các đối số được truyền trong khi gọi hàm phải khớp với các tham số tương ứng được xác định trong khai báo hàm.&lt;/p&gt;
+
+&lt;h3 id=&quot;return-trong-hàm&quot;&gt;Return trong hàm&lt;/h3&gt;
+&lt;p&gt;Trong các chương trình trên chúng ta đã sử dụng kiểu void để khai báo hàm. Điều này có nghĩa là hàm không thể trả về bất kì một giá trị nào. 
+Trong C++ thì hàm cũng có thể trả về một giá trị. Để làm điều này chúng ta cần xác định returnType của hàm trong khi khai báo hàm.
+Sau đó dùng return  để trả về một giá trị từ hàm.
+Ví dụ:
+&lt;img src=&quot;/images/func_Cpp/Untitled11.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ở đây chúng ta có kiểu dữ liệu của hàm là int thay vì void. Điều này có nghĩa là hàm trả về một giá trị int.
+Đoạn mã return(a+b) trả về tổng của hai tham số dưới dạng giá trị của hàm.
+Dòng lệnh return thể hiện rằng chức năng đã kết thúc. Bất kì mã nào sau khi return bên trong hàm sẽ không được thực thi.&lt;/p&gt;
+
+&lt;p&gt;Ví dụ 3: Cộng hai số
+&lt;img src=&quot;/images/func_Cpp/Untitled12.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;đầu-ra-1&quot;&gt;Đầu ra&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/func_Cpp/Untitled13.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Tròn chương trình trên, hàm add() dùng để tính tổng hai số.
+Chúng ta truyền vào trong hàm 2 đối số kiểu int với giá trị 100 và 78 trong khi gọi hàm.
+Chúng ta lưu giữ giá trị trả về của hàm trong biến sum, và sau đó in ra nó.&lt;/p&gt;
+
+&lt;h3 id=&quot;nguyên-mẫu-hàm-function-prototype&quot;&gt;Nguyên mẫu hàm (function prototype)&lt;/h3&gt;
+&lt;p&gt;Trong C++, mã khai báo hàm phải ở trước lệnh gọi hàm. Tuy nhiên, nếu chúng ta muốn định nghĩa một hàm sau lời gọi hàm, chúng ta cần sử dụng nguyên mẫu hàm.
+Ví dụ.
+&lt;img src=&quot;/images/func_Cpp/Untitled14.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Trong đoạn mã trên, nguyên mẫu hàm là: 
+&lt;img src=&quot;/images/func_Cpp/Untitled15.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Điều này cung cấp cho trình biên dịch về tên hàm và các thông số của nó. Đó là lý do vì sao chúng ta có thể sử dụng mã để gọi một hàm trước khi hàm đã được xác định. 
+Cú pháp của một nguyên mẫu hàm là:
+&lt;img src=&quot;/images/func_Cpp/Untitled17.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ví dụ 4: Nguyên mẫu hàm C++
+&lt;img src=&quot;/images/func_Cpp/Untitled16.png&quot; /&gt;
+&lt;img src=&quot;/images/func_Cpp/Untitled18.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Chương trình trên gần như giống với ví dụ 3. Điều khác biệt duy nhất ở đây là hàm được định nghĩa sau khi gọi hàm. 
+Đó là lý do vì sau chúng ta sử dụng nguyên mẫu hàm trong ví dụ này.&lt;/p&gt;
+
+&lt;h3 id=&quot;lợi-ích-của-việc-sử-dụng-các-hàm-do-người-dùng-xác-định&quot;&gt;Lợi ích của việc sử dụng các hàm do người dùng xác định&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Các hàm có thể sử dụng lại. Chúng ta có thể khai báo chúng một lần và sử dụng chúng nhiều lần.&lt;/li&gt;
+  &lt;li&gt;Các hàm làm cho chương trình dễ dàng hơn vì mỗi tác vụ nhỏ được chia thành một hàm.&lt;/li&gt;
+  &lt;li&gt;Các hàm giúp đọc dễ hiểu hơn.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;các-chức-năng-của-thư-viện-c-&quot;&gt;Các chức năng của thư viện C ++&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Các hàm thư viện là các hàm có sẵn trong lập trình C ++.&lt;/li&gt;
+  &lt;li&gt;Người lập trình có thể sử dụng các hàm thư viện bằng cách gọi các hàm trực tiếp Họ không cần phải tự viết các hàm.&lt;/li&gt;
+  &lt;li&gt;Một số chức năng thư viện phổ biến trong C ++ là sqrt(), abs(), isdigit(), vv&lt;/li&gt;
+  &lt;li&gt;Để sử dụng các hàm thư viện, chúng ta thường cần bao gồm tệp tiêu đề trong đó các hàm thư viện này được định nghĩa.&lt;/li&gt;
+  &lt;li&gt;Ví dụ, để sử dụng các hàm toán học như sqrt() và abs(), chúng ta cần bao gồm tệp tiêu đề cmath.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ví dụ 5: Chương trình C++ tìm căn bậc 2 của một số
+&lt;img src=&quot;/images/func_Cpp/Untitled18.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Đầu ra&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/func_Cpp/Untitled19.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Trong chương trình này, hàm thư viện sqrt() được sử dụng để tính căn bậc hai của một số.
+Khai báo hàm của sqrt() được định nghĩa trong cmath tệp tiêu đề. Đó là lý do tại sao chúng ta cần sử dụng mã #include &lt;cmath&gt; để sử dụng hàm sqrt().&lt;/cmath&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;lời-kết&quot;&gt;Lời kết&lt;/h3&gt;
+&lt;p&gt;Như vậy là chúng mình đã giới thiệu cụ thể cho các bạn thế nào là hàm trong C++ qua các ví dụ, có những loại hàm gì và chúng được sử dụng như thế nào. 
+Hi vọng bài viết này đã mang đến cho các bạn những kiến thức mới mẻ và thú vị. Đừng quên ôn tập lại những gì các bạn đã học được nhé. Good luck!&lt;/p&gt;
+
+</description>
+                <pubDate>Tue, 23 Nov 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/function-cpp</link>
+                <guid isPermaLink="true">http://localhost:4000/function-cpp</guid>
+                
+                <category>Programming language</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
         
             <item>
                 <title>Tổng kết buổi 2</title>
                 <description>&lt;blockquote&gt;
   &lt;p&gt;&lt;cite&gt;Số lượng thành viên tham gia: 26&lt;br /&gt;
 &lt;a href=&quot;https://docs.google.com/presentation/d/11Xwe1lzVH1Vg5_bbok9VV90F1DiVSqN2/edit?usp=sharing&amp;amp;ouid=105791949291394407664&amp;amp;rtpof=true&amp;amp;sd=true&quot;&gt;Link slide buổi học&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://youtu.be/Z7dfHnPiPy0&quot;&gt;Link record&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=xbdKMIOqEMw&quot;&gt;Link record&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;www.hackerrank.com/itmo-brain-cpp-2&quot;&gt;Link bài tập lớp buổi 2 CPP&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;www.hackerrank.com/itmo-brain-btvn-2&quot;&gt;Link btvn buổi 2 CPP&lt;/a&gt;&lt;br /&gt;&lt;/cite&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1325,43 +1482,6 @@ Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí 
                 <guid isPermaLink="true">http://localhost:4000/cryptography</guid>
                 
                 <category>Infosec</category>
-                
-                
-                <category>ITMOBRAIN</category>
-                
-            </item>
-        
-            <item>
-                <title>A STORY OF PROGRAMMING</title>
-                <description>&lt;p&gt;Trong kỷ nguyên công nghiệp 4.0, Nhu cầu cao về lập trình viên, nhà phát triển và nhà khoa học dữ liệu đã thu hút nhiều bạn trẻ  tham gia vào lĩnh vực CNTT. Thông thường, những bạn mới bắt đầu có xu hướng bỏ qua một số vấn đề  cốt lõi, cơ bản và tìm thẳng code mẫu để cố gắng rút ngắn thời gian học tập hoặc chạy đua với thời hạn công việc. Tuy nhiên khi một lập trình viên giải quyết một vấn đề về lập trình, hoàn thiện code có lẽ là bước cuối cùng. Trong bài viết này, tôi sẽ hướng dẫn bạn 5 bước mà tôi tin rằng sẽ hướng bạn tới cách tiếp cận chính xác để học lập trình.&lt;/p&gt;
-&lt;h3 id=&quot;tập-giải-quyết-vấn-đề-trên-giấy&quot;&gt;Tập giải quyết vấn đề trên giấy.&lt;/h3&gt;
-&lt;p&gt;Đúng vậy, trước khi bắt đầu thực sự lập trình, bạn cần tóm tắt rõ đầu vào, đầu ra của vấn đề cũng như những hướng giải quyết ra giấy. Việc này không chỉ giúp lập trình viên hiểu rõ hơn vấn đề mà còn tổng hợp những ý tưởng mơ hồ, tạo điều kiện cho phương án giải quyết rõ ràng và tối ưu xuất hiện.&lt;/p&gt;
-&lt;h3 id=&quot;nghiên-cứu-các-thuật-toán-và-cấu-trúc-dữ-liệu&quot;&gt;Nghiên cứu các thuật toán và cấu trúc dữ liệu&lt;/h3&gt;
-&lt;p&gt;Thuật toán và cấu trúc dữ liệu có vẻ xa vời nhưng thực ra lại rất gần gũi. Thuật toán là một tập hợp các bước, khi được tuân theo, sẽ giải quyết một vấn đề cụ thể. Cấu trúc dữ liệu nghiên cứu cách để biểu diễn cùng một dữ liệu theo nhiều dạng khác nhau. Nghiên cứu thêm về thuật toán và cấu trúc dữ liệu giúp bạn có thêm nhiều lựa chọn, phương án giải quyết vấn đề.&lt;/p&gt;
-
-&lt;p&gt;Ví dụ: bài toán tìm phần tử có giá trị xác định của mảng có 1 triệu phần tử, bạn cần 1 triệu phép so sánh để hoàn thành. Nhưng nếu mảng đó đã được sắp xếp, bạn chỉ tốn chưa đến 20 phép so sánh, thậm chí với cấu trúc bảng băm (hash table) bạn chỉ cần 1 phép so sánh duy nhất.
-Vậy nên, thuật toán và cấu trúc dữ liệu là 2 yếu tố quan trọng nhất mà ai cũng cần học, đúng như câu nói nổi tiếng của Niklaus Wirth:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Programs (Chương trình) = Data Structures (Cấu trúc dữ liệu) + Algorithms (Giải thuật)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;đọc-về-lý-thuyết-độ-phức-tạp&quot;&gt;Đọc về lý thuyết độ phức tạp.&lt;/h3&gt;
-&lt;p&gt;Khi bạn đã có trong tay nhiều phương án giải quyết rồi, làm cách nào có thể đánh giá phương án nào tốt hơn, tối ưu hơn? Lý thuyết độ phức tạp sẽ giải quyết việc này.&lt;/p&gt;
-
-&lt;p&gt;Độ phức tạp là một thang đo để đánh giá thuật toán trong trường hợp xấu nhất. Máy tính, mặc dù có khả năng thực hiện lượng phép tính ấn tượng, nhưng có những hạn chế của chúng. Nếu bạn phát triển một thuật toán quá phức tạp mà các máy tính hiện tại không thể chạy nó, thì điều đó là vô nghĩa.&lt;/p&gt;
-&lt;h3 id=&quot;bắt-đầu-bằng-mã-giả&quot;&gt;Bắt đầu bằng mã giả&lt;/h3&gt;
-&lt;p&gt;Nhưng trước khi bạn ngồi vào máy tính và bắt đầu viết code, lời khuyên của tôi là hãy triển khai các thuật toán của bạn bằng mã giả trước. Như chúng ta vừa thảo luận, thuật toán là một tập hợp các bước được sử dụng để giải quyết một vấn đề cụ thể. Mã giả được định nghĩa là “mô tả các bước của thuật toán bằng ngôn ngữ đơn giản”. Đó là một cách giải thích quá trình suy nghĩ của bạn với người khác chứ không phải với máy tính. Tuy không trực tiếp giúp giải quyết vấn đề, nhưng khi bạn làm việc với 1 team, việc giúp tất các thành viên hiểu được thuật toán lại mang ý nghĩa rất lớn.&lt;/p&gt;
-&lt;h3 id=&quot;lựa-chọn-ngôn-ngữ-lập-trình&quot;&gt;Lựa chọn ngôn ngữ lập trình&lt;/h3&gt;
-&lt;p&gt;Khi bạn đã nắm vững lý thuyết giải quyết vấn đề, thuật toán và độ phức tạp, bạn có thể tự tin áp dụng bằng bất kỳ ngôn ngữ lập trình nào. Giống như khi đến Nga thì phải học tiếng Nga vậy, bạn cần lựa chọn ngôn ngữ lập trình phù hợp từng trường hợp, hoàn cảnh. Có ngôn ngữ chuyên dùng để lập trình thiết bị di động, có ngôn ngữ lại chỉ để lập trình web. Theo wikipedia có tới hơn 700 ngôn ngữ lập trình, tuy nhiên chúng đều có cùng các khái niệm như từ vựng, biến, vòng lặp, kiểu dữ liệu,… Vì vậy, bất kể bạn bắt đầu với ngôn ngữ lập trình nào, bạn cũng có thể học cú pháp khác ngay lập tức, miễn là nền tảng của bạn vững chắc.&lt;/p&gt;
-
-&lt;p&gt;Bài viết đã nêu lên được 5 bước định hướng tới cách tiếp cận chính xác để học lập trình. Khi nắm được kiến thức nền tảng thì những bài tập lập trình khó nhằn sẽ trở nên dễ dàng hơn rất nhiều.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Tham gia CLB tin học với chúng mình để nhận thêm nhiều lời khuyên hơn tại ITMO BRAIN !!!&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-                <pubDate>Sun, 31 Oct 2021 04:48:45 +0300</pubDate>
-                <link>http://localhost:4000/intro</link>
-                <guid isPermaLink="true">http://localhost:4000/intro</guid>
-                
-                <category>Programming language</category>
                 
                 
                 <category>ITMOBRAIN</category>

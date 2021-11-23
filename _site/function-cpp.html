@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ITMO Brain</title>
-  <meta name='description' content='CLB Tin Hoc ITMO Brain'>
+  <title>Giới thiệu về Hàm CPP</title>
+  <meta name='description' content='Triệu Tâm'>
 
-  <link rel="canonical" href="http://localhost:4000/404.html">
+  <link rel="canonical" href="http://localhost:4000/function-cpp">
   <link rel="alternate" type="application/rss+xml" title="ITMO Brain" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content=" – ITMO Brain">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image:src" content="">
+  <meta name="twitter:title" content="Giới thiệu về Hàm CPP – ITMO Brain">
+  <meta name="twitter:description" content="Triệu Tâm">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/func_Cpp/Cat-Wants-Nothing-Meme.jpeg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content=" – ITMO Brain">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="">
+  <meta property="og:title" content="Giới thiệu về Hàm CPP – ITMO Brain">
+  <meta property="og:description" content="Triệu Tâm">
+  <meta property="og:image" content="http://localhost:4000/images/func_Cpp/Cat-Wants-Nothing-Meme.jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -209,97 +209,268 @@
 
   <!-- begin content -->
   <main class="content" aria-label="Content">
-    <div class="page-head">
+    <div class="post-head">
   <div class="container">
     <div class="row">
-
+      
       
 
       
-
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img class="lazy" data-src="/images/func_Cpp/Cat-Wants-Nothing-Meme.jpeg" alt="Giới thiệu về Hàm CPP">
+        </div>
+      </div>
       
 
-      <div class="col col-12">
-        <div class="page__info">
-          <h1 class="page__title"></h1>
+      
+      
+      
+      <div class="col col-6 col-d-12">
+        <div class="post__info ">
+  
+          
+            <div class="post__tags">
+              
+                <a href="/tags#Programming language" class="post__tag">Programming language</a>
+              
+            </div>
+          
+  
+          <h1 class="post__title">Giới thiệu về Hàm CPP</h1>
+  
+          <div class="post__meta">
+            <a href="/about/" class="post__author-image">
+              <img class="lazy" data-src="/images/logo.png" alt="ITMO Brain">
+            </a>
+
+            <div class="post__meta-bottom">
+              <a class="post__author" href="/about/">ITMO Brain</a>
+              <time class="post__date" datetime="2021-11-23T04:48:45+03:00">23 Nov 2021</time>
+            </div>
+          </div>
+  
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- begin page -->
+<!-- begin post -->
 <div class="container animate">
 
-  <article class="page">
-    <div class="page__content">
-      <div class="container">
-  <div class="row">
-    <div class="col col-12">
-      <div class="error">
-        <h2 class="error__title">404</h2>
-        <p class="error__text">The requested page could not be found.</p>
-      </div>
+  <article class="post">
+
+    <div class="post__content">
+      <h3 id="giới-thiệu-về-hàm-function-trong-c">Giới thiệu về hàm (function) trong C++</h3>
+<p>Trong bài viết này chúng ta cùng tìm hiểu về hàm và biểu thức hàm thông qua các ví dụ.
+Trước tiên, hàm là một khối mã thực hiện một nhiệm vụ cụ thể.
+Giả sử chúng ta cần tạo một chương trình để vẽ một hình tròn và tô màu cho nó. Chúng ta có thể tạo hai hàm để giải quyết vấn đề này:</p>
+<ul>
+  <li>Hàm để vẽ hình tròn.</li>
+  <li>Hàm để tô màu cho hình tròn.</li>
+</ul>
+
+<p>Việc chia một vấn đề thành nhiều vấn đề nhỏ hơn giúp chương trình dễ hiểu hơn và có thể tái sử dụng.
+Hàm có 2 loại:</p>
+<ol>
+  <li>Hàm chuẩn, đã được định nghĩa trước ở trong C++.</li>
+  <li>Hàm do người dùng tự định nghĩa.</li>
+</ol>
+
+<p>Trong bài này chúng ta sẽ đi sâu vào các hàm do người tự định nghĩa.</p>
+<h3 id="hàm-do-người-dùng-tự-định-nghĩa">Hàm do người dùng tự định nghĩa</h3>
+<ul>
+  <li>C++ cho phép lập trình viên tự định nghĩa hàm của riêng họ.</li>
+  <li>Trong hàm sẽ chứa những đoạn mã thực hiện một nhiệm vụ cụ thể nào đó và được đặt tên bởi lập trình viên.</li>
+  <li>Khi hàm được gọi từ bất kì phần nào của chương trình, tất cả các đoạn mã nằm trong nó sẽ được thực thi.</li>
+</ul>
+
+<h3 id="khai-báo-hàm-c">Khai báo hàm C++</h3>
+<p>Cú pháp tổng quát để khai báo một hàm là:
+<img src="/images/func_Cpp/Untitled.png" /></p>
+
+<p>Và đây là ví dụ về khai báo hàm
+<img src="/images/func_Cpp/Untitled1.png" /></p>
+
+<p>Ở đây, chúng ta có:</p>
+<ul>
+  <li>Tên của hàm là greet()</li>
+  <li>Kiểu trả về của hàm là void</li>
+  <li>Dấu ngoặc đơn trống () có nghĩa là không có bất kì một tham số nào được truyền vào</li>
+  <li>Phần thân hàm (đoạn mã) sẽ được viết bên trong {}</li>
+</ul>
+
+<h3 id="gọi-một-hàm">Gọi một hàm</h3>
+<p>Trong chương trình trên chúng ta đã khai báo một hàm có tên greet(). Để sử dụng hàm greet(), chúng ta cần gọi nó.
+Và đây là cách chúng ta có thể gọi hàm greet() trên.
+<img src="/images/func_Cpp/Untitled2.png" /></p>
+
+<p>Cách hoạt động của hàm trong C++
+<img src="/images/func_Cpp/Untitled3.png" /></p>
+
+<p>Ví dụ 1: Hiển thị văn bản
+<img src="/images/func_Cpp/Untitled4.png" /></p>
+
+<p>Đầu ra
+<img src="/images/func_Cpp/Untitled5.png" /></p>
+
+<p>Khai báo hàm với tham số
+Như đã đề cập ở trên, một hàm có thể khai báo với các tham số (đối số). Tham số là một giá trị được truyền vào khi khai báo một hàm. 
+Ví du, chúng ta cùng xem xét hàm sau:
+<img src="/images/func_Cpp/Untitled6.png" /></p>
+
+<p>Biến num là tham số hàm với kiểu dữ liệu được truyền vào là int.	
+Cách truyền một giá trị cho hàm khi gọi hàm:
+<img src="/images/func_Cpp/Untitled7.png" /></p>
+
+<p>VÍ dụ 2: Khai báo hàm với nhiều tham số
+<img src="/images/func_Cpp/Untitled8.png" /></p>
+
+<h3 id="đầu-ra">Đầu ra</h3>
+<p><img src="/images/func_Cpp/Untitled9.png" />
+Trong chương trình trên, chúng ta đã sử dụng một hàm với một tham số có kiểu int và một tham số có kiểu float.
+Sau đó chúng ta truyền vào hàm biến num1 và num2 dưới dạng đối số. Các giá trị này được lưu trữ bởi các tham số hàm n1 và n2 tương ứng. 
+<img src="/images/func_Cpp/Untitled10.png" /></p>
+
+<p>Lưu ý: Kiểu của các đối số được truyền trong khi gọi hàm phải khớp với các tham số tương ứng được xác định trong khai báo hàm.</p>
+
+<h3 id="return-trong-hàm">Return trong hàm</h3>
+<p>Trong các chương trình trên chúng ta đã sử dụng kiểu void để khai báo hàm. Điều này có nghĩa là hàm không thể trả về bất kì một giá trị nào. 
+Trong C++ thì hàm cũng có thể trả về một giá trị. Để làm điều này chúng ta cần xác định returnType của hàm trong khi khai báo hàm.
+Sau đó dùng return  để trả về một giá trị từ hàm.
+Ví dụ:
+<img src="/images/func_Cpp/Untitled11.png" /></p>
+
+<p>Ở đây chúng ta có kiểu dữ liệu của hàm là int thay vì void. Điều này có nghĩa là hàm trả về một giá trị int.
+Đoạn mã return(a+b) trả về tổng của hai tham số dưới dạng giá trị của hàm.
+Dòng lệnh return thể hiện rằng chức năng đã kết thúc. Bất kì mã nào sau khi return bên trong hàm sẽ không được thực thi.</p>
+
+<p>Ví dụ 3: Cộng hai số
+<img src="/images/func_Cpp/Untitled12.png" /></p>
+
+<h3 id="đầu-ra-1">Đầu ra</h3>
+<p><img src="/images/func_Cpp/Untitled13.png" /></p>
+
+<p>Tròn chương trình trên, hàm add() dùng để tính tổng hai số.
+Chúng ta truyền vào trong hàm 2 đối số kiểu int với giá trị 100 và 78 trong khi gọi hàm.
+Chúng ta lưu giữ giá trị trả về của hàm trong biến sum, và sau đó in ra nó.</p>
+
+<h3 id="nguyên-mẫu-hàm-function-prototype">Nguyên mẫu hàm (function prototype)</h3>
+<p>Trong C++, mã khai báo hàm phải ở trước lệnh gọi hàm. Tuy nhiên, nếu chúng ta muốn định nghĩa một hàm sau lời gọi hàm, chúng ta cần sử dụng nguyên mẫu hàm.
+Ví dụ.
+<img src="/images/func_Cpp/Untitled14.png" /></p>
+
+<p>Trong đoạn mã trên, nguyên mẫu hàm là: 
+<img src="/images/func_Cpp/Untitled15.png" /></p>
+
+<p>Điều này cung cấp cho trình biên dịch về tên hàm và các thông số của nó. Đó là lý do vì sao chúng ta có thể sử dụng mã để gọi một hàm trước khi hàm đã được xác định. 
+Cú pháp của một nguyên mẫu hàm là:
+<img src="/images/func_Cpp/Untitled17.png" /></p>
+
+<p>Ví dụ 4: Nguyên mẫu hàm C++
+<img src="/images/func_Cpp/Untitled16.png" />
+<img src="/images/func_Cpp/Untitled18.png" /></p>
+
+<p>Chương trình trên gần như giống với ví dụ 3. Điều khác biệt duy nhất ở đây là hàm được định nghĩa sau khi gọi hàm. 
+Đó là lý do vì sau chúng ta sử dụng nguyên mẫu hàm trong ví dụ này.</p>
+
+<h3 id="lợi-ích-của-việc-sử-dụng-các-hàm-do-người-dùng-xác-định">Lợi ích của việc sử dụng các hàm do người dùng xác định</h3>
+<ul>
+  <li>Các hàm có thể sử dụng lại. Chúng ta có thể khai báo chúng một lần và sử dụng chúng nhiều lần.</li>
+  <li>Các hàm làm cho chương trình dễ dàng hơn vì mỗi tác vụ nhỏ được chia thành một hàm.</li>
+  <li>Các hàm giúp đọc dễ hiểu hơn.</li>
+</ul>
+
+<h3 id="các-chức-năng-của-thư-viện-c-">Các chức năng của thư viện C ++</h3>
+<ul>
+  <li>Các hàm thư viện là các hàm có sẵn trong lập trình C ++.</li>
+  <li>Người lập trình có thể sử dụng các hàm thư viện bằng cách gọi các hàm trực tiếp Họ không cần phải tự viết các hàm.</li>
+  <li>Một số chức năng thư viện phổ biến trong C ++ là sqrt(), abs(), isdigit(), vv</li>
+  <li>Để sử dụng các hàm thư viện, chúng ta thường cần bao gồm tệp tiêu đề trong đó các hàm thư viện này được định nghĩa.</li>
+  <li>Ví dụ, để sử dụng các hàm toán học như sqrt() và abs(), chúng ta cần bao gồm tệp tiêu đề cmath.</li>
+</ul>
+
+<p>Ví dụ 5: Chương trình C++ tìm căn bậc 2 của một số
+<img src="/images/func_Cpp/Untitled18.png" /></p>
+
+<p>Đầu ra</p>
+
+<p><img src="/images/func_Cpp/Untitled19.png" /></p>
+
+<p>Trong chương trình này, hàm thư viện sqrt() được sử dụng để tính căn bậc hai của một số.
+Khai báo hàm của sqrt() được định nghĩa trong cmath tệp tiêu đề. Đó là lý do tại sao chúng ta cần sử dụng mã #include <cmath> để sử dụng hàm sqrt().</cmath></p>
+
+<h3 id="lời-kết">Lời kết</h3>
+<p>Như vậy là chúng mình đã giới thiệu cụ thể cho các bạn thế nào là hàm trong C++ qua các ví dụ, có những loại hàm gì và chúng được sử dụng như thế nào. 
+Hi vọng bài viết này đã mang đến cho các bạn những kiến thức mới mẻ và thú vị. Đừng quên ôn tập lại những gì các bạn đã học được nhé. Good luck!</p>
+
+
     </div>
-  </div>
-</div>
+
+    <div class="post__share">
+      <ul class="share__list list-reset">
+        <li class="share__item">
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/function-cpp"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/function-cpp&title=Gi%E1%BB%9Bi%20thi%E1%BB%87u%20v%E1%BB%81%20H%C3%A0m%20CPP&summary=Tri%E1%BB%87u%20T%C3%A2m&source=ITMO%20Brain"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+        </li>
+      </ul>
     </div>
+
+
   </article>
-
 </div>
-<!-- end page -->
+<!-- end post -->
 
 
-<!-- begin recent posts -->
-<div class="recent-posts animate">
-  <div class="container">
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts is-related animate">
     <div class="row">
       <div class="col col-12">
         <div class="container__inner">
           <div class="section__info">
             <div class="section__head">
-              <h2 class="section__title">Recent Posts</h2>
-              <a class="section__link" href="/">Back to homepage</a>
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#Programming language" class="section__link related-tag">Xem tất cả<span> Programming language</span></a>
+                  
+                
+              
+              </a>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
+          <div class="row">
+
+          
+            
+            
       
-        <div class="article col col-4 col-d-6 col-t-12">
-  <div class="article__inner">
-
-    <div class="article__head">
-      <time class="article__date" datetime="2021-11-23T04:48:45+03:00">23 Nov 2021</time>
-
+            
       
-
+            
+            
+            
+            
       
-      <a class="article__image" href="/function-cpp">
-        <img class="lazy" data-src="/images/func_Cpp/Cat-Wants-Nothing-Meme.jpeg" alt="Giới thiệu về Hàm CPP">
-      </a>
+            
       
+            
 
-    </div>
-
-    <div class="article__content">
-
-      <h2 class="article__title">
-        <a href="/function-cpp">Giới thiệu về Hàm CPP</a>
-      </h2>
-
-      
-      <p class="article__excerpt">Triệu Tâm</p>
-      
-
-    </div>
-  </div>
-</div>
-      
-        <div class="article col col-4 col-d-6 col-t-12">
+              <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
 
     <div class="article__head">
@@ -328,8 +499,19 @@
     </div>
   </div>
 </div>
+
+            
+                
+              
+            
+            
+            
       
-        <div class="article col col-4 col-d-6 col-t-12">
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
 
     <div class="article__head">
@@ -358,11 +540,100 @@
     </div>
   </div>
 </div>
+
+            
+                
+              
+            
+            
+            
       
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2021-11-15T04:48:45+03:00">15 Nov 2021</time>
+
+      
+
+      
+      <a class="article__image" href="/github">
+        <img class="lazy" data-src="/images/github.png" alt="Giới thiệu về Github">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="/github">Giới thiệu về Github</a>
+      </h2>
+
+      
+      <p class="article__excerpt">Triệu Tâm</p>
+      
+
     </div>
   </div>
 </div>
-<!-- end recent posts -->
+
+            
+                
+                  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <!-- begin comments -->
+<div class="show-comments">
+
+  <button class="button disqus-button" id="show-comments-button" onclick="disqus();return false;">댓글 보기</button>
+</div>
+
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  var disqus_loaded = false;
+  var disqus_shortname = 'itmobrain-github-io';
+  var disqus_container = document.getElementById("disqus_thread");
+  if (!disqus_loaded) {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+      // Show disqus comments
+      disqus_container.classList.add("is-open");
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments --> 
+      </div>
+    </div>
+  </div>
 
   </main>
   <!-- end content -->
