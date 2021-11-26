@@ -14,8 +14,8 @@ Nội dung khoá học được chính những thành viên từ ban điều hà
 [Link bài tập lớp buổi 1 CPP](https://www.hackerrank.com/contests/itmo-brain-cpp-1/)<br>
 [Link btvn buổi 1 CPP](https://www.hackerrank.com/itmo-brain-cpp-btvn-1/)<br>
 ### Buổi 2
-
-
+[Link bài tập lớp buổi 2 CPP](https://www.hackerrank.com/contests/itmo-brain-cpp-2/)<br>
+[Link btvn buổi 2 CPP](https://www.hackerrank.com/itmo-brain-cpp-btvn-2/)<br>
 
 
 
