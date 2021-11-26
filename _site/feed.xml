@@ -5,9 +5,110 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Wed, 24 Nov 2021 00:02:39 +0300</pubDate>
-        <lastBuildDate>Wed, 24 Nov 2021 00:02:39 +0300</lastBuildDate>
+        <pubDate>Fri, 26 Nov 2021 17:02:01 +0300</pubDate>
+        <lastBuildDate>Fri, 26 Nov 2021 17:02:01 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>09.03.04 Kỹ thuật phần mềm</title>
+                <description>&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/admin/thien.jpg&quot; /&gt;
+  &lt;em&gt;Lê Ngọc Thiện / &lt;a href=&quot;https://www.facebook.com/thienkaitouz&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;&lt;/em&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Xin chào mọi người, mình tên là Ngọc Thiện, hiện đang là sinh viên năm hai ngành Kỹ thuật phần mềm (09.03.04) tại trường đại học ITMO.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Mã ngành 09.03.04 Kỹ thuật phần mềm thuộc khoa ПИиКТ (Факультет программной инженерии и компьютерной техники), đây cũng là khoa lớn nhất, xét theo số lượng sinh viên đang theo học (số liệu tháng 4 năm 2021). Tuy nhiên bài viết này của mình sẽ chỉ cung cấp một số thông tin về ngành học Kỹ thuật phần mềm và những kinh nghiệm học tập mà anh Võ Minh Thiên Long (sinh viên năm 3 ngành Kỹ thuật phần mềm) đã đúc kết được. Hy vọng từ những thông tin mình tổng hợp được có thể giúp mọi người có cái nhìn tổng quát về ngành này cũng như biết được định hướng của ngành học này tại ITMO qua đó giảm bớt được phần nào những khó khăn.&lt;/p&gt;
+
+&lt;h3 id=&quot;giới-thiệu-về-ngành-kỹ-thuật-phần-mềm&quot;&gt;Giới thiệu về ngành kỹ thuật phần mềm?&lt;/h3&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/ktpm/istockphoto.jpeg&quot; /&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Hãy mở chiếc smartphone của mình ra và các bạn đếm thử xem mình đang sử dụng bao nhiêu ứng dụng để phục vụ nhu cầu cá nhân của bản thân? Có thể bạn chưa để ý nhưng tất cả những ứng dụng đó đều là sản phẩm của lĩnh vực kỹ thuật phần mềm.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Với sự phát triển không ngừng của các thiết bị điện tử ngày nay, ngành này đang ngày một mở rộng và trở nên quen thuộc cũng như gần gũi với cuộc sống của chúng ta hơn bao giờ hết.
+“Phần mềm” (Software) là một chương trình hoặc một tập hợp các chương trình cung cấp chức những năng mà người dùng mong muốn. Và “Kỹ thuật” (Engineering) là quá trình thiết kế và xây dựng, vận hành một thứ gì đó phục vụ một mục đích cụ thể và tìm ra giải pháp hiệu quả về chi phí cho các vấn đề. Và “Kỹ thuật phần mềm” (Software Engineering) sẽ là ngành học phù hợp với những ai yêu thích lập trình thuần túy, ‘phần mềm’, ‘chương trình’ hay ‘ứng dụng’ đều là các sản phẩm của việc lập trình.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Kỹ thuật phần mềm là việc áp dụng phương pháp tiếp cận/nghiên cứu có hệ thống, có kỷ luật để thiết kế, phát triển, vận hành và bảo trì một hệ thống phần mềm. - IEEE.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Và chắc bạn cũng biết, chúng ta sử dụng phần mềm mọi lúc mọi nơi: từ ứng dụng văn phòng cơ bản như Microsoft Word, Excel, Powerpoint đến trình duyệt web Chrome, Firefox, Safari hay hệ điều hành bạn đang sử dụng như Windows, Linux, MacOS hay kể cả trang web mà bạn dùng để đọc bài viết này cũng là một dạng của ứng dụng. Vậy nên có thể thấy phần mềm được ứng dụng rất rộng rãi trong rất nhiều lĩnh vực, và do đó có rất nhiều hướng đi để bạn lựa chọn trong ngành này: phần mềm hệ thống, phần mềm mạng và ứng dụng web, phần mềm giải trí (game, mạng xã hội), phần mềm trí tuệ nhân tạo, phần mềm khoa học (vd: ORCAD, PSPICE, AUTOCAD), phần mềm kinh tế, y học….&lt;/p&gt;
+
+&lt;h3 id=&quot;học-tập-tại-itmo-như-thế-nào&quot;&gt;Học tập tại ITMO như thế nào?&lt;/h3&gt;
+&lt;p&gt;Tại ITMO, mã ngành 09.03.04 (Kỹ thuật phần mềm) được chia thành 3 chuyên ngành:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Chuyên ngành 1: &lt;strong&gt;Компьютерные технологии в дизайне (Công nghệ máy tính trong thiết kế)&lt;/strong&gt;&lt;br /&gt;
+Mục tiêu chính của chuyên ngành này là đào tạo các chuyên gia trong lĩnh vực công nghệ thông tin và đa phương tiện, lập trình và thiết kế. Chương trình của chuyên ngành được chia thành hai hướng:
+    &lt;ul&gt;
+      &lt;li&gt;1.«Разработка графических и веб-приложений» (tạm dịch: Thiết kế đồ họa và thiết kế ứng dụng web): sẽ được tìm hiểu các kiến thức về bố cục web, kiểu chữ,.. (frontend), thiết kế giao diện ứng dụng, giao diện game cũng như các hệ thống xử lý hình ảnh, tìm hiểu về công nghệ thực tế ảo (VR), thực tế tăng cường (AR), thực tế hỗn hợp (MR);&lt;/li&gt;
+      &lt;li&gt;2.«Трехмерное моделирование и промышленный дизайн» (tạm dịch: Lập trình 3D và Thiết kế Công nghiệp) tìm hiểu về mô hình 3D và đồ họa kỹ thuật (hệ thống CAD/CAM), nâng cao kỹ năng vẽ, thiết kế, cũng như kiến thức trong lĩnh vực thiết kế công nghiệp.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/ktpm/Screenshot 2021-11-26 at 16.39.40.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chuyên ngành 2: &lt;strong&gt;Нейротехнологии и программирование (Công nghệ thần kinh và lập trình)&lt;/strong&gt;&lt;br /&gt;
+Chương trình của chuyên ngành này mục tiêu là đào tạo nên những lập trình viên có khả năng phát triển và triển khai các công nghệ thần kinh. Sinh viên sẽ học lập trình bằng các ngôn ngữ: Java, C / C ++, Python, JavaScript, PHP, v.v., sử dụng HTML5, CSS3, XML, XSL, ECMAScript, Ajax; các gói phần mềm: Adobe Creative Suite, CorelDRAW, Sound Forge, 3ds Max, v.v.; công nghệ về cơ sở dữ liệu: Oracle Database, MySQL, MongoDB, Apache Derby, Berkeley DB, v.v.; kết hợp cùng với sinh lý học thần kinh: Open BCI, BioRadio Human Physiology Kit, ….&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;Đây là chuyên ngành mà mình đã chọn nên mình sẽ nói kỹ hơn một chút.&lt;/strong&gt; &lt;br /&gt;
+Đây là chương trình khá mới tại ITMO (bắt đầu từ năm 2017), và cũng là chương trình đầu tiên tại Nga về sự kết hợp giữ đào tạo về Công nghệ thần kinh và Lập trình. Công nghệ thần kinh: bao gồm những phương pháp giao tiếp với hệ thần kinh thông qua các thiết bị điện tử, xử lý các tín hiệu điện từ vỏ não, khuếch đại chúng để có thể theo dõi hoặc điều chỉnh các hoạt động thần kinh. Hiện nay công nghệ thần kinh đã được ứng dụng trong y học (vd: thiết bị cho phép bệnh nhân bị liệt và vận động viên thể thao điều khiển bộ xương bằng cách sử dụng điện não đồ, tức sóng não: https://neurobotics.ru/), quốc phòng, giải trí (VR brain games) , và giáo dục. Công nghệ thần kinh đứng ở vị trí giao thoa giữa tâm lý học, y học và khoa học kỹ thuật, vì vậy để đáp ứng nhu cầu của lĩnh vực này, một lập trình viên giỏi là chưa đủ, bạn phải biết hệ thống thần kinh trung ương hoạt động như thế nào, hiểu các chức năng của não và các phương tiện để theo dõi tín hiệu của nó,… Và chương trình này được sinh ra để đáp ứng nhu cầu đó của thị trường lao động.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/ktpm/Screenshot 2021-11-26 at 16.39.49.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Chuyên ngành 3: &lt;strong&gt;Системное и прикладное программное обеспечение (Hệ thống và phần mềm)&lt;/strong&gt;&lt;br /&gt;
+Mục tiêu của chuyên ngành là đào tạo các chuyên gia đẳng cấp thế giới để hình thành nguồn nhân lực trong lĩnh vực tạo nên các nền tảng phần mềm, bao gồm cả hệ thống mạng vật lý và nền kinh tế kỹ thuật số, những lĩnh vực phát triển công nghệ máy tính được thế giới công nhận. Trong quá trình đào tạo, sinh viên sẽ được tìm hiểu về các phương pháp trong thiết kế, phát triển và kiểm thử phần mềm bằng Java, C #, C ++ và các ngôn ngữ khác. Tập trung tìm hiểu cách hoạt động của các hệ điều hành và framework, trình biên dịch, cơ sở dữ liệu và mạng máy tính. Trên cơ sở đó, sinh viên có thể tạo nên phần mềm trên bất kỳ nền tảng nào. Bên cạnh đó, còn được tìm hiểu về nhiều vấn đề liên quan khác như: Làm cách nào để khắc phục sự cố hiệu suất trong một ứng dụng được truy cập nhiều? Làm thế nào để phát triển một nền tảng trong công nghiệp hoặc giải trí có tích hợp công nghệ VR &amp;amp; AR?,….&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+    &lt;img src=&quot;/images/ktpm/Screenshot 2021-11-26 at 16.40.01.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;học-tập&quot;&gt;Học tập&lt;/h3&gt;
+&lt;p&gt;Ở năm học đầu tiên, mọi người sẽ được học chủ yếu là các môn Đại cương như Toán, Lý, Sử,… Bên cạnh đó là những môn nền tảng như Toán rời rạc, Lập Trình, Tin học. Đối với môn Lập trình, kỳ đầu tiên mọi người sẽ được học về C++ cơ bản và Java, OOP. Sang kỳ hai, mọi người sẽ ứng dụng những kiến thức của kỳ một tạo nên một project hoàn chỉnh, bao gồm cả cách phân tích, thiết kế và quản lý dự án. Ở năm học này, nên tập trung học các môn Lập trình (Программирование), Tin học (Информатика), Toán Rời rạc (Дискретная математика). Đây sẽ là những môn học nền tảng cho mọi người ở những năm tiếp theo. Bên cạnh đó, cần rèn luyện tiếng Nga, vì phần lớn giáo viên chỉ sử dụng tiếng Nga, rất ít thầy cô có thể sử dụng tốt tiếng Anh.&lt;/p&gt;
+
+&lt;p&gt;Sang năm 2, mọi người sẽ bắt đầu học một số môn chuyên ngành sâu hơn như: Ngôn ngữ lập trình (ngôn ngữ C), Lập trình Web (Java), Giải thuật và Cấu trúc dữ liệu,… Kết thúc năm 2, sẽ bắt đầu phân chuyên ngành con (специализация). Khoa sẽ có thông báo chi tiết hơn về nội dung học, cũng như là đối tượng học. Việc chọn môn sẽ tuỳ theo định hướng và khả năng của mỗi người.&lt;/p&gt;
+
+&lt;p&gt;Đến năm 3, sau khi đã phân chia chuyên ngành, bên cạnh một số môn chung của ngành như Hệ điều hành, Mạng máy tính, … thì mọi người sẽ học thêm các môn riêng của chuyên ngành con.&lt;/p&gt;
+
+&lt;h3 id=&quot;tản-mạn&quot;&gt;Tản mạn&lt;/h3&gt;
+
+&lt;p&gt;Bài viết này mình sẽ không nói cụ thể về triển vọng nghề nghiệp của ngành này hay xu hướng việc làm sau khi tốt nghiệp, vì như mình cũng đã nêu ở trên, ngành này đã, đang và sẽ được áp dụng vào rất rất nhiều lĩnh vực, và mỗi lĩnh vực đều có những yêu cầu và trải nghiệm riêng. Bên cạnh đó, kiến thức chương trình học ở bậc cử nhân cũng rất rộng, nên sẽ có rất nhiều vị trí công việc phù hợp với khả năng cũng như định hướng của bạn: Software engineer, Developer, Software tester, Application/Systems analyst, UX/UI designer,… Thay vào đó, mình xin được chia sẻ góc nhìn của bản thân đối với ngành này.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+&lt;p align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/images/ktpm/download.png&quot; /&gt;
+&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Khi mình còn nhỏ, mình đã luôn muốn trở thành một nhà phát minh, đi tìm kiếm những vấn đề xung quanh cuộc sống, rồi thiết kế và xây dựng những công cụ để có thể giải quyết những vấn đề đấy, đóng góp gì đó cho nhân loại =)). Đến khi được tiếp xúc và rồi bắt đầu tìm hiểu về lập trình thì mình nhận ra, có một cách khác đơn giản hơn để có thể biến ước mơ đấy của mình thành hiện thực. Bạn chỉ cần một chiếc máy tính, kết nối Internet, là đã có thể tạo ra những sản phẩm tác động tích cực đến cuộc sống của mọi người trên khắp thế giới. Lập trình cũng không chỉ nhàm chán và đơn điệu như mình từng nghĩ, đây thật sự là một ngành đầy tính sáng tạo, nó giống như việc giải một câu đố, đầy thách thức nhưng cũng rất kích thích tinh thần, tạo động lực để giải quyết vấn đề. Công nghệ trong ngành phát triển phần mềm cũng thay đổi một cách chóng mặt, nên bạn phải cố gắng tiến hóa để có thể thích nghi được. Nhưng cũng nhờ đấy, được tiếp cận với những công nghệ mới nhất, thay đổi theo từng ngày, bạn sẽ có thể cảm nhận được, thế giới này đang phát triển nhanh chóng như thế nào, cảm nhận được hàng ngàn những lập trình viên khác đang nỗ lực, đóng góp như thế nào để có thể cải thiện cuộc sống của mọi người. Hy vọng với góc nhìn này cùng những chia sẻ ở trên, có thể giúp bạn có thêm động lực để theo đuổi ngành Kỹ thuật phần mềm.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Cảm ơn mọi người đã đọc hết bài viết này ! Trên đây là những chia sẻ của mình và anh Long đang theo học ngành Kỹ thuật phần mềm. Chúng mình rất mong nhận được phản hồi của các bạn. &amp;lt;3 &amp;lt;3 &amp;lt;3 !&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;nguồn&quot;&gt;Nguồn:&lt;/h4&gt;
+&lt;p&gt;https://scs.ifmo.ru/ru/page/21723/programmy-razvitiya-i-dokumentaciya.htm
+https://news.itmo.ru/en/education/students/news/6526/
+https://abit.itmo.ru/file/files/617/617.pdf
+https://en.wikipedia.org/wiki/Software_engineering
+https://news.itmo.ru/en/education/trend/news/9021/&lt;/p&gt;
+</description>
+                <pubDate>Thu, 25 Nov 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/software-engineer</link>
+                <guid isPermaLink="true">http://localhost:4000/software-engineer</guid>
+                
+                <category>итмо_факультет</category>
+                
+                
+                <category>ITMO</category>
+                
+            </item>
         
             <item>
                 <title>Giới thiệu về Hàm CPP</title>
@@ -1430,65 +1531,6 @@ Những team kĩ thuật của các tổ chức lớn: &lt;a href=&quot;https://
                 
                 
                 <category>ITMO</category>
-                
-            </item>
-        
-            <item>
-                <title>Intro to Cryptography</title>
-                <description>&lt;h2 id=&quot;intro-to-cryptography&quot;&gt;Intro to Cryptography&lt;/h2&gt;
-&lt;p&gt;Trong ngành Bảo mật thông tin, Mật mã học là một phần rất quan trọng và đóng vai trò nền tảng của bảo mật thông tin hiện nay. Khác với các mảng khác, cryptography được sử dụng cách ngày nay rất lâu và đóng vai trò bảo mật trong suốt lịch sử loài người.&lt;/p&gt;
-
-&lt;p&gt;Bài viết này đề cập tới mã hóa cổ điển(classic cryptography)  là cách mã hóa cổ điển được dùng trước thời kỳ của máy vi tính hiện nay. Thời vì này việc mã hóa và giải mã được thực hiện chủ yếu bằng tay. Mã được sắp xếp để tạo thành một đoạn ciphertext khó hiểu đối với kẻ thâm nhập, nhưng với người nhận nhờ đã nắm rõ quy tắc giải mã thông tin nên việc này dễ dàng hơn rất nhiều. 
-Classic cryptography chia làm 2 nhánh chính đó là :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;chuyển vị&lt;/li&gt;
-  &lt;li&gt;thay thế ký tự.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;1-chuyển-vị-kí-tự&quot;&gt;1. Chuyển vị kí tự&lt;/h3&gt;
-&lt;p&gt;Chuyển vị kí tự điển hình mã Caesar được biết đến là người đầu tiên sử dụng mã hóa để truyền thông điệp, Thuật toán caesar để mã hóa 1 đoạn thông điệp gửi đến bên kia đại dương mà đối phương không hề hay biết. Thuật toán Caesar mở đầu bằng việc tịnh tiến ký tự trong bảng chữ cái mở đầu cho những mã hóa bằng kí tự, mật mã sau này:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Cryptography → dịch 1 kí tự(ROT1) --&amp;gt; Dszquphsbqiz
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Mã hóa caesar khá đơn giản, không tốn nhiều thời gian, hơn nữa các dấu câu không hề được mã hóa đã dẫn đến việc kẻ thâm nhập có thể đoán ra quy tắc mã hóa và vấn đề tìm ra thông điệp chỉ còn là vấn đề thời gian. Mình có viết 1 đoạn code để giải mã thuật toán Caesar này khi làm lab trên lớp như sau.&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;IO&amp;lt;NYCMYHINY;YJF?;M=HNY=IH&amp;gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;126&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;95&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;chr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Đoạn code đơn giản tấn công triệt để mọi khả năng của mã hóa Caesar và tất nhiên là sẽ thành công.
-Một số phương pháp khai thác khác trong việc chuyển vị bao gồm:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Dùng ma trận vuông, hoán đổi vị trí phần tử trên cột, hoán đổi phần tử trong hàng,&lt;/li&gt;
-  &lt;li&gt;Hoán đổi vị trí hàng, hoán đổi vị trí cột,&lt;/li&gt;
-  &lt;li&gt;kết hợp nhiều trường hợp trên lại với nhau.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Nhìn chung vì là bằng tay nên những thuật toán này gây không ít khó khăn cho người giải mã. Và nó cũng cần vốn hiểu biết khá tốt về ngôn ngữ đang mã hóa.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-phương-pháp-thay-thế-ký-tự&quot;&gt;2. Phương pháp thay thế ký tự&lt;/h3&gt;
-&lt;p&gt;Với phương pháp thay thế ký tự. Một kí tự đơn giản được thay thế bằng một ký tự khác hoặc số mà không có liên quan nhiều đến các kí tự khác.
-Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí tự được viết tương ứng với key mã hóa và chỉ cần đối chiếu với bảng để giải mã:&lt;/p&gt;
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;VD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bảng&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mã&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;A&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;19&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;B&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;C&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;34&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ABC&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;193034&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Một ví dụ về sức mạnh của mật mã học đó là cỗ máy Enigma. Trong chiến tranh thế giới thứ 2, đây là cỗ máy được dùng để mã hoá tất cả những thư tín liên lạc, giữ bảo mật hoàn toàn các thông tin quân sự của Đức. Cùng với năng lực quân sự mạnh mẽ, nước Đức khi đó một mình chiến đấu với toàn bộ châu  u và trước tình thế này, quân đội Anh phải tìm cách phá bộ giải mã của Enigma để tìm kiếm cơ hội ngăn chặn sự bành trướng của người Đức. Cỗ máy đã làm đau đầu hàng nghìn nhà khoa học lúc bâý giờ, và phải nhờ đến một mật ngữ ở cuối mỗi dòng thư tín( Hít le vạn tuế) thì Alan Turing(cha đẻ của mật mã học hiện đại) mới giải mã được. Việc giải mã cỗ máy Enigma đã giúp chấm dứt chiến tranh thế giới thứ 2 sớm hơn khoảng 2 năm. Đóng vai trò quan trọng trong sự phát triển thế giới hiện đại.&lt;/p&gt;
-
-&lt;p&gt;Khi nghiên cứu sâu hơn về ngôn ngữ, người ta phát triển thêm  thuật toán rất hay về mã hóa: Khi mà ko có bảng giải mã, với 1 lượng lớn ký tự đầu vào đã mã hóa. Qua phân tích số lần xuất hiện, quy tắc và từ vựng đã giúp cho chúng ta có góc nhìn tổng quan hơn về nó. Từ đó lần tìm ra text gốc qua vệc giải mã từng ký tự đã bị thay thế.&lt;/p&gt;
-
-&lt;p&gt;Trong một thời đại mới, cryptography bước vào kỉ nguyên của thách thức khi mà dữ liệu truyền đi với tốc độ ánh sáng. Thông điệp truyền đi có thể bị bắt bới kẻ xâm nhập ngay tức thời. Những thuật toán mạnh mẽ hơn, đồng thời những cỗ máy giải mã đang cạnh tranh với nhau mỗi ngày. Nếu bạn quan tâm nhiều hơn tới mật mã học, hãy comment dưới bài viết này để CLB có động lực ra thêm nhiều bài viết về vấn đề này nữa nhé!🥳&lt;/p&gt;
-</description>
-                <pubDate>Wed, 03 Nov 2021 04:48:45 +0300</pubDate>
-                <link>http://localhost:4000/cryptography</link>
-                <guid isPermaLink="true">http://localhost:4000/cryptography</guid>
-                
-                <category>Infosec</category>
-                
-                
-                <category>ITMOBRAIN</category>
                 
             </item>
         
