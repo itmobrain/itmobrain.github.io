@@ -45,17 +45,21 @@ Mục tiêu chính của chuyên ngành này là đào tạo các chuyên gia tr
 </div>
 
 - Chuyên ngành 2: **Нейротехнологии и программирование (Công nghệ thần kinh và lập trình)**<br>
-Chương trình của chuyên ngành này mục tiêu là đào tạo nên những lập trình viên có khả năng phát triển và triển khai các công nghệ thần kinh. Sinh viên sẽ học lập trình bằng các ngôn ngữ: Java, C / C ++, Python, JavaScript, PHP, v.v., sử dụng HTML5, CSS3, XML, XSL, ECMAScript, Ajax; các gói phần mềm: Adobe Creative Suite, CorelDRAW, Sound Forge, 3ds Max, v.v.; công nghệ về cơ sở dữ liệu: Oracle Database, MySQL, MongoDB, Apache Derby, Berkeley DB, v.v.; kết hợp cùng với sinh lý học thần kinh: Open BCI, BioRadio Human Physiology Kit, ....<br><br>
-**Đây là chuyên ngành mà mình đã chọn nên mình sẽ nói kỹ hơn một chút.** <br>
-Đây là chương trình khá mới tại ITMO (bắt đầu từ năm 2017), và cũng là chương trình đầu tiên tại Nga về sự kết hợp giữ đào tạo về Công nghệ thần kinh và Lập trình. Công nghệ thần kinh: bao gồm những phương pháp giao tiếp với hệ thần kinh thông qua các thiết bị điện tử, xử lý các tín hiệu điện từ vỏ não, khuếch đại chúng để có thể theo dõi hoặc điều chỉnh các hoạt động thần kinh. Hiện nay công nghệ thần kinh đã được ứng dụng trong y học (vd: thiết bị cho phép bệnh nhân bị liệt và vận động viên thể thao điều khiển bộ xương bằng cách sử dụng điện não đồ, tức sóng não: https://neurobotics.ru/), quốc phòng, giải trí (VR brain games) , và giáo dục. Công nghệ thần kinh đứng ở vị trí giao thoa giữa tâm lý học, y học và khoa học kỹ thuật, vì vậy để đáp ứng nhu cầu của lĩnh vực này, một lập trình viên giỏi là chưa đủ, bạn phải biết hệ thống thần kinh trung ương hoạt động như thế nào, hiểu các chức năng của não và các phương tiện để theo dõi tín hiệu của nó,... Và chương trình này được sinh ra để đáp ứng nhu cầu đó của thị trường lao động. 
+Chương trình của chuyên ngành này mục tiêu là đào tạo nên những lập trình viên có khả năng phát triển và triển khai các công nghệ thần kinh. Sinh viên sẽ học lập trình bằng các ngôn ngữ: Java, C / C ++, Python, JavaScript, PHP, v.v., sử dụng HTML5, CSS3, XML, XSL, ECMAScript, Ajax; các gói phần mềm: Adobe Creative Suite, CorelDRAW, Sound Forge, 3ds Max, v.v.; công nghệ về cơ sở dữ liệu: Oracle Database, MySQL, MongoDB, Apache Derby, Berkeley DB, v.v.; kết hợp cùng với sinh lý học thần kinh: Open BCI, BioRadio Human Physiology Kit, ....
 <div class="gallery-box">
     <img src="/images/ktpm/Screenshot 2021-11-26 at 16.39.49.png">
 </div>
+**Đây là chuyên ngành mà mình đã chọn nên mình sẽ nói kỹ hơn một chút.** <br>
+Đây là chương trình khá mới tại ITMO (bắt đầu từ năm 2017), và cũng là chương trình đầu tiên tại Nga về sự kết hợp giữ đào tạo về Công nghệ thần kinh và Lập trình. Công nghệ thần kinh: bao gồm những phương pháp giao tiếp với hệ thần kinh thông qua các thiết bị điện tử, xử lý các tín hiệu điện từ vỏ não, khuếch đại chúng để có thể theo dõi hoặc điều chỉnh các hoạt động thần kinh. Hiện nay công nghệ thần kinh đã được ứng dụng trong y học (vd: thiết bị cho phép bệnh nhân bị liệt và vận động viên thể thao điều khiển bộ xương bằng cách sử dụng điện não đồ, tức sóng não: https://neurobotics.ru/), quốc phòng, giải trí (VR brain games) , và giáo dục. Công nghệ thần kinh đứng ở vị trí giao thoa giữa tâm lý học, y học và khoa học kỹ thuật, vì vậy để đáp ứng nhu cầu của lĩnh vực này, một lập trình viên giỏi là chưa đủ, bạn phải biết hệ thống thần kinh trung ương hoạt động như thế nào, hiểu các chức năng của não và các phương tiện để theo dõi tín hiệu của nó,... Và chương trình này được sinh ra để đáp ứng nhu cầu đó của thị trường lao động. 
+<div class="gallery-box">
+    <img src="/images/ktpm/Screenshot 2021-11-26 at 16.40.01.png">
+</div>
+
 
 - Chuyên ngành 3: **Системное и прикладное программное обеспечение (Hệ thống và phần mềm)**<br>
 Mục tiêu của chuyên ngành là đào tạo các chuyên gia đẳng cấp thế giới để hình thành nguồn nhân lực trong lĩnh vực tạo nên các nền tảng phần mềm, bao gồm cả hệ thống mạng vật lý và nền kinh tế kỹ thuật số, những lĩnh vực phát triển công nghệ máy tính được thế giới công nhận. Trong quá trình đào tạo, sinh viên sẽ được tìm hiểu về các phương pháp trong thiết kế, phát triển và kiểm thử phần mềm bằng Java, C #, C ++ và các ngôn ngữ khác. Tập trung tìm hiểu cách hoạt động của các hệ điều hành và framework, trình biên dịch, cơ sở dữ liệu và mạng máy tính. Trên cơ sở đó, sinh viên có thể tạo nên phần mềm trên bất kỳ nền tảng nào. Bên cạnh đó, còn được tìm hiểu về nhiều vấn đề liên quan khác như: Làm cách nào để khắc phục sự cố hiệu suất trong một ứng dụng được truy cập nhiều? Làm thế nào để phát triển một nền tảng trong công nghiệp hoặc giải trí có tích hợp công nghệ VR & AR?,....
 <div class="gallery-box">
-    <img src="/images/ktpm/Screenshot 2021-11-26 at 16.40.01.png">
+    <img src="/images/ktpm/p9352.jpeg">
 </div>
 
 ### Học tập 
