@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ITMO Brain</title>
-  <meta name='description' content='CLB Tin Hoc ITMO Brain'>
+  <title>Giới thiệu về Linux và cách cài đặt</title>
+  <meta name='description' content='ManhLab'>
 
-  <link rel="canonical" href="http://localhost:4000/404.html">
+  <link rel="canonical" href="http://localhost:4000/linux">
   <link rel="alternate" type="application/rss+xml" title="ITMO Brain" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content=" – ITMO Brain">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image:src" content="">
+  <meta name="twitter:title" content="Giới thiệu về Linux và cách cài đặt – ITMO Brain">
+  <meta name="twitter:description" content="ManhLab">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/linux1.jpeg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content=" – ITMO Brain">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="">
+  <meta property="og:title" content="Giới thiệu về Linux và cách cài đặt – ITMO Brain">
+  <meta property="og:description" content="ManhLab">
+  <meta property="og:image" content="http://localhost:4000/images/linux1.jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -213,160 +213,393 @@
 
   <!-- begin content -->
   <main class="content" aria-label="Content">
-    <div class="page-head">
+    <div class="post-head">
   <div class="container">
     <div class="row">
-
+      
       
 
       
-
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img class="lazy" data-src="/images/linux1.jpeg" alt="Giới thiệu về Linux và cách cài đặt">
+        </div>
+      </div>
       
 
-      <div class="col col-12">
-        <div class="page__info">
-          <h1 class="page__title"></h1>
+      
+      
+      
+      <div class="col col-6 col-d-12">
+        <div class="post__info ">
+  
+          
+            <div class="post__tags">
+              
+                <a href="/tags#Infosec" class="post__tag">Infosec</a>
+              
+            </div>
+          
+  
+          <h1 class="post__title">Giới thiệu về Linux và cách cài đặt</h1>
+  
+          <div class="post__meta">
+            <a href="/about/" class="post__author-image">
+              <img class="lazy" data-src="/images/logo.png" alt="ITMO Brain">
+            </a>
+
+            <div class="post__meta-bottom">
+              <a class="post__author" href="/about/">ITMO Brain</a>
+              <time class="post__date" datetime="2021-11-30T04:48:45+03:00">30 Nov 2021</time>
+            </div>
+          </div>
+  
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- begin page -->
+<!-- begin post -->
 <div class="container animate">
 
-  <article class="page">
-    <div class="page__content">
-      <div class="container">
-  <div class="row">
-    <div class="col col-12">
-      <div class="error">
-        <h2 class="error__title">404</h2>
-        <p class="error__text">The requested page could not be found.</p>
-      </div>
+  <article class="post">
+
+    <div class="post__content">
+      <h3 id="tại-sao-tôi-chuyển-sang-linux-sau-một-thời-gian-dài-sử-dụng-windows">Tại sao tôi chuyển sang Linux sau một thời gian dài sử dụng Windows</h3>
+<p><img src="/images/linux0.png" /></p>
+
+<p>Hệ điều hành về cơ bản là bộ phận kết nối giữa tương tác người dùng và các thiết bị phần cứng. Thông thường chúng ta sẽ chọn hệ điều hành phù hợp với mục đích sử dụng của riêng mình. 3 lựa chọn cơ bản của chúng ta đó là: <strong>Windows, linux và MacOS.</strong></p>
+<ul>
+  <li>Với windows chúng ta có 1 hệ điều hành quen thuộc, dễ dùng, dễ chơi game, hỗ trợ office đầy đủ.</li>
+  <li>Với MacOS chúng ta có 1 hệ điều hành đẹp hơn hẳn, không thích hợp chơi game, hỗ trợ office chỉ vừa đủ, nhưng lại được sử dụng phổ biến tại các công ty lập trình lớn, chi phí đắt đỏ hơn hẳn.</li>
+  <li>Với hệ điều hành nhân Linux chúng ta có 1 hệ điều hành tùy biến cao, mặc định hơi sần sùi nhưng theo mình hoàn toàn có thể customer theo ý bạn muốn, có thể nói là xinh lung linh với 1 chút công sức. OFFice, Adobe,Game, phần mềm phổ thông,.. là những thứ thiếu vắng trên Linux, cũng chính là thứ kéo tụt hệ điều hành này so với 2 hệ điều hành kể trên.</li>
+</ul>
+
+<p>Đọc đến đây các bạn chắc cũng đã có lựa chọn của riêng mình về hệ điều hành mình nên chọn. Tuy nhiên, với kinh nghiệm học lập trình của mình. Lời khuyên của mình là các bạn nên trải nghiệm Linux cho lập trình vì các lí do sau đây:</p>
+<ol>
+  <li>Sự lựa chọn thay thế cho các phần mềm phổ thông:<br />
+Linux thiếu các phần mềm văn phòng: Office, adobe,.. nhưng lựa chọn thay thế là hoàn toàn đủ để các bạn trải nghiệm. Google Docs đang vươn lên là nơi chia sẻ tài liệu, hệ thống quản lý realtime cho phép nhiều người làm việc cùng lúc. Trong quá trình học chắc chắn bạn sẽ phải làm việc nhóm, nơi mà nhiều người cùng sửa 1 tài liệu, hoặc bạn chia sẻ tài liệu cho người khác. Ưu điểm này hoàn toàn xứng đáng để đánh đổi 1 số chức năng bạn không cần thiết. Với việc thiết kế thì Canva là một lựa chọn tốt cho các bạn không chuyên, Canva Pro cho phép bạn làm mọi thứ nhanh hơn nhờ vào các template sẵn, tối ưu các bước thừa, và cũng nhẹ nhàng, không cần cài đặt như Adobe. Bạn nào không có Canva Pro có thể liên hệ mình để sử dụng bản Pro nhé!</li>
+  <li>Linux lại hỗ trợ các phần mềm lập trình đầy đủ:<br />
+Tất cả các công cụ lập trình đều hỗ trợ rất tốt trên Linux. Hầu hết hệ thống server trên thế giới sử dụng linux, hệ thống quản lý cơ sở dữ liệu,.. vận hành trên linux. Windows là lựa chọn số 1 hiện tại cho người dùng cuối, nhưng ở khía cạnh nhà phát triển, lập trình viên thì Linux là số 1.</li>
+  <li>Linux không có game hay các thứ làm bạn phân tâm.</li>
+  <li>Linux là một hệ điều hành nhẹ, tối ưu bộ nhớ tốt, bạn có thể chạy linux trên các phần cứng cũ mà vẫn đạt hiệu suất cao.</li>
+  <li>Linux cung cấp giao diện người dùng đa dạng, khả năng lựa chọn , customer đa dạng. Thay vì chỉ có 1 như windows thì Linux có rất nhiều bản phân phối, đơn vị phát triển, bản thân bạn cũng có thể viết 1 distribution dựa trên nhân Linux và đặt tên của riêng mình.</li>
+</ol>
+
+<h3 id="thứ-mạnh-mẽ-nhất-trên-linux-terminal">Thứ mạnh mẽ nhất trên Linux: TERMINAL</h3>
+<p><img src="/images/linux2.jpeg" /></p>
+
+<p>Tìm kiếm, phân tích, chia sẻ file, kết nối mạng, bật tắt tác vụ ngầm, giải nén, mã hóa tệp, truy cập máy tính đám mây, chuyển đổi video sang gif, v.v. Đây là một số thao tác có thể thực hiện với dòng lệnh.</p>
+<h4 id="thao-tác-với-github-đơn-giản-hơn-trên-linux">Thao tác với github đơn giản hơn trên linux</h4>
+<p><img src="/images/ter1.png" /></p>
+
+<h4 id="các-dự-án-được-chạy-nhanh-chóng">Các dự án được chạy nhanh chóng.</h4>
+<p><img src="/images/ter2.png" /></p>
+
+<h4 id="câu-lệnh-cơ-bản">Câu lệnh cơ bản</h4>
+<p>Trong quá trình học tập của mình, hay làm việc lập trình sau này, các thao tác Linux, viết bash hay script trên terminal là một kỹ năng cơ bản. Hãy cùng tìm hiểu một số câu lệnh đơn giản nhé:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mv - di chuyển (đổi tên) tệp
+cp - sao chép tệp và thư mục
+rm - xóa tệp hoặc thư mục
+ls - liệt kê nội dung thư mục
+pwd - tên in của thư mục hiện tại/làm việc
+mkdir - tạo thư mục
+rmdir - xóa các thư mục trống, xóa một thư mục
+cat - nối các tệp và in trên đầu ra tiêu chuẩn
+chown - thay đổi chủ sở hữu tệp và nhóm, thay đổi quyền sở hữu tệp
+chmod - thay đổi các bit chế độ tệp, thay đổi quyền của tệp
+curl - chuyển một URL
+wget - Trình tải xuống mạng không tương tác.
+tar - một tiện ích lưu trữ
+gzip - nén hoặc mở rộng tệp, loại Linux 'WinRar'
+ping - gửi ICMP ECHO_REQUEST tới các máy chủ mạng
+ps - báo cáo tác vụ đang chạy.
+pkill - tra cứu hoặc báo hiệu các quy trình dựa trên tên và các thuộc tính khác
+ssh - Ứng dụng đăng nhập từ xa OpenSSH
+git - trình quản lý code theo phiên bản
+</code></pre></div></div>
+
+<h3 id="cách-cài-đặt-linux-trên-máy-tính-đang-chạy-windows">Cách cài đặt Linux trên máy tính đang chạy Windows</h3>
+<p>Nếu bạn đang phân vân về việc chuyển sang Linux, nhưng vẫn chưa muốn sự thay đổi diễn ra quá nhanh. Dualboot là một sự lựa chọn tuyệt vời, bạn vẫn có thể dùng Windows, vẫn có thể thử trải nghiệm Linux.
+<img src="/images/linux3.jpeg" /></p>
+
+<p>Tại sao nên chọn Manjaro: Mình đã sử dụng qua khá nhiều distro Linux như: Ubuntu, Fedora, Mint,Pop_OS. Nhưng Manjaro thực sự là một distro tốt với hệ thống phần mềm đầy đủ, cộng đồng hỗ trợ nhiệt tình, ít lỗi,…</p>
+
+<ol>
+  <li>Chuẩn bị ổ đĩa:
+Bạn nên chuẩn bị 1 phân vùng trống tầm 60-100GB</li>
+  <li>
+    <p>Tải file iso tại đây:
+Tải file ISO tại đây: <a href="https://manjaro.org/download/">Manjaro Download</a>
+<img src="/images/Screenshot 2021-11-30 at 15.00.51.png" /></p>
+  </li>
+  <li>
+    <p>Sử dụng Win32 Disk Imager để tạo USB Boot:
+Tải Win32 Disk Imager tại đây: <a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>
+<img src="/images/linux14.png" /></p>
+  </li>
+  <li>Cài đặt:
+<img src="/images/linux4.jpeg" />
+<img src="/images/linux5.jpeg" /></li>
+</ol>
+
+<p>Ở bước phân vùng bạn nên chọn Manual Parted:
+<img src="/images/linux8.webp" /></p>
+
+<ul>
+  <li>
+    <p>boot:fat32 2GB
+<img src="/images/linux9.webp" /></p>
+  </li>
+  <li>
+    <p>Swap memory: 8GB
+<img src="/images/linux12.webp" /></p>
+  </li>
+  <li>
+    <p>/:ext4 30GB
+<img src="/images/linux10.webp" /></p>
+  </li>
+  <li>
+    <p>/home:ext4 còn lại &gt; 30GB. 
+<img src="/images/linux11.webp" /></p>
+  </li>
+</ul>
+
+<h3 id="enjoy">Enjoy!</h3>
+<p><img src="/images/linux7.jpeg" /></p>
+
     </div>
-  </div>
-</div>
+
+    <div class="post__share">
+      <ul class="share__list list-reset">
+        <li class="share__item">
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/linux"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/linux&title=Gi%E1%BB%9Bi%20thi%E1%BB%87u%20v%E1%BB%81%20Linux%20v%C3%A0%20c%C3%A1ch%20c%C3%A0i%20%C4%91%E1%BA%B7t&summary=ManhLab&source=ITMO%20Brain"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+        </li>
+      </ul>
     </div>
+
+
   </article>
-
 </div>
-<!-- end page -->
+<!-- end post -->
 
 
-<!-- begin recent posts -->
-<div class="recent-posts animate">
-  <div class="container">
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts is-related animate">
     <div class="row">
       <div class="col col-12">
         <div class="container__inner">
           <div class="section__info">
             <div class="section__head">
-              <h2 class="section__title">Recent Posts</h2>
-              <a class="section__link" href="/">Back to homepage</a>
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#Infosec" class="section__link related-tag">Xem tất cả<span> Infosec</span></a>
+                  
+                
+              
+              </a>
             </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+      <time class="article__date" datetime="2021-11-03T04:48:45+03:00">03 Nov 2021</time>
+
+      
+
+      
+      <a class="article__image" href="/cryptography">
+        <img class="lazy" data-src="/images/quantumexplainer3.2-01-10.jpg" alt="Intro to Cryptography">
+      </a>
+      
+
+    </div>
+
+    <div class="article__content">
+
+      <h2 class="article__title">
+        <a href="/cryptography">Intro to Cryptography</a>
+      </h2>
+
+      
+      <p class="article__excerpt">ManhLab</p>
+      
+
+    </div>
+  </div>
+</div>
+
+            
+                
+              
+            
+            
+            
+      
+            
+      
+            
+            
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
   <div class="container">
     <div class="row">
-      
-        <div class="article col col-4 col-d-6 col-t-12">
-  <div class="article__inner">
+      <div class="col col-12">
+        <!-- begin comments -->
+<div class="show-comments">
 
-    <div class="article__head">
-      <time class="article__date" datetime="2021-11-30T04:48:45+03:00">30 Nov 2021</time>
+  <button class="button disqus-button" id="show-comments-button" onclick="disqus();return false;">댓글 보기</button>
+</div>
 
-      
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
 
-      
-      <a class="article__image" href="/linux">
-        <img class="lazy" data-src="/images/linux1.jpeg" alt="Giới thiệu về Linux và cách cài đặt">
-      </a>
-      
+<script>
+  var disqus_loaded = false;
+  var disqus_shortname = 'itmobrain-github-io';
+  var disqus_container = document.getElementById("disqus_thread");
+  if (!disqus_loaded) {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+      // Show disqus comments
+      disqus_container.classList.add("is-open");
+    }
+</script>
 
-    </div>
-
-    <div class="article__content">
-
-      <h2 class="article__title">
-        <a href="/linux">Giới thiệu về Linux và cách cài đặt</a>
-      </h2>
-
-      
-      <p class="article__excerpt">ManhLab</p>
-      
-
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments --> 
+      </div>
     </div>
   </div>
-</div>
-      
-        <div class="article col col-4 col-d-6 col-t-12">
-  <div class="article__inner">
-
-    <div class="article__head">
-      <time class="article__date" datetime="2021-11-28T04:48:45+03:00">28 Nov 2021</time>
-
-      
-
-      
-      <a class="article__image" href="/cpp-3">
-        <img class="lazy" data-src="/images/cpp_banner.jpeg" alt="Tổng kết buổi 3: Các kiểu dữ liệu số học, string, hàm">
-      </a>
-      
-
-    </div>
-
-    <div class="article__content">
-
-      <h2 class="article__title">
-        <a href="/cpp-3">Tổng kết buổi 3: Các kiểu dữ liệu số học, string, hàm</a>
-      </h2>
-
-      
-      <p class="article__excerpt">ManhLab</p>
-      
-
-    </div>
-  </div>
-</div>
-      
-        <div class="article col col-4 col-d-6 col-t-12">
-  <div class="article__inner">
-
-    <div class="article__head">
-      <time class="article__date" datetime="2021-11-25T04:48:45+03:00">25 Nov 2021</time>
-
-      
-
-      
-      <a class="article__image" href="/software-engineer">
-        <img class="lazy" data-src="/images/itmo2.jpg" alt="09.03.04 Kỹ thuật phần mềm">
-      </a>
-      
-
-    </div>
-
-    <div class="article__content">
-
-      <h2 class="article__title">
-        <a href="/software-engineer">09.03.04 Kỹ thuật phần mềm</a>
-      </h2>
-
-      
-      <p class="article__excerpt">Lê Ngọc Thiện</p>
-      
-
-    </div>
-  </div>
-</div>
-      
-    </div>
-  </div>
-</div>
-<!-- end recent posts -->
 
   </main>
   <!-- end content -->
