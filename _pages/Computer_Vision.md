@@ -1091,7 +1091,8 @@ viz_layer(conv_layer)
 
 
 <img src="/images/cv/40.png">
-
+<img src="/images/cv/41.png">
+<img src="/images/cv/42.png">
  
 #### Pooling Layer
 Pooling Layer cung cấp một cách tiếp cận để down sampling feature maps bằng cách tóm tắt sự hiện diện của feature maps trong patchs của feature maps. Hai phương pháp tổng hợp phổ biến là pooling và max pooling tóm tắt sự hiện diện trung bình của một feature và sự hiện diện được kích hoạt nhiều nhất của một feature tương ứng.
@@ -1152,6 +1153,13 @@ viz_layer(activated_layer)
 viz_layer(pooled_layer)
 
 ```
+
+
+<img src="/images/cv/43.png">
+<img src="/images/cv/44.png">
+<img src="/images/cv/45.png">
+<img src="/images/cv/46.png">
+
 
 ### P/S
 Trong khuôn khổ bài viết này, mình đã đề cập tới một số phương pháp thường sử dụng trong việc xử lý ảnh. OpenCV là một thư viện rất mạnh hỗ trợ các hàm xử lý ảnh. Việc xử dụng thành thạo OpenCV sẽ là một lợi thế mạnh trong việc xử lý ảnh và tiền xử lý data raw cho các mô hình Máy học cũng như các mô hình học sâu.<br>
