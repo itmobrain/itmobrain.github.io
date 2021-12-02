@@ -683,17 +683,26 @@ ax1.imshow(filtered, cmap='gray')
 
 ax2.set_title('blurred image')
 ax2.imshow(filtered_blurred, cmap='gray')
+```
 
- 
 
+<img src="/images/cv/22.png">
+
+```
 retval, binary_image = cv2.threshold(filtered_blurred, 30, 255, cv2.THRESH_BINAR)
 
 plt.imshow(binary_image, cmap='gray')
 ```
+
+
+<img src="/images/cv/23.png">
+ 
+ 
  
 ### Face Detection
-Một chương trình cũ, nhưng vẫn phổ biến để phát hiện khuôn mặt là bộ phân loại tầng Haar; các bộ phân loại này trong thư viện OpenCV và sử dụng các tầng phân loại dựa trên tính năng học cách cô lập và phát hiện các khuôn mặt trong một hình ảnh. bài báo gốc đề xuất cách tiếp cận này ở đây.
-Và ở đây: OpenCV: Cascade Classifier
+Một chương trình cũ, nhưng vẫn phổ biến để phát hiện khuôn mặt là bộ phân loại tầng Haar; các bộ phân loại này trong thư viện OpenCV và sử dụng các tầng phân loại dựa trên tính năng học cách cô lập và phát hiện các khuôn mặt trong một hình ảnh. bài báo gốc đề xuất cách tiếp cận này [ở đây.](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf)
+Và ở đây: [OpenCV: Cascade Classifier](https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html)
+
 ```
 # loading in color image for face detection
 image = cv2.imread(IMG_PATH+'images/multi_faces.jpg')
@@ -703,7 +712,12 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20,10))
 plt.imshow(image)
+```
 
+
+<img src="/images/cv/24.png">
+
+```
  
 # converting to grayscale
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
@@ -711,6 +725,11 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 plt.figure(figsize=(20,10))
 plt.imshow(gray, cmap='gray')
 ```
+ 
+ 
+<img src="/images/cv/25.png">
+ 
+ 
  
 Lưu ý ở các tham số.
 Có nhiều khuôn mặt được phát hiện được xác định bởi chức năng detectorMultiScale nhằm mục đích phát hiện các khuôn mặt có kích thước khác nhau. Các đầu vào cho chức năng này là: (image, scaleFactor, minNeighbors); bạn thường sẽ phát hiện nhiều khuôn mặt hơn với scaleFactor nhỏ hơn và giá trị minNeighbors thấp hơn, nhưng việc nâng cao các giá trị này thường tạo ra các kết quả khớp tốt hơn. Sửa đổi các giá trị này tùy thuộc vào hình ảnh đầu vào của bạn.
@@ -726,8 +745,12 @@ print ('We found ' + str(len(faces)) + ' faces in this image')
 print ("Their coordinates and lengths/widths are as follows")
 print ('=============================')
 print (faces)
+```
 
- 
+
+<img src="/images/cv/26.png">
+
+```
 
 # một bản sao của hình ảnh gốc để vẽ biểu đồ phát hiện hình chữ nhật
 img_with_detections = np.copy(image)   
@@ -740,10 +763,16 @@ for (x,y,w,h) in faces:
 plt.figure(figsize=(20,10))
 plt.imshow(img_with_detections)
 ```
+
+
+<img src="/images/cv/27.png">
+
+
  
 ### Image Features
 #### Harris Corner Detection
 Harris Corner Detection là một thuật toán phát hiện góc thường được sử dụng trong các thuật toán thị giác máy tính để trích xuất các góc và suy ra các đặc điểm của hình ảnh. Nó được giới thiệu lần đầu tiên bởi Chris Harris và Mike Stephens vào năm 1988 sau khi cải tiến máy dò góc của Moravec. So với trước đó, máy dò góc của Harris tính đến sự khác biệt của điểm góc với tham chiếu trực tiếp đến hướng, thay vì sử dụng các bản vá dịch chuyển cho mỗi góc 45 độ và đã được chứng minh là chính xác hơn trong việc phân biệt giữa các cạnh và góc . Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để xử lý trước hình ảnh cho các ứng dụng tiếp theo.
+
 ```
 # Read in the image
 image = cv2.imread(IMG_PATH+'images/waffle.jpg')
@@ -755,6 +784,13 @@ image_copy = np.copy(image)
 image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image_copy)
+```
+
+
+<img src="/images/cv/28.png">
+
+
+```
  
 gray = cv2.cvtColor(image_copy, cv2.COLOR_RGB2GRAY)
 gray = np.float32(gray)
@@ -766,6 +802,12 @@ dst = cv2.cornerHarris(gray, 2, 3, 0.04)
 dst = cv2.dilate(dst,None)
 
 plt.imshow(dst, cmap='gray')
+```
+
+
+<img src="/images/cv/29.png">
+
+```
  
 thresh = 0.1*dst.max()
 
@@ -781,22 +823,39 @@ for j in range(0, dst.shape[0]):
 
 plt.imshow(corner_image)
 ```
- 
+
+
+<img src="/images/cv/30.png">
+
+
+
 #### Contour Detection
-Mỗi contour đều có một số đặc điểm có thể được tính toán, bao gồm diện tích của contour, hướng của nó (hướng mà hầu hết contour hướng vào), chu vi và nhiều thuộc tính khác được nêu trong OpenCV documentation.
+Mỗi contour đều có một số đặc điểm có thể được tính toán, bao gồm diện tích của contour, hướng của nó (hướng mà hầu hết contour hướng vào), chu vi và nhiều thuộc tính khác được nêu trong [OpenCV documentation.](https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html)
+
 ```
 image = cv2.imread(IMG_PATH+'images/thumbs_up_down.jpg')
 
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
- 
+```
+
+
+<img src="/images/cv/31.png">
+
+```
 gray = cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
 
 # Binary thresholded image
 retval, binary = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY_INV)
 
 plt.imshow(binary, cmap='gray')
+```
+
+
+<img src="/images/cv/32.png">
+
+```
  
 # Finding contours from thresholded, binary image
 contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
@@ -807,6 +866,11 @@ contours_image = cv2.drawContours(contours_image, contours, -1, (0,255,0), 3)
 
 plt.imshow(contours_image)
 ```
+
+
+<img src="/images/cv/33.png">
+
+
 #### K-Means Clustering
 Phân cụm K-mean là một phương pháp lượng tử hóa vectơ, ban đầu từ xử lý tín hiệu, nhằm mục đích phân chia n quan sát thành k cụm trong đó mỗi quan sát thuộc về cụm có giá trị trung bình gần nhất (cluster centers hoặc cluster centroid), đóng vai trò là nguyên mẫu của cụm. Điều này dẫn đến việc phân vùng không gian dữ liệu thành các ô Voronoi (Voronoi cells). Phân cụm K-mean giảm thiểu các phương sai trong cụm (bình phương khoảng cách Euclide), nhưng không phải khoảng cách Euclid thông thường, đây sẽ là bài toán Weber khó hơn: giá trị trung bình tối ưu hóa sai số bình phương, trong khi chỉ có trung vị hình học giảm thiểu khoảng cách Euclid. Ví dụ, các giải pháp Euclid tốt hơn có thể được tìm thấy bằng cách sử dụng k-medians và k-medoid.
 Ứng dụng của thuật toán K-mean rất nhiều, trong đó có việc nén dung lượng ảnh mà không làm mất đi quá nhiều chất lượng ảnh (image compression), feature learning, cluster analysis, vector quantization...
@@ -816,6 +880,12 @@ image = cv2.imread(IMG_PATH+'images/monarch.jpg')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
+```
+
+
+<img src="/images/cv/34.png">
+
+```
  
 # Reshaping image into a 2D array of pixels and 3 color values (RGB)
 pixel_vals = image.reshape((-1,3))
@@ -838,14 +908,28 @@ segmented_image = segmented_data.reshape((image.shape))
 labels_reshape = labels.reshape(image.shape[0], image.shape[1])
 
 plt.imshow(segmented_image)
- 
+```
+
+
+<img src="/images/cv/35.png">
+
+
 Image Pyramids
 Image Pyramids (pyramid - Kim tự tháp), là một loại biểu diễn tín hiệu đa tỷ lệ được phát triển bởi cộng đồng xử lý tín hiệu, xử lý hình ảnh và thị giác máy tính, trong đó một tín hiệu hoặc hình ảnh phải được làm mịn và lấy mẫu con lặp lại. Biểu diễn kim tự tháp là tiền thân của biểu diễn không gian quy mô và phân tích đa giải.
+
+
+```
 image = cv2.imread(IMG_PATH+'images/rainbow_flag.jpg')
 
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
+```
+
+
+<img src="/images/cv/36.png">
+
+```
  
 level_1 = cv2.pyrDown(image)
 level_2 = cv2.pyrDown(level_1)
@@ -869,8 +953,15 @@ ax4.imshow(level_3)
 ax4.set_xlim([0, image.shape[1]])
 ax4.set_ylim([0, image.shape[0]])
 ```
+
+
+
+<img src="/images/cv/37.png">
+
+
 #### Convolutional Neural Networks
 Trong deep learning, mạng nơ-ron phức hợp (CNN, hoặc ConvNet) là một lớp mạng nơ-ron nhân tạo, được áp dụng phổ biến nhất để phân tích hình ảnh trực quan. Chúng còn được gọi là mạng nơ-ron nhân tạo bất biến hoặc bất biến trong không gian (SIANN), dựa trên kiến trúc trọng số chia sẻ của các nhân hoặc bộ lọc tích chập trượt dọc theo các tính năng đầu vào và cung cấp các phản hồi tương đương dịch được gọi là bản đồ đối tượng. Về mặt phản trực giác, hầu hết các mạng nơ-ron tích chập chỉ tương đương, trái ngược với bất biến, đối với phép dịch. Họ có các ứng dụng trong nhận dạng hình ảnh và video, hệ thống khuyến nghị, phân loại hình ảnh, phân đoạn hình ảnh, phân tích hình ảnh y tế, xử lý ngôn ngữ tự nhiên, và chuỗi thời gian tài chính…
+
 ```
 img_path = IMG_PATH+'images/car.png'
 
@@ -881,8 +972,14 @@ gray_img = gray_img.astype("float32")/255
 
 plt.imshow(gray_img, cmap='gray')
 plt.show()
- 
+```
+
+
+<img src="/images/cv/38.png">
+
 Filters
+
+```
 Một vài filter thường xử dụng để biến đổi hình ảnh qua phép tích chập
 filter_vals = np.array([[-1, -1, 1, 1], [-1, -1, 1, 1], [-1, -1, 1, 1], [-1, -1, 1, 1]])
 # defining four filters
@@ -904,8 +1001,20 @@ for i in range(4):
                         horizontalalignment='center',
                         verticalalignment='center',
                         color='white' if filters[i][x][y]<0 else 'black')
+                        
+                        
+                        
+```
+
+
+
+<img src="/images/cv/39.png">
+
+
  
 Pytorch for Deep Learning
+
+```
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -914,9 +1023,12 @@ import torch.nn.functional as F
 from torchvision.datasets import FashionMNIST
 from torch.utils.data import DataLoader
 from torchvision import transforms
+```
 
 Convolutional layer
 Single convolutional layer chứa tất cả các bộ lọc đã tạo. Khởi tạo các trọng số trong một lớp phức hợp để có thể hình dung những gì xảy ra sau khi chuyển tiếp qua mạng này!
+
+```
 # neural network with a single convolutional layer with four filters
 class Net(nn.Module):
     
@@ -975,7 +1087,11 @@ conv_layer, activated_layer = model(gray_img_tensor)
 # visualizing the output of a conv layer
 viz_layer(conv_layer)
 ```
- 
+
+
+
+<img src="/images/cv/40.png">
+
  
 #### Pooling Layer
 Pooling Layer cung cấp một cách tiếp cận để down sampling feature maps bằng cách tóm tắt sự hiện diện của feature maps trong patchs của feature maps. Hai phương pháp tổng hợp phổ biến là pooling và max pooling tóm tắt sự hiện diện trung bình của một feature và sự hiện diện được kích hoạt nhiều nhất của một feature tương ứng.
