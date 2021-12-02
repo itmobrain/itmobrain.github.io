@@ -57,7 +57,8 @@ image = mpimg.imread('images/oranges.jpg')
 print('Image dimensions:', image.shape)
 plt.imshow(image)
 .image.AxesImage at 0x7faa6faad150>
- 
+<img src="/images/linux0.png">
+
 # Change from color to grayscale
 gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
@@ -925,7 +926,7 @@ viz_layer(pooled_layer)
 
 ```
 
-### OpenCV
+### P/S
 Trong khuôn khổ bài viết này, mình đã đề cập tới một số phương pháp thường sử dụng trong việc xử lý ảnh. OpenCV là một thư viện rất mạnh hỗ trợ các hàm xử lý ảnh. Việc xử dụng thành thạo OpenCV sẽ là một lợi thế mạnh trong việc xử lý ảnh và tiền xử lý data raw cho các mô hình Máy học cũng như các mô hình học sâu.<br>
 Mình vừa kết thúc phần 1. Phần 2 (từ CNN tới SOTA) mình sẽ cố gắng dành thời gian để viết về nó một cách ngắn và dễ hiểu nhất (mình cũng chưa biết khi nào xong vì nó thực sự quá nhiều và quá dài 🙁). Computer Vision là một lĩnh vực rất rất lớn, trong khuôn khổ 1, 2 bài viết không thể hoàn toàn bao phủ hết về nó, chỉ mong qua bài viết của mình, các bạn có thêm nhiều động lực để tìm hiểu về thị giác máy tính.<br>
 Có thể trong quá trình viết có sai sót, hi mọi người cùng sửa chữa để mọi thứ tốt hơn.
