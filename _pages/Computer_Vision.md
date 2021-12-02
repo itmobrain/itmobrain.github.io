@@ -59,14 +59,19 @@ plt.imshow(image)
 ```
 
 
-<img src="/images/linux0.png">
+<img src="/images/cv/1.png">
 
 ```
 # Change from color to grayscale
 gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
 plt.imshow(gray_image, cmap='gray')
+```
 
+
+<img src="/images/cv/2.png">
+
+```
  
 # Specific grayscale pixel values
 # Pixel value at x = 400 and y = 300 
