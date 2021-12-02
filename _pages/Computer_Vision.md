@@ -41,7 +41,9 @@ Trong khuôn khổ bài viết này, dữ liệu được mình sử dụng ng�
 
 ### Understanding Images.
 OpenCV (CV2) là một thư viện cực kỳ nổi tiếng cho các ứng dụng thị giác máy tính. Bạn có thể xem mã nguồn và [hướng dẫn tại đây nè](https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html)<br>
+
 [NumPy](https://numpy.org/doc/) là một thư viện phục vụ cho khoa học máy tính của Python, hỗ trợ cho việc tính toán các mảng nhiều chiều, có kích thước lớn với các hàm đã được tối ưu áp dụng lên các mảng nhiều chiều đó. Numpy đặc biệt hữu ích khi thực hiện các hàm liên quan tới Đại Số Tuyến Tính.
+
 ```
 import numpy as np
 import matplotlib.image as mpimg
@@ -93,6 +95,8 @@ plt.matshow(tiny_image, cmap='gray')
 ```
 
 
+<img src="/images/cv/3.png">
+
 Images and Colors
 ```
 In [7]:
@@ -100,7 +104,12 @@ In [7]:
 image = mpimg.imread('images/rainbow_flag.jpg')
 
 plt.imshow(image)
- 
+```
+
+
+<img src="/images/cv/4.png">
+
+```
 RGB Channels
 In [8]:
 # Isolate RGB channels
@@ -118,6 +127,9 @@ ax3.set_title('B channel')
 ax3.imshow(b, cmap='gray')
 ```
 
+
+<img src="/images/cv/5.png">
+
 Color Threshold
 ```
 IIMG_PATH='introcv/'
@@ -133,15 +145,18 @@ image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 # Display the image copy
 plt.imshow(image_copy)
- 
+``` 
 
 
+<img src="/images/cv/6.png">
 
+```
 # Color Threshold
 lower_blue = np.array([0,0,200]) 
 upper_blue = np.array([50,50,255])
 
 ```
+
 Mask
 ```
 # Define the masked area
@@ -151,8 +166,12 @@ mask = cv2.inRange(image_copy, lower_blue, upper_blue)
 # Vizualize the mask
 
 plt.imshow(mask, cmap='gray')
+```
  
 
+<img src="/images/cv/7.png">
+
+```
 # Masking the image to let the pizza show through
 
 masked_image = np.copy(image_copy)
