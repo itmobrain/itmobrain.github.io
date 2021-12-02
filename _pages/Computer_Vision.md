@@ -183,8 +183,8 @@ plt.imshow(masked_image)
 
 
 <img src="/images/cv/8.png">
-```
 
+```
 # Loading in a background image, and converting it to RGB 
 
 background_image = cv2.imread(IMG_PATH+'images/space_background.jpg')
