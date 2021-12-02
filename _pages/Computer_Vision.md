@@ -179,7 +179,12 @@ masked_image = np.copy(image_copy)
 masked_image[mask != 0] = [0, 0, 0]
 
 plt.imshow(masked_image)
- 
+```
+
+
+<img src="/images/cv/8.png">
+```
+
 # Loading in a background image, and converting it to RGB 
 
 background_image = cv2.imread(IMG_PATH+'images/space_background.jpg')
@@ -197,13 +202,22 @@ crop_background[mask == 0] = [0, 0, 0]
 # Displaying the background
 
 plt.imshow(crop_background)
- 
+```
+
+
+<img src="/images/cv/9.png">
+
+```
 # Adding the two images together to create a complete image!
 complete_image = masked_image + crop_background
 
 # Displaying the result
 plt.imshow(complete_image)
  ```
+ 
+ 
+<img src="/images/c0.png">
+ 
 HSV
 ```
  image = cv2.imread(IMG_PATH+'images/water_balloons.jpg')
@@ -213,7 +227,11 @@ image_copy = np.copy(image)
 image = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
- 
+```
+
+
+<img src="/images/cv/11.png">
+```
 # Converting from RGB to HSV
 hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
 
@@ -232,6 +250,12 @@ ax2.imshow(s, cmap='gray')
 
 ax3.set_title('Value')
 ax3.imshow(v, cmap='gray')
+```
+
+
+<img src="/images/cv122.png">
+
+```
  
 # Color selection criteria in HSV values for getting only Pink balloons
 lower_hue = np.array([160,0,0]) 
@@ -247,6 +271,10 @@ masked_image[mask_hsv==0] = [0,0,0]
 # Vizualizing the mask
 plt.imshow(masked_image)
 ```
+
+
+<img src="/images/cv/13.png">
+
 Classifying Images based on Features
 ```
 In [21]:
