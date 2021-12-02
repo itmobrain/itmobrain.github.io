@@ -938,6 +938,7 @@ Có thể trong quá trình viết có sai sót, hi mọi người cùng sửa c
 ><cite>Thanks for reading. <br>
 Minh!</cite
 
+
 #### Useful links/Books: 
 [Computer Vision: Algorithms and Applications (Texts in Computer Science): Szeliski, Richard ](https://www.amazon.com/Computer-Vision-Algorithms-Applications-Science/dp/1848829345)<br>
 (highly recommend vì cuốn sách này tuy cực kỳ hàn lâm nhưng nó là cuốn sách rất rất hay)
