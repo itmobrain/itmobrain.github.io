@@ -446,7 +446,12 @@ ax3.set_title('S channel')
 ax3.imshow(s, cmap='gray')
 ax4.set_title('V channel')
 ax4.imshow(v, cmap='gray')
- 
+```
+
+
+<img src="/images/cv/16.png">
+
+```
 def avg_brightness(rgb_image):
     hsv = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
 
@@ -466,8 +471,14 @@ test_im = STANDARDIZED_LIST[image_num][0]
 avg = avg_brightness(test_im)
 print('Avg brightness: ' + str(avg))
 plt.imshow(test_im)
+```
+
+
+<img src="/images/cv/17.png">
+
  
 Classifier
+```
 # This function should take in RGB image input
 def estimate_label(rgb_image):
     
@@ -498,8 +509,11 @@ STANDARDIZED_TEST_LIST = standardize(TEST_IMAGE_LIST)
 
 # Shuffle the standardized test data
 random.shuffle(STANDARDIZED_TEST_LIST)
+```
+
 
 Determining Accuracy
+```
 def get_misclassified_images(test_images):
     # Tracking misclassified images by placing them into a list
     misclassified_images_labels = []
@@ -528,29 +542,36 @@ accuracy = num_correct/total
 
 print('Accuracy: ' + str(accuracy))
 print("Number of misclassified images = " + str(len(MISCLASSIFIED)) +' out of '+ str(total))
+```
+
 
 >>> Accuracy: 0.91875
 >>> Number of misclassified images = 13 out of 160
-```
+
 
 ### Image Filters
 #### Fourier Transforms
 Các thành phần tần số của hình ảnh có thể được hiển thị sau khi thực hiện Biến đổi Fourier (FT). FT xem xét các thành phần của hình ảnh (các cạnh có tần số cao và các vùng có màu mịn là tần số thấp) và vẽ biểu đồ tần số xuất hiện dưới dạng các điểm trong quang phổ.<br>
-Trên thực tế, FT coi các mẫu cường độ trong hình ảnh là sóng hình sin với một tần số cụ thể và bạn có thể xem hình ảnh trực quan thú vị về các thành phần sóng hình sin này ở đây.<br>
+Trên thực tế, FT coi các mẫu cường độ trong hình ảnh là sóng hình sin với một tần số cụ thể và bạn có thể xem hình ảnh trực quan thú vị về các thành phần sóng hình sin này [ở đây.](https://plus.maths.org/content/fourier-transforms-images)<br>
 Fourier Transform là một công cụ xử lý hình ảnh quan trọng được sử dụng để phân rã hình ảnh thành các thành phần sin và cosine của nó. Đầu ra của phép biến đổi đại diện cho hình ảnh trong miền Fourier hoặc miền tần số, trong khi hình ảnh đầu vào là miền không gian tương đương. Trong ảnh miền Fourier, mỗi điểm biểu diễn một tần số cụ thể có trong ảnh miền không gian.<br>
 Fourier Transform được sử dụng trong một loạt các ứng dụng, chẳng hạn như phân tích hình ảnh, lọc hình ảnh, tái tạo hình ảnh và nén hình ảnh.<br>
 Và một chút toán học ở đây: 
-Image Transforms - Fourier Transform (ed.ac.uk)
-But what is the Fourier Transform? A visual introduction. 
+[Image Transforms - Fourier Transform](https://homepages.inf.ed.ac.uk/rbf/HIPR2/fourier.htm)
+[But what is the Fourier Transform? A visual introduction.](https://www.youtube.com/watch?v=spUNpyF58BY)
+
 ```
 image_stripes = cv2.imread(IMG_PATH+'images/stripes.jpg')
 image_stripes = cv2.cvtColor(image_stripes, cv2.COLOR_BGR2RGB)
 
 image_solid = cv2.imread(IMG_PATH+'images/pink_solid.jpg')
 image_solid = cv2.cvtColor(image_solid, cv2.COLOR_BGR2RGB)
+```
 
+
+<img src="/images/cv/17.png">
 
 # Displaying
+```
 f, (ax1,ax2) = plt.subplots(1, 2, figsize=(10,5))
 
 ax1.imshow(image_stripes)
@@ -594,7 +615,12 @@ ax3.set_title('original image')
 ax3.imshow(image_solid)
 ax4.set_title('frequency transform image')
 ax4.imshow(f_solid, cmap='gray')
- 
+```
+
+
+<img src="/images/cv/19.png">
+
+```
 image = cv2.imread(IMG_PATH+'images/brain_MR.jpg')
 
 image_copy = np.copy(image)
@@ -602,8 +628,16 @@ image_copy = np.copy(image)
 image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image_copy)
+```
+
+
+<img src="/images/cv/20.png">
+
+
  
 # Converting to grayscale for filtering
+
+```
 gray = cv2.cvtColor(image_copy, cv2.COLOR_RGB2GRAY)
 
 # Creating a Gaussian blurred image
@@ -616,11 +650,17 @@ ax1.imshow(gray, cmap='gray')
 
 ax2.set_title('blurred image')
 ax2.imshow(gray_blur, cmap='gray')
+```
 
- 
+
+<img src="/images/cv/21.png">
+
+
 
 # High-pass filter 
 
+
+```
 # 3x3 sobel filters for edge detection
 sobel_x = np.array([[ -1, 0, 1], 
                    [ -2, 0, 2], 
