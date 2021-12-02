@@ -216,7 +216,7 @@ plt.imshow(complete_image)
  ```
  
  
-<img src="/images/c0.png">
+<img src="/images/cv/10.png">
  
 HSV
 ```
@@ -228,6 +228,7 @@ image = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
 ```
+
 
 
 <img src="/images/cv/11.png">
@@ -253,6 +254,7 @@ ax3.imshow(v, cmap='gray')
 ```
 
 
+
 <img src="/images/cv122.png">
 
 ```
@@ -271,6 +273,7 @@ masked_image[mask_hsv==0] = [0,0,0]
 # Vizualizing the mask
 plt.imshow(masked_image)
 ```
+
 
 
 <img src="/images/cv/13.png">
