@@ -2,13 +2,13 @@
 layout: page
 title: CV
 permalink: /cv/
-image: '/images/nlp.png'
+image: '/images/cv/CV_intro.gif'
 ---
 
 ><cite>🔥Machine Learning Course🔥
 <br>Computer Vision – From OpenCV to SOTA</cite>
 
-><cite>Chào các mọi người. Mình là Minh. Đây là bài viết bài viết đầu tiên của mình trong chuỗi bài về Thị giác máy tính. Mình dành thời gian viết chuỗi bài này để giới thiệu tới mọi người những kiến thức nhỏ mà mình học được. Hy vọng nó sẽ giúp ích với mọi người.</cite>
+><cite>Chào mọi người. Mình là Minh. Đây là bài viết bài viết đầu tiên của mình trong chuỗi bài về Thị giác máy tính. Mình dành thời gian viết chuỗi bài này để giới thiệu tới mọi người những kiến thức nhỏ mà mình học được. Hy vọng nó sẽ giúp ích với mọi người.</cite>
 
 ### Part I: From OpenCV to Convolutional Neural Network for Computer Vision
 <details>
@@ -933,7 +933,7 @@ Có thể trong quá trình viết có sai sót, hi mọi người cùng sửa c
   <div class="gallery">
     <img src="/images/admin/minh.jpg">
   </div>
-  <em>NLP/ <a href="https://fb.com/itmobrain" target="_blank">ITMO Brain</a></em>
+  <em>Computer Vision/ <a href="https://fb.com/itmobrain" target="_blank">ITMO Brain</a></em>
 </div>
 ><cite>Thanks for reading. <br>
 Minh!</cite
@@ -941,6 +941,7 @@ Minh!</cite
 #### Useful links/Books: 
 [Computer Vision: Algorithms and Applications (Texts in Computer Science): Szeliski, Richard ](https://www.amazon.com/Computer-Vision-Algorithms-Applications-Science/dp/1848829345)<br>
 (highly recommend vì cuốn sách này tuy cực kỳ hàn lâm nhưng nó là cuốn sách rất rất hay)
+ 
 [Rapid Object Detection using a Boosted Cascade of Simple Features ](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf)<br>
 [OpenCV Python Tutorial - GeeksforGeeks](https://www.geeksforgeeks.org/opencv-python-tutorial/)<br>
 [15 OpenCV Projects Ideas for Beginners to Practice in 2021 (projectpro.io)](https://www.projectpro.io/article/opencv-projects-ideas-/492)<br>
