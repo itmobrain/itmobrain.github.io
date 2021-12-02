@@ -58,7 +58,9 @@ print('Image dimensions:', image.shape)
 plt.imshow(image)
 .image.AxesImage at 0x7faa6faad150>
 <img src="/images/linux0.png">
-
+```
+<img src="/images/linux0.png">
+```
 # Change from color to grayscale
 gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
