@@ -256,7 +256,7 @@ ax3.imshow(v, cmap='gray')
 
 
 
-<img src="/images/cv12.png">
+<img src="/images/cv/12.png">
 
 ```
  
