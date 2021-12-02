@@ -256,7 +256,7 @@ ax3.imshow(v, cmap='gray')
 
 
 
-<img src="/images/cv122.png">
+<img src="/images/cv12.png">
 
 ```
  
@@ -371,7 +371,7 @@ def standardize(image_list):
 #### Day and Night Image Classifier
 Bộ dữ liệu hình ảnh ngày/đêm bao gồm 200 hình ảnh màu RGB. Mỗi ví dụ có số lượng bằng nhau: 100 hình ảnh ngày và 100 hình ảnh ban đêm.</br>
 Xây dựng một công cụ phân loại có thể gắn nhãn chính xác những hình ảnh này là ngày hay đêm và điều đó dựa vào việc tìm ra các đặc điểm phân biệt giữa hai loại hình ảnh!<br>
-Note: data is here: AMOS dataset<br>
+Note: data is here: [AMOS dataset<br>](http://mvrl.cs.uky.edu/datasets/amos/)
 Training and Testing Data<br>
 Chia thành tập training và testing
 •	60% là traning
@@ -394,6 +394,12 @@ print(len(IMAGE_LIST))
 print(selected_image.shape)
 
 plt.imshow(selected_image)
+```
+
+
+<img src="/images/cv/14.png">
+
+```
  
 Preprocessed images with labels
 STANDARDIZED_LIST = standardize(IMAGE_LIST)
@@ -405,9 +411,15 @@ selected_label = STANDARDIZED_LIST[image_num][1]
 plt.imshow(selected_image)
 print("Shape: "+str(selected_image.shape))
 print("Label [1 = day, 0 = night]: " + str(selected_label))
- 
+```
+
+
+<img src="/images/cv/15.png">
+
+
 Feature Extraction
 
+```
 # Chuyển sang không gian màu HSV
 # Mô tả các kênh màu riêng lẻ
 
