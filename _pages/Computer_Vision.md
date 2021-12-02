@@ -232,6 +232,7 @@ plt.imshow(image)
 
 
 <img src="/images/cv/11.png">
+
 ```
 # Converting from RGB to HSV
 hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
