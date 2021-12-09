@@ -16,12 +16,12 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="CV – ITMO Brain">
   <meta name="twitter:description" content="">
-  <meta name="twitter:image:src" content="http://localhost:4000/images/nlp.png">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/cv/CV_intro.gif">
 
   <!-- Facebook OpenGraph -->
   <meta property="og:title" content="CV – ITMO Brain">
   <meta property="og:description" content="">
-  <meta property="og:image" content="http://localhost:4000/images/nlp.png">
+  <meta property="og:image" content="http://localhost:4000/images/cv/CV_intro.gif">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -98,6 +98,14 @@
                 
                   
                   <li class="nav__item">
+                    <a href="/cv/" class="nav__link">CV</a>
+                  </li>
+                  
+                
+              
+                
+                  
+                  <li class="nav__item">
                     <a href="/about/" class="nav__link">ITMO Brain</a>
                   </li>
                   
@@ -126,14 +134,6 @@
                 
               
                 
-                  
-                
-              
-                
-                  
-                  <li class="nav__item">
-                    <a href="/cv/" class="nav__link">CV</a>
-                  </li>
                   
                 
               
@@ -222,7 +222,7 @@
       
       <div class="col col-12">
         <div class="page-image">
-          <img class="lazy" data-src="/images/nlp.png" alt="CV">
+          <img class="lazy" data-src="/images/cv/CV_intro.gif" alt="CV">
         </div>
       </div>
       
@@ -249,7 +249,7 @@
 </blockquote>
 
 <blockquote>
-  <p><cite>Chào các mọi người. Mình là Minh. Đây là bài viết bài viết đầu tiên của mình trong chuỗi bài về Thị giác máy tính. Mình dành thời gian viết chuỗi bài này để giới thiệu tới mọi người những kiến thức nhỏ mà mình học được. Hy vọng nó sẽ giúp ích với mọi người.</cite></p>
+  <p><cite>Chào mọi người. Mình là Minh. Đây là bài viết bài viết đầu tiên của mình trong chuỗi bài về Thị giác máy tính. Mình dành thời gian viết chuỗi bài này để giới thiệu tới mọi người những kiến thức nhỏ mà mình học được. Hy vọng nó sẽ giúp ích với mọi người.</cite></p>
 </blockquote>
 
 <h3 id="part-i-from-opencv-to-convolutional-neural-network-for-computer-vision">Part I: From OpenCV to Convolutional Neural Network for Computer Vision</h3>
@@ -283,8 +283,10 @@ Trong khuôn khổ bài viết này, dữ liệu được mình sử dụng ng�
 </blockquote>
 
 <h3 id="understanding-images">Understanding Images.</h3>
-<p>OpenCV (CV2) là một thư viện cực kỳ nổi tiếng cho các ứng dụng thị giác máy tính. Bạn có thể xem mã nguồn và <a href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">hướng dẫn tại đây nè</a><br />
-<a href="https://numpy.org/doc/">NumPy</a> là một thư viện phục vụ cho khoa học máy tính của Python, hỗ trợ cho việc tính toán các mảng nhiều chiều, có kích thước lớn với các hàm đã được tối ưu áp dụng lên các mảng nhiều chiều đó. Numpy đặc biệt hữu ích khi thực hiện các hàm liên quan tới Đại Số Tuyến Tính.</p>
+<p>OpenCV (CV2) là một thư viện cực kỳ nổi tiếng cho các ứng dụng thị giác máy tính. Bạn có thể xem mã nguồn và <a href="https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html">hướng dẫn tại đây nè</a><br /></p>
+
+<p><a href="https://numpy.org/doc/">NumPy</a> là một thư viện phục vụ cho khoa học máy tính của Python, hỗ trợ cho việc tính toán các mảng nhiều chiều, có kích thước lớn với các hàm đã được tối ưu áp dụng lên các mảng nhiều chiều đó. Numpy đặc biệt hữu ích khi thực hiện các hàm liên quan tới Đại Số Tuyến Tính.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
 import matplotlib.image as mpimg
 import matplotlib.pyplot as plt
@@ -298,14 +300,19 @@ image = mpimg.imread('images/oranges.jpg')
 # Print out the image dimensions
 print('Image dimensions:', image.shape)
 plt.imshow(image)
-.image.AxesImage at 0x7faa6faad150&gt;
- 
-# Change from color to grayscale
+</code></pre></div></div>
+
+<p><img src="/images/cv/1.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Change from color to grayscale
 gray_image = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
 plt.imshow(gray_image, cmap='gray')
+</code></pre></div></div>
 
- 
+<p><img src="/images/cv/2.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 # Specific grayscale pixel values
 # Pixel value at x = 400 and y = 300 
 
@@ -325,14 +332,19 @@ tiny_image = np.array([[0, 20, 30, 150, 120],
 plt.matshow(tiny_image, cmap='gray')
 </code></pre></div></div>
 
+<p><img src="/images/cv/3.png" /></p>
+
 <p>Images and Colors</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In [7]:
 # Read in the image
 image = mpimg.imread('images/rainbow_flag.jpg')
 
 plt.imshow(image)
- 
-RGB Channels
+</code></pre></div></div>
+
+<p><img src="/images/cv/4.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>RGB Channels
 In [8]:
 # Isolate RGB channels
 r = image[:,:,0]
@@ -349,6 +361,8 @@ ax3.set_title('B channel')
 ax3.imshow(b, cmap='gray')
 </code></pre></div></div>
 
+<p><img src="/images/cv/5.png" /></p>
+
 <p>Color Threshold</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>IIMG_PATH='introcv/'
 image = cv2.imread(IMG_PATH+'images/pizza_bluescreen.jpg')
@@ -363,15 +377,16 @@ image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 # Display the image copy
 plt.imshow(image_copy)
- 
+</code></pre></div></div>
 
+<p><img src="/images/cv/6.png" /></p>
 
-
-# Color Threshold
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Color Threshold
 lower_blue = np.array([0,0,200]) 
 upper_blue = np.array([50,50,255])
 
 </code></pre></div></div>
+
 <p>Mask</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Define the masked area
 
@@ -380,17 +395,22 @@ mask = cv2.inRange(image_copy, lower_blue, upper_blue)
 # Vizualize the mask
 
 plt.imshow(mask, cmap='gray')
- 
+</code></pre></div></div>
 
-# Masking the image to let the pizza show through
+<p><img src="/images/cv/7.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Masking the image to let the pizza show through
 
 masked_image = np.copy(image_copy)
 
 masked_image[mask != 0] = [0, 0, 0]
 
 plt.imshow(masked_image)
- 
-# Loading in a background image, and converting it to RGB 
+</code></pre></div></div>
+
+<p><img src="/images/cv/8.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Loading in a background image, and converting it to RGB 
 
 background_image = cv2.imread(IMG_PATH+'images/space_background.jpg')
 
@@ -407,13 +427,19 @@ crop_background[mask == 0] = [0, 0, 0]
 # Displaying the background
 
 plt.imshow(crop_background)
- 
-# Adding the two images together to create a complete image!
+</code></pre></div></div>
+
+<p><img src="/images/cv/9.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Adding the two images together to create a complete image!
 complete_image = masked_image + crop_background
 
 # Displaying the result
 plt.imshow(complete_image)
 </code></pre></div></div>
+
+<p><img src="/images/cv/10.png" /></p>
+
 <p>HSV</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> image = cv2.imread(IMG_PATH+'images/water_balloons.jpg')
 
@@ -422,8 +448,11 @@ image_copy = np.copy(image)
 image = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
- 
-# Converting from RGB to HSV
+</code></pre></div></div>
+
+<p><img src="/images/cv/11.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Converting from RGB to HSV
 hsv = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
 
 # HSV channels
@@ -441,7 +470,11 @@ ax2.imshow(s, cmap='gray')
 
 ax3.set_title('Value')
 ax3.imshow(v, cmap='gray')
- 
+</code></pre></div></div>
+
+<p><img src="/images/cv/12.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 # Color selection criteria in HSV values for getting only Pink balloons
 lower_hue = np.array([160,0,0]) 
 upper_hue = np.array([180,255,255])
@@ -456,6 +489,9 @@ masked_image[mask_hsv==0] = [0,0,0]
 # Vizualizing the mask
 plt.imshow(masked_image)
 </code></pre></div></div>
+
+<p><img src="/images/cv/13.png" /></p>
+
 <p>Classifying Images based on Features</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>In [21]:
 # Helper function
@@ -546,7 +582,7 @@ def standardize(image_list):
 <h4 id="day-and-night-image-classifier">Day and Night Image Classifier</h4>
 <p>Bộ dữ liệu hình ảnh ngày/đêm bao gồm 200 hình ảnh màu RGB. Mỗi ví dụ có số lượng bằng nhau: 100 hình ảnh ngày và 100 hình ảnh ban đêm.&lt;/br&gt;
 Xây dựng một công cụ phân loại có thể gắn nhãn chính xác những hình ảnh này là ngày hay đêm và điều đó dựa vào việc tìm ra các đặc điểm phân biệt giữa hai loại hình ảnh!<br />
-Note: data is here: AMOS dataset<br />
+Note: data is here: <a href="http://mvrl.cs.uky.edu/datasets/amos/">AMOS dataset<br /></a>
 Training and Testing Data<br />
 Chia thành tập training và testing
 •	60% là traning
@@ -568,7 +604,11 @@ print(len(IMAGE_LIST))
 print(selected_image.shape)
 
 plt.imshow(selected_image)
- 
+</code></pre></div></div>
+
+<p><img src="/images/cv/14.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 Preprocessed images with labels
 STANDARDIZED_LIST = standardize(IMAGE_LIST)
 image_num = 0
@@ -579,10 +619,13 @@ selected_label = STANDARDIZED_LIST[image_num][1]
 plt.imshow(selected_image)
 print("Shape: "+str(selected_image.shape))
 print("Label [1 = day, 0 = night]: " + str(selected_label))
- 
-Feature Extraction
+</code></pre></div></div>
 
-# Chuyển sang không gian màu HSV
+<p><img src="/images/cv/15.png" /></p>
+
+<p>Feature Extraction</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Chuyển sang không gian màu HSV
 # Mô tả các kênh màu riêng lẻ
 
 image_num = 0
@@ -608,8 +651,11 @@ ax3.set_title('S channel')
 ax3.imshow(s, cmap='gray')
 ax4.set_title('V channel')
 ax4.imshow(v, cmap='gray')
- 
-def avg_brightness(rgb_image):
+</code></pre></div></div>
+
+<p><img src="/images/cv/16.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def avg_brightness(rgb_image):
     hsv = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
 
     # Cộng tất cả các giá trị pixel trong 3 kênh
@@ -628,9 +674,12 @@ test_im = STANDARDIZED_LIST[image_num][0]
 avg = avg_brightness(test_im)
 print('Avg brightness: ' + str(avg))
 plt.imshow(test_im)
- 
-Classifier
-# This function should take in RGB image input
+</code></pre></div></div>
+
+<p><img src="/images/cv/17.png" /></p>
+
+<p>Classifier</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># This function should take in RGB image input
 def estimate_label(rgb_image):
     
     # Extracting average brightness feature from an RGB image 
@@ -659,9 +708,10 @@ STANDARDIZED_TEST_LIST = standardize(TEST_IMAGE_LIST)
 
 # Shuffle the standardized test data
 random.shuffle(STANDARDIZED_TEST_LIST)
+</code></pre></div></div>
 
-Determining Accuracy
-def get_misclassified_images(test_images):
+<p>Determining Accuracy</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def get_misclassified_images(test_images):
     # Tracking misclassified images by placing them into a list
     misclassified_images_labels = []
 
@@ -689,29 +739,38 @@ accuracy = num_correct/total
 
 print('Accuracy: ' + str(accuracy))
 print("Number of misclassified images = " + str(len(MISCLASSIFIED)) +' out of '+ str(total))
-
-&gt;&gt;&gt; Accuracy: 0.91875
-&gt;&gt;&gt; Number of misclassified images = 13 out of 160
 </code></pre></div></div>
+
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <p>Accuracy: 0.91875
+Number of misclassified images = 13 out of 160</p>
+    </blockquote>
+  </blockquote>
+</blockquote>
 
 <h3 id="image-filters">Image Filters</h3>
 <h4 id="fourier-transforms">Fourier Transforms</h4>
 <p>Các thành phần tần số của hình ảnh có thể được hiển thị sau khi thực hiện Biến đổi Fourier (FT). FT xem xét các thành phần của hình ảnh (các cạnh có tần số cao và các vùng có màu mịn là tần số thấp) và vẽ biểu đồ tần số xuất hiện dưới dạng các điểm trong quang phổ.<br />
-Trên thực tế, FT coi các mẫu cường độ trong hình ảnh là sóng hình sin với một tần số cụ thể và bạn có thể xem hình ảnh trực quan thú vị về các thành phần sóng hình sin này ở đây.<br />
+Trên thực tế, FT coi các mẫu cường độ trong hình ảnh là sóng hình sin với một tần số cụ thể và bạn có thể xem hình ảnh trực quan thú vị về các thành phần sóng hình sin này <a href="https://plus.maths.org/content/fourier-transforms-images">ở đây.</a><br />
 Fourier Transform là một công cụ xử lý hình ảnh quan trọng được sử dụng để phân rã hình ảnh thành các thành phần sin và cosine của nó. Đầu ra của phép biến đổi đại diện cho hình ảnh trong miền Fourier hoặc miền tần số, trong khi hình ảnh đầu vào là miền không gian tương đương. Trong ảnh miền Fourier, mỗi điểm biểu diễn một tần số cụ thể có trong ảnh miền không gian.<br />
 Fourier Transform được sử dụng trong một loạt các ứng dụng, chẳng hạn như phân tích hình ảnh, lọc hình ảnh, tái tạo hình ảnh và nén hình ảnh.<br />
 Và một chút toán học ở đây: 
-Image Transforms - Fourier Transform (ed.ac.uk)
-But what is the Fourier Transform? A visual introduction.</p>
+<a href="https://homepages.inf.ed.ac.uk/rbf/HIPR2/fourier.htm">Image Transforms - Fourier Transform</a>
+<a href="https://www.youtube.com/watch?v=spUNpyF58BY">But what is the Fourier Transform? A visual introduction.</a></p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image_stripes = cv2.imread(IMG_PATH+'images/stripes.jpg')
 image_stripes = cv2.cvtColor(image_stripes, cv2.COLOR_BGR2RGB)
 
 image_solid = cv2.imread(IMG_PATH+'images/pink_solid.jpg')
 image_solid = cv2.cvtColor(image_solid, cv2.COLOR_BGR2RGB)
+</code></pre></div></div>
 
+<p><img src="/images/cv/17.png" /></p>
 
-# Displaying
-f, (ax1,ax2) = plt.subplots(1, 2, figsize=(10,5))
+<h1 id="displaying">Displaying</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f, (ax1,ax2) = plt.subplots(1, 2, figsize=(10,5))
 
 ax1.imshow(image_stripes)
 ax2.imshow(image_solid)
@@ -754,17 +813,24 @@ ax3.set_title('original image')
 ax3.imshow(image_solid)
 ax4.set_title('frequency transform image')
 ax4.imshow(f_solid, cmap='gray')
- 
-image = cv2.imread(IMG_PATH+'images/brain_MR.jpg')
+</code></pre></div></div>
+
+<p><img src="/images/cv/19.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image = cv2.imread(IMG_PATH+'images/brain_MR.jpg')
 
 image_copy = np.copy(image)
 
 image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image_copy)
- 
-# Converting to grayscale for filtering
-gray = cv2.cvtColor(image_copy, cv2.COLOR_RGB2GRAY)
+</code></pre></div></div>
+
+<p><img src="/images/cv/20.png" /></p>
+
+<h1 id="converting-to-grayscale-for-filtering">Converting to grayscale for filtering</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gray = cv2.cvtColor(image_copy, cv2.COLOR_RGB2GRAY)
 
 # Creating a Gaussian blurred image
 gray_blur = cv2.GaussianBlur(gray, (9, 9), 0)
@@ -776,12 +842,13 @@ ax1.imshow(gray, cmap='gray')
 
 ax2.set_title('blurred image')
 ax2.imshow(gray_blur, cmap='gray')
+</code></pre></div></div>
 
- 
+<p><img src="/images/cv/21.png" /></p>
 
-# High-pass filter 
+<h1 id="high-pass-filter">High-pass filter</h1>
 
-# 3x3 sobel filters for edge detection
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 3x3 sobel filters for edge detection
 sobel_x = np.array([[ -1, 0, 1], 
                    [ -2, 0, 2], 
                    [ -1, 0, 1]])
@@ -803,17 +870,21 @@ ax1.imshow(filtered, cmap='gray')
 
 ax2.set_title('blurred image')
 ax2.imshow(filtered_blurred, cmap='gray')
+</code></pre></div></div>
 
- 
+<p><img src="/images/cv/22.png" /></p>
 
-retval, binary_image = cv2.threshold(filtered_blurred, 30, 255, cv2.THRESH_BINAR)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>retval, binary_image = cv2.threshold(filtered_blurred, 30, 255, cv2.THRESH_BINAR)
 
 plt.imshow(binary_image, cmap='gray')
 </code></pre></div></div>
 
+<p><img src="/images/cv/23.png" /></p>
+
 <h3 id="face-detection">Face Detection</h3>
-<p>Một chương trình cũ, nhưng vẫn phổ biến để phát hiện khuôn mặt là bộ phân loại tầng Haar; các bộ phân loại này trong thư viện OpenCV và sử dụng các tầng phân loại dựa trên tính năng học cách cô lập và phát hiện các khuôn mặt trong một hình ảnh. bài báo gốc đề xuất cách tiếp cận này ở đây.
-Và ở đây: OpenCV: Cascade Classifier</p>
+<p>Một chương trình cũ, nhưng vẫn phổ biến để phát hiện khuôn mặt là bộ phân loại tầng Haar; các bộ phân loại này trong thư viện OpenCV và sử dụng các tầng phân loại dựa trên tính năng học cách cô lập và phát hiện các khuôn mặt trong một hình ảnh. bài báo gốc đề xuất cách tiếp cận này <a href="https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf">ở đây.</a>
+Và ở đây: <a href="https://docs.opencv.org/3.4/db/d28/tutorial_cascade_classifier.html">OpenCV: Cascade Classifier</a></p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># loading in color image for face detection
 image = cv2.imread(IMG_PATH+'images/multi_faces.jpg')
 
@@ -822,14 +893,19 @@ image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.figure(figsize=(20,10))
 plt.imshow(image)
+</code></pre></div></div>
 
- 
+<p><img src="/images/cv/24.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 # converting to grayscale
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  
 
 plt.figure(figsize=(20,10))
 plt.imshow(gray, cmap='gray')
 </code></pre></div></div>
+
+<p><img src="/images/cv/25.png" /></p>
 
 <p>Lưu ý ở các tham số.
 Có nhiều khuôn mặt được phát hiện được xác định bởi chức năng detectorMultiScale nhằm mục đích phát hiện các khuôn mặt có kích thước khác nhau. Các đầu vào cho chức năng này là: (image, scaleFactor, minNeighbors); bạn thường sẽ phát hiện nhiều khuôn mặt hơn với scaleFactor nhỏ hơn và giá trị minNeighbors thấp hơn, nhưng việc nâng cao các giá trị này thường tạo ra các kết quả khớp tốt hơn. Sửa đổi các giá trị này tùy thuộc vào hình ảnh đầu vào của bạn.</p>
@@ -844,9 +920,11 @@ print ('We found ' + str(len(faces)) + ' faces in this image')
 print ("Their coordinates and lengths/widths are as follows")
 print ('=============================')
 print (faces)
+</code></pre></div></div>
 
- 
+<p><img src="/images/cv/26.png" /></p>
 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 # một bản sao của hình ảnh gốc để vẽ biểu đồ phát hiện hình chữ nhật
 img_with_detections = np.copy(image)   
 
@@ -859,9 +937,12 @@ plt.figure(figsize=(20,10))
 plt.imshow(img_with_detections)
 </code></pre></div></div>
 
+<p><img src="/images/cv/27.png" /></p>
+
 <h3 id="image-features">Image Features</h3>
 <h4 id="harris-corner-detection">Harris Corner Detection</h4>
 <p>Harris Corner Detection là một thuật toán phát hiện góc thường được sử dụng trong các thuật toán thị giác máy tính để trích xuất các góc và suy ra các đặc điểm của hình ảnh. Nó được giới thiệu lần đầu tiên bởi Chris Harris và Mike Stephens vào năm 1988 sau khi cải tiến máy dò góc của Moravec. So với trước đó, máy dò góc của Harris tính đến sự khác biệt của điểm góc với tham chiếu trực tiếp đến hướng, thay vì sử dụng các bản vá dịch chuyển cho mỗi góc 45 độ và đã được chứng minh là chính xác hơn trong việc phân biệt giữa các cạnh và góc . Kể từ đó, nó đã được cải tiến và áp dụng trong nhiều thuật toán để xử lý trước hình ảnh cho các ứng dụng tiếp theo.</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Read in the image
 image = cv2.imread(IMG_PATH+'images/waffle.jpg')
 
@@ -872,7 +953,11 @@ image_copy = np.copy(image)
 image_copy = cv2.cvtColor(image_copy, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image_copy)
- 
+</code></pre></div></div>
+
+<p><img src="/images/cv/28.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 gray = cv2.cvtColor(image_copy, cv2.COLOR_RGB2GRAY)
 gray = np.float32(gray)
 
@@ -883,7 +968,11 @@ dst = cv2.cornerHarris(gray, 2, 3, 0.04)
 dst = cv2.dilate(dst,None)
 
 plt.imshow(dst, cmap='gray')
- 
+</code></pre></div></div>
+
+<p><img src="/images/cv/29.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 thresh = 0.1*dst.max()
 
 # Creating an image copy to draw corners on
@@ -899,21 +988,31 @@ for j in range(0, dst.shape[0]):
 plt.imshow(corner_image)
 </code></pre></div></div>
 
+<p><img src="/images/cv/30.png" /></p>
+
 <h4 id="contour-detection">Contour Detection</h4>
-<p>Mỗi contour đều có một số đặc điểm có thể được tính toán, bao gồm diện tích của contour, hướng của nó (hướng mà hầu hết contour hướng vào), chu vi và nhiều thuộc tính khác được nêu trong OpenCV documentation.</p>
+<p>Mỗi contour đều có một số đặc điểm có thể được tính toán, bao gồm diện tích của contour, hướng của nó (hướng mà hầu hết contour hướng vào), chu vi và nhiều thuộc tính khác được nêu trong <a href="https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html">OpenCV documentation.</a></p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image = cv2.imread(IMG_PATH+'images/thumbs_up_down.jpg')
 
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
- 
-gray = cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
+</code></pre></div></div>
+
+<p><img src="/images/cv/31.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gray = cv2.cvtColor(image,cv2.COLOR_RGB2GRAY)
 
 # Binary thresholded image
 retval, binary = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY_INV)
 
 plt.imshow(binary, cmap='gray')
- 
+</code></pre></div></div>
+
+<p><img src="/images/cv/32.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 # Finding contours from thresholded, binary image
 contours, hierarchy = cv2.findContours(binary, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -923,6 +1022,9 @@ contours_image = cv2.drawContours(contours_image, contours, -1, (0,255,0), 3)
 
 plt.imshow(contours_image)
 </code></pre></div></div>
+
+<p><img src="/images/cv/33.png" /></p>
+
 <h4 id="k-means-clustering">K-Means Clustering</h4>
 <p>Phân cụm K-mean là một phương pháp lượng tử hóa vectơ, ban đầu từ xử lý tín hiệu, nhằm mục đích phân chia n quan sát thành k cụm trong đó mỗi quan sát thuộc về cụm có giá trị trung bình gần nhất (cluster centers hoặc cluster centroid), đóng vai trò là nguyên mẫu của cụm. Điều này dẫn đến việc phân vùng không gian dữ liệu thành các ô Voronoi (Voronoi cells). Phân cụm K-mean giảm thiểu các phương sai trong cụm (bình phương khoảng cách Euclide), nhưng không phải khoảng cách Euclid thông thường, đây sẽ là bài toán Weber khó hơn: giá trị trung bình tối ưu hóa sai số bình phương, trong khi chỉ có trung vị hình học giảm thiểu khoảng cách Euclid. Ví dụ, các giải pháp Euclid tốt hơn có thể được tìm thấy bằng cách sử dụng k-medians và k-medoid.
 Ứng dụng của thuật toán K-mean rất nhiều, trong đó có việc nén dung lượng ảnh mà không làm mất đi quá nhiều chất lượng ảnh (image compression), feature learning, cluster analysis, vector quantization…</p>
@@ -931,7 +1033,11 @@ plt.imshow(contours_image)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
- 
+</code></pre></div></div>
+
+<p><img src="/images/cv/34.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 # Reshaping image into a 2D array of pixels and 3 color values (RGB)
 pixel_vals = image.reshape((-1,3))
 
@@ -953,15 +1059,23 @@ segmented_image = segmented_data.reshape((image.shape))
 labels_reshape = labels.reshape(image.shape[0], image.shape[1])
 
 plt.imshow(segmented_image)
- 
-Image Pyramids
-Image Pyramids (pyramid - Kim tự tháp), là một loại biểu diễn tín hiệu đa tỷ lệ được phát triển bởi cộng đồng xử lý tín hiệu, xử lý hình ảnh và thị giác máy tính, trong đó một tín hiệu hoặc hình ảnh phải được làm mịn và lấy mẫu con lặp lại. Biểu diễn kim tự tháp là tiền thân của biểu diễn không gian quy mô và phân tích đa giải.
-image = cv2.imread(IMG_PATH+'images/rainbow_flag.jpg')
+</code></pre></div></div>
+
+<p><img src="/images/cv/35.png" /></p>
+
+<p>Image Pyramids
+Image Pyramids (pyramid - Kim tự tháp), là một loại biểu diễn tín hiệu đa tỷ lệ được phát triển bởi cộng đồng xử lý tín hiệu, xử lý hình ảnh và thị giác máy tính, trong đó một tín hiệu hoặc hình ảnh phải được làm mịn và lấy mẫu con lặp lại. Biểu diễn kim tự tháp là tiền thân của biểu diễn không gian quy mô và phân tích đa giải.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>image = cv2.imread(IMG_PATH+'images/rainbow_flag.jpg')
 
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
 plt.imshow(image)
- 
+</code></pre></div></div>
+
+<p><img src="/images/cv/36.png" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> 
 level_1 = cv2.pyrDown(image)
 level_2 = cv2.pyrDown(level_1)
 level_3 = cv2.pyrDown(level_2)
@@ -984,8 +1098,12 @@ ax4.imshow(level_3)
 ax4.set_xlim([0, image.shape[1]])
 ax4.set_ylim([0, image.shape[0]])
 </code></pre></div></div>
+
+<p><img src="/images/cv/37.png" /></p>
+
 <h4 id="convolutional-neural-networks">Convolutional Neural Networks</h4>
 <p>Trong deep learning, mạng nơ-ron phức hợp (CNN, hoặc ConvNet) là một lớp mạng nơ-ron nhân tạo, được áp dụng phổ biến nhất để phân tích hình ảnh trực quan. Chúng còn được gọi là mạng nơ-ron nhân tạo bất biến hoặc bất biến trong không gian (SIANN), dựa trên kiến trúc trọng số chia sẻ của các nhân hoặc bộ lọc tích chập trượt dọc theo các tính năng đầu vào và cung cấp các phản hồi tương đương dịch được gọi là bản đồ đối tượng. Về mặt phản trực giác, hầu hết các mạng nơ-ron tích chập chỉ tương đương, trái ngược với bất biến, đối với phép dịch. Họ có các ứng dụng trong nhận dạng hình ảnh và video, hệ thống khuyến nghị, phân loại hình ảnh, phân đoạn hình ảnh, phân tích hình ảnh y tế, xử lý ngôn ngữ tự nhiên, và chuỗi thời gian tài chính…</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>img_path = IMG_PATH+'images/car.png'
 
 bgr_img = cv2.imread(img_path)
@@ -995,9 +1113,13 @@ gray_img = gray_img.astype("float32")/255
 
 plt.imshow(gray_img, cmap='gray')
 plt.show()
- 
-Filters
-Một vài filter thường xử dụng để biến đổi hình ảnh qua phép tích chập
+</code></pre></div></div>
+
+<p><img src="/images/cv/38.png" /></p>
+
+<p>Filters</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Một vài filter thường xử dụng để biến đổi hình ảnh qua phép tích chập
 filter_vals = np.array([[-1, -1, 1, 1], [-1, -1, 1, 1], [-1, -1, 1, 1], [-1, -1, 1, 1]])
 # defining four filters
 filter_1 = filter_vals
@@ -1018,9 +1140,16 @@ for i in range(4):
                         horizontalalignment='center',
                         verticalalignment='center',
                         color='white' if filters[i][x][y]&lt;0 else 'black')
- 
-Pytorch for Deep Learning
-import torch
+                        
+                        
+                        
+</code></pre></div></div>
+
+<p><img src="/images/cv/39.png" /></p>
+
+<p>Pytorch for Deep Learning</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -1028,10 +1157,12 @@ import torch.nn.functional as F
 from torchvision.datasets import FashionMNIST
 from torch.utils.data import DataLoader
 from torchvision import transforms
+</code></pre></div></div>
 
-Convolutional layer
-Single convolutional layer chứa tất cả các bộ lọc đã tạo. Khởi tạo các trọng số trong một lớp phức hợp để có thể hình dung những gì xảy ra sau khi chuyển tiếp qua mạng này!
-# neural network with a single convolutional layer with four filters
+<p>Convolutional layer
+Single convolutional layer chứa tất cả các bộ lọc đã tạo. Khởi tạo các trọng số trong một lớp phức hợp để có thể hình dung những gì xảy ra sau khi chuyển tiếp qua mạng này!</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># neural network with a single convolutional layer with four filters
 class Net(nn.Module):
     
     def __init__(self, weight):
@@ -1089,6 +1220,10 @@ conv_layer, activated_layer = model(gray_img_tensor)
 # visualizing the output of a conv layer
 viz_layer(conv_layer)
 </code></pre></div></div>
+
+<p><img src="/images/cv/40.png" />
+<img src="/images/cv/41.png" />
+<img src="/images/cv/42.png" /></p>
 
 <h4 id="pooling-layer">Pooling Layer</h4>
 <p>Pooling Layer cung cấp một cách tiếp cận để down sampling feature maps bằng cách tóm tắt sự hiện diện của feature maps trong patchs của feature maps. Hai phương pháp tổng hợp phổ biến là pooling và max pooling tóm tắt sự hiện diện trung bình của một feature và sự hiện diện được kích hoạt nhiều nhất của một feature tương ứng.</p>
@@ -1149,7 +1284,12 @@ viz_layer(pooled_layer)
 
 </code></pre></div></div>
 
-<h3 id="opencv">OpenCV</h3>
+<p><img src="/images/cv/43.png" />
+<img src="/images/cv/44.png" />
+<img src="/images/cv/45.png" />
+<img src="/images/cv/46.png" /></p>
+
+<h3 id="ps">P/S</h3>
 <p>Trong khuôn khổ bài viết này, mình đã đề cập tới một số phương pháp thường sử dụng trong việc xử lý ảnh. OpenCV là một thư viện rất mạnh hỗ trợ các hàm xử lý ảnh. Việc xử dụng thành thạo OpenCV sẽ là một lợi thế mạnh trong việc xử lý ảnh và tiền xử lý data raw cho các mô hình Máy học cũng như các mô hình học sâu.<br />
 Mình vừa kết thúc phần 1. Phần 2 (từ CNN tới SOTA) mình sẽ cố gắng dành thời gian để viết về nó một cách ngắn và dễ hiểu nhất (mình cũng chưa biết khi nào xong vì nó thực sự quá nhiều và quá dài 🙁). Computer Vision là một lĩnh vực rất rất lớn, trong khuôn khổ 1, 2 bài viết không thể hoàn toàn bao phủ hết về nó, chỉ mong qua bài viết của mình, các bạn có thêm nhiều động lực để tìm hiểu về thị giác máy tính.<br />
 Có thể trong quá trình viết có sai sót, hi mọi người cùng sửa chữa để mọi thứ tốt hơn.</p>
@@ -1157,7 +1297,7 @@ Có thể trong quá trình viết có sai sót, hi mọi người cùng sửa c
   <div class="gallery">
     <img src="/images/admin/minh.jpg" />
   </div>
-  <em>NLP/ <a href="https://fb.com/itmobrain" target="_blank">ITMO Brain</a></em>
+  <em>Computer Vision/ <a href="https://fb.com/itmobrain" target="_blank">ITMO Brain</a></em>
 </div>
 <blockquote>
   <p><cite>Thanks for reading. <br />
@@ -1166,8 +1306,9 @@ Minh!&lt;/cite</cite></p>
 
 <h4 id="useful-linksbooks">Useful links/Books:</h4>
 <p><a href="https://www.amazon.com/Computer-Vision-Algorithms-Applications-Science/dp/1848829345">Computer Vision: Algorithms and Applications (Texts in Computer Science): Szeliski, Richard </a><br />
-(highly recommend vì cuốn sách này tuy cực kỳ hàn lâm nhưng nó là cuốn sách rất rất hay)
-<a href="https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf">Rapid Object Detection using a Boosted Cascade of Simple Features </a><br />
+(highly recommend vì cuốn sách này tuy cực kỳ hàn lâm nhưng nó là cuốn sách rất rất hay)</p>
+
+<p><a href="https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf">Rapid Object Detection using a Boosted Cascade of Simple Features </a><br />
 <a href="https://www.geeksforgeeks.org/opencv-python-tutorial/">OpenCV Python Tutorial - GeeksforGeeks</a><br />
 <a href="https://www.projectpro.io/article/opencv-projects-ideas-/492">15 OpenCV Projects Ideas for Beginners to Practice in 2021 (projectpro.io)</a><br />
 <a href="https://www.pyimagesearch.com/start-here/">Start Here with Computer Vision, Deep Learning, and OpenCV - PyImageSearch</a><br />

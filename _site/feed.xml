@@ -5,9 +5,497 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Thu, 02 Dec 2021 14:36:32 +0300</pubDate>
-        <lastBuildDate>Thu, 02 Dec 2021 14:36:32 +0300</lastBuildDate>
+        <pubDate>Fri, 10 Dec 2021 02:51:40 +0300</pubDate>
+        <lastBuildDate>Fri, 10 Dec 2021 02:51:40 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Con trỏ</title>
+                <description>&lt;h2 id=&quot;cơ-bản&quot;&gt;Cơ bản&lt;/h2&gt;
+&lt;h3 id=&quot;lời-mở-đầu&quot;&gt;Lời mở đầu&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Con trỏ thường được nêu ra trong những cuộc tranh cãi là phần khó hiểu nhất của C. Nhưng nó lại là tính năng mà khiến C trở thành một ngôn ngữ mạnh mẽ. Trong bài viết này, chúng ta sẽ cùng đi từ những khái niệm đơn giản nhất về con trỏ và cách sử dụng của nó với mảng, string, hàm.&lt;br /&gt;
+Nào, cùng dành khoảng 30 phút, thư giãn, rót một ly coffee, và bắt đầu tìm hiểu về con trỏ nhé&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;khái-niệm-về-biến-giá-trị-của-biến-địa-chỉ-của-biến&quot;&gt;Khái niệm về biến, giá trị của biến, địa chỉ của biến&lt;/h3&gt;
+&lt;p&gt;Để hiểu cách sử dụng của con trỏ, chúng ta cần nắm vững khái niệm về địa chỉ ở trong C. &lt;br /&gt;
+Điều gì sẽ xảy ra khi chúng ta viết dòng code dưới đây?&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int digit = 42;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ở dòng code trên, chúng ta đã khai báo 1 biến kiểu &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; có tên là &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digit&lt;/code&gt; với giá trị là &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;42&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Về mặt tổ chức bộ nhớ, chúng ta đã lấy ra 1 khối bộ nhớ (block of memory), đặt tên cho nó là &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digit&lt;/code&gt; và gán giá trị cho khối bộ đó là &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;42&lt;/code&gt;. Vì được khai báo là kiểu &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt; nên khối này chiếm 4 bytes liên tiếp nhau trong bộ nhớ máy tính.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pointer2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Khối bộ nhớ này được gán với 1 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;địa chỉ&lt;/code&gt; (address). Giá trị của địa chỉ này không quá quan trọng với chúng ta, vì nó là 1 giá trị random nào đó mà được máy tính tự động sinh ra. Nhưng, chúng ta có thể truy cập vào địa chỉ này bằng cách sử dụng toán tử &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printf(&quot;dia chi cua bien digit: = %d&quot;,&amp;amp;digit);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Lưu ý: Các bạn có thể nhận được các địa chỉ khác nhau mỗi khi chạy dòng code trên do việc tổ chức bộ nhớ này được ngẫu nhiên thực hiện bởi máy tính.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;truy-cập-giá-trị-của-biến-thông-qua-địa-chi&quot;&gt;Truy cập giá trị của biến thông qua địa chi&lt;/h4&gt;
+&lt;p&gt;Để truy cập giá trị của biến thông qua địa chỉ, sử dụng toán tử *.&lt;/p&gt;
+
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int digit = 42;
+printf(&quot;Dia chi cua bien digit: %d\n&quot;, &amp;amp;digit);
+printf(&quot;Gia tri cua bien digit: %d\n&quot;, *(&amp;amp;digit));
+
+
+Output:
+dia chi cua bien digit: 6422300
+gia tri cua bien digit: 42
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Vậy tóm lại biến là một thứ dùng để lưu giá trị, biến được lưu trong bộ nhớ và được cấp phát 1 địa chỉ riêng cho biến đó. Muốn biết địa chỉ của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; là gì thì sử dụng toán tử &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;x&lt;/code&gt;. Muốn truy cập giá trị của biến thông qua địa chỉ, sử dụng toán tử &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;con-trỏ&quot;&gt;Con trỏ&lt;/h3&gt;
+&lt;h4 id=&quot;định-nghĩa&quot;&gt;Định nghĩa:&lt;/h4&gt;
+&lt;p&gt;Con trỏ trong C cũng chỉ là một biến, mang đầy đủ các chức năng mà một biến bình thường trong C có. Ví dụ như là có thể khai báo, khởi tạo và lưu trữ giá trị cũng như là có giá trị riêng của nó. Nhưng biến con trỏ không chỉ dùng để lưu một giá trị bình thường, nó là biến trỏ tới 1 địa chỉ khác, tức giá trị nó lưu là 1 địa chỉ của 1 ô nhớ khác.
+ &lt;img src=&quot;/images/pointer1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Chúng ta cùng thống nhất 1 số khái niệm khi làm việc với con trỏ nhé:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Giá trị của con trỏ: địa chỉ mà con trỏ trỏ đến.&lt;/li&gt;
+  &lt;li&gt;Địa chỉ của con trỏ: Địa chỉ của bản thân biến con trỏ đó&lt;/li&gt;
+  &lt;li&gt;Giá trị của biến nơi con trỏ đang trỏ tới&lt;/li&gt;
+  &lt;li&gt;Địa chỉ của biến nơi con trỏ đang trỏ tới = giá trị của con trỏ.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Như ở hình phía trên, các bạn có thể thấy con trỏ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pointer&lt;/code&gt; lưu giá trị và &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;24650&lt;/code&gt; và giá trị này chính xác là địa chỉ của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digit&lt;/code&gt;. Khi này ta nói, con trỏ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pointer&lt;/code&gt; trỏ đến địa chỉ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;24650&lt;/code&gt; hoặc trỏ tới biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;digit&lt;/code&gt;.
+Cách khai báo&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;` &amp;lt;kiểu dữ liệu&amp;gt; * &amp;lt;tên biến&amp;gt;`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Tương tự như các biến bình thường, con trỏ cũng phải có kiểu dữ liệu và tên biến, tuy nhiên điều khác biệt là dấu * trước tên biến, đây là ký hiệu báo cho trình biên dịch biết ta đang khai báo con trỏ.&lt;/p&gt;
+
+&lt;p&gt;Những kiểu dữ liệu có thể là: void, int, float, double….
+Tên con trỏ phải được đặt tuân theo quy tắc đặt tên biến như bình thường.
+        - Ví dụ:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int *ptr_int; // khai báo con trỏ để trỏ tới biến kiểu int
+char *ptr_char; // khai báo con trỏ để trỏ tới biến kiểu char
+float *ptr_float;//khai báo con trỏ để trỏ tới biến kiểu float
+void *ptr_void; // khai báo con trỏ kiểu void có thể trỏ tới mọi kiểu dữ liệu
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;cách-gán-giá-trị&quot;&gt;Cách gán giá trị&lt;/h4&gt;
+
+&lt;p&gt;Sau khi khai báo con trỏ, cũng giống như 1 biến bình thường, ta cần khởi tạo giá tri cho nó. 
+Ví dụ:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int *ptr; // khai báo con trỏ
+int digit = 42; // khai báo biến digit mang giá trị là 42
+ptr = &amp;amp;digit; // gán giá trị của con trỏ = địa chỉ của biến digit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Hoặc:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char c = ‘a’; // khai báo biến c kiểu char mang giá trị là ‘a’
+char *ptr = &amp;amp;c; // khai báo con trỏ kiểu char đồng thời khởi tạo giá trị của nó bằng địa chỉ của biến c
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Lưu ý:&lt;br /&gt;
+Con trỏ được khai báo là kiểu dữ liệu gì thì chỉ có thể trỏ tới biến có cùng kiểu giá trị đó ( trừ con trỏ mang kiểu void mà chúng ta sẽ đề cập ngay sau đây)&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;tham-chiếu-ngược-dereference&quot;&gt;Tham chiếu ngược (dereference)&lt;/h4&gt;
+&lt;p&gt;Khi chúng ta tham chiếu ngược (dereference) một địa chỉ, nó trả lại giá trị lưu trong địa chỉ ô nhớ đó. Vì bản chất con trỏ lưu địa chỉ, nên việc tham chiếu ngược tới con trỏ sẽ truy cập được giá trị của địa chỉ mà con trỏ trỏ tới.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Cú pháp  `*[tên_con_trỏ]`
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ví dụ:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int digit = 42;//khai báo biến kiểu int mang giá trị là 42
+Int *ptr = &amp;amp;digit; // khai báo con trỏ kiểu int đồng thời khởi tạo giá trị của nó bằng địa chỉ của biến digit
+printf(&quot;Gia tri khi tham chieu nguoc = %d\n&quot;, *ptr);
+
+Output: Gia tri khi tham chieu nguoc = 42
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;con-trỏ-rác--null-pointer&quot;&gt;Con trỏ rác ( Null Pointer)&lt;/h4&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int *null_ptr; // con tro rac
+int digit = 42;
+int *ptr = &amp;amp;digit;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Hãy ghi nhớ rằng chúng ta không nên để một con trỏ là rác ( tức là không được khởi tạo giá trị). Một con trỏ rác là con trỏ không trỏ tới cái gì cả, nếu bạn sử dụng nó thì nó sẽ trỏ tới 1 địa chỉ ` ngẫu nhiên ` nào đó và sẽ thật là nguy hiểm nếu địa chỉ đó đang được sử dụng với 1 mục đích khác.&lt;/p&gt;
+
+&lt;p&gt;Để đảm bảo rằng chúng ta không có con trỏ rác, hãy khởi tạo cho con trỏ với giá trị &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NULL&lt;/code&gt;, và mục đích là để sử dụng sau này nếu cần thiết.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int *ptr = NULL;
+Hoặc
+int *ptr = nullptr;
+
+
+    
+        Con trỏ Void ( Void Pointer)
+            Một con trỏ void được sử dụng để trỏ tới biến có bất kỳ kiểu dữ liệu nào. Nó có thể tái sử dụng với bất kỳ biến nào mà chúng ta muốn. Nó được khai báo như sau:
+        
+void *ptr_void = nullptr;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Với sự “tiện lợi”, con trỏ void cũng mang tới những giới hạn ràng buộc. Bạn không thể lấy giá trị của địa chỉ mà con trỏ void trỏ tới nếu không ép kiểu tường minh.&lt;/p&gt;
+
+&lt;p&gt;Ví dụ&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;void *ptr_void = nullptr;
+int number = 54;
+ptr_void = &amp;amp;number;
+printf(&quot;Gia tri cua number = %d\n&quot;, *ptr_void); // bien dich loi
+printf(&quot;Gia tri cua number = %d\n&quot;, *(int *)ptr_void);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;bản-chất-của-con-trỏ-trong-c&quot;&gt;Bản chất của con trỏ trong C&lt;/h3&gt;
+
+&lt;p&gt;Để hiểu về sức mạnh của con trỏ, hãy cùng xem xét ví dụ sau:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int number = 54;
+int ptr = &amp;amp;number;
+printf(&quot;Gia tri cua number = %d\n&quot;, number); // 54
+printf(&quot;Dia chi cua number = %d\n&quot;, &amp;amp;number); // 6422300
+printf(&quot;Gia tri cua con tro = %d\n&quot;, ptr); // 6422300
+printf(&quot;Dia chi cua con tro = %d\n&quot;, &amp;amp;ptr); // 6422296
+printf(&quot;Gia tri cua bien ma con tro p dang tro toi = %d\n&quot;, *ptr); // 54
+
+*ptr = 100; // thay doi gia tri cua con tro
+printf(“\n”);
+printf(&quot;Gia tri cua number = %d\n&quot;, number); //100
+printf(&quot;Gia tri cua bien ma con tro p dang tro toi = %d\n&quot;, *ptr); // 100
+
+number = 1000;
+printf(“\n”);
+printf(&quot;Gia tri cua number = %d\n&quot;, number); //1000
+printf(&quot;Gia tri cua bien ma con tro p dang tro toi = %d\n&quot;, *ptr); // 1000
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Qua ví dụ trên chúng ta có thể đưa ra kết luận sau đây:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt; Con trỏ có thể thay đổi trực tiếp giá trị của biến mà nó đang trỏ tới
+Khi thay đổi giá trị của biến, thì rõ ràng nếu tồn tại con trỏ ptr trỏ tới biến đó thì *ptr cũng sẽ thay đổi theo giá trị của biến.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;các-lỗi-thường-gặp&quot;&gt;Các lỗi thường gặp&lt;/h4&gt;
+&lt;p&gt;Nhầm lẫn giữa địa chỉ và giá trị. Con trỏ là biến trỏ tới địa chỉ, không phải giá trị&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int number = 54;
+int *ptr = number; // sai vi number la gia tri
+int *ptr = &amp;amp;number; // dung vi number la dia chi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Có thể các bạn sẽ không phân biệt được dấu * khi khai báo con trỏ và khi truy cập vào giá trị của địa chỉ mà con trỏ đang trỏ tới.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int number = 54;
+int *ptr = &amp;amp;number; // *ptr mang y nghia la khai bao con tro
+*ptr = 100; // *ptr mang y nghia la truy cap gia tri cua dia chi ma con tro dang tro toi
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;b-mối-quan-hệ-của-con-trỏ-và-mảng-chuỗi&quot;&gt;B. Mối quan hệ của con trỏ và mảng, chuỗi&lt;/h2&gt;
+&lt;h3 id=&quot;tại-sao-lại-là-con-trỏ-và-mảng&quot;&gt;Tại sao lại là con trỏ và mảng?&lt;/h3&gt;
+&lt;p&gt;Trong C, con trỏ và mảng có mối quan hệ rất gần gũi và mạnh mẽ với nhau. Thông thường bạn có thể truy cập phần tử mảng bằng cách arrayName[index], tuy nhiên con trỏ cung cấp cho chúng ta cách để truy cập đến các phần tử của mảng nhanh hơn và tối ưu hơn. Cụ thể hãy cùng mình tìm hiểu tiếp nhé!&lt;/p&gt;
+&lt;h4 id=&quot;mảng-1-chiều&quot;&gt;Mảng 1 chiều&lt;/h4&gt;
+&lt;p&gt;Hãy cùng xem điều gì xảy ra nếu chúng ta viết &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int myArrray[5];&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;5 khối bộ nhớ liên tiếp bắt đầu từ myArray[0] tới myArray[4] được tạo ra với những giá trị rác chứa bên trong nó (do chưa khởi tạo). Mỗi khối bộ nhớ có kích thước là 4 bytes ( do là kiểu int).&lt;/p&gt;
+
+&lt;p&gt;Do đó, nếu địa chỉ của myArray[0] là &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;100&lt;/code&gt;, thì địa chỉ của các ô còn lại lần lượt là 104, 108, 112 và 116.&lt;/p&gt;
+
+&lt;p&gt;Hãy cùng xem xét ví dụ sau:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int prime[5] = {2,3,5,7,11};
+printf(&quot;Ket qua khi dung &amp;amp;prime = %d\n&quot;,&amp;amp;prime);
+printf(&quot;Ket qua khi dung prime = %d\n&quot;,prime);
+printf(&quot;Ket qua khi dung &amp;amp;prime[0] = %d\n&quot;,&amp;amp;prime[0]);
+
+
+/* Output */
+Ket qua khi dung &amp;amp;prime = 6422016
+Ket qua khi dung prime = 6422016
+Ket qua khi dung &amp;amp;prime[0] = 6422016
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;prime, prime và &amp;amp;prime[0]&lt;/code&gt; tất cả cùng trỏ đến một địa chỉ, phải không? Đúng vậy, nhưng đợi đã, có một điều bất ngờ ( nhưng cũng có thể gây bối rối).&lt;/p&gt;
+
+&lt;p&gt;Hãy cùng cộng vào mỗi con trỏ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;prime, prime, và &amp;amp;prime[0]&lt;/code&gt; thêm 1&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printf(&quot;Ket qua khi dung &amp;amp;prime = %d\n&quot;,&amp;amp;prime + 1);
+printf(&quot;Ket qua khi dung prime = %d\n&quot;,prime + 1);
+printf(&quot;Ket qua khi dung &amp;amp;prime[0] = %d\n&quot;,&amp;amp;prime[0] + 1);
+
+    /* Output */
+Ket qua khi dung &amp;amp;prime = 6422036
+Ket qua khi dung prime = 6422020
+Ket qua khi dung &amp;amp;prime[0] = 6422020
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Wow! Tại sao &amp;amp;prime + 1 lại cho ra giá trị khác với 2 cái còn lại? Và tại sao prime + 1 và &amp;amp;prime[0] + 1 lại vẫn bằng nhau? Hãy cùng trả lời nhé.&lt;/p&gt;
+
+&lt;p&gt;Bản thân biến mảng (trong trường hợp này là &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prime&lt;/code&gt;) là một con trỏ trỏ tới phần tử đầu tiên của mảng (phần tử ở vị trí 0). Do đó trong ví dụ trên chúng ta thấy prime và &amp;amp;prime[0] có giá trị giống nhau. Vì bản chất đều trỏ tới phần tử đầu tiên của mảng. Ở đây, cả hai con trỏ trỏ tới phần tử đầu tiên có kích thước 4 bytes. Khi bạn thêm 1 vào chúng, chúng sẽ trỏ tới phần tử thứ 1 của mảng. Do đó kết quả là địa chỉ được cộng thêm 4.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;prime&lt;/code&gt;, ở khía cạnh khác, là 1 con trỏ tới mảng int có kích thước 5. Nó lưu địa chỉ “gốc” của mảng prime[5], địa chỉ này ban đầu bằng với địa chỉ của phần tử đầu tiên của mảng. Tuy nhiên, khi cộng thêm 1 sẽ có kết quả lại là địa chỉ cũ cộng thêm 5 x 4 = 20 bytes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Tóm lại, arrayName và arrayName[0] trỏ tới phần tử đầu tiên trong khi &amp;amp;arrayName trỏ tới toàn bộ mảng&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Chúng ta có thể truy cập phần tử của mảng khi sử dụng chỉ số như sau:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int prime[5] = {2,3,5,7,11};
+for( int i = 0; i &amp;lt; 5; i++)
+{
+  printf(&quot;Chi so = %d, Dia chi= %d, Gia tri= %d\n&quot;, i, &amp;amp;prime[i], prime[i]);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Chúng ta có thể dùng con trỏ, điều này sẽ nhanh hơn sử dụng chỉ số:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int prime[5] = {2,3,5,7,11};
+for( int i = 0; i &amp;lt; 5; i++)
+{
+  printf(&quot;Chi so = %d, Dia chi= %d, Gia tri= %d\n&quot;, i, prime + i, *(prime + i));
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Cả 2 cách đều cho output là:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Chi so= 0, Dia chi= 6422016, Gia tri= 2
+Chi so= 1, Dia chi= 6422020, Gia tri= 3
+Chi so= 2, Dia chi= 6422024, Gia tri= 5
+Chi so= 3, Dia chi= 6422028, Gia tri= 7
+Chi so= 4, Dia chi= 6422032, Gia tri= 11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;string&quot;&gt;String&lt;/h4&gt;
+&lt;p&gt;Mỗi chuỗi (string) là 1 mảng 1-chiều gồm các ký tự và được kết thúc bởi ký tự null (\0). Khi chúng ta viết &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;char name[] = “ITMO_BRAIN”;&lt;/code&gt; , mỗi ký tự chiếm 1 byte trong bộ nhớ và mặc định ký tự cuối cùng luôn luôn phải là&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\0&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tương tự như với mảng chúng ta đã làm phía trên, name và &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;name[0]&lt;/code&gt; trỏ tới ký từ thứ 0 của chuỗi, trong khi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;amp;name&lt;/code&gt;trỏ tới toàn bộ chuỗi. Tương tự, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name[i]&lt;/code&gt; cũng có thể viết thành &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*(name +i)&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;char champions[] = &quot;Liverpool&quot;;
+
+printf(&quot;Địa chỉ của cả chuỗi = %d\n&quot;, &amp;amp;champions);
+printf(&quot;Giá trị sau khi thêm 1 %d\n&quot;, &amp;amp;champions + 1);
+/* Output */
+Địa chỉ của cả chuỗi = 6421974
+Giá trị sau khi thêm 1 =  6421984
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printf(&quot;Địa chỉ của phần tử đầu tiên = %d\n&quot;, &amp;amp;champions[0]);
+printf(&quot;Giá trị sau khi cộng 1 vào địa chỉ của phần tử đầu tiên  %d\n&quot;, &amp;amp;champions[0] + 1);
+/* Output */
+Địa chỉ của phần tử đầu tiên = 6421974
+Giá trị sau khi cộng 1 vào địa chỉ của phần tử đầu tiên = 6421975
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printf(&quot;Địa chỉ của phần tử đầu tiên = %d\n&quot;, champions);
+printf(&quot;Giá trị sau khi cộng 1 vào địa chỉ của phần tử đầu tiên %d\n&quot;, champions + 1);
+
+/* Output */
+Địa chỉ của phần tử đầu tiên = 6421974
+Giá trị sau khi cộng 1 vào địa chỉ của phần tử đầu tiên 6421975
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;printf(&quot;Giá trị của ký tự thứ 4 = %c\n&quot;, champions[4]);
+printf(&quot;Giá trị của ký tự thứ 4 dùng con trỏ = %c\n&quot;, *(champions + 4));
+
+/* Output */
+Giá trị của ký tự thứ 4 = r
+Giá trị của ký tự thứ 4 dùng còn trỏ = r
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;mảng-các-con-trỏ&quot;&gt;Mảng các con trỏ&lt;/h4&gt;
+&lt;p&gt;Như một mảng int và mảng char, chúng ta cũng có mảng các con trỏ. Loại mảng này đơn giản là tập hợp của các địa chỉ ô nhớ. Những ô nhớ này có thể trỏ tới các giá trị riêng lẻ hoặc cũng có thể trỏ tới các mảng khác.&lt;/p&gt;
+
+&lt;p&gt;Cú pháp để khai báo mảng con trỏ:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dataType *variableName[size];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* Examples */
+int *example1[5]; // khai báo mảng example1 chứa 5 con trỏ kiểu int
+char *example2[8];// khai báo mảng example2 chứa 8 con trỏ kiểu char
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;con-trỏ-trỏ-tới-mảng&quot;&gt;Con trỏ trỏ tới mảng&lt;/h4&gt;
+&lt;p&gt;Cũng giống như “con trỏ tới int” hoặc “con trỏ tới char”, chúng ta cũng có con trỏ trỏ tới mảng. Loại con trỏ này trỏ tới toàn mảng hoặc các phần tử của mảng đó.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Note: Kiến thức ở phần trước, &amp;amp;arrayName trỏ tới toàn bộ mảng.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Một con trỏ trỏ tới mảng có thể khai báo như sau:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;dataType (*variableName)[size];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* Examples */
+int (*ptr1)[5];
+char (*ptr2)[15];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Lưu ý: dấu ngoặc tròn () . Nếu không có nó, những gì chúng ta khai báo sẽ trở thành mảng các con trỏ chứ không phải con trỏ trỏ tới mảng.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Trong ví dụ thứ nhất thì ptr1 là con trỏ trỏ tới mảng chứa 5 số nguyên ( 5 integers).&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int goals[] = { 85,102,66,69,67};
+int (*pointerToGoals)[5] = &amp;amp;goals;
+printf(&quot;Địa chỉ lưu trong pointerToGoals %d\n&quot;, pointerToGoals);
+printf(&quot;giá trị %d\n&quot;,*pointerToGoals);
+
+/* Output */
+Địa chỉ lưu trong pointerToGoals 6422016
+Giá trị 6422016
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Khi chúng ta tham chiếu ngược (dereference) một con trỏ, nó trả lại giá trị lưu trong địa chỉ ô nhớ đó. Tương tự, khi tham chiếu ngược một con trỏ tới mảng, chúng ta có được mảng và tên của mảng trỏ tới địa chỉ gốc. Nếu chúng ta tham chiếu ngược 1 lần nữa, chúng ta sẽ nhận được giá trị lưu trong địa chỉ đó. Chúng ta thử in chúng ra bằng cách sử dụng &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pointerToGoals&lt;/code&gt; nhé.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for(int i = 0; i &amp;lt; 5; i++)
+printf(&quot;%d &quot;, *(*pointerToGoals + i));
+
+/* Output */
+85 102 66 69 67
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;c-sử-dụng-con-trỏ-với-hàm-trong-lập-trình-c&quot;&gt;C. Sử dụng con trỏ với hàm trong lập trình C&lt;/h2&gt;
+
+&lt;h3 id=&quot;truyền-tham-số-cho-hàm-bằng-tham-trị-và-tham-chiếu&quot;&gt;Truyền tham số cho hàm bằng tham trị và tham chiếu&lt;/h3&gt;
+
+&lt;p&gt;Truyền tham số bằng tham trị tức là truyền bản sao của biến vào hàm để xử lý. Bản sao của một biến mang giá trị bằng giá trị của biến đó.&lt;/p&gt;
+
+&lt;p&gt;Ví dụ&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void truyen_tham_tri(int x){
+  x++;
+  printf(&quot;\nDia chi cua x = %d&quot;, &amp;amp;x);
+}
+
+int main(){
+int a = 3; 
+      printf(&quot;\nDia chi cua a = %d&quot;, &amp;amp;a);
+printf(&quot;\nGia tri cua a truoc khi goi ham = %d&quot;, a);
+truyen_tham_tri(a);
+printf(&quot;\nGia tri cua a sau khi goi ham = %d&quot;, a);
+
+ /* output
+Dia chi cua a = -392092044
+Gia tri cua a truoc khi goi ham = 3
+Dia chi cua x = -392092068
+Gia tri cua a sau khi goi ham = 3
+
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Như bạn thấy, khi hàm được truyền theo tham trị thì:&lt;/p&gt;
+
+&lt;p&gt;Giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; không bị thay đổi.
+Địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; và địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truyen_tham_tri&lt;/code&gt; là khác nhau.&lt;/p&gt;
+
+&lt;p&gt;Vậy là chúng ta đã tạo ra thêm biến x mới trong bộ nhớ và điều này trả giá bằng chi phí bộ nhớ. Chúng ta có cách nào khác để tiết kiệm bộ nhớ hơn không?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Có, đó là gọi hàm bằng tham chiếu. Chúng ta truyền địa chỉ hoặc tham chiếu của biến vào hàm, lúc này không có bản sao chép nào được tạo cả, đảm bảo việc không bị lãng phí bộ nhớ. Chúng ta có thể truy cập vào giá trị lưu trong các địa chỉ này bằng toán tử tham chiếu ngược &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Chúng ta có thể viết lại chương trình phía trên bằng cách gọi hàm bằng tham chiếu như sau:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void truyen_tham_chieu(int &amp;amp;x){
+  x++;
+  printf(&quot;\nDia chi cua x = %d&quot;, &amp;amp;x);
+}
+
+int main(){
+int a = 3; 
+      printf(&quot;\nDia chi cua a = %d&quot;, &amp;amp;a);
+printf(&quot;\nGia tri cua a truoc khi goi ham = %d&quot;, a);
+truyen_tham_chieu(a);
+printf(&quot;\nGia tri cua a sau khi goi ham = %d&quot;, a);
+
+ /* output
+Dia chi cua a = 119268420
+Gia tri cua a truoc khi goi ham = 3
+Dia chi cua x = 119268420
+Gia tri cua a sau khi goi ham = 4
+
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Như bạn thấy, khi hàm nhận tham số là tham chiếu thì:&lt;/p&gt;
+
+&lt;p&gt;Giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; bị thay đổi đúng theo cách biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; bị thay đổi trong hàm truyen_tham_chieu.&lt;br /&gt;
+Địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; và địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; trong hàm truyen_tham_chieu là giống nhau =&amp;gt; chúng cùng là 1 biến.&lt;/p&gt;
+
+&lt;p&gt;Tham trị và tham chiếu cần phải được sử dụng chính xác nếu không bạn sẽ gặp phải những lỗi tai hại, hãy cùng xem xét ví dụ sau đây:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+#include &amp;lt;stdio.h&amp;gt;
+
+void swap(int &amp;amp;a, int &amp;amp;b){ // ham so nhan tham chieu
+  int tmp = a;
+  a = b;
+  b = tmp;
+printf(&quot;\nTrong ham: a = %d, b = %d&quot;, a, b);
+}
+
+int main(){
+int first = 3,second = 5; 
+printf(&quot;\ntruoc khi goi ham: first = %d, second = %d&quot;, first, second);
+swap(first,second);
+printf(&quot;\n Sau khi thuc thi ham: first = %d, second = %d&quot;, first, second);
+
+ /* output
+Truoc khi goi ham: first = 3, second = 5
+Trong ham: a = 5, b = 3
+Sau khi thuc thi ham: first = 5, second = 3 
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Chương trình trên thực hiện việc hoán đổi giá trị của 2 số &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; thông qua hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swap(int a, int b)&lt;/code&gt; nhận vào 2 tham số là tham chiếu. Do đó, giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; được hoán đổi sau khi thực thi hàm.&lt;/p&gt;
+
+&lt;p&gt;Tuy nhiên một lỗi khá thường gặp là bạn sơ ý truyền vào tham trị thay vì tham chiếu.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void swap(int a, int b){ // ham so nhan tham tri
+  int tmp = a;
+  a = b;
+  b = tmp;
+printf(&quot;\nTrong ham: a = %d, b = %d&quot;, a, b);
+}
+
+main(){
+int first = 3,second = 5; 
+printf(&quot;\ntruoc khi goi ham: first = %d, second = %d&quot;, first, second);
+swap(first,second);
+printf(&quot;\n Sau khi thuc thi ham: first = %d, second = %d&quot;, first, second);
+
+ /* output
+Truoc khi goi ham: first = 3, second = 5
+Trong ham: a = 5, b = 3
+Sau khi thuc thi ham: first = 3, second = 5 
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swap(int a, int b)&lt;/code&gt; nhận vào 2 tham số là tham trị. Do đó, giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; không được hoán đổi sau khi thực thi hàm.&lt;/p&gt;
+
+&lt;p&gt;Sử dụng con trỏ để truyền mảng làm tham số của hàm
+Trong phần này, chúng ta hãy cùng tìm hiểu các chương trình khác nhau nhưng việc truyền tham số sẽ sử dụng con trỏ.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+ void add(float *a, float *b){
+ float c = *a + *b;
+ printf(&quot;Addition gives %.2f\n&quot;,c);
+}
+int main(){
+    printf(&quot;Enter two numbers :\n&quot;);
+    float a,b;
+    scanf(&quot;%f %f&quot;,&amp;amp;a,&amp;amp;b);
+    add(&amp;amp;a,&amp;amp;b);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Chúng ta tạo hàm add() để tính tổng của 2 số a và b.&lt;/p&gt;
+
+&lt;p&gt;Địa chỉ của a và b được truyền vào hàm. Bên trong hàm chúng ta sử dụng * để truy cập giá trị của chúng và in ra kết quả.&lt;/p&gt;
+
+&lt;p&gt;Tương tự như vậy, chúng ta có thể truyền 1 mảng làm tham số bằng cách sử dụng con trỏ mà trỏ tới phần tử đầu tiên của nó.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void timSoLonNhat( int *p){
+ int max = *p;
+ for(int i=0; i &amp;lt; 5; i++){
+    if(*(p+i) &amp;gt; max)
+        max = *(p+i);
+ }
+ printf(&quot;so lon nhat la %d\n&quot;,max);
+ }
+main(){
+  int myNumbers[5] = { 34, 65, -456, 0, 3455};
+  timSoLonNhat(myNumbers);
+   /* output:so lon nhat la 3455&quot; */
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Bởi vì tên của mảng, bản thân nó là 1 con trỏ trỏ tới phần tử đầu tiên, chúng ta có thể truyền nó như là 1 tham số tới hàm timSoLonNhat(). Trong hàm số này, chúng ta đã duyệt từng phần tử của mảng bằng con trỏ và vòng lặp để tìm ra số lớn nhất.&lt;/p&gt;
+
+&lt;p&gt;Về phần con trỏ và hàm, còn nhiều ứng dụng nữa mà chúng ta cần phải quan tâm. Tuy nhiên mình cho rằng nó vượt quá mục đích của bài viết này là giới thiệu về con trỏ cho người mới, mình sẽ để link tham khảo cho các bạn đọc thêm nhé. Con trỏ là một phần khó trong C nhưng nếu bạn hiểu và vận dụng được nó tốt thì chắc chắn bạn đang nắm trong tay kiến thức khá vững chắc về ngôn ngữ C cũng như cách tổ chức bộ nhớ đấy!&lt;/p&gt;
+
+&lt;h2 id=&quot;kết-bài&quot;&gt;Kết bài&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt; Vậy là chúng ta đã đi qua các định nghĩa, bản chất, lỗi thường gặp, các toán tử cũng như là ứng dụng của con trỏ. Hy vọng bài viết này đã giúp cho các bạn phần nào hiểu thêm về con trỏ và cách sử dụng nó trong lập trình C. Bản thân mình khi học về con trỏ cũng phải nhào nặn lại kiến thức khá nhiều thì mới có thể tận dụng được sức mạnh của nó. Nên các bạn đừng lo lắng hay ngại ngần mà đọc lại bài viết để nắm rõ hơn phần kiến thức hay và quan trọng này nhé!&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                <pubDate>Wed, 08 Dec 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/pointer</link>
+                <guid isPermaLink="true">http://localhost:4000/pointer</guid>
+                
+                <category>Programming language</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
         
             <item>
                 <title>Giới thiệu về Linux và cách cài đặt</title>
@@ -57,7 +545,7 @@ chmod - thay đổi các bit chế độ tệp, thay đổi quyền của tệp
 curl - chuyển một URL
 wget - Trình tải xuống mạng không tương tác.
 tar - một tiện ích lưu trữ
-gzip - nén hoặc mở rộng tệp, loại Linux 'WinRar'
+gzip - nén hoặc mở rộng tệp, loại Linux &apos;WinRar&apos;
 ping - gửi ICMP ECHO_REQUEST tới các máy chủ mạng
 ps - báo cáo tác vụ đang chạy.
 pkill - tra cứu hoặc báo hiệu các quy trình dựa trên tên và các thuộc tính khác
@@ -345,7 +833,7 @@ void xoaKiTu(string &amp;amp;a){
     int len = a.length();
     string temp = &quot;&quot;;
     for(int i =0; i &amp;lt; len; i++){
-       if ((a[i] &amp;gt;= 'a' &amp;amp;&amp;amp; a[i] &amp;lt;= 'z') || (a[i] &amp;gt;= 'A' &amp;amp;&amp;amp; a[i] &amp;lt;= 'Z')) {
+       if ((a[i] &amp;gt;= &apos;a&apos; &amp;amp;&amp;amp; a[i] &amp;lt;= &apos;z&apos;) || (a[i] &amp;gt;= &apos;A&apos; &amp;amp;&amp;amp; a[i] &amp;lt;= &apos;Z&apos;)) {
             temp = temp + a[i];
         }
     }
@@ -1570,65 +2058,6 @@ Tham khảo tài liệu của khoa và một số ý kiến của các bạn h�
                 
                 
                 <category>ITMO</category>
-                
-            </item>
-        
-            <item>
-                <title>What is Machine Learning (ML)?</title>
-                <description>&lt;h3 id=&quot;what-is-machine-learning-ml&quot;&gt;What is Machine Learning (ML)?&lt;/h3&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;“Machine learning algorithms find and apply patterns in data. And they pretty much run the world.” - MIT Technology Review.&lt;br /&gt;
-“Các thuật toán học máy tìm kiếm và áp dụng các mẫu trong dữ liệu. Và chúng điều hành thế giới (của chúng ta) khá nhiều”&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Chúng ta đã trải qua 3 cuộc cách mạng công nghiệp trong lịch sử và trong những năm gần đây, AI - Trí Tuệ Nhân Tạo, và cụ thể hơn là Machine Learning (ML - Học Máy) nổi lên như một trong những trụ cột chính của cuộc cách mạng công nghiệp lần thứ tư.&lt;/p&gt;
-
-&lt;p&gt;Học Máy là hướng nghiên cứu tập trung vào việc tạo ra các hệ thống có khả năng học hỏi mà không cần phải lập trình một cách cụ thể. Học hỏi là một kỹ năng quan trọng nhất của một con người, vậy nếu chúng ta muốn tạo ra một hệ thống AI có trí tuệ như con người thì cần phải tạo ra các cỗ máy có khả năng học hỏi dựa trên các kinh nghiệm mà chúng thu thập được trong suốt quá trình hoạt động.
-Hiện nay Học Máy đã đạt được những thành công vang dội khiến nó trở thành một hướng nghiên cứu chính trong AI, được sử dụng trên toàn thế giới.&lt;/p&gt;
-
-&lt;h3 id=&quot;vậy-sự-phát-triển-của-máy-học-hiện-nay-như-thế-nào&quot;&gt;Vậy sự phát triển của Máy học hiện nay như thế nào?&lt;/h3&gt;
-&lt;p&gt;Những dấu ấn đầu tiên của Học máy đến từ cách đây hơn 70 năm, 1950 – Alan Turing tạo ra phép thử Turing (Turing Test) để xác định xem một máy tính có trí thông minh thực sự hay không. Để vượt qua các phép thử, máy tính phải có khả năng đánh lừa một người tin rằng nó cũng là con người. Đến năm 1957 - Frank Rosenblatt thiết kế hệ thần kinh (neural network) đầu tiên cho máy tính mô phỏng các quá trình tư duy của não người. Học máy đạt thành công vang dội khi gần 25 năm trước, năm 1997, ứng dụng của AI đã đặt những bước đầu tiên khi hệ thống Deep Blue do IBM phát triển giành chiến thắng trước kiện tướng cờ vua thế giới khi đó Garry Kasparov. Đến năm 2011 – Google Brain được phát triển, và hệ thần kinh sâu (deep neural network) của nó có thể học để phát hiện và phân loại các đối tượng bằng với khả năng của một chú mèo. Cho đến năm 2014 – Facebook phát triển DeepFace - có thể nhận diện hoặc xác minh các cá nhân trong các bức ảnh ở mức độ ngang với con người.&lt;/p&gt;
-
-&lt;p&gt;Một cột mốc đáng chú ý vào năm 2016 – Thuật toán AI của Google đã đánh bại một cầu thủ chuyên nghiệp trong trò cờ vây của Trung Quốc, vốn được coi là trò cờ phức tạp nhất thế giới và khó hơn cờ vua gấp nhiều lần. Cùng năm, AlphaGo do Google DeepMind phát triển đã giành chiến thắng bốn trên năm trận đấu Cờ vây với kỳ thủ số 1 thế giới.&lt;/p&gt;
-
-&lt;h3 id=&quot;ứng-dụng-của-máy-học&quot;&gt;Ứng dụng của Máy học&lt;/h3&gt;
-&lt;p&gt;AI đang len lỏi vào mọi lĩnh vực trong đời sống mà có thể chúng ta không nhận ra. Xe tự hành của Google và Tesla, hệ thống tự tag khuôn mặt trong ảnh của Facebook, trợ lý ảo Siri của Apple hay đơn giản chỉ là một hệ thống lọc email rác.… chỉ là một vài trong vô vàn những ứng dụng của AI/ML. 
-ML là một phương tiện được kỳ vọng sẽ giúp con người đạt được mục tiêu là có được trí thông minh như con người. Và thực tế thì Học Máy đã mang nhân loại đi rất xa trên quãng đường chinh phục AI.
-Chinh phục AI mặc dù vẫn là mục đích cuối cùng của các phương pháp ML, nhưng hiện tại ML tập trung vào những mục tiêu ngắn hạn hơn như:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Làm cho máy tính có những khả năng nhận thức cơ bản của con người như nghe, nhìn, hiểu được ngôn ngữ, giải toán, lập trình, …&lt;/li&gt;
-  &lt;li&gt;Hỗ trợ con người trong việc xử lý một khối lượng thông tin khổng lồ mà chúng ta phải đối mặt hàng ngày, hay còn gọi là Big Data.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Nói đến ML là nói đến “dự đoán”: từ việc dự đoán nhãn phân loại đến dự đoán hành động cần thực hiện trong bước tiếp theo. Vậy machine learning có thể dự đoán tương lai hay không? Có thể có hoặc không: Machine learning có thể dự đoán được tương lai, nhưng chỉ khi tương lai có mối liên hệ mật thiết với hiện tại.&lt;/p&gt;
-&lt;h3 id=&quot;sự-phát-triển-của-ai-ml-và-cơ-hội-tại-việt-nam&quot;&gt;Sự phát triển của AI/ ML và cơ hội tại Việt Nam.&lt;/h3&gt;
-&lt;p&gt;Trong bối cảnh phát triển và hội nhập quốc tế, cùng với sự phát triển mạnh mẽ của cuộc cách mạng công nghiệp lần thứ tư, Việt Nam xác định tập trung phát triển công nghệ AI - được dự báo sẽ trở thành ngành công nghệ đột phá nhất trong 10 năm tới.&lt;/p&gt;
-
-&lt;p&gt;Từ năm 2014, Chính phủ đã xác định AI là công nghệ đột phá, mũi nhọn cần được triển khai nghiên cứu, được đưa vào danh mục công nghệ cao ưu tiên đầu tư phát triển. Gần đây rất nhiều hội thảo, hội nghị khoa học đã được tổ chức dưới sự chủ trì của Chính phủ, với sự tham gia của các tổ chức, chuyên gia trong nước và quốc tế. Qua đó, Lãnh đạo Chính phủ đã đưa ra quan điểm về việc đẩy mạnh triển khai AI và cần thúc đẩy phát triển mạnh mẽ hơn nữa …&lt;/p&gt;
-
-&lt;p&gt;Bên cạnh những nỗ lực của Nhà nước, AI đã và đang được các tập đoàn, công ty như FPT, Viettel, Vin Big Data… nghiên cứu ứng dụng mạnh mẽ trong nhiều lĩnh vực (y tế, giáo dục, thương mại điện tử…). Năm 2019, Trường Đại học Bách khoa Hà Nội thành lập và tuyển sinh trình độ đại học ngành AI (với số điểm trên 27 điểm) để đảm bảo nguồn nhân lực AI được đào tạo chất lượng với mục tiêu trở thành đơn vị dẫn đầu trong việc đào tạo chuyên gia về AI tại Việt Nam.&lt;/p&gt;
-
-&lt;p&gt;Có thể thấy, Việt Nam không đứng ngoài cuộc đua của thế giới. Cơ hội cho những ML Engineer là rất rộng mở, không chỉ ở Việt Nam mà còn là bất cứ nơi đâu trên thế giới.
-Bài viết vừa đề cập tới Máy học là gì, sự phát triển của nó cùng sự ảnh hưởng của nó tới cuộc sống của con người hiện nay như thế nào.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Những bước tiếp theo của Machine Learning là gì? Khó khăn nào xuất hiện khi ML xuất hiện? Cần hay không mối quan tâm về Đạo đức AI? Tất cả sẽ được tiếp tục gửi tới các khác giả của ITMO Brain trong những câu chuyện tiếp theo.&lt;br /&gt;ltm from ITMO Brain :))&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;bạn-đọc-có-thể-xem-thêm-tại&quot;&gt;Bạn đọc có thể xem thêm tại&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.technologyreview.com/2018/11/10/139137/is-this-ai-we-drew-you-a-flowchart-to-work-it-out/&quot;&gt;What is AI? We drew you a flowchart to work it out | MIT Technology Review&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.technologyreview.com/2018/11/17/103781/what-is-machine-learning-we-drew-you-another-flowchart/&quot;&gt;What is machine learning? của MIT Technology Review&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://en.wikipedia.org/wiki/AlphaGo&quot;&gt;AlphaGo - Wikipedia&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.facebook.com/zuck/posts/10103351073024591&quot;&gt;Jarvis - trợ lý thông minh cho căn nhà của Mark Zuckerberg&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-                <pubDate>Tue, 09 Nov 2021 04:48:45 +0300</pubDate>
-                <link>http://localhost:4000/intro-to-machinelearning</link>
-                <guid isPermaLink="true">http://localhost:4000/intro-to-machinelearning</guid>
-                
-                <category>MachineLearning</category>
-                
-                
-                <category>ITMOBRAIN</category>
                 
             </item>
         
