@@ -6,22 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ITMO Brain</title>
-  <meta name='description' content='CLB Tin Hoc ITMO Brain'>
+  <title>Tổng kết buổi 5: Con trỏ</title>
+  <meta name='description' content='ManhLab'>
 
-  <link rel="canonical" href="http://localhost:4000/page/2/">
+  <link rel="canonical" href="http://localhost:4000/cpp-buoi5">
   <link rel="alternate" type="application/rss+xml" title="ITMO Brain" href="/feed.xml">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content=" – ITMO Brain">
-  <meta name="twitter:description" content="">
-  <meta name="twitter:image:src" content="http://localhost:4000/images/itmo.png">
+  <meta name="twitter:title" content="Tổng kết buổi 5: Con trỏ – ITMO Brain">
+  <meta name="twitter:description" content="ManhLab">
+  <meta name="twitter:image:src" content="http://localhost:4000/images/cpp_banner.jpeg">
 
   <!-- Facebook OpenGraph -->
-  <meta property="og:title" content=" – ITMO Brain">
-  <meta property="og:description" content="">
-  <meta property="og:image" content="http://localhost:4000/images/itmo.png">
+  <meta property="og:title" content="Tổng kết buổi 5: Con trỏ – ITMO Brain">
+  <meta property="og:description" content="ManhLab">
+  <meta property="og:image" content="http://localhost:4000/images/cpp_banner.jpeg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -213,57 +213,343 @@
 
   <!-- begin content -->
   <main class="content" aria-label="Content">
-    <!-- begin hero -->
-<section class="hero">
+    <div class="post-head">
   <div class="container">
     <div class="row">
-      <div class="col col-12">
-        <div class="hero__inner">
+      
+      
 
-          <div class="hero__left">
-            <h1 class="hero__title">ITMO Brain</h1>
-            <p class="hero__description">Nhằm thúc đẩy và phát triển phong trào học tập và nghiên cứu công nghệ thông tin. ITMO Brain sẽ là cầu nối giúp đỡ về học tập tại trường đại học ITMO.</p>
-            
-            <div class="hero__subscribe">
-              <form class="subscribe-form validate"
-                action="//github.us20.list-manage.com/subscribe/post?u=bcadae01b7923c394ece51a14&amp;id=3083a440df" method="POST" id="membedded-subscribe-form" name="membedded-subscribe-form" target="_blank" novalidate>
-                <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
-                <input class="subscribe-email required email" id="mce-EMAIL" type="text" name="EMAIL"
-                  placeholder="E-mail">
-                <button class="button button--primary subscribe-button" id="membedded-subscribe" type="submit" name="subscribe">Gửi</button>
-              </form>
+      
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img class="lazy" data-src="/images/cpp_banner.jpeg" alt="Tổng kết buổi 5: Con trỏ">
+        </div>
+      </div>
+      
+
+      
+      
+      
+      <div class="col col-6 col-d-12">
+        <div class="post__info ">
+  
+          
+            <div class="post__tags">
+              
+                <a href="/tags#Programming language" class="post__tag">Programming language</a>
+              
+                <a href="/tags#Learning" class="post__tag">Learning</a>
+              
             </div>
-            
-          </div>
+          
+  
+          <h1 class="post__title">Tổng kết buổi 5: Con trỏ</h1>
+  
+          <div class="post__meta">
+            <a href="/about/" class="post__author-image">
+              <img class="lazy" data-src="/images/logo.png" alt="ITMO Brain">
+            </a>
 
-          <div class="hero__right">
-            <div class="hero__image">
-              <img class="lazy" data-src="/images/banner.jpg" alt="'s Picture">
+            <div class="post__meta-bottom">
+              <a class="post__author" href="/about/">ITMO Brain</a>
+              <time class="post__date" datetime="2021-12-12T04:48:45+03:00">12 Dec 2021</time>
             </div>
           </div>
-
+  
         </div>
       </div>
     </div>
   </div>
-</section>
-<!-- end hero -->
+</div>
 
-<div class="container">
-  <div class="row animate">
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      <blockquote>
+  <p><cite>Số lượng thành viên tham gia: 10<br />
+<a href="https://docs.google.com/presentation/d/1lGVGfcPitNnhdpHqglX7_ZZ_LRWL3HtDFd48pd1pZdM/edit#slide=id.p">Link slide buổi học</a><br />
+<a href="">Link record đang update</a><br />
+<a href="https://stepik.org/join-class/76feb8a03f9c57b906687eb1930a0b09398427d4">Link bài tập lớp buổi 5 CPP</a><br />
+<a href="https://www.hackerrank.com/itmo-brain-btvn-4">Link btvn buổi 4 CPP</a><br />
+<a href="https://www.hackerrank.com/itmo-brain-btvn-5">Link btvn buổi 5 CPP</a><br /></cite></p>
+</blockquote>
+
+<h3 id="bản-chất-của-biến-variables">Bản chất của Biến (Variables):</h3>
+
+<p><img src="/images/pointer2.png" /></p>
+
+<h3 id="khái-niệm-về-hằng-biến-cục-bộ-và-biến-toàn-cục">Khái niệm về hằng, biến cục bộ và biến toàn cục:</h3>
+<h4 id="hằng-constant">Hằng (constant):</h4>
+<p>Hằng (constant) là từ chỉ những thứ không thay đổi và lặp đi lặp lại.</p>
+
+<p>Cách khai báo:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const &lt;kiểu dữ liệu&gt; &lt;tên biến&gt; = &lt;giá trị&gt;;
+hoặc
+&lt;kiểu dữ liệu&gt; const &lt;tên biến&gt; = &lt;giá trị&gt;;
+</code></pre></div></div>
+<h4 id="biến-cục-bộ-local-variables">Biến cục bộ (Local variables):</h4>
+<p>Biến được định nghĩa bên trong khối lệnh được gọi là các biến cục bộ (local variables). Những biến này chỉ có thể được truy cập bên trong các khối lệnh mà nó được định nghĩa (bao gồm các khối lệnh lồng nhau), và bị hủy ngay sau khi các khối lệnh kết thúc.</p>
+
+<h4 id="biến-toàn-cục-global-variables">Biến toàn cục (Global variables):</h4>
+<p>Các biến khai báo bên ngoài của khối lệnh được gọi là biến toàn cục. Biến toàn cục có thời gian tĩnh, nghĩa là chúng được tạo ra khi chương trình bắt đầu và bị hủy khi nó kết thúc. Các biến toàn cục có phạm vi tập tin (file scope), hay gọi là “phạm vi toàn cầu” (global scope).</p>
+
+<h3 id="con-trỏ">Con trỏ:</h3>
+<h4 id="định-nghĩa">Định nghĩa:</h4>
+<p>Là biến trỏ tới 1 địa chỉ khác, tức giá trị nó lưu là 1 địa chỉ của 1 ô nhớ khác.
+ <img src="/images/pointer1.png" /></p>
+
+<h4 id="các-khái-niệm-về-con-trỏ">Các khái niệm về con trỏ</h4>
+<ul>
+  <li>Giá trị của con trỏ: địa chỉ mà con trỏ trỏ đến.</li>
+  <li>Địa chỉ của con trỏ: Địa chỉ của bản thân biến con trỏ đó</li>
+  <li>Giá trị của biến nơi con trỏ đang trỏ tới</li>
+  <li>Địa chỉ của biến nơi con trỏ đang trỏ tới = giá trị của con trỏ.</li>
+</ul>
+
+<h4 id="làm-việc-với-con-trỏ">Làm việc với con trỏ:</h4>
+<p>Cách khai báo:  <code class="language-plaintext highlighter-rouge">&lt;kiểu dữ liệu&gt; * &lt;tên biến&gt;</code><br />
+Cách gán giá trị :<br />
+Ví dụ:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int *ptr; // khai báo con trỏ
+int val = 5; // khai báo biến digit mang giá trị là 42
+ptr = &amp;val; // gán giá trị của con trỏ = địa chỉ của biến digit
+</code></pre></div></div>
+<blockquote>
+  <p><cite>Lưu ý:
+Con trỏ được khai báo là kiểu dữ liệu gì thì chỉ có thể trỏ tới biến có cùng kiểu giá trị đó</cite></p>
+</blockquote>
+
+<p>Tham chiếu ngược:  <code class="language-plaintext highlighter-rouge">*[tên_con_trỏ]</code></p>
+
+<h4 id="con-trỏ-đặc-biệt">Con trỏ đặc biệt:</h4>
+<h5 id="con-trỏ-rác-null-pointer">Con trỏ rác (Null Pointer):</h5>
+<p>Hãy ghi nhớ rằng chúng ta không nên để một con trỏ là rác ( tức là không được khởi tạo giá trị). Một con trỏ rác là con trỏ không trỏ tới cái gì cả, nếu bạn sử dụng nó thì nó sẽ trỏ tới 1 địa chỉ ` ngẫu nhiên ` nào đó và sẽ thật là nguy hiểm nếu địa chỉ đó đang được sử dụng với 1 mục đích khác</p>
+
+<h5 id="con-trỏ-void-void-pointer">Con trỏ Void (Void Pointer):</h5>
+<p>Một con trỏ void được sử dụng để trỏ tới biến có bất kỳ kiểu dữ liệu nào. Nó có thể tái sử dụng với bất kỳ biến nào mà chúng ta muốn</p>
+
+<h4 id="bản-chất-của-con-trỏ">Bản chất của con trỏ:</h4>
+<p>Con trỏ có thể thay đổi trực tiếp giá trị của biến mà nó đang trỏ tới
+Khi thay đổi giá trị của biến, thì rõ ràng nếu tồn tại con trỏ ptr trỏ tới biến đó thì *ptr cũng sẽ thay đổi theo giá trị của biến.</p>
+
+<h4 id="các-lỗi-thường-gặp">Các lỗi thường gặp:</h4>
+<p>Nhầm lẫn giữa địa chỉ và giá trị. Con trỏ là biến trỏ tới địa chỉ, không phải giá trị
+Có thể các bạn sẽ không phân biệt được dấu * khi khai báo con trỏ và khi truy cập vào giá trị của địa chỉ mà con trỏ đang trỏ tới.</p>
+
+<h3 id="truyền-giá-trị-cho-hàm">Truyền giá trị cho hàm:</h3>
+<p>Gọi hàm bằng tham trị tức là truyền bản sao của biến vào hàm để xử lý. Bản sao của một biến mang giá trị bằng giá trị của biến đó.
+Gọi hàm bằng tham chiếu. Chúng ta truyền địa chỉ hoặc tham chiếu của biến vào hàm, lúc này không có bản sao chép nào được tạo cả, đảm bảo việc không bị lãng phí bộ nhớ. Chúng ta có thể truy cập vào giá trị lưu trong các địa chỉ này bằng toán tử tham chiếu ngược <code class="language-plaintext highlighter-rouge">*</code>.</p>
+
+<h3 id="code-bài-tập-trên-lớp">Code bài tập trên lớp:</h3>
+<h4 id="swap">Swap</h4>
+<p>Viết một hàm swap , nhận hai con trỏ int và hoán đổi giá trị của hai biến đó.</p>
+
+<p><strong>Sample Input:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 2
+</code></pre></div></div>
+<p><strong>Sample Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2 1
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+void swap(int *a, int *b) {
+	int tmp = *a;
+*a = *b;
+*b = *c; 
+}
+int main() {
+    	int a, b;
+    	cin &gt;&gt; a &gt;&gt; b;
+    	swap(&amp;a, &amp;b);
+    	cout &lt;&lt; a &lt;&lt; " " &lt;&lt; b;
+return 0;
+}
+
+</code></pre></div></div>
+<h4 id="max3">Max3</h4>
+<p>Hãy xây dựng một hàm Max3, nhận đầu vào là 3 biến kiểu int a, b, c và một con trỏ Max. Hàm sẽ thực hiện tìm giá trị lớn nhất trong ba số (a, b, c) và gán giá trị đấy vào biến Max.</p>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 30 15
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>30
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+void Max3(int a, int b, int c, int *Max) {
+    *Max = a;
+    if (b &gt; *Max) *Max = b;
+    if (c &gt; *Max) *Max = c;
+}
+
+int main() {
+
+    // Không thay đổi code ở hàm main
+    int a, b, c;
+    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+    int ansMax;
+    Max3(a, b, c, &amp;ansMax);
+    cout &lt;&lt; ansMax;
+}
+
+</code></pre></div></div>
+<h4 id="sort">Sort</h4>
+<p>Sau khi đã có hàm swap(int *a, int *b) ở bài tập trước. Hãy ứng dụng nó để xây dựng hàm sort , nhận vào 3 con trỏ và sắp xếp chúng theo thứ tự tăng dần.</p>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8 11 9
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>8 9 11
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+
+void swap(int *a, int *b) {
+    int c = *a;
+    *a = *b;
+    *b = c;
     
+}
+
+void sort(int *a, int *b, int *c) {
+    if (*a &gt; *b) swap(a, b);
+    if (*a &gt; *c) swap(a, c);
+    if (*b &gt; *c) swap(b, c);
+}
+
+int main() {
+    int a, b, c;
+    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;
+    sort(&amp;a, &amp;b, &amp;c);
+    cout &lt;&lt; a &lt;&lt; " " &lt;&lt; b &lt;&lt; " " &lt;&lt; c;
+}
+
+</code></pre></div></div>
+<h4 id="normalize">normalize</h4>
+<p>Viết một hàm normalize nhận đầu vào là một con trỏ, hàm thực hiện việc chia số đó với 2 mỗi khi có thể (nếu số đó dương và chia hết cho 2).<br />
+Ví dụ, số 100 sẽ trở thành 25, và số 5 sẽ vẫn là chính nó.
+Nó được đảm bảo rằng hàm này sẽ không truyền vào số âm.</p>
+
+<p><strong>Sample Input 0</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>100
+</code></pre></div></div>
+<p><strong>Sample Output 0:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>25
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#include&lt;bits/stdc++.h&gt;
+using namespace std;
+
+
+void normalize(int *a) {
+    while(*a != 0 &amp;&amp; *a % 2 == 0){
+        *a /= 2;
+    }
+}
+
+int main() {
+    int a;
+    cin &gt;&gt; a;
+    normalize(&amp;a);
+    cout &lt;&lt; a;
+}
+</code></pre></div></div>
+<h4 id="đường-link-hữu-ích">Đường Link hữu ích:</h4>
+<p><a href="https://www.cplusplus.com/doc/tutorial/pointers/#:~:text=The%20variable%20that%20stores%20the,uses%20in%20lower%20level%20programming.">Pointers CPP</a><br />
+<a href="https://www.geeksforgeeks.org/pointers-c-examples/">Pointers in C/C++ with Examples</a><br />
+<a href="https://gist.github.com/ericandrewlewis/720c374c29bbafadedc9">C++ Pointer Tutorial</a><br /></p>
+
+    </div>
+
+    <div class="post__share">
+      <ul class="share__list list-reset">
+        <li class="share__item">
+          <a class="share__link share__facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/cpp-buoi5"
+            onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
+            title="Share on Facebook" rel="nofollow"><i class="ion ion-logo-facebook"></i></a>
+        </li>
+        <li class="share__item">
+          <a class="share__link share__linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/cpp-buoi5&title=T%E1%BB%95ng%20k%E1%BA%BFt%20bu%E1%BB%95i%205:%20Con%20tr%E1%BB%8F&summary=ManhLab&source=ITMO%20Brain"
+          onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" rel="nofollow"><i class="ion ion-logo-linkedin"></i></a>
+        </li>
+      </ul>
+    </div>
+
+
+  </article>
+</div>
+<!-- end post -->
+
+
+
+
+
+
+
+<!-- begin related posts -->
+<div class="container">
+  <section class="related-posts is-related animate">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner">
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">You may also like</h2>
+              <a class="section__link" href="/blog">
+                
+                
+                  
+                    <a href="/tags#Programming language" class="section__link related-tag">Xem tất cả<span> Programming language</span></a>
+                  
+                
+                  
+                
+              
+              </a>
+            </div>
+          </div>
+          <div class="row">
+
+          
+            
+            
       
-        <div class="article col col-4 col-d-6 col-t-12">
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
 
     <div class="article__head">
-      <time class="article__date" datetime="2021-11-09T04:48:45+03:00">09 Nov 2021</time>
+      <time class="article__date" datetime="2021-12-08T04:48:45+03:00">08 Dec 2021</time>
 
       
 
       
-      <a class="article__image" href="/intro-to-machinelearning">
-        <img class="lazy" data-src="/images/machinelearning.png" alt="What is Machine Learning (ML)?">
+      <a class="article__image" href="/pointer2">
+        <img class="lazy" data-src="/images/pointers.png" alt="Con trỏ phần 2: Sử dụng con trỏ với hàm trong lập trình C">
       </a>
       
 
@@ -272,28 +558,39 @@
     <div class="article__content">
 
       <h2 class="article__title">
-        <a href="/intro-to-machinelearning">What is Machine Learning (ML)?</a>
+        <a href="/pointer2">Con trỏ phần 2: Sử dụng con trỏ với hàm trong lập trình C</a>
       </h2>
 
       
-      <p class="article__excerpt">Lê Trọng Minh</p>
+      <p class="article__excerpt">nd_wannafly</p>
       
 
     </div>
   </div>
 </div>
+
+            
+                
+              
+            
+            
+            
       
-        <div class="article col col-4 col-d-6 col-t-12">
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
 
     <div class="article__head">
-      <time class="article__date" datetime="2021-11-05T04:48:45+03:00">05 Nov 2021</time>
+      <time class="article__date" datetime="2021-12-08T04:48:45+03:00">08 Dec 2021</time>
 
       
 
       
-      <a class="article__image" href="/itmo-ikt">
-        <img class="lazy" data-src="/images/itmo2.jpg" alt="Công nghệ thông tin và các hệ thống liên lạc">
+      <a class="article__image" href="/pointer">
+        <img class="lazy" data-src="/images/pointers.png" alt="Con trỏ phần 1: Giới thiệu cơ bản về con trỏ">
       </a>
       
 
@@ -302,28 +599,46 @@
     <div class="article__content">
 
       <h2 class="article__title">
-        <a href="/itmo-ikt">Công nghệ thông tin và các hệ thống liên lạc</a>
+        <a href="/pointer">Con trỏ phần 1: Giới thiệu cơ bản về con trỏ</a>
       </h2>
 
       
-      <p class="article__excerpt">Lê Đình Vũ</p>
+      <p class="article__excerpt">nd_wannafly</p>
       
 
     </div>
   </div>
 </div>
+
+            
+                
+              
+            
+            
+            
       
-        <div class="article col col-4 col-d-6 col-t-12">
+            
+      
+            
+            
+            
+            
+      
+            
+      
+            
+
+              <div class="article col col-4 col-d-6 col-t-12">
   <div class="article__inner">
 
     <div class="article__head">
-      <time class="article__date" datetime="2021-11-03T04:48:45+03:00">03 Nov 2021</time>
+      <time class="article__date" datetime="2021-11-28T04:48:45+03:00">28 Nov 2021</time>
 
       
 
       
-      <a class="article__image" href="/itmo-bit">
-        <img class="lazy" data-src="/images/itmo2.jpg" alt="Khoa an toàn thông tin">
+      <a class="article__image" href="/cpp-3">
+        <img class="lazy" data-src="/images/cpp_banner.jpeg" alt="Tổng kết buổi 3: Các kiểu dữ liệu số học, string, hàm">
       </a>
       
 
@@ -332,37 +647,7 @@
     <div class="article__content">
 
       <h2 class="article__title">
-        <a href="/itmo-bit">Khoa an toàn thông tin</a>
-      </h2>
-
-      
-      <p class="article__excerpt">Đỗ Bảo Hoàng</p>
-      
-
-    </div>
-  </div>
-</div>
-      
-        <div class="article col col-4 col-d-6 col-t-12">
-  <div class="article__inner">
-
-    <div class="article__head">
-      <time class="article__date" datetime="2021-11-03T04:48:45+03:00">03 Nov 2021</time>
-
-      
-
-      
-      <a class="article__image" href="/cryptography">
-        <img class="lazy" data-src="/images/quantumexplainer3.2-01-10.jpg" alt="Intro to Cryptography">
-      </a>
-      
-
-    </div>
-
-    <div class="article__content">
-
-      <h2 class="article__title">
-        <a href="/cryptography">Intro to Cryptography</a>
+        <a href="/cpp-3">Tổng kết buổi 3: Các kiểu dữ liệu số học, string, hàm</a>
       </h2>
 
       
@@ -372,126 +657,60 @@
     </div>
   </div>
 </div>
-      
-        <div class="article col col-4 col-d-6 col-t-12">
-  <div class="article__inner">
 
-    <div class="article__head">
-      <time class="article__date" datetime="2021-10-31T04:48:45+03:00">31 Oct 2021</time>
-
-      
-
-      
-      <a class="article__image" href="/intro">
-        <img class="lazy" data-src="/images/intro.jpeg" alt="A STORY OF PROGRAMMING">
-      </a>
-      
-
-    </div>
-
-    <div class="article__content">
-
-      <h2 class="article__title">
-        <a href="/intro">A STORY OF PROGRAMMING</a>
-      </h2>
-
-      
-      <p class="article__excerpt">ManhLab</p>
-      
-
-    </div>
-  </div>
-</div>
-      
-    
-  </div>
-</div>
-
-
-<!-- begin pagination -->
-<div class="container">
-  <div class="row">
-    <div class="col col-12">
-      <nav class="pagination animate">
-        <div class="pagination__inner">
-
-          <div class="pagination__list">
             
-              <a href="/" class="pagination__prev pagination__item"><i class="ion ion-ios-arrow-back"></i> Prev</a>
-            
-      
-            <div class="pagination__count pagination__item">2 of 2</div>
-      
-            
-              <span class="pagination__next pagination__item disabled">Next <i class="ion ion-ios-arrow-forward"></i></span>
-            
+                
+                  
           </div>
-
-        </div>
-      </nav>
-    </div>
-  </div>
-</div>
-<!-- end pagination -->
-
-
-<!-- begin section-tags -->
-<section class="section section-tags">
-  <div class="container">
-    <div class="row">
-      <div class="col col-12">
-        <div class="section__head">
-          <h3 class="section__title">Tags</h3>
-          <a href="/tags/" class="section__link">Xem thêm</a>
-        </div>
-        
-        
-
-        <div class="row">
-          
-          
-          <div class="col col-3 col-d-6 col-m-12">
-            <a href="/tags#Infosec" class="tag-image">
-              <span class="tag-name">Infosec</span>
-              <img class="lazy"  data-src="/images/linux1.jpeg" alt="post.title" >
-            </a>
-          </div>
-          
-          
-          
-          <div class="col col-3 col-d-6 col-m-12">
-            <a href="/tags#Learning" class="tag-image">
-              <span class="tag-name">Learning</span>
-              <img class="lazy"  data-src="/images/cpp_banner.jpeg" alt="post.title" >
-            </a>
-          </div>
-          
-          
-          
-          <div class="col col-3 col-d-6 col-m-12">
-            <a href="/tags#MachineLearning" class="tag-image">
-              <span class="tag-name">MachineLearning</span>
-              <img class="lazy"  data-src="/images/machinelearning.png" alt="post.title" >
-            </a>
-          </div>
-          
-          
-          
-          <div class="col col-3 col-d-6 col-m-12">
-            <a href="/tags#Programming+language" class="tag-image">
-              <span class="tag-name">Programming language</span>
-              <img class="lazy"  data-src="/images/cpp_banner.jpeg" alt="post.title" >
-            </a>
-          </div>
-          
-          
-          
         </div>
       </div>
     </div>
+  </section>
+</div>
+<!-- end related posts -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <!-- begin comments -->
+<div class="show-comments">
+
+  <button class="button disqus-button" id="show-comments-button" onclick="disqus();return false;">댓글 보기</button>
+</div>
+
+<div id="disqus_thread" class="post__comments">
+  <div id="disqus_empty"></div>
+</div>
+
+<script>
+  var disqus_loaded = false;
+  var disqus_shortname = 'itmobrain-github-io';
+  var disqus_container = document.getElementById("disqus_thread");
+  if (!disqus_loaded) {
+      disqus_loaded = true;
+      var e = document.createElement("script");
+      e.type = "text/javascript";
+      e.async = true;
+      e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+      (document.getElementsByTagName("head")[0] ||
+        document.getElementsByTagName("body")[0])
+        .appendChild(e);
+      // Hide the button after opening
+      document.getElementById("show-comments-button").style.display = "none";
+      // Show disqus comments
+      disqus_container.classList.add("is-open");
+    }
+</script>
+
+<noscript>Please enable JavaScript to view the
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+<!-- end comments --> 
+      </div>
+    </div>
   </div>
-</section>
-<!-- end section-tags -->
+
   </main>
   <!-- end content -->
 

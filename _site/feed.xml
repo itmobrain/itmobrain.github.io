@@ -5,12 +5,413 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Fri, 10 Dec 2021 02:51:40 +0300</pubDate>
-        <lastBuildDate>Fri, 10 Dec 2021 02:51:40 +0300</lastBuildDate>
+        <pubDate>Sun, 12 Dec 2021 21:26:29 +0300</pubDate>
+        <lastBuildDate>Sun, 12 Dec 2021 21:26:29 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
         
             <item>
-                <title>Con trỏ</title>
+                <title>Tổng kết buổi 5: Con trỏ</title>
+                <description>&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Số lượng thành viên tham gia: 10&lt;br /&gt;
+&lt;a href=&quot;https://docs.google.com/presentation/d/1lGVGfcPitNnhdpHqglX7_ZZ_LRWL3HtDFd48pd1pZdM/edit#slide=id.p&quot;&gt;Link slide buổi học&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;&quot;&gt;Link record đang update&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://stepik.org/join-class/76feb8a03f9c57b906687eb1930a0b09398427d4&quot;&gt;Link bài tập lớp buổi 5 CPP&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.hackerrank.com/itmo-brain-btvn-4&quot;&gt;Link btvn buổi 4 CPP&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.hackerrank.com/itmo-brain-btvn-5&quot;&gt;Link btvn buổi 5 CPP&lt;/a&gt;&lt;br /&gt;&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;bản-chất-của-biến-variables&quot;&gt;Bản chất của Biến (Variables):&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/pointer2.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;khái-niệm-về-hằng-biến-cục-bộ-và-biến-toàn-cục&quot;&gt;Khái niệm về hằng, biến cục bộ và biến toàn cục:&lt;/h3&gt;
+&lt;h4 id=&quot;hằng-constant&quot;&gt;Hằng (constant):&lt;/h4&gt;
+&lt;p&gt;Hằng (constant) là từ chỉ những thứ không thay đổi và lặp đi lặp lại.&lt;/p&gt;
+
+&lt;p&gt;Cách khai báo:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;const &amp;lt;kiểu dữ liệu&amp;gt; &amp;lt;tên biến&amp;gt; = &amp;lt;giá trị&amp;gt;;
+hoặc
+&amp;lt;kiểu dữ liệu&amp;gt; const &amp;lt;tên biến&amp;gt; = &amp;lt;giá trị&amp;gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;biến-cục-bộ-local-variables&quot;&gt;Biến cục bộ (Local variables):&lt;/h4&gt;
+&lt;p&gt;Biến được định nghĩa bên trong khối lệnh được gọi là các biến cục bộ (local variables). Những biến này chỉ có thể được truy cập bên trong các khối lệnh mà nó được định nghĩa (bao gồm các khối lệnh lồng nhau), và bị hủy ngay sau khi các khối lệnh kết thúc.&lt;/p&gt;
+
+&lt;h4 id=&quot;biến-toàn-cục-global-variables&quot;&gt;Biến toàn cục (Global variables):&lt;/h4&gt;
+&lt;p&gt;Các biến khai báo bên ngoài của khối lệnh được gọi là biến toàn cục. Biến toàn cục có thời gian tĩnh, nghĩa là chúng được tạo ra khi chương trình bắt đầu và bị hủy khi nó kết thúc. Các biến toàn cục có phạm vi tập tin (file scope), hay gọi là “phạm vi toàn cầu” (global scope).&lt;/p&gt;
+
+&lt;h3 id=&quot;con-trỏ&quot;&gt;Con trỏ:&lt;/h3&gt;
+&lt;h4 id=&quot;định-nghĩa&quot;&gt;Định nghĩa:&lt;/h4&gt;
+&lt;p&gt;Là biến trỏ tới 1 địa chỉ khác, tức giá trị nó lưu là 1 địa chỉ của 1 ô nhớ khác.
+ &lt;img src=&quot;/images/pointer1.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;các-khái-niệm-về-con-trỏ&quot;&gt;Các khái niệm về con trỏ&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Giá trị của con trỏ: địa chỉ mà con trỏ trỏ đến.&lt;/li&gt;
+  &lt;li&gt;Địa chỉ của con trỏ: Địa chỉ của bản thân biến con trỏ đó&lt;/li&gt;
+  &lt;li&gt;Giá trị của biến nơi con trỏ đang trỏ tới&lt;/li&gt;
+  &lt;li&gt;Địa chỉ của biến nơi con trỏ đang trỏ tới = giá trị của con trỏ.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;làm-việc-với-con-trỏ&quot;&gt;Làm việc với con trỏ:&lt;/h4&gt;
+&lt;p&gt;Cách khai báo:  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;kiểu dữ liệu&amp;gt; * &amp;lt;tên biến&amp;gt;&lt;/code&gt;&lt;br /&gt;
+Cách gán giá trị :&lt;br /&gt;
+Ví dụ:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;int *ptr; // khai báo con trỏ
+int val = 5; // khai báo biến digit mang giá trị là 42
+ptr = &amp;amp;val; // gán giá trị của con trỏ = địa chỉ của biến digit
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Lưu ý:
+Con trỏ được khai báo là kiểu dữ liệu gì thì chỉ có thể trỏ tới biến có cùng kiểu giá trị đó&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Tham chiếu ngược:  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*[tên_con_trỏ]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;con-trỏ-đặc-biệt&quot;&gt;Con trỏ đặc biệt:&lt;/h4&gt;
+&lt;h5 id=&quot;con-trỏ-rác-null-pointer&quot;&gt;Con trỏ rác (Null Pointer):&lt;/h5&gt;
+&lt;p&gt;Hãy ghi nhớ rằng chúng ta không nên để một con trỏ là rác ( tức là không được khởi tạo giá trị). Một con trỏ rác là con trỏ không trỏ tới cái gì cả, nếu bạn sử dụng nó thì nó sẽ trỏ tới 1 địa chỉ ` ngẫu nhiên ` nào đó và sẽ thật là nguy hiểm nếu địa chỉ đó đang được sử dụng với 1 mục đích khác&lt;/p&gt;
+
+&lt;h5 id=&quot;con-trỏ-void-void-pointer&quot;&gt;Con trỏ Void (Void Pointer):&lt;/h5&gt;
+&lt;p&gt;Một con trỏ void được sử dụng để trỏ tới biến có bất kỳ kiểu dữ liệu nào. Nó có thể tái sử dụng với bất kỳ biến nào mà chúng ta muốn&lt;/p&gt;
+
+&lt;h4 id=&quot;bản-chất-của-con-trỏ&quot;&gt;Bản chất của con trỏ:&lt;/h4&gt;
+&lt;p&gt;Con trỏ có thể thay đổi trực tiếp giá trị của biến mà nó đang trỏ tới
+Khi thay đổi giá trị của biến, thì rõ ràng nếu tồn tại con trỏ ptr trỏ tới biến đó thì *ptr cũng sẽ thay đổi theo giá trị của biến.&lt;/p&gt;
+
+&lt;h4 id=&quot;các-lỗi-thường-gặp&quot;&gt;Các lỗi thường gặp:&lt;/h4&gt;
+&lt;p&gt;Nhầm lẫn giữa địa chỉ và giá trị. Con trỏ là biến trỏ tới địa chỉ, không phải giá trị
+Có thể các bạn sẽ không phân biệt được dấu * khi khai báo con trỏ và khi truy cập vào giá trị của địa chỉ mà con trỏ đang trỏ tới.&lt;/p&gt;
+
+&lt;h3 id=&quot;truyền-giá-trị-cho-hàm&quot;&gt;Truyền giá trị cho hàm:&lt;/h3&gt;
+&lt;p&gt;Gọi hàm bằng tham trị tức là truyền bản sao của biến vào hàm để xử lý. Bản sao của một biến mang giá trị bằng giá trị của biến đó.
+Gọi hàm bằng tham chiếu. Chúng ta truyền địa chỉ hoặc tham chiếu của biến vào hàm, lúc này không có bản sao chép nào được tạo cả, đảm bảo việc không bị lãng phí bộ nhớ. Chúng ta có thể truy cập vào giá trị lưu trong các địa chỉ này bằng toán tử tham chiếu ngược &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;code-bài-tập-trên-lớp&quot;&gt;Code bài tập trên lớp:&lt;/h3&gt;
+&lt;h4 id=&quot;swap&quot;&gt;Swap&lt;/h4&gt;
+&lt;p&gt;Viết một hàm swap , nhận hai con trỏ int và hoán đổi giá trị của hai biến đó.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+void swap(int *a, int *b) {
+	int tmp = *a;
+*a = *b;
+*b = *c; 
+}
+int main() {
+    	int a, b;
+    	cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;
+    	swap(&amp;amp;a, &amp;amp;b);
+    	cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; b;
+return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;max3&quot;&gt;Max3&lt;/h4&gt;
+&lt;p&gt;Hãy xây dựng một hàm Max3, nhận đầu vào là 3 biến kiểu int a, b, c và một con trỏ Max. Hàm sẽ thực hiện tìm giá trị lớn nhất trong ba số (a, b, c) và gán giá trị đấy vào biến Max.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 30 15
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;30
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+void Max3(int a, int b, int c, int *Max) {
+    *Max = a;
+    if (b &amp;gt; *Max) *Max = b;
+    if (c &amp;gt; *Max) *Max = c;
+}
+
+int main() {
+
+    // Không thay đổi code ở hàm main
+    int a, b, c;
+    cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c;
+    int ansMax;
+    Max3(a, b, c, &amp;amp;ansMax);
+    cout &amp;lt;&amp;lt; ansMax;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;sort&quot;&gt;Sort&lt;/h4&gt;
+&lt;p&gt;Sau khi đã có hàm swap(int *a, int *b) ở bài tập trước. Hãy ứng dụng nó để xây dựng hàm sort , nhận vào 3 con trỏ và sắp xếp chúng theo thứ tự tăng dần.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 11 9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;8 9 11
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+
+void swap(int *a, int *b) {
+    int c = *a;
+    *a = *b;
+    *b = c;
+    
+}
+
+void sort(int *a, int *b, int *c) {
+    if (*a &amp;gt; *b) swap(a, b);
+    if (*a &amp;gt; *c) swap(a, c);
+    if (*b &amp;gt; *c) swap(b, c);
+}
+
+int main() {
+    int a, b, c;
+    cin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b &amp;gt;&amp;gt; c;
+    sort(&amp;amp;a, &amp;amp;b, &amp;amp;c);
+    cout &amp;lt;&amp;lt; a &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; b &amp;lt;&amp;lt; &quot; &quot; &amp;lt;&amp;lt; c;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;normalize&quot;&gt;normalize&lt;/h4&gt;
+&lt;p&gt;Viết một hàm normalize nhận đầu vào là một con trỏ, hàm thực hiện việc chia số đó với 2 mỗi khi có thể (nếu số đó dương và chia hết cho 2).&lt;br /&gt;
+Ví dụ, số 100 sẽ trở thành 25, và số 5 sẽ vẫn là chính nó.
+Nó được đảm bảo rằng hàm này sẽ không truyền vào số âm.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;100
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;25
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include&amp;lt;bits/stdc++.h&amp;gt;
+using namespace std;
+
+
+void normalize(int *a) {
+    while(*a != 0 &amp;amp;&amp;amp; *a % 2 == 0){
+        *a /= 2;
+    }
+}
+
+int main() {
+    int a;
+    cin &amp;gt;&amp;gt; a;
+    normalize(&amp;amp;a);
+    cout &amp;lt;&amp;lt; a;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h4 id=&quot;đường-link-hữu-ích&quot;&gt;Đường Link hữu ích:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.cplusplus.com/doc/tutorial/pointers/#:~:text=The%20variable%20that%20stores%20the,uses%20in%20lower%20level%20programming.&quot;&gt;Pointers CPP&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.geeksforgeeks.org/pointers-c-examples/&quot;&gt;Pointers in C/C++ with Examples&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://gist.github.com/ericandrewlewis/720c374c29bbafadedc9&quot;&gt;C++ Pointer Tutorial&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
+</description>
+                <pubDate>Sun, 12 Dec 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/cpp-buoi5</link>
+                <guid isPermaLink="true">http://localhost:4000/cpp-buoi5</guid>
+                
+                <category>Programming language</category>
+                
+                <category>Learning</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
+        
+            <item>
+                <title>Con trỏ phần 2: Sử dụng con trỏ với hàm trong lập trình C</title>
+                <description>&lt;h2 id=&quot;c-sử-dụng-con-trỏ-với-hàm-trong-lập-trình-c&quot;&gt;C. Sử dụng con trỏ với hàm trong lập trình C&lt;/h2&gt;
+
+&lt;h3 id=&quot;truyền-tham-số-cho-hàm-bằng-tham-trị-và-tham-chiếu&quot;&gt;Truyền tham số cho hàm bằng tham trị và tham chiếu&lt;/h3&gt;
+
+&lt;p&gt;Truyền tham số bằng tham trị tức là truyền bản sao của biến vào hàm để xử lý. Bản sao của một biến mang giá trị bằng giá trị của biến đó.&lt;/p&gt;
+
+&lt;p&gt;Ví dụ&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void truyen_tham_tri(int x){
+  x++;
+  printf(&quot;\nDia chi cua x = %d&quot;, &amp;amp;x);
+}
+
+int main(){
+int a = 3; 
+      printf(&quot;\nDia chi cua a = %d&quot;, &amp;amp;a);
+printf(&quot;\nGia tri cua a truoc khi goi ham = %d&quot;, a);
+truyen_tham_tri(a);
+printf(&quot;\nGia tri cua a sau khi goi ham = %d&quot;, a);
+
+ /* output
+Dia chi cua a = -392092044
+Gia tri cua a truoc khi goi ham = 3
+Dia chi cua x = -392092068
+Gia tri cua a sau khi goi ham = 3
+
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Như bạn thấy, khi hàm được truyền theo tham trị thì:&lt;/p&gt;
+
+&lt;p&gt;Giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; không bị thay đổi.
+Địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; và địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truyen_tham_tri&lt;/code&gt; là khác nhau.&lt;/p&gt;
+
+&lt;p&gt;Vậy là chúng ta đã tạo ra thêm biến x mới trong bộ nhớ và điều này trả giá bằng chi phí bộ nhớ. Chúng ta có cách nào khác để tiết kiệm bộ nhớ hơn không?&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Có, đó là gọi hàm bằng tham chiếu. Chúng ta truyền địa chỉ hoặc tham chiếu của biến vào hàm, lúc này không có bản sao chép nào được tạo cả, đảm bảo việc không bị lãng phí bộ nhớ. Chúng ta có thể truy cập vào giá trị lưu trong các địa chỉ này bằng toán tử tham chiếu ngược &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;.&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Chúng ta có thể viết lại chương trình phía trên bằng cách gọi hàm bằng tham chiếu như sau:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void truyen_tham_chieu(int &amp;amp;x){
+  x++;
+  printf(&quot;\nDia chi cua x = %d&quot;, &amp;amp;x);
+}
+
+int main(){
+int a = 3; 
+      printf(&quot;\nDia chi cua a = %d&quot;, &amp;amp;a);
+printf(&quot;\nGia tri cua a truoc khi goi ham = %d&quot;, a);
+truyen_tham_chieu(a);
+printf(&quot;\nGia tri cua a sau khi goi ham = %d&quot;, a);
+
+ /* output
+Dia chi cua a = 119268420
+Gia tri cua a truoc khi goi ham = 3
+Dia chi cua x = 119268420
+Gia tri cua a sau khi goi ham = 4
+
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Như bạn thấy, khi hàm nhận tham số là tham chiếu thì:&lt;/p&gt;
+
+&lt;p&gt;Giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; bị thay đổi đúng theo cách biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; bị thay đổi trong hàm truyen_tham_chieu.&lt;br /&gt;
+Địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; và địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; trong hàm truyen_tham_chieu là giống nhau =&amp;gt; chúng cùng là 1 biến.&lt;/p&gt;
+
+&lt;p&gt;Tham trị và tham chiếu cần phải được sử dụng chính xác nếu không bạn sẽ gặp phải những lỗi tai hại, hãy cùng xem xét ví dụ sau đây:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+#include &amp;lt;stdio.h&amp;gt;
+
+void swap(int &amp;amp;a, int &amp;amp;b){ // ham so nhan tham chieu
+  int tmp = a;
+  a = b;
+  b = tmp;
+printf(&quot;\nTrong ham: a = %d, b = %d&quot;, a, b);
+}
+
+int main(){
+int first = 3,second = 5; 
+printf(&quot;\ntruoc khi goi ham: first = %d, second = %d&quot;, first, second);
+swap(first,second);
+printf(&quot;\n Sau khi thuc thi ham: first = %d, second = %d&quot;, first, second);
+
+ /* output
+Truoc khi goi ham: first = 3, second = 5
+Trong ham: a = 5, b = 3
+Sau khi thuc thi ham: first = 5, second = 3 
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Chương trình trên thực hiện việc hoán đổi giá trị của 2 số &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; thông qua hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swap(int a, int b)&lt;/code&gt; nhận vào 2 tham số là tham chiếu. Do đó, giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; được hoán đổi sau khi thực thi hàm.&lt;/p&gt;
+
+&lt;p&gt;Tuy nhiên một lỗi khá thường gặp là bạn sơ ý truyền vào tham trị thay vì tham chiếu.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void swap(int a, int b){ // ham so nhan tham tri
+  int tmp = a;
+  a = b;
+  b = tmp;
+printf(&quot;\nTrong ham: a = %d, b = %d&quot;, a, b);
+}
+
+main(){
+int first = 3,second = 5; 
+printf(&quot;\ntruoc khi goi ham: first = %d, second = %d&quot;, first, second);
+swap(first,second);
+printf(&quot;\n Sau khi thuc thi ham: first = %d, second = %d&quot;, first, second);
+
+ /* output
+Truoc khi goi ham: first = 3, second = 5
+Trong ham: a = 5, b = 3
+Sau khi thuc thi ham: first = 3, second = 5 
+*/
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swap(int a, int b)&lt;/code&gt; nhận vào 2 tham số là tham trị. Do đó, giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; không được hoán đổi sau khi thực thi hàm.&lt;/p&gt;
+
+&lt;p&gt;Sử dụng con trỏ để truyền mảng làm tham số của hàm
+Trong phần này, chúng ta hãy cùng tìm hiểu các chương trình khác nhau nhưng việc truyền tham số sẽ sử dụng con trỏ.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+ void add(float *a, float *b){
+ float c = *a + *b;
+ printf(&quot;Addition gives %.2f\n&quot;,c);
+}
+int main(){
+    printf(&quot;Enter two numbers :\n&quot;);
+    float a,b;
+    scanf(&quot;%f %f&quot;,&amp;amp;a,&amp;amp;b);
+    add(&amp;amp;a,&amp;amp;b);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Chúng ta tạo hàm add() để tính tổng của 2 số a và b.&lt;/p&gt;
+
+&lt;p&gt;Địa chỉ của a và b được truyền vào hàm. Bên trong hàm chúng ta sử dụng * để truy cập giá trị của chúng và in ra kết quả.&lt;/p&gt;
+
+&lt;p&gt;Tương tự như vậy, chúng ta có thể truyền 1 mảng làm tham số bằng cách sử dụng con trỏ mà trỏ tới phần tử đầu tiên của nó.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
+
+void timSoLonNhat( int *p){
+ int max = *p;
+ for(int i=0; i &amp;lt; 5; i++){
+    if(*(p+i) &amp;gt; max)
+        max = *(p+i);
+ }
+ printf(&quot;so lon nhat la %d\n&quot;,max);
+ }
+main(){
+  int myNumbers[5] = { 34, 65, -456, 0, 3455};
+  timSoLonNhat(myNumbers);
+   /* output:so lon nhat la 3455&quot; */
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Bởi vì tên của mảng, bản thân nó là 1 con trỏ trỏ tới phần tử đầu tiên, chúng ta có thể truyền nó như là 1 tham số tới hàm timSoLonNhat(). Trong hàm số này, chúng ta đã duyệt từng phần tử của mảng bằng con trỏ và vòng lặp để tìm ra số lớn nhất.&lt;/p&gt;
+
+&lt;p&gt;Về phần con trỏ và hàm, còn nhiều ứng dụng nữa mà chúng ta cần phải quan tâm. Tuy nhiên mình cho rằng nó vượt quá mục đích của bài viết này là giới thiệu về con trỏ cho người mới, mình sẽ để link tham khảo cho các bạn đọc thêm nhé. Con trỏ là một phần khó trong C nhưng nếu bạn hiểu và vận dụng được nó tốt thì chắc chắn bạn đang nắm trong tay kiến thức khá vững chắc về ngôn ngữ C cũng như cách tổ chức bộ nhớ đấy!&lt;/p&gt;
+
+&lt;h2 id=&quot;kết-bài&quot;&gt;Kết bài&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt; Vậy là chúng ta đã đi qua các định nghĩa, bản chất, lỗi thường gặp, các toán tử cũng như là ứng dụng của con trỏ. Hy vọng bài viết này đã giúp cho các bạn phần nào hiểu thêm về con trỏ và cách sử dụng nó trong lập trình C. Bản thân mình khi học về con trỏ cũng phải nhào nặn lại kiến thức khá nhiều thì mới có thể tận dụng được sức mạnh của nó. Nên các bạn đừng lo lắng hay ngại ngần mà đọc lại bài viết để nắm rõ hơn phần kiến thức hay và quan trọng này nhé!&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                <pubDate>Wed, 08 Dec 2021 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/pointer2</link>
+                <guid isPermaLink="true">http://localhost:4000/pointer2</guid>
+                
+                <category>Programming language</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
+        
+            <item>
+                <title>Con trỏ phần 1: Giới thiệu cơ bản về con trỏ</title>
                 <description>&lt;h2 id=&quot;cơ-bản&quot;&gt;Cơ bản&lt;/h2&gt;
 &lt;h3 id=&quot;lời-mở-đầu&quot;&gt;Lời mở đầu&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -318,169 +719,8 @@ printf(&quot;%d &quot;, *(*pointerToGoals + i));
 /* Output */
 85 102 66 69 67
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h2 id=&quot;c-sử-dụng-con-trỏ-với-hàm-trong-lập-trình-c&quot;&gt;C. Sử dụng con trỏ với hàm trong lập trình C&lt;/h2&gt;
-
-&lt;h3 id=&quot;truyền-tham-số-cho-hàm-bằng-tham-trị-và-tham-chiếu&quot;&gt;Truyền tham số cho hàm bằng tham trị và tham chiếu&lt;/h3&gt;
-
-&lt;p&gt;Truyền tham số bằng tham trị tức là truyền bản sao của biến vào hàm để xử lý. Bản sao của một biến mang giá trị bằng giá trị của biến đó.&lt;/p&gt;
-
-&lt;p&gt;Ví dụ&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
-
-void truyen_tham_tri(int x){
-  x++;
-  printf(&quot;\nDia chi cua x = %d&quot;, &amp;amp;x);
-}
-
-int main(){
-int a = 3; 
-      printf(&quot;\nDia chi cua a = %d&quot;, &amp;amp;a);
-printf(&quot;\nGia tri cua a truoc khi goi ham = %d&quot;, a);
-truyen_tham_tri(a);
-printf(&quot;\nGia tri cua a sau khi goi ham = %d&quot;, a);
-
- /* output
-Dia chi cua a = -392092044
-Gia tri cua a truoc khi goi ham = 3
-Dia chi cua x = -392092068
-Gia tri cua a sau khi goi ham = 3
-
-*/
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Như bạn thấy, khi hàm được truyền theo tham trị thì:&lt;/p&gt;
-
-&lt;p&gt;Giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; không bị thay đổi.
-Địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; và địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;truyen_tham_tri&lt;/code&gt; là khác nhau.&lt;/p&gt;
-
-&lt;p&gt;Vậy là chúng ta đã tạo ra thêm biến x mới trong bộ nhớ và điều này trả giá bằng chi phí bộ nhớ. Chúng ta có cách nào khác để tiết kiệm bộ nhớ hơn không?&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Có, đó là gọi hàm bằng tham chiếu. Chúng ta truyền địa chỉ hoặc tham chiếu của biến vào hàm, lúc này không có bản sao chép nào được tạo cả, đảm bảo việc không bị lãng phí bộ nhớ. Chúng ta có thể truy cập vào giá trị lưu trong các địa chỉ này bằng toán tử tham chiếu ngược &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt;.&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Chúng ta có thể viết lại chương trình phía trên bằng cách gọi hàm bằng tham chiếu như sau:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
-
-void truyen_tham_chieu(int &amp;amp;x){
-  x++;
-  printf(&quot;\nDia chi cua x = %d&quot;, &amp;amp;x);
-}
-
-int main(){
-int a = 3; 
-      printf(&quot;\nDia chi cua a = %d&quot;, &amp;amp;a);
-printf(&quot;\nGia tri cua a truoc khi goi ham = %d&quot;, a);
-truyen_tham_chieu(a);
-printf(&quot;\nGia tri cua a sau khi goi ham = %d&quot;, a);
-
- /* output
-Dia chi cua a = 119268420
-Gia tri cua a truoc khi goi ham = 3
-Dia chi cua x = 119268420
-Gia tri cua a sau khi goi ham = 4
-
-*/
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Như bạn thấy, khi hàm nhận tham số là tham chiếu thì:&lt;/p&gt;
-
-&lt;p&gt;Giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; bị thay đổi đúng theo cách biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; bị thay đổi trong hàm truyen_tham_chieu.&lt;br /&gt;
-Địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;a&lt;/code&gt; trong hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; và địa chỉ của &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x&lt;/code&gt; trong hàm truyen_tham_chieu là giống nhau =&amp;gt; chúng cùng là 1 biến.&lt;/p&gt;
-
-&lt;p&gt;Tham trị và tham chiếu cần phải được sử dụng chính xác nếu không bạn sẽ gặp phải những lỗi tai hại, hãy cùng xem xét ví dụ sau đây:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-#include &amp;lt;stdio.h&amp;gt;
-
-void swap(int &amp;amp;a, int &amp;amp;b){ // ham so nhan tham chieu
-  int tmp = a;
-  a = b;
-  b = tmp;
-printf(&quot;\nTrong ham: a = %d, b = %d&quot;, a, b);
-}
-
-int main(){
-int first = 3,second = 5; 
-printf(&quot;\ntruoc khi goi ham: first = %d, second = %d&quot;, first, second);
-swap(first,second);
-printf(&quot;\n Sau khi thuc thi ham: first = %d, second = %d&quot;, first, second);
-
- /* output
-Truoc khi goi ham: first = 3, second = 5
-Trong ham: a = 5, b = 3
-Sau khi thuc thi ham: first = 5, second = 3 
-*/
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Chương trình trên thực hiện việc hoán đổi giá trị của 2 số &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; thông qua hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swap(int a, int b)&lt;/code&gt; nhận vào 2 tham số là tham chiếu. Do đó, giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; được hoán đổi sau khi thực thi hàm.&lt;/p&gt;
-
-&lt;p&gt;Tuy nhiên một lỗi khá thường gặp là bạn sơ ý truyền vào tham trị thay vì tham chiếu.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
-
-void swap(int a, int b){ // ham so nhan tham tri
-  int tmp = a;
-  a = b;
-  b = tmp;
-printf(&quot;\nTrong ham: a = %d, b = %d&quot;, a, b);
-}
-
-main(){
-int first = 3,second = 5; 
-printf(&quot;\ntruoc khi goi ham: first = %d, second = %d&quot;, first, second);
-swap(first,second);
-printf(&quot;\n Sau khi thuc thi ham: first = %d, second = %d&quot;, first, second);
-
- /* output
-Truoc khi goi ham: first = 3, second = 5
-Trong ham: a = 5, b = 3
-Sau khi thuc thi ham: first = 3, second = 5 
-*/
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Hàm &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;swap(int a, int b)&lt;/code&gt; nhận vào 2 tham số là tham trị. Do đó, giá trị của biến &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;first, second&lt;/code&gt; không được hoán đổi sau khi thực thi hàm.&lt;/p&gt;
-
-&lt;p&gt;Sử dụng con trỏ để truyền mảng làm tham số của hàm
-Trong phần này, chúng ta hãy cùng tìm hiểu các chương trình khác nhau nhưng việc truyền tham số sẽ sử dụng con trỏ.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
-
- void add(float *a, float *b){
- float c = *a + *b;
- printf(&quot;Addition gives %.2f\n&quot;,c);
-}
-int main(){
-    printf(&quot;Enter two numbers :\n&quot;);
-    float a,b;
-    scanf(&quot;%f %f&quot;,&amp;amp;a,&amp;amp;b);
-    add(&amp;amp;a,&amp;amp;b);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Chúng ta tạo hàm add() để tính tổng của 2 số a và b.&lt;/p&gt;
-
-&lt;p&gt;Địa chỉ của a và b được truyền vào hàm. Bên trong hàm chúng ta sử dụng * để truy cập giá trị của chúng và in ra kết quả.&lt;/p&gt;
-
-&lt;p&gt;Tương tự như vậy, chúng ta có thể truyền 1 mảng làm tham số bằng cách sử dụng con trỏ mà trỏ tới phần tử đầu tiên của nó.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;stdio.h&amp;gt;
-
-void timSoLonNhat( int *p){
- int max = *p;
- for(int i=0; i &amp;lt; 5; i++){
-    if(*(p+i) &amp;gt; max)
-        max = *(p+i);
- }
- printf(&quot;so lon nhat la %d\n&quot;,max);
- }
-main(){
-  int myNumbers[5] = { 34, 65, -456, 0, 3455};
-  timSoLonNhat(myNumbers);
-   /* output:so lon nhat la 3455&quot; */
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Bởi vì tên của mảng, bản thân nó là 1 con trỏ trỏ tới phần tử đầu tiên, chúng ta có thể truyền nó như là 1 tham số tới hàm timSoLonNhat(). Trong hàm số này, chúng ta đã duyệt từng phần tử của mảng bằng con trỏ và vòng lặp để tìm ra số lớn nhất.&lt;/p&gt;
-
-&lt;p&gt;Về phần con trỏ và hàm, còn nhiều ứng dụng nữa mà chúng ta cần phải quan tâm. Tuy nhiên mình cho rằng nó vượt quá mục đích của bài viết này là giới thiệu về con trỏ cho người mới, mình sẽ để link tham khảo cho các bạn đọc thêm nhé. Con trỏ là một phần khó trong C nhưng nếu bạn hiểu và vận dụng được nó tốt thì chắc chắn bạn đang nắm trong tay kiến thức khá vững chắc về ngôn ngữ C cũng như cách tổ chức bộ nhớ đấy!&lt;/p&gt;
-
-&lt;h2 id=&quot;kết-bài&quot;&gt;Kết bài&lt;/h2&gt;
+&lt;p&gt;Xem thêm phần 2: &lt;a href=&quot;https://itmobrain.github.io/pointer2&quot;&gt;Sử dụng con trỏ với hàm trong lập trình C&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;kết-bài&quot;&gt;Kết bài&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;cite&gt; Vậy là chúng ta đã đi qua các định nghĩa, bản chất, lỗi thường gặp, các toán tử cũng như là ứng dụng của con trỏ. Hy vọng bài viết này đã giúp cho các bạn phần nào hiểu thêm về con trỏ và cách sử dụng nó trong lập trình C. Bản thân mình khi học về con trỏ cũng phải nhào nặn lại kiến thức khá nhiều thì mới có thể tận dụng được sức mạnh của nó. Nên các bạn đừng lo lắng hay ngại ngần mà đọc lại bài viết để nắm rõ hơn phần kiến thức hay và quan trọng này nhé!&lt;/cite&gt;&lt;/p&gt;
@@ -1715,349 +1955,6 @@ Chẳng thể phủ nhận những lời hay ý đẹp bạn viết trong CV là
                 
                 
                 <category>ITMOBRAIN</category>
-                
-            </item>
-        
-            <item>
-                <title>Tổng kết buổi 1</title>
-                <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Số lượng thành viên tham gia: 27&lt;br /&gt;
-&lt;a href=&quot;https://docs.google.com/presentation/d/1XAk2ltO7TeXt-63QFWOk2vJ8bgIRHULfDuUlI4Wx1cc/edit?usp=sharing&quot;&gt;Link slide buổi học&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://niuitmo.sharepoint.com/sites/ITMOBRAIN/Shared%20Documents/General/Recordings/Meeting%20in%20_General_-20211114_132810-Meeting%20Recording.mp4?web=1&quot;&gt;Link record&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.hackerrank.com/contests/itmo-brain-cpp-1/&quot;&gt;Link bài tập lớp buổi 1 CPP&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.hackerrank.com/itmo-brain-cpp-btvn-1/&quot;&gt;Link btvn buổi 1 CPP&lt;/a&gt;&lt;br /&gt;&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;nội-dung-chia-sẻ&quot;&gt;Nội dung chia sẻ:&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Tổng quan về C++ và ứng dụng.&lt;/li&gt;
-  &lt;li&gt;Cấu trúc 1 chương trình C++ cơ bản.&lt;/li&gt;
-  &lt;li&gt;Ghi nhớ cách khai báo biến, cấu trúc lệnh if else và swicth.&lt;/li&gt;
-  &lt;li&gt;Một số thư viện cần nhớ:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;code&gt;#include &amp;lt;bits/stdc++.h&amp;gt; &lt;/code&gt;- thư viện gọi tất cả các thư viện.&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;iostream&lt;/code&gt;- thư viện chứ hàm cin, cout,…&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;math.h&lt;/code&gt; - thư viện chứa hàm sqrt(tính căn bậc 2), abs(trị tuyệt đối), sin(tính sin),…&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;stdio.h&lt;/code&gt; - thư viện chứa printf, scanf,…&lt;/li&gt;
-      &lt;li&gt;&lt;code&gt;iomanip&lt;/code&gt; - thư viện chứa setprecision,…&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cách in số thực y làm tròn sau dấy phẩy x chữ số: &lt;code&gt;cout&amp;lt;&amp;lt;fixed&amp;lt;&amp;lt;setprecision(x)&amp;lt;&amp;lt;y&lt;/code&gt;;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;ưu-điểm-của-c&quot;&gt;Ưu điểm của C++&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;C++ là một ngôn ngữ &lt;strong&gt;hiệu năng cao&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Nhiều ứng dụng&lt;/strong&gt; - từ Học máy đến xây dựng trò chơi trong Unity và Unreal đến mô phỏng toán học thời gian thực, đến lập trình các hợp đồng thông minh Blockchain. Nếu bạn chưa biết Tensorflow, một trong những thư viện Máy học được sử dụng rộng rãi nhất trên thế giới sử dụng C++ làm ngôn ngữ lập trình phụ trợ để tăng tốc độ thực thi.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Quản lý bộ nhớ&lt;/strong&gt; - C++ cung cấp cho người dùng quyền kiểm soát hoàn toàn, đó là một lợi thế và một bất lợi vì điều này làm tăng trách nhiệm của người dùng trong việc quản lý bộ nhớ thay vì được quản lý bởi bộ thu gom rác.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Hỗ trợ Thư viện&lt;/strong&gt; - thư viện tiêu chuẩn cho các vùng chứa khác nhau như sets, map, hash, v.v.&lt;/li&gt;
-  &lt;li&gt;Ngôn ngữ lập trình &lt;strong&gt;hướng đối tượng&lt;/strong&gt; - bốn nguyên tắc của lập trình hướng đối tượng là đóng gói, trừu tượng hóa, kế thừa và đa hình. Nhìn chung, điều này giúp tránh trùng lặp mã và tăng khả năng tái sử dụng mã.
-    &lt;ul&gt;
-      &lt;li&gt;Tính năng đóng gói làm cho dữ liệu trừu tượng hóa (bảo mật hoặc quyền riêng tư đối với dữ liệu) có thể thực hiện được với sự trợ giúp của một lớp.&lt;/li&gt;
-      &lt;li&gt;Kế thừa được sử dụng để cung cấp khái niệm về khả năng tái sử dụng mã.&lt;/li&gt;
-      &lt;li&gt;Tính đa hình làm cho một ngôn ngữ có thể thực hiện các tác vụ khác nhau ở các trường hợp khác nhau.&lt;/li&gt;
-      &lt;li&gt;Tính trừu tượng thể hiện thông tin cần thiết trong một chương trình mà không cần trình bày chi tiết.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;người-sáng-tạo&quot;&gt;Người sáng tạo&lt;/h3&gt;
-&lt;p&gt;Năm 1983, Bjarne Stroustrup phát hành C++, ông là nhân viên của &lt;strong&gt;Bell AT&amp;amp;T&lt;/strong&gt; và bắt đầu làm việc trên ngôn ngữ “C với các lớp”. Giờ đây, C++ phát triển thêm nhiều tính năng mở rộng và được ứng dụng rộng rãi trong nhiều lĩnh vực.
-Nói về &lt;strong&gt;Bell AT&amp;amp;T&lt;/strong&gt; Labs là một trong những nơi ươm mầm những phát kiến lớn nhất của lĩnh vực Công nghệ thông tin và truyền thông thế kỉ 20.&lt;/p&gt;
-&lt;h3 id=&quot;c&quot;&gt;C++&lt;/h3&gt;
-&lt;p&gt;Nó là một &lt;strong&gt;ngôn ngữ cấp cao&lt;/strong&gt; được thiết kế để phát triển ứng dụng nhanh chóng. Bạn không cần phải học C để sử dụng C ++.&lt;/p&gt;
-&lt;h3 id=&quot;một-dự-án-c&quot;&gt;Một dự án C++&lt;/h3&gt;
-&lt;p&gt;Nó sẽ luôn có hai giai đoạn: biên dịch mã thành một hoặc nhiều tệp object và sau đó liên kết các tệp object thành tệp thực thi. Điều này có nghĩa là trình biên dịch C++ của bạn sẽ cung cấp một công cụ khác, được gọi là trình liên kết.&lt;/p&gt;
-&lt;h3 id=&quot;ngữ-nghĩa-của-cpp&quot;&gt;Ngữ nghĩa của cpp&lt;/h3&gt;
-&lt;p&gt;Ở cấp độ rất cơ bản, một project C ++ sẽ chỉ chứa một file: mã nguồn C++, thường có phần mở rộng là &lt;strong&gt;cpp&lt;/strong&gt;, viết tắt của c plus plus.&lt;/p&gt;
-&lt;h3 id=&quot;bắt-đầu-với-hàm-main&quot;&gt;Bắt đầu với hàm main&lt;/h3&gt;
-&lt;p&gt;Một trong những phần này là hàm main() là hàm chạy đầu tiên. Hiện tại, tất cả những gì bạn cần biết là mọi ứng dụng C ++ đều có một hàm main().&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
-// The entry point of the program 
-int main() 
-{ 
-    std::cout &amp;lt;&amp;lt; “Hello, world!”;
-    return 0; 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h3 id=&quot;chia-nhỏ-cú-pháp&quot;&gt;Chia nhỏ cú pháp&lt;/h3&gt;
-&lt;p&gt;Dòng đầu tiên bắt đầu bằng #include. #include cho phép tái sử dụng mã được viết sẵn tại thư viện trong chương trình của bạn.&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
-int main() 
-{ 
-    std::cout &amp;lt;&amp;lt; “Hello, world!”; 
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;dấu ngoặc nhọn (&amp;lt;&amp;gt;)&lt;/strong&gt; chỉ ra rằng trình biên dịch nên tìm thư viện cung cấp sẵn.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Comment - dòng bắt đầu bằng //&lt;/strong&gt;. Một cách khác có thể được bắt đầu bằng &lt;strong&gt;/* và kết thúc bằng */&lt;/strong&gt; và mọi thứ giữa hai ký hiệu này là một comment, bao gồm cả ngắt dòng. Tất cả kí tự ở giữa comment sẽ không được chạy.&lt;/li&gt;
-  &lt;li&gt;Dấu ngoặc nhọn - ** chia tách khối mã {}**, trong trường hợp này được sử dụng cho hàm main để chia tách với các phần khác của chương trình. Tưởng tượng chương trình như sự lắp ghép của các khối, thì {} sẽ chia tách các khối đó với nhau, giúp chương trình biết được mã nào là của khối nào.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Dấu ngoặc trống ()&lt;/strong&gt;, hiện tại hàm này không có tham số. Nhưng thông thường, điều này được sử dụng để khai báo các tham số được truyền cho hàm.&lt;/li&gt;
-  &lt;li&gt;Hàm int main(), là điểm bắt đầu của ứng dụng c++ của bạn phải trả về int(tức là một số nguyên).
-chức năng chính là một câu lệnh đơn bắt đầu bằng std và kết thúc bằng dấu chấm phẩy (;)
-câu lệnh đơn in ra chuỗi &lt;strong&gt;Hello, world!&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;chuỗi được đặt trong dấu ngoặc kép &lt;code&gt;(″ ″)&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;chuỗi được đưa vào std::cout bằng cách sử dụng toán tử &lt;strong&gt;«&lt;/strong&gt; cho phép dữ liệu được in ra.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;sử-dụng-std-namespace-thay-thế&quot;&gt;Sử dụng std namespace thay thế&lt;/h3&gt;
-&lt;p&gt;Trong trường hợp này, std là viết tắt của &lt;strong&gt;standard namespace&lt;/strong&gt;. Điều đó bao gồm cout, cin, string, vector, map, v.v. Vì vậy, phổ biến là thêm “using namespace std” ở đầu mã nguồn để bạn không phải nhập lại tiền tố &lt;strong&gt;std::&lt;/strong&gt;. namespace là tên được đặt cho các phần của mã giúp giảm nguy cơ xung đột đặt tên.&lt;/p&gt;
-
-&lt;p&gt;Before using Namespace&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
-int main() 
-{ 
-    std::cout &amp;lt;&amp;lt; “Hello, world!”; 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;After using Namespace including Breakdown of the Syntax&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//Preprocessor directive
-#include &amp;lt;iostream&amp;gt;
-// Entry point of the program 
-int main() 
-{ 
-    /*Tell the compiler what namespace to search with namespace std;*/
-   using namespace std;
-/* Write to the screen using std::cout*/
-   cout &amp;lt;&amp;lt; “Hello, world!”&amp;lt;&amp;lt; endl;
-//Returns a value
-    return 0; 
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Chúc mừng bạn đã thực hiện chương trình đầu tiên. &lt;strong&gt;Stay hungry! Stay foolish&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;bảng-xếp-hạng-hackerrank&quot;&gt;Bảng xếp hạng Hackerrank:&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;/images/lb1.jpg&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;code-bài-tập-trên-lớp&quot;&gt;Code bài tập trên lớp:&lt;/h3&gt;
-&lt;h4 id=&quot;tặng-hoa&quot;&gt;Tặng hoa&lt;/h4&gt;
-&lt;p&gt;Trong CLB ITMO Brain thì anh Trần Đức Mạnh ( a.k.a Mi sa Chan) nổi tiếng là nhiều tiền và đẹp trai, đặc biệt là rất biết quan tâm đến các bạn nữ. Hôm nay là ngày 14 tháng 11 - “Ngày bệnh dư đường thế giới” hay còn gọi là “ngày quốc tế đáo thái đường” (World Diabetes Day), anh Mạnh quyết tâm thể hiện sự ngọt ngào của mình và quyết định sẽ mua hoa tặng tất cả các người yêu của anh.&lt;/p&gt;
-
-&lt;p&gt;Anh Mạnh có N người yêu và dự định mua X bông hoa, mỗi bông hoa có giá là P. Ở Saint Petersburg hoa rất đắt, sinh hoạt phí kỳ này thì đang chậm nên anh Mạnh phải lên kế hoạch đầu tư hợp lý. Các bạn hãy giúp anh tính số tiền trung bình mà anh đầu tư cho mỗi cô người yêu nhé !&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Input Format:&lt;/strong&gt;&lt;br /&gt;
-3 số nguyên n, x, p nằm trên cùng 1 dòng&lt;br /&gt;
-&lt;strong&gt;Constraints&lt;/strong&gt;&lt;br /&gt;
-1 ≤ n ≤ 10ˆ3&lt;br /&gt;
-1 ≤ x ≤ 10ˆ6&lt;br /&gt;
-1 ≤ p ≤ 10ˆ6&lt;br /&gt;
-&lt;strong&gt;Output Format&lt;/strong&gt;&lt;br /&gt;
-Số thực duy nhất là số tiền trung bình mà anh Mạnh đầu tư cho mỗi cô người yêu.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Sample Input 0:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4 6 200
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;300
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// from danghoangducbinh
-#include &amp;lt;cmath&amp;gt;
-#include &amp;lt;cstdio&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-using namespace std;
-
-
-int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    double n, x, p;
-    cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; x &amp;gt;&amp;gt; p;
-    double a = x*(p/n) ;
-    cout &amp;lt;&amp;lt; fixed &amp;lt;&amp;lt; (a);
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;đếm-nghiệm&quot;&gt;Đếm nghiệm&lt;/h4&gt;
-&lt;p&gt;Sau màn tặng hoa thể hiện đầy đủ sự giàu có và khả năng thấu hiểu chị em, anh Mạnh đã ghi điểm rất lớn trong lòng các bạn nữ trong CLB ITMO BRAIN. Tuy nhiên các bạn nữ trong CLB chúng ta đều là những người xinh đẹp và thông minh, ai cũng có tiêu chuẩn chọn người yêu rất cao. Ngoài đẹp trai, cao 1m90, nhiều tiền, … anh Mạnh cần phải chứng minh trí tuệ của mình. TN (Thị Nở) - một ứng cử viên tiềm năng cho vị trí người yêu đưa ra cho anh một câu đố:&lt;br /&gt;
-Với mỗi số nguyên n bạn TN nói ra, anh phải trả lời chính xác số nghiệm thực của phương trình sau:
-&lt;img src=&quot;/images/demnghiem.png&quot; /&gt;&lt;br /&gt;
-Anh Mạnh rất bận, còn rất nhiều mục tiêu theo đuổi nữa, không chỉ mình TN. Nên bạn hãy giúp anh Mạnh viết 1 chương trình tự động trả lời câu hỏi của TN nhé!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Input Format:&lt;/strong&gt;&lt;br /&gt;
-Gồm 1 số nguyên n trên 1 dòng duy nhất&lt;br /&gt;
-&lt;strong&gt;Constraints&lt;/strong&gt;&lt;br /&gt;
-1 ≤ n ≤ 10ˆ9&lt;br /&gt;
-&lt;strong&gt;Output Format&lt;/strong&gt;&lt;br /&gt;
-Số nguyên duy nhất là số nghiệm thực của phương trình đã cho&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// from tle15112002
-#include &amp;lt;cmath&amp;gt;
-#include &amp;lt;cstdio&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-using namespace std;
-
-
-int main() {
-    cout &amp;lt;&amp;lt; 0;
-    return 0;
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;h4 id=&quot;mai-làm-gì&quot;&gt;Mai làm gì&lt;/h4&gt;
-&lt;p&gt;Khánh Huyền là người đam mê đỏ đen và luôn quyết định ngày mai của mình bằng việc tung xúc xắc. Đầu tiên Huyền tung xúc xắc để quyết định xem có đi học hay không. Nếu xúc xắc ra chẵn thì nghỉ học hoặc ngược lại thì đi học. Nếu đi học, Huyền lại tung xúc xắc tiếp, chẵn thì làm bài, lẻ thì không làm bài. Nếu nghỉ học, Huyền tung xúc xắc ra chẵn thì xem phim, lẻ thì gội đầu.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Input Format:&lt;/strong&gt;&lt;br /&gt;
-2 số nguyên x và y - là 2 số Huyền nhận được sau 2 lần tung xúc xắc.&lt;br /&gt;
-&lt;strong&gt;Constraints&lt;/strong&gt;&lt;br /&gt;
-0 &amp;lt; x &amp;lt; 7; 0 &amp;lt; y &amp;lt; 7&lt;br /&gt;
-&lt;strong&gt;Output Format&lt;/strong&gt;&lt;br /&gt;
-In ra màn hình kết quả ứng với từng số: “nghi hoc”, “di hoc”, “lam bai”, “khong lam bai”, “xem phim”, “goi dau” và các kết quả được ngăn cách bởi chữ ‘va’.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Sample Input 0&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;6 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;&lt;strong&gt;Sample Output 0:&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;nghi hoc va goi dau
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;// from kh280174
-#include &amp;lt;cmath&amp;gt;
-#include &amp;lt;cstdio&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-using namespace std;
-
-
-int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
-    int x, y;
-    cin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y;
-    if(x%2==1){
-        if(y%2==1){cout&amp;lt;&amp;lt;&quot;di hoc va khong lam bai&quot;;}
-        else cout&amp;lt;&amp;lt;&quot;di hoc va lam bai&quot;;
-    };
-    if(x%2==0){
-        if(y%2==1){cout&amp;lt;&amp;lt;&quot;nghi hoc va goi dau&quot;;}
-        else cout&amp;lt;&amp;lt;&quot;nghi hoc va xem phim &quot;;
-    };
-    
-    return 0;
-}
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;đường-link-hữu-ích&quot;&gt;Đường Link hữu ích:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://en.cppreference.com/w/cpp/language/main_function&quot;&gt;Main function&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://en.cppreference.com/w/cpp/language/type&quot;&gt;Cpp type&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-096-introduction-to-c-january-iap-2011/lecture-notes/MIT6_096IAP11_lec01.pdf&quot;&gt;6.096 Introduction to C++: Introduction&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;
-</description>
-                <pubDate>Sun, 14 Nov 2021 04:48:45 +0300</pubDate>
-                <link>http://localhost:4000/cpp-buoi1</link>
-                <guid isPermaLink="true">http://localhost:4000/cpp-buoi1</guid>
-                
-                <category>Programming language</category>
-                
-                <category>Learning</category>
-                
-                
-                <category>ITMOBRAIN</category>
-                
-            </item>
-        
-            <item>
-                <title>Cơ điện tử và kỹ thuật Robot</title>
-                <description>&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/admin/tuan.jpg&quot; /&gt;
-  &lt;em&gt;Đinh Ngọc Tuấn / &lt;a href=&quot;https://www.facebook.com/profile.php?id=100011042762760&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Hế Lô mọi người, Mình là Tuấn (Đinh Ngọc Tuấn) hiện đang là sinh viên năm 2 chuyên ngành Cơ điện tử và kỹ thuật Robot (15.03.06) trường đại học ITMO.&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Trước khi chia sẻ một số kiến thức về chuyên ngành mình xin được tâm sự đôi chút về lý do tại sao mình lại chọn chuyên ngành Cơ điện tử và robot. Hồi còn bé mình rất thích xem cuộc thi Robocon Việt Nam chiếu trên sóng truyền hình kênh VTV2. Cuộc thi đó đã tạo cho mình niềm đam mê về robot. Lúc đó mình rất muốn sau này tạo ra được những con robot giống như mấy anh đi thi vậy.&lt;/p&gt;
-
-&lt;p&gt;Nhưng mà đời không như là mơ, đã có một thời gian mình loay hoay tìm lối đi cho riêng mình. Sau nhiều lần thất bại, may mắn đến với mình khi mình được nhận học bổng du học tại nước Nga xinh đẹp này. Thấy chữ cơ điện tử và kỹ thuật robot là khoái rồi nên mình chọn luôn. Từ những nhận định trong quá trình học tập và tìm hiểu của bản thân về ngành học, mình xin được chia sẻ một số điều mình biết về ngành học của mình và những tư tưởng học tập mà mình đã đúc kết được trong suốt thời gian qua. Hy vọng sẽ giúp các bạn một cái nhìn rõ hơn về ngành học của mình và tiếp thêm  động lực học tập cho các bạn.&lt;/p&gt;
-&lt;h3 id=&quot;vậy-thế-nào-là-cơ-điện-tử-và-robot&quot;&gt;Vậy thế nào là cơ điện tử và robot?&lt;/h3&gt;
-&lt;p&gt;Cơ điện tử là một quá trình cấu hình bao gồm sự kết hợp của Kỹ thuật cơ khí, Kỹ thuật điện, Kỹ thuật điều khiển và Kỹ thuật máy tính. Cơ điện tử là một điểm nối mà lĩnh vực kỹ thuật hợp tác. Người máy (Rô bốt)  có thể được coi là một tập hợp con của Cơ điện tử vì nó liên quan đến các lĩnh vực kỹ thuật cơ khí, điện tử và máy tính này. Sự khác biệt chính là đầu vào được “cung cấp” cho các hệ thống cơ điện tử trong khi các hệ thống robot tự “thu nhận” đầu vào.&lt;/p&gt;
-
-&lt;p&gt;Bạn sẽ học cách xử lý một lượng lớn dữ liệu và tạo ra các hệ thống có ý nghĩa về dữ liệu trong thời gian thực để một cơ sở sản xuất hoàn toàn tự động có thể hoạt động một cách an toàn và hiệu quả hoặc một chiếc ô tô có thể lái hoàn toàn tự động. Các kỹ sư người máy và cơ điện tử đang có nhu cầu cao khi nhu cầu về các chuyên gia trong lĩnh vực này ngày càng tăng. Chúng cần thiết trong các ngành công nghiệp sản xuất và hàng không vũ trụ tiên tiến cũng như các nhà sản xuất robot và phân tích dữ liệu.&lt;/p&gt;
-
-&lt;p&gt;Khi các máy móc tự động hóa và tự động hóa ngày càng trở nên quan trọng trong xã hội của chúng ta, người máy - và ngành mẹ của nó, cơ điện tử - trở nên quan trọng hơn bao giờ hết.&lt;/p&gt;
-
-&lt;p&gt;Đối tượng nên quan tâm: Những ai yêu thích các loại thiết bị cơ khí, điện tử, máy tính, rô bốt, ô tô.&lt;br /&gt;Nếu bạn để ý thì trên trường tại Kronversky có máy bán cà phê tự động, đó là một sản phẩm những kỹ sư cơ điện tử và robot có thể làm ra. Sẽ tuyệt vời hơn nữa nếu bạn có thể ứng dụng AI và ML vào các sản phẩm này. Hãy tưởng tượng có một cỗ máy bán cà phê có thể nhận dạng khuôn mặt của bạn, giao tiếp với bạn bằng giọng nói và ghi nhớ những loại cafe bạn thích…vân vân và mây mây .&lt;/p&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Sophia_%28robot%29.jpg/800px-Sophia_%28robot%29.jpg&quot; /&gt;
-  &lt;em&gt;Sophia / &lt;a href=&quot;https://en.wikipedia.org/wiki/Sophia&quot; target=&quot;_blank&quot;&gt;Wikipedia&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-&lt;p&gt;Hoặc một ví dụ khác là người máy Sophia - được thiết kế và phát triển bởi công ty công nghệ Mỹ Hanson Robotics có trụ sở đặt tại Hồng Kông. Sophia được thiết kế để suy nghĩ và cử động sao cho giống với con người nhất đồng thời được trang bị trí tuệ thông minh nhân tạo. Mục đích chế tạo Sophia; theo nhà sản xuất; là nhằm phát minh ra một robot có ý thức, có sự sáng tạo và có khả năng hoạt động như bất kỳ con người nào để giúp đỡ chính con người trong các vấn đề cuộc sống thường ngày như: phục vụ chăm sóc sức khỏe, hỗ trợ điều trị y tế, giáo dục cùng nhiều các dịch vụ khác. Người máy sofia là bằng chứng cho sự phát triển về AI trong tương lai. Trong tương lai ứng dụng của robotics kết hợp với AI sẽ giúp giải quyết các vấn đề của nhân loại như chăm sóc y tế, giao thông hay các vấn đề trong kinh doanh như tăng năng suất.&lt;/p&gt;
-&lt;h3 id=&quot;vậy-đơn-vị-chức-năng-của-robotics-là-gì-&quot;&gt;Vậy đơn vị chức năng của robotics là gì ?&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;Body Structure -  Hầu hết các  robot đều có cấu trúc cơ thể dựa trên mục đích sử dụng và chức năng của nó.&lt;/li&gt;
-  &lt;li&gt;Muscle Systems - Các cơ cấu phổ biến như bánh răng, thiết bị truyền động khí nén, cơ nhân tạo và cơ đẩy.
-Sensory Systems - Hệ thống “sensory Systems” đơn giản sử dụng các thiết bị như máy dò chuyển động đơn giản, trong khi hệ thống “Sensory Systems” phức tạp sử dụng camera quang học cho phép robot không chỉ nhìn thấy môi trường xung quanh mà còn tương tác với môi trường dựa trên môi trường xung quanh.&lt;/li&gt;
-  &lt;li&gt;Power Source - Hai hình thức cung cấp năng lượng điện phổ biến nhất cho rô bốt là ổ cắm điện nối đất cho rô bốt cố định hoặc bộ pin bên trong cho rô bốt di động.&lt;/li&gt;
-  &lt;li&gt;Brain System - Hệ thống “não bộ” của robot có liên quan chặt chẽ và hoạt động cùng với hệ thống giác quan. Hệ thống não của robot cũng có thể rất đơn giản hoặc rất phức tạp, tùy thuộc vào chức năng của robot. Một hệ thống “não bộ” đơn giản sẽ gửi tín hiệu đến hệ thống cơ của rô-bốt yêu cầu nó dừng lại nếu hệ thống cảm giác được phát hiện được kích hoạt. Một hệ thống “não bộ” phức tạp sẽ cho phép một robot xác định các đối tượng trong môi trường xung quanh nó, dựa trên thông tin thu thập được bởi các hệ thống giác quan. Sau đó “hệ thống não bộ” sẽ gửi tín hiệu đến hệ thống cơ dựa trên thông tin đó, cho phép robot tương tác với các vật thể xung quanh nó.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;học-tập-tại-itmo-như-thế-nào&quot;&gt;Học tập tại ITMO như thế nào?&lt;/h3&gt;
-&lt;p&gt;Để học tập hiệu quả các bạn nên chuẩn bị cho mình một nền tảng toán học, vật lý thật vững chắc. Ví dụ như năm đầu tiên trong môn giới thiệu chuyên ngành cần hiểu rất rõ về Đại số tuyến tính, các hàm toán học ứng dụng trong lập trình nhúng cho robot như hàm Lyapunov (Lyapunov functions), Cơ học Lagrange và kiến thức về Vật lý phần cơ học. Tìm hiểu về lập trình C/C++ để rèn luyện tư duy và hiểu về lập trình.  Tìm hiểu cách làm việc với Simulink hay Xcos trong Matlab, Scilab.&lt;/p&gt;
-
-&lt;p&gt;Chúng ta sẽ được làm quen với các môn cơ bản liên quan đến chuyên ngành của mình.  Các môn liên quan đến lập trình như : Lập trình java, lập trình C. Môn VPD (Введение в профессиональную деятельность) nơi mà bạn sẽ được quen với lắp ráp và lập trình nhúng cho robot (cụ thể là Mindstorms EV3). Mình rất thích môn VPD và nó cũng là môn ngốn rất nhiều thời gian của mình khi học năm nhất đại học.  Ngoài ra bạn sẽ làm quen kiến thức cơ bản về AI (Artificial intelligence), ML(Machine Learning) qua các môn học Ứng dụng trí tuệ nhân tạo (прикладной искусственный интеллект) và môn Máy học (Машинное обучение) cùng một số môn đại cương khác.&lt;/p&gt;
-
-&lt;p&gt;Từ năm 2021, Mã ngành 15.03.06(Cơ điện tử và kỹ thuật robot) chia làm 3 chuyên ngành nhỏ sau:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Мехатроника.&lt;/li&gt;
-  &lt;li&gt;Интеллектуальная робототехника.&lt;/li&gt;
-  &lt;li&gt;Интеллектуальная робототехника (проектная).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Các bạn có thể tìm hiểu các môn học với từng chuyên ngành bằng file gắn &lt;a href=&quot;https://www.google.com/url?q=https://vk.com/doc563228141_617153236?hash%3D95940875d35792f68f%26dl%3Dbde995cd232f19dda8&amp;amp;sa=D&amp;amp;source=docs&amp;amp;ust=1636534480620000&amp;amp;usg=AOvVaw3Y2AGJpTQU7sG9WL9nboAw&quot;&gt;với đường link này&lt;/a&gt;.&lt;br /&gt;
-Và mình xin trích một nhận xét của một sinh viên năm 2 cùng ngành mình tên là Georgy Khachatryan như sau:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;“Робототехника, в отличие от других специальностей, очень прикладная. С первого курса мы начали собирать роботов, создавать из математические модели и программировать их (на парах ВПД). Этим все не ограничивается, в ИТМО нас знакомят с широким спектром разных общеобразовательных и специальных предметов. Это помогает нам преуспеть как в робототехника, так и в жизни в целом.’’ 
-&lt;br /&gt;&lt;br /&gt;Tạm dịch :  Robotics, không giống như các chuyên ngành khác, được ứng dụng rất nhiều. Từ năm đầu tiên chúng tôi bắt đầu lắp ráp robot, tạo ra các mô hình toán học từ chúng và lập trình nhúng ( trên các tiết học môn VPD - Введение в профессиональную деятельность). Đó không phải là tất cả, ở ITMO chúng tôi được giới thiệu về nhiều loại giáo dục phổ thông và các môn học đặc biệt khác nhau. Nó giúp chúng tôi thành công trong cả lĩnh vực chế tạo máy và cuộc sống nói chung.&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;một-số-kỹ-năng-mềm-quan-trọng&quot;&gt;Một số kỹ năng mềm quan trọng&lt;/h3&gt;
-&lt;p&gt;Bên cạnh việc sở hữu nguồn tri thức dồi dào, hiểu biết về cuộc sống, có 4 kỹ năng mềm được đánh giá là vô cùng quan trọng để thành công trong công việc và cuộc sống  - hay còn được gọi tắt là kỹ năng 4C:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Kỹ năng giao tiếp (Communication) - Giao tiếp là hoạt động cơ bản của con người, nảy sinh từ nhu cầu trao đổi truyền đạt thông tin, cảm xúc, suy nghĩ của bản thân thông qua ngôn ngữ. Khi được bồi đắp kỹ năng giao tiếp tốt, các bạn sẽ biết cách lắng nghe và thấu hiểu, đồng thời có khả năng thể hiện các cảm xúc, suy nghĩ của bản thân một cách hiệu quả và tự tin.&lt;/li&gt;
-  &lt;li&gt;Tư duy phản biện (Critical Thinking) : Tư duy phản biện hay tư duy phân tích là một quá trình gồm phân tích, đánh giá thông tin đã có nhằm làm sáng tỏ và khẳng định lại tính chính xác của vấn đề. Tư duy phản biện giúp các bạn có cái nhìn khái quát và khả năng đưa ra chính kiến về nhiều vấn đề, tạo ra những thay đổi tích cực trong suy nghĩ và hành động.&lt;/li&gt;
-  &lt;li&gt;Tính sáng tạo (Creativity):  Mỗi con người luôn tiềm ẩn khả năng sáng tạo không giới hạn. Trong bối cảnh thế giới thay đổi nhanh chóng, kỹ năng sáng tạo được đánh giá là vô cũng cần thiết nhằm đem lại hướng giải quyết vấn đề linh hoạt và tối ưu.&lt;/li&gt;
-  &lt;li&gt;Kỹ năng hợp tác (Collaboration): Để phát triển lâu dài, chúng ta cần làm việc cùng một tập thể và khi đó “Kỹ năng hợp tác” đóng vai trò thành hay bại. Đây cũng là kỹ năng quan trọng khi bạn tham gia vào thị trường lao động và là điều không thể thiếu để hòa nhập với mọi môi trường tổ chức - doanh nghiệp, giúp hoàn thành công việc hiệu quả.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Ngoài ra còn có EQ - trí thông minh cảm xúc, kỹ năng tự tin thuyết trình trước đám đông,… Xây dựng cho mình một phong cách tự học phù hợp và hiệu quả với bản thân mình. Không ngừng tìm tòi khám phá cái mới có trọng tâm trọng điểm.&lt;/p&gt;
-
-&lt;p&gt;Trên đây là một số chia sẻ của mình về mã ngành 15.03.06 - Cơ điện tử và kỹ thuật robot. Hy vọng phần nào đó giúp đỡ mọi người hiểu hơn về chuyên ngành này. Để từ đó xây dựng cho mình một phương pháp học tập đúng đắn và đạt hiệu quả cao. Sau này khi đã có góc nhìn tổng quan và chi tiết, nhiều kinh nghiệm học tập hơn nữa mình sẽ tiếp tục chia sẻ cho mọi người .&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Cảm ơn mọi người đã đọc hết bài viết này ! Đừng quên góp ý dưới bình luận để bài viết của mình được đầy đủ và hoàn thiện hơn nhé &amp;lt;3 &amp;lt;3 &amp;lt;3 !&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;nguồn&quot;&gt;Nguồn:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=pjVHbu76LYU&quot;&gt;Cơ điện tử Học gì và làm gì ? P1,2,3&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.youtube.com/watch?v=shW5QnSrKdw&amp;amp;t=230s&quot;&gt;Cơ điện tử: Tự học để thành công (Self-study for your Own success) , 4C kỹ năng mềm&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.vyatsu.ru/abiturientu/univers/dni-otkryityih-dverey-1/mehatronika-i-robototehnika-2.html&quot;&gt;Абитуриенту Мехатроника и робототехника&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://medium.com/@norahpink/what-is-mechatronics-8e8d4591949c&quot;&gt;What are Mechatronics and Robotics?&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://www.monash.edu/engineering/future-students/undergraduate-study/specialisations/robotics&quot;&gt;What do robotics and mechatronics engineers do?&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://math24.net/method-lyapunov-functions.html&quot;&gt;Method of Lyapunov Functions&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;https://vi.wikipedia.org/wiki/Sophia_robot&quot;&gt;Người máy sofia&lt;/a&gt;&lt;br /&gt;
-Tham khảo tài liệu của khoa và một số ý kiến của các bạn học người Nga.&lt;/p&gt;
-</description>
-                <pubDate>Wed, 10 Nov 2021 04:48:45 +0300</pubDate>
-                <link>http://localhost:4000/robotics</link>
-                <guid isPermaLink="true">http://localhost:4000/robotics</guid>
-                
-                <category>итмо_факультет</category>
-                
-                
-                <category>ITMO</category>
                 
             </item>
         
