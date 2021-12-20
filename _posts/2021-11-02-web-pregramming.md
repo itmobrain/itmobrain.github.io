@@ -63,18 +63,17 @@ Sau khi đã có những kiến thức nền tảng rồi, bạn có thể chọ
 ##### Hướng 1: Lập trình Web Front end
 Hướng này chịu trách nhiệm thiết kế và xây dựng giao diện cho các trang web hoặc ứng dụng web để người dùng có thể xem và tương tác trực tiếp trên đó. Tất cả mọi thứ bạn nhìn thấy khi điều hướng trên Internet, từ các font chữ, màu sắc, hình ảnh cho tới các menu xổ xuống và các thanh trượt, là một sự kết hợp của HTML, CSS, và JavaScript được điều khiển bởi trình duyệt máy tính của bạn (Hướng này còn được ví như “phần nổi của tảng bằng chìm”)
 Sau khi đã học HTML, CSS, JS vững bạn cần học tiếp các công nghệ:
-JQuery: là một thư viện JavaScript thu nhỏ. Có tác dụng giúp tạo ra các tương tác, sự kiện, hiệu ứng trên website… một cách dễ dàng.
-CSS và các framework front-end hiện nay phổ biến nhất là Bootstrap giúp hỗ trợ thiết kế website nhanh và chuẩn hơn. Đây là Framework mà hầu hết Front End developer đều cần bạn am hiểu và vận dụng tốt.
-Các framework của JavaScript: Có kiến thức và kỹ năng sử dụng thành thạo các Framework của Javascript như AngularJS, Backbone, Ember, ReactJS. Các Frameworks này giúp lập trình viên tiết kiệm được thời gian trong quá trình lập trình, tối ưu hóa và dễ dàng tạo ra các tương tác thân thiện với người dùng.
-Các kiến thức về UI (User Interface)  / UX (User Experience). 
+- CSS và các framework front-end hiện nay phổ biến nhất là Bootstrap giúp hỗ trợ thiết kế website nhanh và chuẩn hơn. Đây là Framework mà hầu hết Front End developer đều cần bạn am hiểu và vận dụng tốt.
+- Các framework của JavaScript: Có kiến thức và kỹ năng sử dụng thành thạo các Framework của Javascript như AngularJS, Backbone, Ember, ReactJS. Các Frameworks này giúp lập trình viên tiết kiệm được thời gian trong quá trình lập trình, tối ưu hóa và dễ dàng tạo ra các tương tác thân thiện với người dùng.
+- Các kiến thức về UI (User Interface)  / UX (User Experience). 
 
 ##### Hướng 2: Lập trình web Back end
 Hướng này bạn sẽ chịu trách nhiệm thiết kế và lập trình phần logic bên trong website để kết nối phần giao diện với cơ sở dữ liệu, giúp cho website sống động và có thể tương tác với người dùng. (Hướng này chính là phần chìm của tảng băng, là những gì người dùng ko thấy trên giao diện web)
 Phần này bạn cần học thêm về cách công nghệ như sau:
-Ngôn ngữ lập trình chính: Java, PHP, C#, Javascript, Ruby hoặc Python.
-Kiến thức về các hệ quản trị cơ sở dữ liệu là vô cùng cần thiết, quan trọng và không thể thiếu như: MS SQL Server, Oracle, MySql, PostgreSQL, MongoDB, ….
-Một Framework / công nghệ phù hợp với ngôn ngữ Backend đã chọn: Spring – Java, ASP.NET – C#, Express/NodeJS – Javascript, Laravel – PHP, …
-Deploy: Học cấu hình server, domain, cách publish website lên internet...
+- Ngôn ngữ lập trình chính: Java, PHP, C#, Javascript, Ruby hoặc Python.
+- Kiến thức về các hệ quản trị cơ sở dữ liệu là vô cùng cần thiết, quan trọng và không thể thiếu như: MS SQL Server, Oracle, MySql, PostgreSQL, MongoDB, ….
+- Một Framework / công nghệ phù hợp với ngôn ngữ Backend đã chọn: Spring – Java, ASP.NET – C#, Express/NodeJS – Javascript, Laravel – PHP, …
+- Deploy: Học cấu hình server, domain, cách publish website lên internet...
 
 Đến đây có thể bạn đã có thể tạo ra một website hoàn chỉnh. Nhưng không dừng lại ở đó.
 Bạn hoàn toàn có thể kết hợp cả 2 hướng để trở thành LẬP TRÌNH VIÊN FULL STACK.
