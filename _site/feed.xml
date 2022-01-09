@@ -5,9 +5,127 @@
         <description>CLB Tin Hoc ITMO Brain</description>
         <link>http://localhost:4000/</link>
         <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Mon, 20 Dec 2021 16:14:48 +0300</pubDate>
-        <lastBuildDate>Mon, 20 Dec 2021 16:14:48 +0300</lastBuildDate>
+        <pubDate>Sun, 09 Jan 2022 23:41:31 +0300</pubDate>
+        <lastBuildDate>Sun, 09 Jan 2022 23:41:31 +0300</lastBuildDate>
         <generator>Jekyll v4.2.1</generator>
+        
+            <item>
+                <title>Intro to Graph Neutral Network</title>
+                <description>&lt;h3 id=&quot;why-graphs&quot;&gt;Why Graphs?&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Graphs are a general language for describing and analyzing entities with relations/interactions&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;cite&gt;Complex domains have a rich relational structure, which can be represented as a relational graph. By explicitly modeling relationships we achieve better performance!&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Gần đây, Graph Neural Network (GNN) ngày càng trở nên phổ biến trong nhiều lĩnh vực khác nhau, bao gồm phân tích dữ liệu mạng xã hội, trích xuất kiến thức, hệ thống gợi ý và thậm chí cả phân tích cuộc sống. Sức mạnh của GNN trong việc mô hình hóa sự phụ thuộc giữa các nút trong biểu đồ cho phép tạo ra bước đột phá trong lĩnh vực nghiên cứu liên quan đến phân tích đồ thị. 
+&lt;img src=&quot;/images/gnn/3.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bài viết này nhằm mục đích giới thiệu những kiến thức cơ bản về Graph và ứng dụng của chúng.&lt;/p&gt;
+&lt;h3 id=&quot;what-is-graph&quot;&gt;What is Graph&lt;/h3&gt;
+&lt;p&gt;Đồ thị là một kiểu dữ liệu phi tuyến tính(non euclidean) có cấu trúc với các nút (còn gọi là đỉnh) và các cạnh. Nó được biểu diễn về mặt toán học là &lt;strong&gt;G(V,E)&lt;/strong&gt;. Ví dụ, &lt;strong&gt;&lt;em&gt;một phân tử NO₂&lt;/em&gt;&lt;/strong&gt; có thể được coi là một đồ thị trong đó nguyên tử nitơ và hai nguyên tử oxy được coi là nút, và liên kết giữa các nguyên tử được coi là cạnh. Một ví dụ khác về biểu đồ có thể là gia đình của bạn, trong đó mỗi người là một nút và mối quan hệ giữa hai người là cạnh.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;img src=&quot;/images/gnn/no2.png&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Một đồ thị có thể có nhãn trên cả các nút và các cạnh của nó. Nó có thể là số hoặc văn bản. Mỗi nút sẽ có một số tính năng xác định nút. Trong đồ thị của NO₂, các nguyên tố như số hiệu nguyên tử, khối lượng nguyên tử và số electron hóa trị của mỗi nút có thể là các đặc trưng tương ứng của nó. Các cạnh có thể có hoặc không có các đặc trưng tùy thuộc vào loại biểu đồ. Trong NO₂, các đặc điểm của các cạnh có thể là độ bền của liên kết, loại liên kết (liên kết đơn hoặc liên kết đôi), v.v.&lt;/p&gt;
+
+&lt;p&gt;Đồ thị được phân loại trên nhiều cơ sở khác nhau. Phổ biến nhất là dựa trên các cạnh của đồ thị. Đây là những đồ thị có hướng và vô hướng. Trong đồ thị có hướng, các cạnh từ nút này đến nút khác có hướng, trong khi trong đồ thị vô hướng, các nút được nối với nhau qua các cạnh và không có hướng.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+  &lt;div class=&quot;gallery&quot;&gt;
+    &lt;img src=&quot;/images/gnn/1.png&quot; /&gt;
+    &lt;img src=&quot;/images/gnn/2.png&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Một ví dụ thực tế về biểu đồ có hướng là Instagram. Khi bạn theo dõi ai đó, họ không nhất thiết phải theo dõi lại bạn. Theo một nghĩa nào đó, điều này là một chiều. Mặt khác, yêu cầu kết bạn trên Facebook là một ví dụ về biểu đồ vô hướng. Sau khi yêu cầu kết bạn được chấp nhận, cả hai bạn có thể xem nội dung của nhau.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-graph&quot;&gt;Example Graph&lt;/h3&gt;
+&lt;h5 id=&quot;mạng-xã-hội&quot;&gt;Mạng xã hội:&lt;/h5&gt;
+&lt;p&gt;Mạng xã hội là một biểu đồ trong đó các nút đại diện cho mọi người và mối quan hệ giữa hai người là cạnh. Mối quan hệ này có thể là bất cứ điều gì, từ một người quen đơn giản đến một gia đình.
+&lt;img src=&quot;/images/gnn/4.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;phân-tử&quot;&gt;Phân tử:&lt;/h4&gt;
+&lt;p&gt;Một phân tử có thể được biểu diễn dưới dạng đồ thị trong đó các nút đại diện cho các nguyên tử và các cạnh đại diện cho liên kết giữa chúng.&lt;/p&gt;
+
+&lt;div class=&quot;gallery-box&quot;&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;img src=&quot;/images/gnn/5.png&quot; height=&quot;1000px&quot; width=&quot;400px&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;internet&quot;&gt;Internet:&lt;/h4&gt;
+&lt;p&gt;Internet là một biểu đồ trong đó các thiết bị, bộ định tuyến, trang web và máy chủ là các nút và kết nối internet là các cạnh.
+&lt;img src=&quot;/images/gnn/6.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;graph-explore&quot;&gt;Graph explore&lt;/h3&gt;
+&lt;h4 id=&quot;phân-loại-nút---dự-đoán-nhãn-của-một-nút-nhất-định&quot;&gt;Phân loại nút - Dự đoán nhãn của một nút nhất định.&lt;/h4&gt;
+&lt;p&gt;Ví dụ: một người nhất định trong mạng xã hội có thể được phân loại dựa trên sở thích, niềm tin hoặc đặc điểm của họ.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;img src=&quot;/images/gnn/7.png&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;dự-đoán-liên-kết&quot;&gt;Dự đoán liên kết&lt;/h4&gt;
+&lt;p&gt;Dự đoán nếu và cách hai nút được liên kết. Ví dụ, tìm xem hai người (nút) nhất định có bất kỳ mối quan hệ nào giữa họ hay không.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;img src=&quot;/images/gnn/12
+.png&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;phân-cụm---xác-định-các-cụm-nút-được-liên-kết-dày-đặc&quot;&gt;Phân cụm - Xác định các cụm nút được liên kết dày đặc.&lt;/h4&gt;
+&lt;p&gt;Ví dụ: tìm xem một nhóm người có bất kỳ điểm nào giống nhau về chủ đề hay không.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/gnn/8.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;dự-đoán-sự-tương-đồng&quot;&gt;Dự đoán sự tương đồng&lt;/h4&gt;
+&lt;p&gt;Đo mức độ tương tự của hai nút/mạng. Tại đây bạn có thể tìm xem hai người hoặc hai nhóm người khác nhau có giống với nhau hay không.&lt;/p&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;img src=&quot;/images/gnn/11.png&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;graphs-neural-networks-aplication&quot;&gt;Graphs Neural Networks Aplication&lt;/h3&gt;
+&lt;h4 id=&quot;hệ-thống-khuyến-nghị&quot;&gt;Hệ thống khuyến nghị:&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/gnn/9.png&quot; /&gt;
+Khả năng của hệ thống khuyến nghị có thể được tăng lên theo cấp số nhân bằng cách sử dụng GNN. Với GNN, các đề xuất sẽ dựa trên việc mượn thông tin từ các nút lân cận, do đó làm cho việc nhúng nút chính xác hơn. Pinterest sử dụng hệ thống đề xuất dựa trên GNN.&lt;/p&gt;
+
+&lt;h4 id=&quot;sự-phát-triển-thuốc&quot;&gt;Sự phát triển thuốc:&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;/images/gnn/10.jpg&quot; /&gt;
+Tất cả các phân tử có thể được biểu diễn dưới dạng đồ thị. Sử dụng GNN, có thể lập mô hình các mạng phức tạp như mạng tương tác protein-protein (PPI) và mạng trao đổi chất. Mô hình này giúp phát triển các loại thuốc tốt hơn và ổn định cho bệnh tật.&lt;/p&gt;
+
+&lt;h4 id=&quot;phân-cực-trên-twitter&quot;&gt;Phân cực trên Twitter:&lt;/h4&gt;
+&lt;div class=&quot;gallery-box&quot;&gt;
+&lt;div class=&quot;gallery&quot;&gt;
+&lt;img src=&quot;/images/gnn/12.jpg&quot; /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Tùy thuộc vào bài đăng mà một người thích và những người họ theo dõi, có thể phát hiện xem một người có phân cực theo quan điểm cụ thể về một chủ đề (chính trị, môi trường, v.v.) hay không.&lt;/p&gt;
+
+&lt;h4 id=&quot;phát-hiện-vòng-kết-nối-xã-hội&quot;&gt;Phát hiện vòng kết nối xã hội:&lt;/h4&gt;
+&lt;p&gt;Sử dụng GNN, có thể phát hiện vòng kết nối xã hội của một người dựa trên tương tác của anh ta với những người khác. Vòng kết nối này có thể là đồng nghiệp, bạn đại học, thành viên gia đình, những người cùng lớp, v.v.&lt;/p&gt;
+
+&lt;h3 id=&quot;tại-sao-không-thể-áp-dụng-tích-chập-cho-đồ-thị&quot;&gt;Tại sao không thể áp dụng tích chập cho đồ thị?&lt;/h3&gt;
+&lt;p&gt;Hình ảnh có kích thước cố định và dữ liệu cấu trúc dựa trên lưới với vị trí không gian xác định. Mặt khác, đồ thị có kích thước tùy ý, cấu trúc liên kết phức tạp và cấu trúc phi euclide. Nó cũng không có thứ tự nút cố định. Như chúng ta đã biết, mạng nơ-ron được xác định cho các kích thước, lưới và cấu trúc cụ thể. Do đó không thể áp dụng tích chập trực tiếp cho đồ thị.&lt;/p&gt;
+
+</description>
+                <pubDate>Sun, 09 Jan 2022 04:48:45 +0300</pubDate>
+                <link>http://localhost:4000/cryptography</link>
+                <guid isPermaLink="true">http://localhost:4000/cryptography</guid>
+                
+                <category>Infosec</category>
+                
+                
+                <category>ITMOBRAIN</category>
+                
+            </item>
         
             <item>
                 <title>Intro to Web programming</title>
@@ -71,19 +189,22 @@ Cách website hoạt động:&lt;/li&gt;
 &lt;p&gt;&lt;img src=&quot;/images/fronback.png&quot; /&gt;&lt;/p&gt;
 &lt;h5 id=&quot;hướng-1-lập-trình-web-front-end&quot;&gt;Hướng 1: Lập trình Web Front end&lt;/h5&gt;
 &lt;p&gt;Hướng này chịu trách nhiệm thiết kế và xây dựng giao diện cho các trang web hoặc ứng dụng web để người dùng có thể xem và tương tác trực tiếp trên đó. Tất cả mọi thứ bạn nhìn thấy khi điều hướng trên Internet, từ các font chữ, màu sắc, hình ảnh cho tới các menu xổ xuống và các thanh trượt, là một sự kết hợp của HTML, CSS, và JavaScript được điều khiển bởi trình duyệt máy tính của bạn (Hướng này còn được ví như “phần nổi của tảng bằng chìm”)
-Sau khi đã học HTML, CSS, JS vững bạn cần học tiếp các công nghệ:
-JQuery: là một thư viện JavaScript thu nhỏ. Có tác dụng giúp tạo ra các tương tác, sự kiện, hiệu ứng trên website… một cách dễ dàng.
-CSS và các framework front-end hiện nay phổ biến nhất là Bootstrap giúp hỗ trợ thiết kế website nhanh và chuẩn hơn. Đây là Framework mà hầu hết Front End developer đều cần bạn am hiểu và vận dụng tốt.
-Các framework của JavaScript: Có kiến thức và kỹ năng sử dụng thành thạo các Framework của Javascript như AngularJS, Backbone, Ember, ReactJS. Các Frameworks này giúp lập trình viên tiết kiệm được thời gian trong quá trình lập trình, tối ưu hóa và dễ dàng tạo ra các tương tác thân thiện với người dùng.
-Các kiến thức về UI (User Interface)  / UX (User Experience).&lt;/p&gt;
+Sau khi đã học HTML, CSS, JS vững bạn cần học tiếp các công nghệ:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;CSS và các framework front-end hiện nay phổ biến nhất là Bootstrap giúp hỗ trợ thiết kế website nhanh và chuẩn hơn. Đây là Framework mà hầu hết Front End developer đều cần bạn am hiểu và vận dụng tốt.&lt;/li&gt;
+  &lt;li&gt;Các framework của JavaScript: Có kiến thức và kỹ năng sử dụng thành thạo các Framework của Javascript như AngularJS, Backbone, Ember, ReactJS. Các Frameworks này giúp lập trình viên tiết kiệm được thời gian trong quá trình lập trình, tối ưu hóa và dễ dàng tạo ra các tương tác thân thiện với người dùng.&lt;/li&gt;
+  &lt;li&gt;Các kiến thức về UI (User Interface)  / UX (User Experience).&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h5 id=&quot;hướng-2-lập-trình-web-back-end&quot;&gt;Hướng 2: Lập trình web Back end&lt;/h5&gt;
 &lt;p&gt;Hướng này bạn sẽ chịu trách nhiệm thiết kế và lập trình phần logic bên trong website để kết nối phần giao diện với cơ sở dữ liệu, giúp cho website sống động và có thể tương tác với người dùng. (Hướng này chính là phần chìm của tảng băng, là những gì người dùng ko thấy trên giao diện web)
-Phần này bạn cần học thêm về cách công nghệ như sau:
-Ngôn ngữ lập trình chính: Java, PHP, C#, Javascript, Ruby hoặc Python.
-Kiến thức về các hệ quản trị cơ sở dữ liệu là vô cùng cần thiết, quan trọng và không thể thiếu như: MS SQL Server, Oracle, MySql, PostgreSQL, MongoDB, ….
-Một Framework / công nghệ phù hợp với ngôn ngữ Backend đã chọn: Spring – Java, ASP.NET – C#, Express/NodeJS – Javascript, Laravel – PHP, …
-Deploy: Học cấu hình server, domain, cách publish website lên internet…&lt;/p&gt;
+Phần này bạn cần học thêm về cách công nghệ như sau:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ngôn ngữ lập trình chính: Java, PHP, C#, Javascript, Ruby hoặc Python.&lt;/li&gt;
+  &lt;li&gt;Kiến thức về các hệ quản trị cơ sở dữ liệu là vô cùng cần thiết, quan trọng và không thể thiếu như: MS SQL Server, Oracle, MySql, PostgreSQL, MongoDB, ….&lt;/li&gt;
+  &lt;li&gt;Một Framework / công nghệ phù hợp với ngôn ngữ Backend đã chọn: Spring – Java, ASP.NET – C#, Express/NodeJS – Javascript, Laravel – PHP, …&lt;/li&gt;
+  &lt;li&gt;Deploy: Học cấu hình server, domain, cách publish website lên internet…&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Đến đây có thể bạn đã có thể tạo ra một website hoàn chỉnh. Nhưng không dừng lại ở đó.
 Bạn hoàn toàn có thể kết hợp cả 2 hướng để trở thành LẬP TRÌNH VIÊN FULL STACK.
@@ -1792,99 +1913,6 @@ int main() {
                 <category>Programming language</category>
                 
                 <category>Learning</category>
-                
-                
-                <category>ITMOBRAIN</category>
-                
-            </item>
-        
-            <item>
-                <title>Master Google Search</title>
-                <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Hello xin chào tất cả các bạn. Mình là Mạnh, cũng như các sinh viên khác mình sử dụng google rất nhiều. Sau quá trình googlelist nhiều năm, mình đã luyện được khá nhiều bí kíp võ công, giúp bản thân thành công xử lý các tiên sinh khó tính ở trường. Bí kíp này mình sẽ giữ cho riêng mình và không chia sẻ cho ai hết nhé. Tạm biệt các bạn! Kết bài đi anh Tuấn ơi! &lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Hê lô mọi người! Mình là Tuấn, mình mới trộm được quyển bí kíp của Mạnh. Nay mạnh dạn chia sẻ cho mọi người, mọi người thấy hay vui lòng gửi ít tiền vào tk: 210397290703&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Ông lớn công nghệ Google hiện nay sở hữu công cụ tìm kiếm lớn nhất trên thế giới. Bất cứ thông tin, hình ảnh, video, địa điểm bạn hoàn toàn có thể sử dụng bộ tìm kiếm trên Google, kết quả sẽ có chỉ sau vài giây nhanh nhất. Và thao tác nhập nội dung tìm kiếm trên thanh Search của Google thì chắc chắn ai cũng biết. Tuy nhiên, nếu chúng ta muốn tìm những kết quả phức tạp hơn, chính xác hơn thì cần đến một vài những thủ thuật cần thiết trên Google&lt;/p&gt;
-&lt;h3 id=&quot;searching-using-site&quot;&gt;Searching using Site:&lt;/h3&gt;
-&lt;p&gt;Với sử dụng &lt;code&gt;site&lt;/code&gt; trong tìm kiếm cho phép bạn thực hiện tìm kiếm trên google cho một trang web cụ thể. bạn cũng có thể sử dụng điều này để kiểm tra xem trang web của bạn có trên google tìm kiếm hay không. Thông thường ta thường sử dụng để tìm kiếm trên các trang uy tín như: medium, stackoverflow, geeksforgeeks.org,….&lt;/p&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.31.19.png&quot; /&gt;
-  &lt;em&gt;Search &lt;code&gt;site&lt;/code&gt; / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-&lt;h3 id=&quot;search-using-quotation&quot;&gt;Search using quotation:&lt;/h3&gt;
-&lt;p&gt;Bạn cũng có thể sử dụng dấu ngoặc kép để lấy nội dung chính xác hơn. Thông thường, khi bạn gõ tìm một nội dung bất kỳ, Google sẽ gợi ý đến những chủ đề có từ khóa liên quan. Khi dùng phương pháp này kết quả  yêu cầu chính xác cụm từ cần search.&lt;/p&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.58.34.png&quot; /&gt;
-  &lt;em&gt;Search using quotation / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-&lt;p&gt;Không biết sao chứ mình tìm thì nó lại ra lensovieta mọi người ạ!&lt;/p&gt;
-&lt;h3 id=&quot;missing-words-or-phrases&quot;&gt;Missing words or Phrases:&lt;/h3&gt;
-&lt;p&gt;Bạn có thể sử dụng dấu * (dấu hoa thị) để điền các từ và cụm từ còn thiếu. Nó rất hữu ích bất cứ khi nào bạn đang cố gắng tìm kiếm một bài hát và bạn không nhớ lời bài hát.&lt;/p&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-18 at 20.44.20.png&quot; /&gt;
-  &lt;em&gt;Search * / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;excluding-a-word&quot;&gt;Excluding a word:&lt;/h3&gt;
-&lt;p&gt;Sử dụng ‘-’ để loại trừ các từ và cụm từ khỏi tìm kiếm. Kết quả sẽ hiển thị tất cả các trang web và liên kết không có chữ.&lt;/p&gt;
-
-&lt;p&gt;Nếu các bạn không thêm &lt;code&gt;-nguyên&lt;/code&gt; vào phía sau thì kết quả sẽ thu được như sau:&lt;/p&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 21.05.55.png&quot; /&gt;
-  &lt;em&gt;Excluding a word / &lt;a href=&quot;https://www.facebook.com/manhlab&quot; target=&quot;_blank&quot;&gt;Facebook&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 21.06.39.png&quot; /&gt;
-  &lt;em&gt;Excluding a word / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;filetype-operator-tìm-theo-loại-tệp&quot;&gt;FileType Operator: Tìm theo loại tệp&lt;/h3&gt;
-&lt;p&gt;Nếu bạn muốn tìm 1 quyển sách mà nó vẫn đang chơi trò trốn tìm với bạn bạn thì mẹo nhỏ sau đây sẽ hữu ích với bạn. Toán tử này cung cấp cho bạn sức mạnh để tìm kiếm tệp cho một loại tệp cụ thể. Nó rất hữu ích khi bạn đang tìm kiếm pdf hoặc các tệp tin được định dạng ở các loại khác như PPT, XSL.&lt;/p&gt;
-
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.53.47.png&quot; /&gt;
-  &lt;em&gt;Search filetype / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;thực-hành-tìm-một-quyển-sách&quot;&gt;Thực hành tìm một quyển sách&lt;/h3&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.50.59.png&quot; /&gt;
-  &lt;em&gt;Search book / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;thực-hành-tìm-mã-nguồn&quot;&gt;Thực hành tìm mã nguồn&lt;/h3&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.49.49.png&quot; /&gt;
-  &lt;em&gt;Search code / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;thực-hành-giải-quyết-lỗi-trong-chương-trình&quot;&gt;Thực hành giải quyết lỗi trong chương trình&lt;/h3&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.34.14.png&quot; /&gt;
-  &lt;em&gt;Search error / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;thực-hành-tìm-một-bài-hát-dựa-theo-lời&quot;&gt;Thực hành tìm một bài hát dựa theo lời&lt;/h3&gt;
-&lt;div class=&quot;gallery-box&quot;&gt;
-    &lt;img src=&quot;/images/Screenshot 2021-11-19 at 20.36.27.png&quot; /&gt;
-  &lt;em&gt;Search song / &lt;a href=&quot;&quot; target=&quot;_blank&quot;&gt;Google&lt;/a&gt;&lt;/em&gt;
-&lt;/div&gt;
-&lt;p&gt;Đây là một số thủ thuật tìm kiếm mà mình biết. Nếu bạn còn các cách tìm thông tin hiệu quả khác nữa thì đừng ngần ngại chia sẻ vào comment dưới bài viết nhé.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;cite&gt;Cảm ơn các bạn đã đọc hết bài viết này!&lt;/cite&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-                <pubDate>Fri, 19 Nov 2021 04:48:45 +0300</pubDate>
-                <link>http://localhost:4000/google-search</link>
-                <guid isPermaLink="true">http://localhost:4000/google-search</guid>
-                
-                <category>Programming language</category>
-                
-                <category>Tools</category>
                 
                 
                 <category>ITMOBRAIN</category>

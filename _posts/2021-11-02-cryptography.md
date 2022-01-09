@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Intro to Cryptography"
-date: 2021-11-03 01:48:45
-image: '/images/quantumexplainer3.2-01-10.jpg'
+title: "Intro to Graph Neutral Network"
+date: 2022-1-9 01:48:45
+image: "/images/gnn/gnn.jpeg"
 description: ManhLab
 tags:
 - Infosec
@@ -10,47 +10,106 @@ categories:
 - ITMOBRAIN
 twitter_text:
 ---
-## Intro to Cryptography
-Trong ngành Bảo mật thông tin, Mật mã học là một phần rất quan trọng và đóng vai trò nền tảng của bảo mật thông tin hiện nay. Khác với các mảng khác, cryptography được sử dụng cách ngày nay rất lâu và đóng vai trò bảo mật trong suốt lịch sử loài người. 
+### Why Graphs? 
+><cite>Graphs are a general language for describing and analyzing entities with relations/interactions</cite>
 
-Bài viết này đề cập tới mã hóa cổ điển(classic cryptography)  là cách mã hóa cổ điển được dùng trước thời kỳ của máy vi tính hiện nay. Thời vì này việc mã hóa và giải mã được thực hiện chủ yếu bằng tay. Mã được sắp xếp để tạo thành một đoạn ciphertext khó hiểu đối với kẻ thâm nhập, nhưng với người nhận nhờ đã nắm rõ quy tắc giải mã thông tin nên việc này dễ dàng hơn rất nhiều. 
-Classic cryptography chia làm 2 nhánh chính đó là : 
-- chuyển vị 
-- thay thế ký tự. 
+><cite>Complex domains have a rich relational structure, which can be represented as a relational graph. By explicitly modeling relationships we achieve better performance!</cite>
 
-### 1. Chuyển vị kí tự 
-Chuyển vị kí tự điển hình mã Caesar được biết đến là người đầu tiên sử dụng mã hóa để truyền thông điệp, Thuật toán caesar để mã hóa 1 đoạn thông điệp gửi đến bên kia đại dương mà đối phương không hề hay biết. Thuật toán Caesar mở đầu bằng việc tịnh tiến ký tự trong bảng chữ cái mở đầu cho những mã hóa bằng kí tự, mật mã sau này: 
-```
-Cryptography → dịch 1 kí tự(ROT1) --> Dszquphsbqiz
-```
-Mã hóa caesar khá đơn giản, không tốn nhiều thời gian, hơn nữa các dấu câu không hề được mã hóa đã dẫn đến việc kẻ thâm nhập có thể đoán ra quy tắc mã hóa và vấn đề tìm ra thông điệp chỉ còn là vấn đề thời gian. Mình có viết 1 đoạn code để giải mã thuật toán Caesar này khi làm lab trên lớp như sau.
-```python
-text = "IO<NYCMYHINY;YJF?;M=HNY=IH>"
-for i in range(100):
-    for key in text:
-        if ord(key) + i > 126:
-            print(chr(ord(key) + i - 95), end="")
-        else:
-            print(chr(ord(key) + i), end="")
-    print("\n")
-```
 
-Đoạn code đơn giản tấn công triệt để mọi khả năng của mã hóa Caesar và tất nhiên là sẽ thành công.
-Một số phương pháp khai thác khác trong việc chuyển vị bao gồm:
-- Dùng ma trận vuông, hoán đổi vị trí phần tử trên cột, hoán đổi phần tử trong hàng, 
-- Hoán đổi vị trí hàng, hoán đổi vị trí cột, 
-- kết hợp nhiều trường hợp trên lại với nhau. 
-  
-Nhìn chung vì là bằng tay nên những thuật toán này gây không ít khó khăn cho người giải mã. Và nó cũng cần vốn hiểu biết khá tốt về ngôn ngữ đang mã hóa.
+Gần đây, Graph Neural Network (GNN) ngày càng trở nên phổ biến trong nhiều lĩnh vực khác nhau, bao gồm phân tích dữ liệu mạng xã hội, trích xuất kiến thức, hệ thống gợi ý và thậm chí cả phân tích cuộc sống. Sức mạnh của GNN trong việc mô hình hóa sự phụ thuộc giữa các nút trong biểu đồ cho phép tạo ra bước đột phá trong lĩnh vực nghiên cứu liên quan đến phân tích đồ thị. 
+<img src="/images/gnn/3.png">
 
-### 2. Phương pháp thay thế ký tự
-Với phương pháp thay thế ký tự. Một kí tự đơn giản được thay thế bằng một ký tự khác hoặc số mà không có liên quan nhiều đến các kí tự khác.
-Một hàm được sử dụng khá lâu đó là bảng mã hóa: khi mà kí tự được viết tương ứng với key mã hóa và chỉ cần đối chiếu với bảng để giải mã:
-```python
-VD: bảng mã: A-19 B-30 C-34 ABC - 193034
-```
-Một ví dụ về sức mạnh của mật mã học đó là cỗ máy Enigma. Trong chiến tranh thế giới thứ 2, đây là cỗ máy được dùng để mã hoá tất cả những thư tín liên lạc, giữ bảo mật hoàn toàn các thông tin quân sự của Đức. Cùng với năng lực quân sự mạnh mẽ, nước Đức khi đó một mình chiến đấu với toàn bộ châu  u và trước tình thế này, quân đội Anh phải tìm cách phá bộ giải mã của Enigma để tìm kiếm cơ hội ngăn chặn sự bành trướng của người Đức. Cỗ máy đã làm đau đầu hàng nghìn nhà khoa học lúc bâý giờ, và phải nhờ đến một mật ngữ ở cuối mỗi dòng thư tín( Hít le vạn tuế) thì Alan Turing(cha đẻ của mật mã học hiện đại) mới giải mã được. Việc giải mã cỗ máy Enigma đã giúp chấm dứt chiến tranh thế giới thứ 2 sớm hơn khoảng 2 năm. Đóng vai trò quan trọng trong sự phát triển thế giới hiện đại.
+Bài viết này nhằm mục đích giới thiệu những kiến thức cơ bản về Graph và ứng dụng của chúng.
+### What is Graph
+Đồ thị là một kiểu dữ liệu phi tuyến tính(non euclidean) có cấu trúc với các nút (còn gọi là đỉnh) và các cạnh. Nó được biểu diễn về mặt toán học là **G(V,E)**. Ví dụ, ***một phân tử NO₂*** có thể được coi là một đồ thị trong đó nguyên tử nitơ và hai nguyên tử oxy được coi là nút, và liên kết giữa các nguyên tử được coi là cạnh. Một ví dụ khác về biểu đồ có thể là gia đình của bạn, trong đó mỗi người là một nút và mối quan hệ giữa hai người là cạnh.
+<div class="gallery-box">
+<div class="gallery">
+<img src="/images/gnn/no2.png">
+</div>
+</div>
+Một đồ thị có thể có nhãn trên cả các nút và các cạnh của nó. Nó có thể là số hoặc văn bản. Mỗi nút sẽ có một số tính năng xác định nút. Trong đồ thị của NO₂, các nguyên tố như số hiệu nguyên tử, khối lượng nguyên tử và số electron hóa trị của mỗi nút có thể là các đặc trưng tương ứng của nó. Các cạnh có thể có hoặc không có các đặc trưng tùy thuộc vào loại biểu đồ. Trong NO₂, các đặc điểm của các cạnh có thể là độ bền của liên kết, loại liên kết (liên kết đơn hoặc liên kết đôi), v.v.
 
-Khi nghiên cứu sâu hơn về ngôn ngữ, người ta phát triển thêm  thuật toán rất hay về mã hóa: Khi mà ko có bảng giải mã, với 1 lượng lớn ký tự đầu vào đã mã hóa. Qua phân tích số lần xuất hiện, quy tắc và từ vựng đã giúp cho chúng ta có góc nhìn tổng quan hơn về nó. Từ đó lần tìm ra text gốc qua vệc giải mã từng ký tự đã bị thay thế.
+Đồ thị được phân loại trên nhiều cơ sở khác nhau. Phổ biến nhất là dựa trên các cạnh của đồ thị. Đây là những đồ thị có hướng và vô hướng. Trong đồ thị có hướng, các cạnh từ nút này đến nút khác có hướng, trong khi trong đồ thị vô hướng, các nút được nối với nhau qua các cạnh và không có hướng.
+<div class="gallery-box">
+  <div class="gallery">
+    <img src="/images/gnn/1.png">
+    <img src="/images/gnn/2.png">
+  </div>
+</div>
 
-Trong một thời đại mới, cryptography bước vào kỉ nguyên của thách thức khi mà dữ liệu truyền đi với tốc độ ánh sáng. Thông điệp truyền đi có thể bị bắt bới kẻ xâm nhập ngay tức thời. Những thuật toán mạnh mẽ hơn, đồng thời những cỗ máy giải mã đang cạnh tranh với nhau mỗi ngày. Nếu bạn quan tâm nhiều hơn tới mật mã học, hãy comment dưới bài viết này để CLB có động lực ra thêm nhiều bài viết về vấn đề này nữa nhé!🥳
+
+Một ví dụ thực tế về biểu đồ có hướng là Instagram. Khi bạn theo dõi ai đó, họ không nhất thiết phải theo dõi lại bạn. Theo một nghĩa nào đó, điều này là một chiều. Mặt khác, yêu cầu kết bạn trên Facebook là một ví dụ về biểu đồ vô hướng. Sau khi yêu cầu kết bạn được chấp nhận, cả hai bạn có thể xem nội dung của nhau.
+
+### Example Graph
+##### Mạng xã hội: 
+Mạng xã hội là một biểu đồ trong đó các nút đại diện cho mọi người và mối quan hệ giữa hai người là cạnh. Mối quan hệ này có thể là bất cứ điều gì, từ một người quen đơn giản đến một gia đình.
+<img src="/images/gnn/4.png">
+
+#### Phân tử: 
+Một phân tử có thể được biểu diễn dưới dạng đồ thị trong đó các nút đại diện cho các nguyên tử và các cạnh đại diện cho liên kết giữa chúng.
+
+<div class="gallery-box">
+<div class="gallery">
+<img src="/images/gnn/5.png" height=1000px width=400px>
+</div>
+</div>
+
+#### Internet: 
+Internet là một biểu đồ trong đó các thiết bị, bộ định tuyến, trang web và máy chủ là các nút và kết nối internet là các cạnh.
+<img src="/images/gnn/6.png">
+
+### Graph explore
+#### Phân loại nút - Dự đoán nhãn của một nút nhất định. 
+Ví dụ: một người nhất định trong mạng xã hội có thể được phân loại dựa trên sở thích, niềm tin hoặc đặc điểm của họ.
+<div class="gallery-box">
+<div class="gallery">
+<img src="/images/gnn/7.png">
+</div>
+</div>
+
+#### Dự đoán liên kết 
+Dự đoán nếu và cách hai nút được liên kết. Ví dụ, tìm xem hai người (nút) nhất định có bất kỳ mối quan hệ nào giữa họ hay không.
+<div class="gallery-box">
+<div class="gallery">
+<img src="/images/gnn/12
+.png">
+</div>
+</div>
+
+#### Phân cụm - Xác định các cụm nút được liên kết dày đặc. 
+Ví dụ: tìm xem một nhóm người có bất kỳ điểm nào giống nhau về chủ đề hay không.
+
+<img src="/images/gnn/8.png">
+
+#### Dự đoán sự tương đồng
+Đo mức độ tương tự của hai nút/mạng. Tại đây bạn có thể tìm xem hai người hoặc hai nhóm người khác nhau có giống với nhau hay không.
+<div class="gallery-box">
+<div class="gallery">
+<img src="/images/gnn/11.png">
+</div>
+</div>
+
+### Graphs Neural Networks Aplication
+#### Hệ thống khuyến nghị: 
+<img src="/images/gnn/9.png">
+Khả năng của hệ thống khuyến nghị có thể được tăng lên theo cấp số nhân bằng cách sử dụng GNN. Với GNN, các đề xuất sẽ dựa trên việc mượn thông tin từ các nút lân cận, do đó làm cho việc nhúng nút chính xác hơn. Pinterest sử dụng hệ thống đề xuất dựa trên GNN.
+
+#### Sự phát triển thuốc: 
+<img src="/images/gnn/10.jpg">
+Tất cả các phân tử có thể được biểu diễn dưới dạng đồ thị. Sử dụng GNN, có thể lập mô hình các mạng phức tạp như mạng tương tác protein-protein (PPI) và mạng trao đổi chất. Mô hình này giúp phát triển các loại thuốc tốt hơn và ổn định cho bệnh tật.
+
+#### Phân cực trên Twitter: 
+<div class="gallery-box">
+<div class="gallery">
+<img src="/images/gnn/12.jpg">
+</div>
+</div>
+Tùy thuộc vào bài đăng mà một người thích và những người họ theo dõi, có thể phát hiện xem một người có phân cực theo quan điểm cụ thể về một chủ đề (chính trị, môi trường, v.v.) hay không.
+
+#### Phát hiện vòng kết nối xã hội: 
+Sử dụng GNN, có thể phát hiện vòng kết nối xã hội của một người dựa trên tương tác của anh ta với những người khác. Vòng kết nối này có thể là đồng nghiệp, bạn đại học, thành viên gia đình, những người cùng lớp, v.v.
+
+### Tại sao không thể áp dụng tích chập cho đồ thị?
+Hình ảnh có kích thước cố định và dữ liệu cấu trúc dựa trên lưới với vị trí không gian xác định. Mặt khác, đồ thị có kích thước tùy ý, cấu trúc liên kết phức tạp và cấu trúc phi euclide. Nó cũng không có thứ tự nút cố định. Như chúng ta đã biết, mạng nơ-ron được xác định cho các kích thước, lưới và cấu trúc cụ thể. Do đó không thể áp dụng tích chập trực tiếp cho đồ thị.
+
+
